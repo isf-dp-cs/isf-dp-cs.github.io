@@ -3,6 +3,7 @@ layout: default
 title: Review
 parent: CS12
 # nav_order: 0
+published: false
 ---
 
 # Intro Exercises
