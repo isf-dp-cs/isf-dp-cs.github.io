@@ -2,7 +2,7 @@
 layout: default
 title: Intro to Pseudocode 
 parent: CS11
-nav_order: 1
+nav_order: 2
 ---
 
 # Intro To Pseudocode
@@ -11,10 +11,10 @@ nav_order: 1
 Pseudocode is a language designed by the IB to help you focus on the `logic` of programming, without having to think too much about `syntax`. Although it's designed to be handwritte, we have a handy website that can compile and run pseudocode.
 
 {: .task }
-Open up the [pseudocode compiler](http://ibcomp.fis.edu/pseudocode/pcode.html) in a new tab. You will be using this website to complete the exercises below.
+>Open up the [pseudocode compiler](http://ibcomp.fis.edu/pseudocode/pcode.html) in a new tab. You will be using this website to complete the exercises below.
 
-<!-- >{: .warning }
-This compiler does not supply any error messages. If your program isn't running, you can visit the [debugging page](/CS11_labs/troubleshooting_pseudocode.html) to help you troubleshoot. -->
+>{: .warning }
+This compiler does not supply any error messages. If your program isn't running, you can visit the [debugging page](/CS11_labs/troubleshooting_pseudocode.html) to help you troubleshoot.
 
 <details open markdown="block">
   <summary>
@@ -125,58 +125,3 @@ output "The animal is: ", TYPE
 | Bird | 2 legs, can fly   | 
 | Unknown Creature | everything else | 
 
-## While Loops
-```java
-// Example of a while loop
-NUM = 10
-loop until NUM = 1
-   NUM = NUM - 1
-   output NUM
-end loop
-```
-### Practice While Loops
-
-{: .task }
->***Write a guessing game.***  
->
->Here is an example interaction:
->```
-Guess a number between 1-10
->>> 3
-Too low
->>>9
-Too high
->>>7
-You got it!
-```
-
-## Auto Loops
-```java
-// Example of an auto loop
-loop VAR from 1 to 10
-   output VAR
-end loop
-```
-
-### Practice Auto Loops
-
-{: .task }
->***Write pseudocode to calculate the numbers in the fibonacci sequence.*** 
->
->Each number in the fibonacci sequence is the sum of the two previous numbers
->
->Your output should look like this:
-```
-How many terms of the fibonacci sequence would you like?
->>> 10
-1
-1
-2
-3
-5
-8
-13
-21
-34
-55
-```

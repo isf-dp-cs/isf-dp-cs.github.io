@@ -2,7 +2,7 @@
 layout: default
 title: Debugging Pseudocode
 parent: CS11
-nav_order: 2
+nav_order: 1
 # published: false
 ---
 

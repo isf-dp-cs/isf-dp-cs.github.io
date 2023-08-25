@@ -57,6 +57,7 @@ plugins:
 #   - vendor/ruby/
 
 
+#callouts
 callouts_level: quiet # or loud
 callouts:
   warning:
@@ -68,3 +69,7 @@ callouts:
   example:
     title: Example Interaction
     color: blue
+
+
+#logo
+# logo: "https://academy.isf.edu.hk/wp-content/uploads/118.jpg"

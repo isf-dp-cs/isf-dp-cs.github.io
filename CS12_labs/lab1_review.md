@@ -1,9 +1,9 @@
 ---
 layout: default
-title: Review
+title: Books Manager Exercise
 parent: CS12
 # nav_order: 0
-published: false
+# published: false
 ---
 
 # Intro Exercises
@@ -18,52 +18,63 @@ published: false
 {:toc}
 </details>
 
-## Variables
-```java
-// Example of a pseudocode loop
-X=1
-```
+## Overview
+The Book Manager lets users create digital bookshelves and sort books onto them, sort of like [Goodreads](https://www.goodreads.com/)
 
-💻 ***Write a loop that counts down from 10 to 0***
+![Diagram](https://lucid.app/publicSegments/view/dda5e171-8e0a-48df-8f64-34fa944a9a49/image.png)
 
 
-## Input and Output
-```java
-// Example of a pseudocode loop
-X=1
-```
+## UML
 
-💻 ***Write a loop that counts down from 10 to 0***
+Here is the UML for this assignnment. If you would like to view it on its own, [click here](https://lucid.app/publicSegments/view/33ba1431-02d7-4cbe-87a7-4cc7c1597547/image.png)
 
+![this stuff](https://lucid.app/publicSegments/view/33ba1431-02d7-4cbe-87a7-4cc7c1597547/image.png)
 
-## For Loops
-```java
-// Example of a java loop
-class Main {
-  public static void main(String[] args) {
-    int n = 5;
-    // for loop  
-    for (int i = 1; i <= n; ++i) {
-      System.out.println("Java is fun");
-    }
-  }
-}
-```
+## Details about some Classes
 
-💻 ***Write a loop that counts down from 10 to 0***
+### User 
 
-## While Loops
-```java
-// Example of a pseudocode loop
-loop VAR from 1 to 2
-   output VAR
-end loop
-```
+#### printUserInfo()
+This method should print out the username and the labels of all of their bookshelves.
 
-💻 ***Write a loop that counts down from 10 to 0***
+### Bookshelf
 
-## Extension
+#### addBooks()
+When a book is added to the bookshelf, this method should ***also*** add the shelf's label into the Book's `bookshelves` list.
 
-💻 ***Do something cool***
+#### printBooks()
+This method should print out all the titles of the books on the bookshelf.
+
+### Book
+
+#### bookshelves
+A book can be on multiple bookshelves at once (for example, it might be on your `Horror bookshelf`, your `Stephen King Bookshelf` and your `Want to Read` bookshelf). The bookshelves attribute shouls store the `labels` of the bookshelves it's on.
+
+#### rating
+The rating should be an integer. The default rating should be -1.
 
 
+#### printInfo()
+This method should print out the title, author, and rating for the book. If a rating is -1, print that the book has not yet been rated.
+
+## Extensions
+
+### Validation: Username restrictions
+A username must be between at least 4-15 characters long. 
+
+If a user tries to make an account with an invalid username, they should instead get some default username.
+If a user tries to change their username with an invalid username, the username should stay the same
+
+### Validation: No duplicates 
+If a user tries to add in a bookshelf that already exists, they should receive an error message and the new bookshelf should not be created.
+
+If a user tries to add a book to the same bookshelf twice, they should receive an error message and the book should not be added.
+
+### Validation: Valid ratings
+If a user wants to set the rating to something negative, or something over 5, you should not let them.
+
+### Remove books from bookshelves
+If you want to remove a book from a bookshelf, consider all the places that must be updated.
+
+### Delete bookshelves
+If you want to delete bookshelves, first make sure that they are empty.
