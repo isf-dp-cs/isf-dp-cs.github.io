@@ -143,6 +143,42 @@ TEAM 2
 - Lucy
 >```
 
+### Exercise 3: Who won the election?
+
+{: .task }
+> ***Imagine you have 4 candidates for Governor of Candy Land:***
+> - Peppa Pig [0]
+> - Harry Potter [1]
+> - Barbie [2]
+> - Mr. Potato Head [3]
+> - [ ] ***Create a collection storing all the votes***
+>```java
+VOTES = new Collection()
+VOTES.addItem("Barbie")
+VOTES.addItem("Harry Potter")
+VOTES.addItem("Barbie")
+VOTES.addItem("Peppa Pig")
+...
+VOTES.addItem("Barbie")
+VOTES.addItem("Barbie")
+VOTES.addItem("Peppa Pig")
+>```
+> - [ ] ***You should create an array to count up the votes***
+>```java
+// stores the number of votes for each candidate
+COUNTS = [0,0,0,0] 
+>```
+>  - [ ] ***Loop through the VOTES collection***
+>  - [ ] ***Count up how many votes each candidate has using the COUNTS array.***
+>  - [ ] ***Output the COUNTS array***
+>
+
+Extension:
+
+{: .task }
+>  - [ ] ***Now you do not know how many candidates you have in the election. How will you calculate the winner?***
+
+
 ## Deliverables
 
 {: .deliverable }
