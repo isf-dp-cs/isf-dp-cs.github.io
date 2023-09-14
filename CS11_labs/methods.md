@@ -26,7 +26,7 @@ Open up the [pseudocode compiler](http://ibcomp.fis.edu/pseudocode/pcode.html) i
 
 ### Creating a Method
 ```java
-method printNums()
+method printNums(NUMS)
    loop C from 0 to 9
       output NUMS[C]
    end loop
