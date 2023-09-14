@@ -6,7 +6,7 @@ parent: CS12
 # published: false
 ---
 
-# Intro Exercises
+# Books Manager
 {: .no_toc }
 
 <details open markdown="block">
