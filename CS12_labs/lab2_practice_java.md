@@ -52,11 +52,14 @@ A method is needed to select from the original unsorted array `allMovies` the th
 >
 >You may assume that `allMovies` contains at least three `Movie` objects within the `chosenGenre`. As part of your answer you should use the method `movieSort()` as developed in part (b).
 
-## Additional Questions (HL)
+## Additional Question (HL)
 
-### (a)
-Imagine that the tv shows are stored in a `LinkedList` 
+### (d)
+Imagine that the tv shows are stored in a `LinkedList` called `allShows`.
+
 {: .task }
->Construct the code for the method `topThree` that will take an integer parameter `chosenGenre`. It must return a sorted array of size 3 that contains the three highest rated `Movie` objects (in ascending order of price) with the correct genre.
->
->You may assume that `allMovies` contains at least three `Movie` objects within the `chosenGenre`. As part of your answer you should use the method `movieSort()` as developed in part (b).
+>Construct a recursive binary search method given as
+```java
+public TvShow binSearch(String title, int low, int high)
+```
+>where `title` is the search term. You may assume that `allShows` is accessible to `binSearch` and that it has been filled with many objects.
