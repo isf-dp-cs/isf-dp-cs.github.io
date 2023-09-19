@@ -3,7 +3,7 @@ layout: default
 title: Key Terms
 parent: CS12
 nav_order: 1
-# published: false
+published: false
 ---
 
 | Term                                                                                                         | Definition                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
