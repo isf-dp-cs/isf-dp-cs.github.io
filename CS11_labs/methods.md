@@ -29,7 +29,7 @@ Open up the [pseudocode compiler](http://ibcomp.fis.edu/pseudocode/pcode.html) i
 method printNums(NUMS)
    loop C from 0 to 9
       output NUMS[C]
-   end loop
+   end loopg
    output "========"
 end method
 ```
