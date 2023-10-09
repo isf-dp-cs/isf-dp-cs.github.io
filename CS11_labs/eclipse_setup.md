@@ -9,6 +9,8 @@ nav_order: 7
 # Download Eclipse
 {: .no_toc }
 
+[Note: if eclipse is not working for you, you can use this online compiler](https://www.jdoodle.com/online-java-compiler/)
+
 ## Go to this link
 [Go here to download Eclipse](https://www.eclipse.org/downloads/)
 
