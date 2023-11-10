@@ -46,8 +46,8 @@ public class Cat {
 
 	// main method
 	public static void main(String[] args) {
-		Cat myCat = new Cat("Ollie") // creates a new cat object
-		myCat.speak() //calls the cat object's method
+		Cat myCat = new Cat("Ollie"); // creates a new cat object
+		myCat.speak(); //calls the cat object's method
 	}
 }
 ```
