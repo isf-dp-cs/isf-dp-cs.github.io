@@ -1,8 +1,8 @@
 ---
 layout: default
-title: Java Intro 
+title: Classes Intro 
 parent: CS11
-nav_order: 9
+nav_order: 12
 # published: false
 ---
 
@@ -18,54 +18,66 @@ nav_order: 9
 - TOC
 {:toc}
 </details>
-## Starter code
+
+## Setup
+{: .task }
+Go to moodle and download `Cat Exercise`
+Import it into Eclipse
+
+
+## Creating an object in Java
 
 {: .task }
-Copy this starter code into your new Java class
 
 ```java
 public class Cat {
-
-	private String name;
+	//atributes
+	private String name; 
 	private int lives = 9;
 
-	Cat(String name) {
+	//methods
+	public Cat(String name) {
 		this.name = name;
 	}
 
-	void meow() {
-		System.out.println("meeeeeooooooooooowwwwwwwww!!");
+	public void speak() {
+		System.out.println("meow!!");
 	}
 
-	public void printName() {
-		if (name == null)
-			System.out.println("i don't know my own name!");
-		else
-			System.out.println("my name is " + name);
-	}
-
-	void kill() {
-		lives--;
-		if (lives > 0)
-			System.out.println("nice try, but I still have " + lives + " lives left");
-		else if (lives < 0)
-			System.out.println("that's overkill yo!");
-		else
-			System.out.println("DEAD CAT :(");
-	}
-
+	// main method
 	public static void main(String[] args) {
-		/* Do the following things without changing the Cat class */
-
-		// 1. Make the Cat meow
-
-		// 2. Get the Cat to print it's name
-
-		// 3. Kill the Cat!
-
+		Cat myCat = new Cat("Ollie") // creates a new cat object
+		myCat.speak() //calls the cat object's method
 	}
 }
 ```
+
+## Extension: Brawler Game
+
+{: .task }
+- Add a `power` attribute to the cat
+- Add the required methods to get and set the `power` of the cat
+- Use a `for loop` to create an array containing multiple cats with random power levels
+- Use a `while loop` to create the brawler game
+	- Randomly select two cats from the array
+	- The stronger cat wins
+	- The winning cat gains power
+	- The losing cat loses a life
+	- The game ends when only one cat is left alive
+
+Here's how you can randomly generate numbers in java:
+```java
+import java.util.Random;
+
+Random rand = new Random();
+
+// Obtain a number between [0 - 49].
+int n = rand.nextInt(50);
+```
+
+
+
+<!-- 
 
 {: .task }
 Create a new java project, and this paste this starter code into your new Java class
@@ -107,3 +119,4 @@ public class Harry {
 
 }
 ```
+ -->
