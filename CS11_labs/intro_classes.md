@@ -21,8 +21,8 @@ nav_order: 12
 
 ## Setup
 {: .task }
-Go to moodle and download `Cat Exercise`
-Import it into Eclipse
+- Go to moodle and download `Cat Exercise`
+- Import it into Eclipse
 
 
 ## Creating an object in Java
