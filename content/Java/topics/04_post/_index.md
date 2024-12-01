@@ -1,22 +1,34 @@
 ---
 title: "Posts" 
 bookFlatSection: false
-weight: 6
+weight: 7
 # bookCollapseSection: true
-draft: true
+# draft: true
 ---
 
 # Posts
-This lab uses Java OOP principles. It emphasizes using class objects inside other classes.
+This lab is based after the November 24 mock exam. **You will practice reviews these skills** :
+- creating and using classes, objects, methods, attributes, parameters
+- referencing class objects inside other classes
+- avoiding null objects when looping through arrays 
+- sorting
+
+Concepts introduced in this lab. By the end of this lab you should be able to **identify examples of each concept, and correctly use these terms, and use them in your code**
+
+- **Escape sequences** *- (e.g. \n for a newline)*
+- **Polymorphism** *- (e.g. overriding toString to print a Post object)*
+- **Exceptions** *- (e.g. IOException)*
+- **Static methods** *- (e.g. `static Post[] readPostsFromFile`)* 
+- **String methods `.equals(String)` `.toUpperCase()` `.toLowerCase()` `.length()`**
+- **UML to describe one-to-many relationships**
 
 ---
 
 ## [0] Setup
 
-
 ### Clone the Repository
 
-#### 💻 select [`Projects`] > [`Get from VCS`] > [`Repository URL`]
+#### 💻 select [`+ New Project`] > [`Repository URL`]
 
 {{< figure src="images/courses/java/intellijIDEA/intellij_repo_url.png" width="50%">}}
 
@@ -27,14 +39,14 @@ This lab uses Java OOP principles. It emphasizes using class objects inside othe
 Be sure to change `yourgithubusername` to your actual GitHub username.
 
 ```shell
-https://github.com/isf-dp-cs/lab_cards_yourgithubusername
+https://github.com/isf-dp-cs/lab_post_yourgithubusername
 ```
 
 ---
 
-## [1] Cards
+## [1] Post
 
-The class Cards has already been written for you. It is a simplified version of the Cards you wrote last class. 
+The class Post has already been written for you. It is based off of the following UML. 
 
 {{< mermaid >}}
 
@@ -44,14 +56,94 @@ classDiagram
         - hashtag: String 
     	- likes: int 
         - visibility: boolean
-        + default constructor()
+        + Post(String textContent, String hashtag, boolean visibility, int likes)
         + accessors and mutator methods  ()
     }
-
 {{< /mermaid >}}
 
-{{< mermaid >}}
+**Polymorphism in `toString()`**
 
+Polymorphism is when we `override` the usual behavior of a method and define new behavior. 
+The usual behavior of `toString()` on any object would be to print out the memory location like this:
+
+```java
+Post post2 = new Post("Check out this cool picture!", "#coolpicture", false, 0);
+System.out.println(post1);
+
+-----------------
+model.Post@30f39991
+```
+
+This method of `Post` overrides `toString()`, so now it will print nicely to the console. 
+
+```java
+Post post2 = new Post("Check out this cool picture!", "#coolpicture", false, 0);
+System.out.println(post1);
+
+--------------------------------------------------
+| Check out this cool picture! |
+--------------------------------------------------
+| Hashtag: #coolpicture |
+--------------------------------------------------
+| Likes: 0 |
+--------------------------------------------------
+```
+In order to override a method, we need to make sure that we keep these the same:
+
+- Method name
+- Return type
+- Number and type of parameters
+
+Additionally, we should include the @Override keyword above our child class method to indicate to the compiler that we want to override a method in the parent class.
+
+```java
+@Override
+public String toString()
+```
+
+---
+
+### Construct findSamplePosts()
+
+In the `Main` class, there is a method `readPostsFromFile()` that reads all `Post` objects from a text file `posts_database.txt` into a large, unsorted array called `allPosts`.  
+
+A method is needed to show users a sample selection of posts from the platform.
+This method should take the array `allPosts` as a parameter and select `Post` objects from `allPosts` so that every available hashtag is presented only once.   
+
+There are empty spaces at the end of the array `allPosts`. 
+
+
+You may assume that there are never more than 100 different `hashtags` on the platform (as identified by the variable `hashtag`).
+
+💻 **Construct the code for the method `findSamplePosts()` that will take the array allPosts as a parameter.** It must return a `Post` array that contains one post for every `hashtag` that is used on the social media platform, without including any two `Posts` with the same `hashtag`. 
+
+
+### Construct steps to list of most popular hashtags
+The students want to know which topics are popular on their platform. Therefore, they want to view which `hashtags` were used in posts with the most likes. To be included, the hashtag must be on a publicly visible post that has at least 200 likes. Even if a `hashtag` is used on many popular posts, it should only be included once in the list of hashtags.   
+
+💻 **Construct the code for the method `findPopularHashtags()` that will perform this query and return the results in the form of a `String` array.**
+
+
+### Update visibility to include 3 options
+
+The students now want to change the `visibility` feature. Instead of only two options for `visibility` (being viewable by friends or publicly viewable), posts will have a third option to be viewable only to the user themselves.   
+
+Because of this, `visibility` can no longer be a `boolean`. Decide which data type is more appropriate, and then make this change. 
+
+*Note: you will need to make chages in may places, including:*
+`Post`
+- the constructor, accessor, mutator
+- toString
+`Main`
+- `readPostsFromFile()`
+`posts_database.txt`
+
+
+## [2] Profile
+
+The `Profile` creates profiles, which each contain an array of many `Post` objects.
+
+{{< mermaid >}}
 classDiagram
     class Profile {
 		- username: String
@@ -62,118 +154,30 @@ classDiagram
         + sortPosts() void
         + accessors and mutator methods  ()
     }
-
 {{< /mermaid >}}
 
+<!-- `Profiles` and `Posts` have a one-to-many relationship. In UML, it is shown like this:
 
-{{< columns >}}
-```java
-public class Student {
-	// attributes 
-    private String name;
-    private String[] subjects;
+### UML GOES HERE -->
 
-	//constructor
-    public Student(String name, String[] subjects) {
-        this.name = name;
-        this.subjects = subjects;
-    }
-
-	//accessors and mutators
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String[] getSubjects() {
-        return subjects;
-    }
-
-    public void setSubjects(String[] subjects) {
-        this.subjects = subjects;
-    }
-}
-```
-
-<--->
-
-{{< mermaid >}}
-classDiagram
-    class Student {
-		-String name
-    	-String[] subjects
-		+Student(String name, String[] subjects)
-        + getName(): String
-        + setName(name: String): void
-        + getSubjects(): String[]
-        + setSubjects(subjects: String[]): void
-    }
-{{< /mermaid >}}
-
-{{< /columns >}}
-
-There are a few main differences:
-
-### Only 2 attributes
-
-```java
-public class Card {
-    private String suit;
-    private int rank;
-```
-
-### Overriding toString()
-
-This method overrides `toString()`. This means that now, if you use `System.out.println()` on a `Card` object, it will print nicely to the console:
-
-```java
-   // Override toString
-    // Converts the card to a readable string representation.
-    @Override
-    public String toString() {
-        String rankString;
-        if (rank >= 2 && rank <= 10) {
-            rankString = String.valueOf(rank);
-        } else if (rank == 11) {
-            rankString = "Jack";
-        } else if (rank == 12) {
-            rankString = "Queen";
-        } else if (rank == 13) {
-            rankString = "King";
-        } else if (rank == 1) {
-            rankString = "Ace";
-        } else {
-            rankString = "Invalid Rank";
-        }
-        return rankString + " of " + suit;
-    }
-```
+It is your job to finish the Profile class according to the specifications.
 
 ---
 
-## [2] Deck
 
-The `Deck` class uses the `Card` class to make a deck of cards. It will store all the cards into an array.
+### Attributes + Constructor
+💻 **Construct code to declare the attributes of the Profile class**
 
-{{< mermaid >}}
-classDiagram
-    class Deck {
-		-Card[] cards;
-    	-int topCardIndex;
-        + Deck()
-        + shuffle(): void
-        + dealCard(suit: String): Card
-    }
-{{< /mermaid >}}
 
-It is your job to finish the Deck class according to the specifications.
+💻 **Construct code for the constructor of class Profile.**
 
----
+ 
+### Main Method 
+💻 **Construct code that creates an instance of a profile of a 16 year old named Rex whose chosen username is tyrannosaurus_rex.**
 
-### Deck Constructor
+
+<!-- ### Construct sortPosts
+
 
 💻 **Complete the  constructor so it does 2 things:**
 
@@ -219,9 +223,9 @@ int randomIndex = rand.nextInt(10); //each time you need a new random number, ru
 💻 **Write a method `dealCard()` that returns the next `card` in the deck**
 
 1️⃣ if the `topCardIndex` isn't null, return the card there, then increase `topCardIndex` by 1   
-2️⃣ else, return `null`
+2️⃣ else, return `null` -->
 
----
+<!-- ---
 
 ## [3] Java Arrays
 
@@ -252,11 +256,11 @@ nums[2] = 3;
 ### **Get the length of an array**
 ```java
 marks.length
-```
+``` -->
 
 ---
 
-## [4] Deliverables
+## [3] Deliverables
 
 {{< deliverables>}}
 
