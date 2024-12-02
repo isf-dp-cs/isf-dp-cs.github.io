@@ -15,12 +15,14 @@ This lab is based after the November 24 mock exam. **You will practice reviews t
 
 Concepts introduced in this lab. By the end of this lab you should be able to **identify examples of each concept, and correctly use these terms, and use them in your code**
 
-- **Escape sequences** *- (e.g. \n for a newline)*
+- **BufferedReader(FileReader) methods `.ready` `.readLine`**
 - **Polymorphism** *- (e.g. overriding toString to print a Post object)*
-- **Exceptions** *- (e.g. IOException)*
-- **Static methods** *- (e.g. `static Post[] readPostsFromFile`)* 
-- **String methods `.equals(String)` `.toUpperCase()` `.toLowerCase()` `.length()`**
+- **String methods `.equals(String)` `.toUpperCase()` `.toLowerCase()`**
+
+<!-- - **Escape sequences** *- (e.g. \n for a newline)*
 - **UML to describe one-to-many relationships**
+- **Exceptions** *- (e.g. IOException)*
+- **Static methods** *- (e.g. `static Post[] readPostsFromFile`)*  -->
 
 ---
 
@@ -103,7 +105,7 @@ public String toString()
 
 ---
 
-### Construct findSamplePosts()
+### [a] Find Sample Posts
 
 In the `Main` class, there is a method `readPostsFromFile()` that reads all `Post` objects from a text file `posts_database.txt` into a large, unsorted array called `allPosts`.  
 
@@ -118,26 +120,36 @@ You may assume that there are never more than 100 different `hashtags` on the pl
 💻 **Construct the code for the method `findSamplePosts()` that will take the array allPosts as a parameter.** It must return a `Post` array that contains one post for every `hashtag` that is used on the social media platform, without including any two `Posts` with the same `hashtag`. 
 
 
-### Construct steps to list of most popular hashtags
+---
+
+### [b] Popular Hashtags
+
 The students want to know which topics are popular on their platform. Therefore, they want to view which `hashtags` were used in posts with the most likes. To be included, the hashtag must be on a publicly visible post that has at least 200 likes. Even if a `hashtag` is used on many popular posts, it should only be included once in the list of hashtags.   
 
 💻 **Construct the code for the method `findPopularHashtags()` that will perform this query and return the results in the form of a `String` array.**
 
+---
 
-### Update visibility to include 3 options
+### [c] Update Visibility
 
 The students now want to change the `visibility` feature. Instead of only two options for `visibility` (being viewable by friends or publicly viewable), posts will have a third option to be viewable only to the user themselves.   
 
 Because of this, `visibility` can no longer be a `boolean`. Decide which data type is more appropriate, and then make this change. 
 
 *Note: you will need to make chages in may places, including:*
-`Post`
-- the constructor, accessor, mutator
-- toString
-`Main`
-- `readPostsFromFile()`
-`posts_database.txt`
 
+**`Post`**  
+  - constructor
+  - accessor
+  - mutator
+  - toString   
+
+**`Main`**
+  - `readPostsFromFile()`    
+
+**`posts_database.txt`**
+
+---
 
 ## [2] Profile
 
@@ -165,15 +177,36 @@ It is your job to finish the Profile class according to the specifications.
 ---
 
 
-### Attributes + Constructor
+### [a] Attributes
 💻 **Construct code to declare the attributes of the Profile class**
 
+---
 
+### [b] Constructor
 💻 **Construct code for the constructor of class Profile.**
 
- 
-### Main Method 
-💻 **Construct code that creates an instance of a profile of a 16 year old named Rex whose chosen username is tyrannosaurus_rex.**
+💻 **Be sure to test out that `Profile` works before moving on!.**
+
+
+---
+
+### [c.1] Profile in Main 
+
+💻 **Import the `Profile` class into the Main class.** Reference the way that `Post` was imported as an example.   
+
+💻 **Construct a main method with code that creates an instance of a profile of a 16 year old named Rex whose chosen username is `tyrannosaurus_rex`.**   
+
+Rex needs some posts on his profile.    
+💻 **Create a new `.txt` file like `posts_database.txt` to create lots of posts for Rex, and read it in using `readPostsFromFile()`.**
+
+---
+
+### [c.2] Sort Posts
+
+💻 **In `Profile`, construct the code for the method `sortPosts` that will sort the array `myPosts` in descending order of number of likes.**   
+
+After you're finished, make sure to test it on Rex in `Main`!
+
 
 
 <!-- ### Construct sortPosts
