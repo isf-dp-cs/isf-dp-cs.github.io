@@ -41,7 +41,7 @@ Concepts introduced in this lab. By the end of this lab you should be able to **
 Be sure to change `yourgithubusername` to your actual GitHub username.
 
 ```shell
-https://github.com/isf-dp-cs/lab_post_yourgithubusername
+https://github.com/isf-dp-cs/lab_posts_yourgithubusername
 ```
 
 ---
@@ -69,7 +69,7 @@ Polymorphism is when we `override` the usual behavior of a method and define new
 The usual behavior of `toString()` on any object would be to print out the memory location like this:
 
 ```java
-Post post2 = new Post("Check out this cool picture!", "#coolpicture", false, 0);
+Post post1 = new Post("Check out this cool picture!", "#coolpicture", false, 0);
 System.out.println(post1);
 
 -----------------
@@ -79,7 +79,7 @@ model.Post@30f39991
 This method of `Post` overrides `toString()`, so now it will print nicely to the console. 
 
 ```java
-Post post2 = new Post("Check out this cool picture!", "#coolpicture", false, 0);
+Post post1 = new Post("Check out this cool picture!", "#coolpicture", false, 0);
 System.out.println(post1);
 
 --------------------------------------------------
