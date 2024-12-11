@@ -97,11 +97,11 @@ classDiagram
         + setAllSongs(Song[]): void
         + sortPopularity(): void
         + sortValence(): void
+        + getSongByTitle(String title): Song
+        + getSongByPopularity(double target): Song
+        + getSongByValence(double target): Song
         + getRandomSong(): Song
         + getRandomPopularSong(int popularity): Song
-        + getSongByTitle(): Song
-        + getSongByPopularity(): Song
-        + getSongByValence(): Song
     }
 {{< /mermaid >}}
 
@@ -135,7 +135,7 @@ double length = Double.parseDouble(data[6]); // read in an double from location 
 ### [a] Sort by Popularity 🫧
 > Note: Use Bubble Sort for this method 
 
-💻 Write a new method `sortPopularity` that sorts `allSongs` by popularity score in descending order (most popular first). This method has access to `allSongs` so it does not need any parameters or to return anything.
+💻 Write a new method `sortPopularity()` that sorts `allSongs` by popularity score in descending order (most popular first). This method has access to `allSongs` so it does not need any parameters or to return anything.
 
 ---
 
@@ -144,13 +144,67 @@ double length = Double.parseDouble(data[6]); // read in an double from location 
 
 Valence is a measure of how "happy" a song sounds. 
 
-💻 Write a new method `sortValence` that sorts `allSongs` by the valence of the songs in ascending order (lowest values first). 
+💻 Write a new method `sortValence()` that sorts `allSongs` by the valence of the songs in ascending order (lowest values first). 
 
 ---
 
-### [c] Get Random Song
+### [c] Search By Title 🔎
+> Note: Use Linear Search for this method  
+
+💻 Write a new method `getSongByTitle(String target)` that finds a song with the given title, and returns that song. If it cannot find a song that matches, it should return null. 
+
+💻 In the `main` method of `Melodify`, **test this method** to be sure it works.
 
 ---
+
+### [d] Search by Popularity 🔎
+> Note: Use Binary Search for this method  
+
+💻 Write a new method `getSongByPopularity(double target)` that finds a song with the given popularity, and returns that song. If it cannot find a song that matches, it should return null. Remember that binary search only works on **sorted arrays**, so be sure to call one of your sorting methods first.
+
+💻 In the `main` method of `Melodify`, **test this method** to be sure it works.
+
+---
+
+### [e] Search by Valence ⤵️
+> Note: Use Binary Search for this method  
+
+This time, you'll practice using a `do...while` loop. It's very similar to a `while` loop, but you state the action **first**, before stating this condition, which ensures it will always run at least one time. Here's an example:
+
+```java
+int i = 0;
+do {
+  System.out.println(i);
+  i++;
+}
+while (i < 5);
+```
+
+💻 Write a new method `getSongByValence(double target)` that finds a song with the given valence, and returns that song. Use the `do...while` loop. If it cannot find a song that matches, it should return null. Remember that binary search only works on **sorted arrays**, so be sure to call one of your sorting methods first.
+
+💻 In the `main` method of `Melodify`, **test this method** to be sure it works.
+
+---
+
+### [f] Get Random Song
+
+💻 Write a new method `getRandomSong()` that returns a random Song. 
+
+> Here's how to randomly generate a number 0-9:   
+```java
+Random rand = new Random(); // you only need to run this once
+int randomIndex = rand.nextInt(10); //each time you need a new random number, run this line of code
+```
+---
+
+### [g] Get Random Song
+
+💻 Write a new method `getRandomPopularSong(int minPopularity)` that returns a random Song that is at least as popular as the parameter. 
+
+Use `do...while` in this method.
+
+---
+
 
 
 ## [4] Deliverables
