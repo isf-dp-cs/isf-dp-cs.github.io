@@ -107,7 +107,7 @@ classDiagram
 
 ### [a] Attributes + Constructor
 
-Create the correct attribute and constructor for the `Melodify` class, using the UML diagram as a guide.   
+**💻 Create the correct attribute and constructor for the `Melodify` class, using the UML diagram as a guide.**   
 
 You can assume that there will be 200 songs in `allSongs`
 
@@ -117,7 +117,7 @@ You can assume that there will be 200 songs in `allSongs`
 
 In your repository, there is already a file located at `"src/allSongs.txt"`   
 
-In the `Melodify` class, write a method `readPostsFromFile()` that reads all `Song` objects from the text file `allSongs.txt` into `this.allSongs`.  *Hint: reference lab_posts for an example of how to do this*   
+**💻 In the `Melodify` class, write a method `readPostsFromFile()` that reads all `Song` objects from the text file `allSongs.txt` into `this.allSongs`.**  *Hint: reference lab_posts for an example of how to do this*   
 
 Here is a reference of how to parse the different types of data in `allSongs.txt`:
 
@@ -135,7 +135,7 @@ double length = Double.parseDouble(data[6]); // read in an double from location 
 ### [a] Sort by Popularity 🫧
 > Note: Use Bubble Sort for this method 
 
-💻 Write a new method `sortPopularity()` that sorts `allSongs` by popularity score in descending order (most popular first). This method has access to `allSongs` so it does not need any parameters or to return anything.
+**💻 Write a new method `sortPopularity()` that sorts `allSongs` by popularity score in descending order (most popular first).** This method has access to `allSongs` so it does not need any parameters or to return anything.
 
 ---
 
@@ -144,25 +144,25 @@ double length = Double.parseDouble(data[6]); // read in an double from location 
 
 Valence is a measure of how "happy" a song sounds. 
 
-💻 Write a new method `sortValence()` that sorts `allSongs` by the valence of the songs in ascending order (lowest values first). 
+**💻 Write a new method `sortValence()` that sorts `allSongs` by the valence of the songs in ascending order (lowest values first).** 
 
 ---
 
 ### [c] Search By Title 🔎
 > Note: Use Linear Search for this method  
 
-💻 Write a new method `getSongByTitle(String target)` that finds a song with the given title, and returns that song. If it cannot find a song that matches, it should return null. 
+**💻 Write a new method `getSongByTitle(String target)` that finds a song with the given title, and returns that song.** If it cannot find a song that matches, it should return null. 
 
-💻 In the `main` method of `Melodify`, **test this method** to be sure it works.
+**💻 In the `main` method of `Melodify`, test this method to be sure it works.**
 
 ---
 
 ### [d] Search by Popularity 🔎
 > Note: Use Binary Search for this method  
 
-💻 Write a new method `getSongByPopularity(double target)` that finds a song with the given popularity, and returns that song. If it cannot find a song that matches, it should return null. Remember that binary search only works on **sorted arrays**, so be sure to call one of your sorting methods first.
+**💻 Write a new method `getSongByPopularity(double target)` that finds a song with the given popularity, and returns that song. If it cannot find a song that matches, it should return null. Remember that binary search only works on sorted arrays, so be sure to call one of your sorting methods first.**
 
-💻 In the `main` method of `Melodify`, **test this method** to be sure it works.
+**💻 In the `main` method of `Melodify`, **test this method** to be sure it works.**
 
 ---
 
@@ -180,15 +180,15 @@ do {
 while (i < 5);
 ```
 
-💻 Write a new method `getSongByValence(double target)` that finds a song with the given valence, and returns that song. Use the `do...while` loop. If it cannot find a song that matches, it should return null. Remember that binary search only works on **sorted arrays**, so be sure to call one of your sorting methods first.
+**💻 Write a new method `getSongByValence(double target)` that finds a song with the given valence, and returns that song. Use the `do...while` loop. If it cannot find a song that matches, it should return null. Remember that binary search only works on sorted arrays, so be sure to call one of your sorting methods first.**
 
-💻 In the `main` method of `Melodify`, **test this method** to be sure it works.
+**💻 In the `main` method of `Melodify`, test this method to be sure it works.**
 
 ---
 
 ### [f] Get Random Song
 
-💻 Write a new method `getRandomSong()` that returns a random Song. 
+**💻 Write a new method `getRandomSong()` that returns a random Song.** 
 
 > Here's how to randomly generate a number 0-9:   
 ```java
@@ -197,14 +197,13 @@ int randomIndex = rand.nextInt(10); //each time you need a new random number, ru
 ```
 ---
 
-### [g] Get Random Song
+### [g] Get Random Song by Valence
 
-💻 Write a new method `getRandomPopularSong(int minPopularity)` that returns a random Song that is at least as popular as the parameter. 
+**💻 Write a new method `getRandomPopularSong(int minPopularity)` that returns a random Song that is at least as popular as the parameter.** 
 
 Use `do...while` in this method.
 
 ---
-
 
 
 ## [4] Deliverables
@@ -227,3 +226,28 @@ Use `do...while` in this method.
 
 
 {{< /deliverables>}}
+
+---
+
+## [5]  Extension
+
+### [a] Recursion
+
+Binary Search is a method that is commonly made `recursive`. In addition to the target value, it also takes the array, and the left and right indices as parameters.    
+
+**💻 Create a new method `getSongByEnergy(Song[] arr, int left, int right, double target)` that uses recursive binary search to find the target song.**
+
+### [b] Melodify Wrapped
+
+Now it's time to create a Melodify Wrapped! 
+
+**💻 Read in listening data. You can use teacher data, or data from Lawrence, Brendan, or Kenneth if they're feeling generous.**
+
+**💻 Try generating a "Melodify Wrapped" for them**   
+Some ideas:
+- Calculate their average energy and valence levels, and their most popular genre to give them their label, e.g. "Pink Pilates Princess", "Indie Sleaze", etc.
+- Calculate their total minutes listened
+- Calculate their 5 top artists
+- Calculate their 5 top tracks\
+- Create their top 100 tracks playlist
+
