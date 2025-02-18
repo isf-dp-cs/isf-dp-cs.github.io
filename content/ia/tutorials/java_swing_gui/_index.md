@@ -1,7 +1,7 @@
 ---
 title: "Java Swing GUI" 
 bookFlatSection: true
-weight: 10
+weight: 13
 # bookCollapseSection: true
 # draft: true
 ---
