@@ -14,16 +14,13 @@ This page contains information and coding exercises for `queues`.
 
 ---
 
-
-## Queue Examples
-
 ### Creating a new Queue
 ```java
 NAMES = new Queue()
 ```
 
 ### Queue methods
-```java
+```shell
 NAMES.enqueue("Bob") // put an item into the end of a queue
 NEXT_NAME = NAMES.dequeue() // remove and return the item from the front of the Queue
 NAMES.isEmpty() // returns TRUE if queue is empty, FALSE otherwise

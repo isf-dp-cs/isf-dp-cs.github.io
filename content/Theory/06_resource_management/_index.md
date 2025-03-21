@@ -1,6 +1,6 @@
 ---
-title: "➡️ Resource Management"
-weight: 08 #temporarily put first
+title: "[6] Resource Management"
+weight: 60 #temporarily put first
 # bookFlatSection: false
 # bookCollapseSection: true
 ---

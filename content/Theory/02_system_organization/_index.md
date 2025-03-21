@@ -1,5 +1,5 @@
 ---
-title: "Computer Organization"
+title: "[2] Computer Organization"
 weight: 20
 # bookFlatSection: false #this makes it so this page isn't seen
 # bookCollapseSection: true
@@ -48,3 +48,13 @@ weight: 20
 | Unicode                                              | A character encoding standard that allows computers to represent and manipulate text from different writing systems.               |
 | Ergonomics                                           | The study of designing equipment and devices that are comfortable and efficient for human use.                                     |
 | Accessibility                                        | The degree to which a system or device can be used by people with disabilities or special needs.                                   |
+
+
+| Term                                                    | Meaning                                                                                                                                                                                                                                               |
+| ------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| AND                                                  | A Boolean operator that returns true if and only if both of its inputs are true.                                                   |
+| OR                                                   | A Boolean operator that returns true if at least one of its inputs is true.                                                        |
+| NOT                                                  | A Boolean operator that negates the input, returning true if the input is false, and vice versa.                                   |
+| NAND                                                 | A Boolean operator that returns false if and only if both of its inputs are true.                                                  |
+| NOR                                                  | A Boolean operator that returns true if both of its inputs are false.                                                              |
+| XOR                                                  | A Boolean operator that returns true if and only if exactly one of its inputs is true.                                             |

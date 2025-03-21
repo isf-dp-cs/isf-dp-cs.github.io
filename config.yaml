@@ -1,5 +1,6 @@
 # baseURL: https://amethyst.bencuan.me
 baseURL: "https://github.io/the-isf-academy/making-with-code"
+# pygmentsStyle: "monokai"
 
 # Book configuration
 disablePathToLower: true
@@ -14,7 +15,7 @@ markup:
     startLevel: 1
   highlight:
     style: catppuccin-macchiato
-    guessSyntax: false
+    # guessSyntax: true
 
 
 # Multi-lingual mode config
@@ -72,7 +73,7 @@ params:
   enableGitHubEdit: true
 
   # whether to render mermaid diagrams
-  enableMermaid: false
+  enableMermaid: true
 
   # Link to your Github repo
   GitHubLink: https://github.com/64bitpandas/amethyst

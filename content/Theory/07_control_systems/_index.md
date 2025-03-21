@@ -1,6 +1,6 @@
 ---
-title: "➡️ Control Systems"
-weight: 09 #temporarily put first
+title: "[7] Control Systems"
+weight: 70 #temporarily put first
 # bookFlatSection: false
 # bookCollapseSection: true
 ---

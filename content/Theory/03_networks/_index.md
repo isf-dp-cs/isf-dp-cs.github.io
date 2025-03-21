@@ -1,5 +1,5 @@
 ---
-title: "Networks"
+title: "[3] Networks"
 weight: 30
 # bookFlatSection: false #this makes it so this page isn't seen
 # bookCollapseSection: true
