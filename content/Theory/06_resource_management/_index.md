@@ -15,6 +15,10 @@ weight: 60 #temporarily put first
 [Topic 6 Quizlet Flashcards](https://quizlet.com/539642182/ib-computer-science-topic-6-flash-cards/) from CS Classroom.
 
 [Video](https://www.youtube.com/watch?v=cqEqWjO5xGo) from CS Classroom.
+
+---
+
+
 ## Example Problems
 
 The example problems below are a subset of 18 questions from the past papers 2018-2024. This subset focuses on questions that cover `Topic 6 - Resource Management`, but due to the nature of IB exam questions, some sub-questions are from `Topic 7 - Control Systems`.

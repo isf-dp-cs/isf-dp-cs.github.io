@@ -8,9 +8,42 @@ weight: 50
 
 ---
 
+## Review Tools
+[Topic 5 Revision](https://www.computersciencecafe.com/key-terminology-ib-topic-5-223994.html) from Computer Science Cafe.
+
+[Topic 5 Key Terminology](https://www.computersciencecafe.com/key-terminology-ib-topic-5.html) from Computer Science Cafe.
+
+
+[Video 1](https://youtu.be/M5QYynjOaRU?si=tO7d1b5DmZxW97KF) from CS Classroom (Intro, 2D Arrays, Recursion)
+
+[Video 2](https://youtu.be/wf3Ifpbyy38?si=t2ubBRi_AkZko5AX) from CS Classroom (Stacks and Queues)
+
+
+---
+
+## Key Terms (covered)
+
+{{< expand "View Terms" >}}
+
+*Covered for Class of 2026*
+
+| Term                  | Meaning                                                                                                                                    |
+| --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
+| 2D arrays             | A data structure that stores elements in a grid-like format with rows and columns.                                                         |
+| Stacks                | A data structure that follows the Last-In-First-Out (LIFO) principle, where elements are added and removed from the same end.              |
+| Queues                | A data structure that follows the First-In-First-Out (FIFO) principle, where elements are added to one end and removed from the other end. |
+| Recursion             | A programming technique where a function calls itself.                                                                                     |
+| Base case             | The terminating condition for a recursive function.                                                                                        |
+| Recursive case        | The condition where a recursive function continues to call itself.                                                                         |
+
+{{< /expand >}}
+
+---
+
 ## Example Problems Stacks + Queues
 
-### 1. Identify two applications of a stack. [2]
+
+**1. Identify two applications of a stack. [2]**
 
 {{< expand "Answer" >}}
 Award [2 max]:
@@ -29,8 +62,7 @@ Award [2 max]:
 
 ---
 
-### 2. Identify two applications of queues in computing. [2]
-
+**2. Identify two applications of queues in computing. [2]**
 {{< expand "Answer" >}}
 Award [2 max]:
 - Print queue (serving requests on a shared printer) / spooling in printer.
@@ -48,7 +80,7 @@ Note: Accept other appropriate examples of applications of queues in computing.
 
 ---
 
-### 3. Stack operations. [6]
+**3. Stack operations. [6]**
 
 A stack is a data structure that is used in the implementation of a recursive method.
 
@@ -101,9 +133,7 @@ end loop
 
 ---
 
-### 4. Define the term queue and identify its applications.
-
-A computer science student is coding and running a program while several documents, such as essays, lab reports and homework, are being printed out.
+**4. A computer science student is coding and running a program while several documents, such as essays, lab reports and homework, are being printed out.**
 
 #### (a) Define the term queue as a data structure. [1]
 
@@ -125,7 +155,7 @@ Accept any other job queue (e.g., program is running).
 
 ---
 
-### 5. Identify one characteristic of a queue. [1]
+**5. Identify one characteristic of a queue. [1]**
 
 {{< expand "Answer" >}}
 Award [1 max]:
@@ -139,7 +169,7 @@ Award [1 max]:
 
 ## Example Problems 2D Arrays
 
-### 1. 2D Arrays using dice rolls. [15]
+**1. 2D Arrays using dice rolls. [15]**
 
 A program is developed to simulate the roll of dice in a game.
 
@@ -440,7 +470,7 @@ end loop
 {{< /expand >}}
 
 ---
-### 2. Bus Stops [15]
+**2. Bus Stops [15]**
 
 A bus company provides services within a city. Passengers can look up the distance between any two bus stations on any of its routes.
 
@@ -616,9 +646,37 @@ Award [3 max]:
 
 ## Example Problems Recursion 
 
-### Trace Recursive Algorithm [4]
+**Define the term *recursion*. [1]**
 
-Consider the following recursive method:
+{{< expand "Answer" >}}
+When a method calls on itself.
+{{< /expand >}}
+
+
+---
+
+**Outline two disadvantages of recursive methods. [4]**
+
+{{< expand "Answer" >}}
+Award [4 max]   
+Award [1] for a disadvantage and [1] for the elaboration, ×2.
+
+- **Memory intensive**:  
+    - Recursion uses memory (call stack) to store all intermediate arguments and return values.  
+    - This could lead to stack overflow if there is a large amount of data.
+
+- **Can be slow**:  
+    - If not implemented correctly, recursion can result in too many recursive calls, slowing down execution.
+
+- **Complex logic**:  
+    - Recursive functions can be difficult to construct, analyze, or understand due to the complexity of the paradigm.
+
+{{< /expand >}}
+
+
+---
+
+**Consider the following recursive method:**
 
 ```python
 def rec(A):
@@ -628,7 +686,7 @@ def rec(A):
         return 1
 ```
 
-#### (a) Determine the value of `rec(5)` (show all your working). [4]
+#### Determine the value of `rec(5)` (show all your working). [4]
 
 {{< expand "Answer" >}}
 Award [4 max]:
@@ -646,21 +704,67 @@ rec(5)
 
 {{< /expand >}}
 
+---
+
+**Explain how a stack may be used in the implementation of a recursive function. [4]**
+
+{{< expand "Answer" >}}
+Award [4 max]    
+
+- A recursive function calls itself during its execution;
+- First call (all local variables, data, return addresses, etc.) is pushed onto stack;
+- Second/subsequent recursive calls are pushed on to the stack (added above previous call(s));
+- When the terminating condition is met/ execution of recursive function ends;
+- The function calls pop from the stack;
+- In the reverse order to which they were pushed/LIFO;
+{{< /expand >}}
 
 ---
 
-## Key Terms
+**Consider the following recursive method:**
 
-*Covered for Class of 2026*
+```python
+fun(N)
+    if N > 0
+        then
+            return (N mod 10) + fun(N div 10)
+        else
+            return 0
+    end if
+end fun
+```
 
-| Term                  | Meaning                                                                                                                                    |
-| --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| 2D arrays             | A data structure that stores elements in a grid-like format with rows and columns.                                                         |
-| Stacks                | A data structure that follows the Last-In-First-Out (LIFO) principle, where elements are added and removed from the same end.              |
-| Queues                | A data structure that follows the First-In-First-Out (FIFO) principle, where elements are added to one end and removed from the other end. |
-| Recursion             | A programming technique where a function calls itself.                                                                                     |
-| Base case             | The terminating condition for a recursive function.                                                                                        |
-| Recursive case        | The condition where a recursive function continues to call itself.                                                                         |
+#### (a) Determine the value of `fun(1216)`. Show all your working. [4]
+
+{{< expand "Answer" >}}
+Award [4 max]:
+
+The working may be differently represented. If only the final result (8) is shown, then award only one mark.
+
+```python
+fun(1216) = 6 + fun(121);
+          =6 + 1 + fun(12);
+          =6+1+2+ fun(1);
+          =6+1+2+1+ fun(0);
+          =6+1+2+1+0= 10;
+```
+
+{{< /expand >}}
+
+
+#### (b) Deduce the purpose of this recursive method. [2]
+
+{{< expand "Answer" >}}
+Award [2 max]:
+
+Calculates/returns the sum;
+Of all digits in N;
+
+{{< /expand >}}
+
+---
+
+## Key Terms (not covered)
 
 *Not covered for Class of 2026*
 
