@@ -295,6 +295,8 @@ Note: Accept a correct truth table for the expression A NAND B.
 
 {{< /expand >}}
 
+---
+
 ### Logic Gates and Circuits
 
 ---
