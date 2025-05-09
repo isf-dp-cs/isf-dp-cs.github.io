@@ -32,7 +32,7 @@ In general, you can use GitHub Copilot [here.](https://github.com/copilot)
 
 3. To install the plugin, click *Install* and restart IntelliJ IDEA.
 
-### Adding VSCode Plugin
+### Adding VSCode Extension
 
 1. Press `⌘` `shift` `X` to open *Extensions*.
 
