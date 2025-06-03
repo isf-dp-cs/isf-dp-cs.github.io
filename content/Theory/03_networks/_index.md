@@ -6,6 +6,10 @@ weight: 30
 ---
  # Networks
  
+ ## Key Terminology
+
+ {{< expand "Key Terminology" >}}
+
 | Term                                                    | Meaning                                                                                                                                                                                                                                                  |
 | ------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Local Area Network (LAN)                                | A LAN is a computer network that interconnects devices within a small geographic area, such as a single building or a campus.                                                                                                                            |
@@ -44,3 +48,466 @@ weight: 30
 | Deadlock                                                | A situation that occurs when two or more processes or devices are waiting for each other to release resources, resulting in a standstill or system failure.                                                                                              |
 | Congestion                                              | A situation that occurs when a network or communication channel becomes overloaded with data traffic, resulting in slower data transmission or even data loss.                                                                                           |
 | Error Checking                                          | A technique used to detect errors in data transmission, storage, and retrieval. This can involve various methods, such as parity checking, checksums, or cyclic redundancy checks (CRC).                                                                 |
+
+{{< /expand >}}
+
+---
+
+## Example Problems
+
+---
+
+### Types of Networks
+
+
+**Describe the purpose of the following hardware component of a network: Router. [2]**
+
+{{< expand "Markscheme" >}}
+*Award [2 max]*  
+- A router is a hardware device that connects multiple networks together;  
+- It directs data packets between networks based on their destination addresses;  
+- The router examines each packet and determines the best path for it to reach its destination;  
+- It uses protocols to decide how and where to forward packets;  
+- Routers help manage network traffic and ensure data is sent efficiently;  
+{{< /expand >}}
+
+---
+
+**Describe the purpose of the following hardware component of a network: Network interface card (NIC). [2]**
+
+{{< expand "Markscheme" >}}
+*Award [2 max]*  
+- A network interface card (NIC) enables a computer or device to connect to a network;  
+- It allows the device to communicate with other devices on the network by sending and receiving data packets;  
+- The NIC provides the hardware interface between the computer and the network transmission media (such as Ethernet cables or wireless signals);  
+- It determines how the device accesses the network and participates in network communication;  
+{{< /expand >}}
+
+---
+
+**(a) Identify one additional hardware component in a wireless LAN. [1]**
+
+{{< expand "Markscheme" >}}
+
+*Award [1 max]*  
+- (Wireless) router;  
+- Access points;  
+- (Wireless) bridge or repeater;  
+- (Wireless) controller;  
+- Wireless adaptors / Network interface cards (NICs);  
+{{< /expand >}}
+
+---
+
+**Identify two characteristics of a personal area network (PAN). [2]**
+
+{{< expand "Markscheme" >}}
+*Award [2 max]*  
+- Smallest type of network;  
+- Consists of connected devices in close proximity to the individual using them;  
+- Connected via Bluetooth/wireless;  
+- Suitable example: smartphone to car connection;  
+{{< /expand >}}
+
+---
+
+**Outline two advantages of a school using a computer network. [4]**
+
+{{< expand "Markscheme" >}}
+*Award [4 max]. Mark as [2] and [2].*
+
+- **File/resource sharing:**  
+    - Files can be shared directly between computers on the network, eliminating the need for physical media like USB drives;  
+    - All computers can share resources such as printers and scanners, improving efficiency;  
+- **Communication:**  
+    - Students and teachers can communicate easily with each other and with people around the world via the network;  
+- **Interactive teamwork:**  
+    - Collaborative software enables multiple users to work on documents or projects at the same time;  
+- **Flexible access:**  
+    - Students can access their files from any computer on the network, allowing them to start work on one device and finish on another;  
+- **Software cost savings:**  
+    - Network licenses for software are often cheaper than purchasing individual licenses for each computer;  
+- **Simplified software management:**  
+    - Installing or updating software on a central server saves time compared to managing each computer individually;  
+- **Improved network security:**  
+    - The school can monitor network activity and enforce security policies, helping to keep data secure;  
+{{< /expand >}}
+ 
+---
+
+
+### Speed
+
+**Explain why the speed of data transmission across a mobile network can vary. [3]**
+
+{{< expand "Markscheme" >}}
+*Award [3 max]*  
+- The network technologies available in the area (3G, 4G, 5G);  
+- Limited bandwidth;  
+- Features of the  device;  
+- Amount of data being transmitted;  
+- Number of other users in the area using the same network;  
+- Location of user with respect to cell towers (signal varies depending on coverage area);  
+{{< /expand >}}
+
+---
+**Explain why the speed of data transmission on the wireless network in the training room may vary. [4]**
+
+{{< expand "Markscheme" >}}
+*Award [4 max]. Mark as [2] and [2].*
+
+- The speed of data transmission on a wireless network can decrease as the distance between the receiver and the transmitter increases;  
+- Physical obstructions such as solid walls can interfere with the wireless signal, slowing down transmission;  
+- The available bandwidth on a wireless network is limited;  
+- As more users connect to the network, the bandwidth is shared, which can reduce transmission speeds for each user;  
+
+*Note to examiners: Answers must relate to wireless networks and not be a comparison between cabled and wireless networks.*
+{{< /expand >}}
+
+---
+
+**(b) Identify two factors that may affect the speed of data transmission. [2]**
+
+{{< expand "Markscheme" >}}
+*Award [2 max]*  
+- Physical distance / the number of network devices which have to be crossed;  
+- The performance of each of the devices (e.g., weak processor);  
+- Quality / characteristics of network equipment (such as the router or transmission media / cable / fibre / wireless);  
+- Number of network users (and their demand at any particular time);  
+- Type of encryption used or the encryption strength / server bandwidth / size of the user data / type of protocol used;  
+{{< /expand >}}
+
+---
+
+A company that provides training for teachers plans to set up a training room in its offices with a network of 15 computers. The company has decided to allow the teachers to use their own devices in its training room by adding wireless networking.
+
+
+
+### Wireless Networks
+
+---
+
+**Distinguish between a wired network and a wireless network in terms of reliability of transmission. [4]**
+
+{{< expand "Markscheme" >}}
+*Award [4 max]*  
+- The reliability of wireless depends on the strength of the wireless signal;  
+    - Depends on distance from router;  
+    - Depends on the topology/shape of the surroundings;  
+    - A wireless LAN has slower data transfer;  
+- Ethernet is more reliable as the strength of the signal does not depend on the distance from the router / wired LAN supports longer distances;  
+- Wired is immune to interference;  
+- There is no issue with the topology/shape of the surrounding;  
+- But the Ethernet cable may be cut/broken affecting reliability;  
+{{< /expand >}}
+
+---
+
+**Outline why a wireless network may be less secure than a wired network. [2]**
+
+{{< expand "Markscheme" >}}
+*Award [2 max]*  
+- Wired network is only accessible with a physical cable connection;  
+- In wireless networks, signals are broadcasted outside of the building, leaving it open to the public and potential hackers / easy to intercept transmissions;  
+- A wireless network is more open to misuse;  
+- Network administrator cannot directly monitor a specific machine;  
+{{< /expand >}}
+
+
+
+---
+
+**Identify two characteristics of wireless transmission. [2]**
+
+{{< expand "Markscheme" >}}
+*Award [2 max]*  
+- Uses radio waves / electromagnetic waves to transfer data;  
+- Transmission speed of data is limited;  
+- Range of transmission / transmission reliability can be affected by distance from access point / number of other users / obstacles etc;  
+- Inexpensive to install / no need to spend on cabling;  
+- Relatively easy to expand / add new devices / scale down to accommodate changes in demand;  
+- Security can be poor (unless encryption is applied) / subject to eavesdropping / interception;  
+- Allows users to move around without losing access to the network;  
+{{< /expand >}}
+
+---
+
+
+
+### Protocols
+
+---
+**Outline why protocols are necessary. [2]**
+
+{{< expand "Markscheme" >}}
+*Award [2 max]*  
+- Protocols define the rules that govern network communication (for example, packet format, type and size, what happens when an error occurs, and which part of the network is supposed to handle the error and how);  
+- Computer networks consist of various types of equipment (such as routers, switches, hubs, and network interface cards) from different vendors, but they must all work together or the network does not operate correctly;  
+- Protocols work in layers (the highest being what the user sees, and the lowest being the wire that the information is transferred along) and these layers communicate with each other according to the rules (allowing communication to occur accurately and efficiently);  
+{{< /expand >}}
+
+---
+
+**Outline one reason why protocols are used in communications between computers. [2]**
+
+{{< expand "Markscheme" >}}
+*Award [2 max]*  
+- To provide a set of rules/procedures;  
+- To enable two or more different electronic devices/computers/entities to understand each other during data transfer / enable successful communication;  
+{{< /expand >}}
+
+---
+
+**Outline three reasons why protocols are necessary on a computer network. [6]**
+
+{{< expand "Markscheme" >}}
+*Award [6 max]*  
+Award [1] for a reason, award [1] for an extension, x3.  
+- Protocols define the rules for communication, ensuring devices can exchange data reliably and efficiently;  
+    - For example, TCP/IP specifies how data is packaged, addressed, transmitted, and received;  
+- Protocols provide security services such as encryption and authentication to protect data during transmission;  
+    - For example, HTTPS and SSL secure web traffic;  
+- Protocols include mechanisms for error checking, flow control, and congestion control to maintain data integrity and network performance;  
+    - For example, error detection helps identify and correct transmission errors, while flow control prevents data loss;  
+{{< /expand >}}
+
+---
+
+### OSI Model
+
+---
+
+**Identify two of the layers of the Open Systems Interconnection (OSI) seven-layer model. [2]**
+
+{{< expand "Markscheme" >}}
+*Award [2 max]*  
+- Physical Layer;  
+- Data Link Layer;  
+- Network Layer;  
+- Transport Layer;  
+- Session Layer;  
+- Presentation Layer;  
+- Application Layer;  
+{{< /expand >}}
+
+
+---
+
+### Security
+
+---
+
+**State one precaution a user can take to secure their data in case their laptop is stolen. [1]**
+
+{{< expand "Markscheme" >}}
+*Award [1 max]*  
+- Assign a password or use biometric authentication on the device;  
+- Avoid storing sensitive data on the laptop;  
+- Safeguard all passwords and avoid saving login credentials or “remember me” cookies on the device;  
+- Encrypt the SSD or hard drive;  
+*Note: Reward other correct responses. Backing up data does not keep it secure, so no marks for “Regularly back up the SSD / hard drive to another location”.*
+{{< /expand >}}
+
+---
+
+**Describe one method of security that may be used on this wireless network. [2]**
+
+{{< expand "Markscheme" >}}
+*Award [2 max]*  
+- Encryption;  
+    - Scrambles the contents of network transmissions so that intercepted data cannot be understood without the decryption key;  
+- User ID (and password);  
+    - Only allows authorized users to access the network;  
+- Media Access Control (MAC) address filtering;  
+    - Only devices with approved MAC addresses can connect to the network;  
+- Firewall;  
+    - Monitors and controls incoming and outgoing network traffic, blocking suspicious data;  
+{{< /expand >}}
+
+---
+
+**Evaluate the use of trusted media access control (MAC) addresses as one method of network security. [4]**
+
+{{< expand "Markscheme" >}}
+*Award [4 max]*  
+- Each network adapter has a unique MAC address assigned by the manufacturer;  
+- Routers can use MAC addresses to identify and authenticate devices, allowing administrators to whitelist or blacklist specific devices for network access;  
+- A disadvantage is that the whitelist must be updated whenever a new device needs access or when guests require temporary access, which can be inconvenient to manage;  
+- This method is not effective against attackers who can intercept network traffic, discover valid MAC addresses, and spoof them to gain unauthorized access;  
+{{< /expand >}}
+ 
+---
+
+**Describe the role of a firewall. [2]**
+
+{{< expand "Markscheme" >}}
+*Award [2 max]*  
+- A firewall monitors incoming and outgoing network traffic;  
+- Decides whether to allow or block specific traffic (based on a defined set of security rules) / restricts access to parts of a network / prevents unauthorised access of confidential data;  
+- Accept software and hardware firewalls;  
+    - Software firewall: program installed on each computer that monitors incoming and outgoing traffic / controls the behaviour of applications;  
+    - Hardware firewall: equipment installed between the network and gateway that regulates traffic through ports and prohibits suspicious data packets;  
+{{< /expand >}}
+
+---
+
+**Outline what is meant by a media access control (MAC) address. [2]**
+
+{{< expand "Markscheme" >}}
+*Award [2 max]*  
+- A physical address/hardware identification number/12-digit hexadecimal number assigned by the manufacturer to a network interface in a device;  
+- That helps to uniquely identify each device on a network;  
+{{< /expand >}}
+
+---
+
+The staff at a doctor’s practice consist of a receptionist and a doctor.
+The patients’ medical records and payments, the doctor’s appointment calendar, and other important data are stored in a database on the central computer.
+
+
+**(a) Outline one security measure that can be taken to prevent unauthorized access to the patients’ data stored on the central computer. [2]**
+
+{{< expand "Markscheme" >}}
+*Award [2 max]*  
+- Passwords should be given to access certain aspects of the data;  
+- There should be levels of hierarchy (e.g., receptionist only allowed to access names, addresses but not medical history/doctor’s notes);  
+- Multi-factor authentication/one-factor authentication;  
+    - Mandates users (doctor and receptionist) to verify their identities through various methods (e.g., PIN, thumb scanning, retina scanning);  
+- Security awareness training for the doctor and receptionist / precautionary measures when handling patient data;  
+- Encryption;  
+    - Makes it harder for hackers to decipher confidential patient data;  
+- Regularly installing updates/patches;  
+    - To ensure the data is protected against new threats;  
+{{< /expand >}}
+
+---
+
+### VPN
+
+---
+
+**(b) Outline two reasons for the use of a virtual private network (VPN) in this situation. [4]**
+
+{{< expand "Markscheme" >}}
+*Award [4 max]*  
+- Security when working remotely;  
+    - VPN’s data encryption features allow the doctor to keep confidential information safe / VPN authenticates the user before giving access to data;  
+- VPN allows access to any content in any place;  
+    - Enables users to send and receive data across shared or public networks as if directly connected to the private network;  
+- VPNs hide the location / hidden IP address;  
+    - Makes it seem as if accessing data from another place / location of the patient unknown for hackers;  
+- Protects the privacy of data;  
+    - Prevents apps and websites from attributing the doctor’s behaviour to her computer’s IP address / limits collection of location and browser history from ISP;  
+- VPNs usually have intuitive and user-friendly interface;  
+    - Makes installation and use easy for the doctor (non-technical user);  
+- VPN is adaptable to many smart devices;  
+    - Doctor can use various devices / any available device;  
+*Mark as [2] and [2].*  
+{{< /expand >}}
+
+---
+
+**State two technologies that are required to provide a virtual private network (VPN). [2]**
+
+{{< expand "Markscheme" >}}
+*Award [2 max]*  
+- (VPN) tunnelling (server);  
+- (VPN aware) router (and firewall);  
+- Encryption (protocol) (Accept examples IPSec / SSL / TSL);  
+- VPN client software (installed on the employee’s computer);  
+{{< /expand >}}
+
+---
+
+**Outline two features of a VPN that make it secure. [4]**
+
+{{< expand "Markscheme" >}}
+*Award [4 max]*  
+- Authentication;  
+    - Strong user VPN authentication uses various methods, including certificates, one-time passwords and software tokens;  
+- Encryption;  
+    - If data intercepted, it will not be readable;  
+    - Encrypting each encapsulated data packet’s content with an encryption key (shared only between the VPN’s server and clients);  
+- Tunnelling software;  
+    - VPN hides a user’s data by encrypting it with a tunnel created between the user’s device and the VPN’s web server;  
+- Multiple exit nodes;  
+    - Makes it hard to distinguish where the data sent is originated (protecting privacy);  
+*Mark as [2] and [2]. Award [1] for a feature and [1] for a reasonable expansion, x2.*  
+{{< /expand >}}
+
+---
+
+### Packets
+
+---
+
+**Describe the structure of a data packet. [2]**
+
+{{< expand "Markscheme" >}}
+*Award [2 max]*  
+- The structure of a data packet typically includes a header, payload (actual data), and sometimes a trailer;  
+- The header contains control information such as origin and destination IP addresses, packet number, and other metadata;  
+- The payload is the actual data being transmitted;  
+- The trailer (if present) may include error checking or control information to signal the end of the packet;  
+{{< /expand >}}
+
+---
+
+**State three pieces of information that a data packet must contain. [3]**
+
+{{< expand "Markscheme" >}}
+*Award [3 max]*  
+- Data;  
+- Protocol;  
+- Packet number;  
+- Total number of packets;  
+- Sender’s IP address;  
+- Receiver’s IP address;  
+- Control bits / Parity bit / Check digit / Time to live (hop limit);  
+{{< /expand >}}
+
+---
+
+**Explain how data is transmitted by packet switching. [3]**
+
+{{< expand "Markscheme" >}}
+*Award [3 max]*  
+- A message / the data is broken into a number of parts;  
+- Which are sent independently;  
+- Over the optimum route for each packet;  
+- The individual parts are reassembled at the destination;  
+- Each packet contains the (IP) address of both the sender and recipient;  
+{{< /expand >}}
+
+---
+
+**Explain how data is transmitted by packet switching. [4]**
+
+{{< expand "Markscheme" >}}
+*Award [4 max]*  
+- Data is organized in specially formatted units (data packets);  
+- Each data packet contains: data, address of the sender, address of the receiver, size of packet, sequence number, control codes, etc.;  
+- Routed from source to destination using network switches and routers;  
+- Switches and routers determine how best to transfer the packet between intermediate devices on the path to its destination;  
+- Data packets are reassembled at destination;  
+{{< /expand >}}
+
+---
+
+**Explain how data is transmitted using packet switching. [5]**
+
+{{< expand "Markscheme" >}}
+*Award [5 max]*  
+- The whole data is split into (fixed / equal) sized chunks / packets;  
+- Each packet has a header, payload and trailer;  
+- Packet contains information such as source, destination IP addresses, packet number, protocol, checksum, payload / data, CRC etc (at least two);  
+- Each packet is sent individually / independently along the best path (by a router);  
+- Packets may take different routes to the destination;  
+- If a route becomes unavailable, individual packets can be re-routed;  
+- Packets (may) arrive at the destination out of order;  
+- Packets are re-ordered / joined together at the destination;  
+- Missing packets can be re-sent;  
+{{< /expand >}}
+
+
+
