@@ -6,6 +6,18 @@ weight: 30
 ---
  # Networks
  
+---
+
+ ## Review Tools
+
+[Topic 3 Revision](https://www.computersciencecafe.com/topic-3-revision-ib.html) from Computer Science Cafe.
+
+[Topic 3 Key Terminology](https://www.computersciencecafe.com/key-terminology-ib-topic-3.html) from Computer Science Cafe.
+
+[Topic 3 Video](https://youtu.be/bFkYffPJq0M?si=m4CC7dIYQtygAfeg) from CS Classroom.
+
+---
+
  ## Key Terminology
 
  {{< expand "Key Terminology" >}}
@@ -85,7 +97,7 @@ weight: 30
 
 ---
 
-**(a) Identify one additional hardware component in a wireless LAN. [1]**
+**Identify one additional hardware component in a wireless LAN. [1]**
 
 {{< expand "Markscheme" >}}
 
@@ -138,6 +150,8 @@ weight: 30
 
 ### Speed
 
+---
+
 **Explain why the speed of data transmission across a mobile network can vary. [3]**
 
 {{< expand "Markscheme" >}}
@@ -166,7 +180,7 @@ weight: 30
 
 ---
 
-**(b) Identify two factors that may affect the speed of data transmission. [2]**
+**Identify two factors that may affect the speed of data transmission. [2]**
 
 {{< expand "Markscheme" >}}
 *Award [2 max]*  
@@ -178,9 +192,6 @@ weight: 30
 {{< /expand >}}
 
 ---
-
-A company that provides training for teachers plans to set up a training room in its offices with a network of 15 computers. The company has decided to allow the teachers to use their own devices in its training room by adding wireless networking.
-
 
 
 ### Wireless Networks
@@ -365,7 +376,7 @@ The staff at a doctor’s practice consist of a receptionist and a doctor.
 The patients’ medical records and payments, the doctor’s appointment calendar, and other important data are stored in a database on the central computer.
 
 
-**(a) Outline one security measure that can be taken to prevent unauthorized access to the patients’ data stored on the central computer. [2]**
+**Outline one security measure that can be taken to prevent unauthorized access to the patients’ data stored on the central computer. [2]**
 
 {{< expand "Markscheme" >}}
 *Award [2 max]*  
@@ -386,7 +397,7 @@ The patients’ medical records and payments, the doctor’s appointment calenda
 
 ---
 
-**(b) Outline two reasons for the use of a virtual private network (VPN) in this situation. [4]**
+**Outline two reasons for the use of a virtual private network (VPN) in this situation. [4]**
 
 {{< expand "Markscheme" >}}
 *Award [4 max]*  
