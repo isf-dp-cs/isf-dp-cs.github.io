@@ -5,8 +5,8 @@ weight: 2
 
 # Check setup
 
-**Welcome back to CS! These instructions will help you check out your coding environment if you took Shuyuan CS or you've already got a Python coding environment.**
-If you get stuck or are unsure what to do, send a screenshot of your error to Ms. Genzlinger at *bgenzlinger@isf.edu.hk* 
+**Welcome back to CS! These instructions will help you get your computer set up for the class.**
+If you get stuck or are unsure what to do, first check out the debugging section at the bottom of the page. If you are still encountering an error, please send a screenshot of your error to Ms. Brown.
 
 
 ---
@@ -37,10 +37,10 @@ xcode-select: error: command line tools are already installed, use "Software Upd
 
 
 (1) **Once the installation finishes, you will see a Finder window showing what was installed**.
-(If you closed the window, open Finder, click on "Applications," and then "Python 3.12" (or whatever version of Python you just installed).
+(If you closed the window, open Finder, click on "Applications," and then "Python 3.13" (or whatever version of Python you just installed).
 
 
-(2) **Check Python installed successfully by typing `python --version` into the Terminal.** You should see a version number above `3.12`.
+(2) **Check Python installed successfully by typing `python3 --version` into the Terminal.** You should see the version number `3.13`.
 
 (3) **Double-click on "Install Certificates.command".** This will will open a Terminal window and run a bunch of commands. Once you see `[Process completed]`, you may close the window.
 
@@ -51,7 +51,7 @@ xcode-select: error: command line tools are already installed, use "Software Upd
 
 {{< aside >}}
 **If you see a red "Permission denied" error message when running "Install Certificates.command"**:
-- open a Terminal window and run **`sudo "/Applications/Python 3.12/Install Certificates.command"`**
+- open a Terminal window and run **`sudo "/Applications/Python 3.13/Install Certificates.command"`**
 - You will be asked for an administrator password; you won't see any letters appearing as you enter the password. This is a security feature.
 {{</ aside >}}
 
@@ -77,25 +77,35 @@ brew upgrade
 ---
 
 
-## Reinstall Poetry
-*Poetry makes sure your coding environment is set up to work for all your coding projects*
+## Upgrade Poetry
 
-{{< code-action "First we must uninstall poetry" >}} 
+{{< code-action "Upgrade Poetry " >}} 
 ```shell
-curl -sSL https://install.python-poetry.org | python3 - --uninstall
-```
-```shell
-curl -sSL https://install.python-poetry.org | POETRY_UNINSTALL=1 python3 -
+brew upgrade poetry
 ```
 
-{{< code-action "Run the below command to install Pipx with Brew." >}} We will nowuse `Pipx` to install and update Poetry.
+{{< code-action "Add the poetry shell plugin" >}} 
 ```shell
-brew install pipx
+poetry self add poetry-plugin-shell
 ```
 
-{{< code-action "Run the below command to install Poetry." >}} 
+---
+
+## Github Setup 
+
+{{< code-action "Add a shortcut command to easily open Github" >}} 
 ```shell
-pipx install poetry
+echo 'alias remote="open \"\$(git remote get-url origin | sed \"s/\.git\$//\")\""' >> ~/.zshrc
+```
+
+{{< code-action "Upgrade gh " >}} 
+```shell
+brew upgrade gh
+```
+
+{{< code-action "Ensure you are logged into Github." >}} Follow the instructions. 
+```shell
+gh auth login
 ```
 
 ---
@@ -133,7 +143,38 @@ poetry --version
 
 {{< deliverables "Fill out the Install Form" >}}
 
-✅ **Fill out this form to notify your teachers if your install was successfull:** [forms.gle/uHZ2xGhuhhYFnCkXA](https://forms.gle/uHZ2xGhuhhYFnCkXA)
+✅ **Fill out this form to notify your teachers if your install was successfull or not:** [forms.gle/uHZ2xGhuhhYFnCkXA](https://forms.gle/AabMrNKgSs4snuBWA)
 
 
 {{< /deliverables >}}
+
+---
+
+## Debugging 
+
+**If `code --version` showes `EACCES: permission denied, unlink '/usr/local/bin/code'`**
+1.  First double check `VS Code` is in your “Applications” folder
+2.  In the top menu click `View > Comannd Palette...`
+3.  Type `uninstall code`, click the option 
+4.  Type `install code`, click the option
+5.  In Terminal, try `code --version`.
+6.  If you do not see a version number, run this command: `sudo chown -R your_user_name /usr/local/bin`
+7.  In Terminal, try `code --version`.
+3. If still does not show a verison number, ask a teacher.
+
+---
+
+**If `poetry --version` does NOT show a version number.** 
+1. Copy & Paste this command into the Terminal: `pipx ensurepath`
+2. Try `poetry --version` again. 
+3. If still does not show a verison number, ask a teacher.
+
+---
+
+**If `brew --version` does NOT show a version number.** 
+1. Copy & Paste the commands below into the Terminal.  Be sure to paste them one at a time. Each time, pressing `return` to run the command.
+    1. `echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile`
+    2. `eval "$(/opt/homebrew/bin/brew shellenv)"`
+2. Try `brew --version` again.
+3. If still does not show a verison number, ask a teacher.
+

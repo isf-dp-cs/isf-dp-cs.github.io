@@ -1,12 +1,15 @@
 ---
 title: "Initial Setup"
 weight: 1
+draft: false
 ---
 
 # Initial setup
 
-**Welcome to CS! These instructions will help you get your computer set up for the class.**
-If you get stuck or are unsure what to do, send a screenshot of your error to Ms. Genzlinger at *bgenzlinger@isf.edu.hk*
+**Welcome to CS! These instructions will help you get your computer set up for the class.** Use these instructions if you didn't take Shuyuan CS, or if you have a new computer. This guide will require the admin password of your computer.
+
+If you get stuck or are unsure what to do, first check out the debugging section at the bottom of the page. If you are still encountering an error, please send a screenshot of your error to Ms. Brown *ebrown@isf.edu.hk* or Ms. Genzlinger *bgenzlinger@isf.edu.hk*.
+
 
 
 ---
@@ -72,10 +75,10 @@ xcode-select: error: command line tools are already installed, use "Software Upd
 
 
 (1) **Once the installation finishes, you will see a Finder window showing what was installed**.
-(If you closed the window, open Finder, click on "Applications," and then "Python 3.12" (or whatever version of Python you just installed).
+(If you closed the window, open Finder, click on "Applications," and then "Python 3.13" (or whatever version of Python you just installed).
 
 
-(2) **Check Python installed successfully by typing `python3.12 --version` into the Terminal.** You should see a version number above `3.12`.
+(2) **Check Python installed successfully by typing `python3 --version` into the Terminal.** You should see version number  `3.13`.
 
 {{< figure src="images/courses/cs9/unit00/-000_initialsetup14.png" width="50%" alt-text="mwc setup" >}}
 
@@ -89,7 +92,7 @@ xcode-select: error: command line tools are already installed, use "Software Upd
 
 {{< aside >}}
 **If you see a red "Permission denied" error message when running "Install Certificates.command"**:
-- open a Terminal window and run **`sudo "/Applications/Python 3.12/Install Certificates.command"`**
+- open a Terminal window and run **`sudo "/Applications/Python 3.13/Install Certificates.command"`**
 - You will be asked for an administrator password; you won't see any letters appearing as you enter the password. This is a security feature.
 {{</ aside >}}
 
@@ -124,9 +127,12 @@ bgenzlinger~/Documents$
 {{< figure src="images/courses/cs9/unit00/-000_initialsetup10.png" width="50%" alt-text="mwc setup" >}}
 
 
-{{< code-action "Run the below commands to add the Homebrew to the path." >}} 
+{{< code-action "Run the below commands one at a time." >}} 
 ```shell
 echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile
+```
+
+```shell
 eval "$(/opt/homebrew/bin/brew shellenv)"
 ```
 
@@ -151,14 +157,76 @@ pipx install poetry
 pipx ensurepath
 ```
 
+{{< code-action "Run the below command to add the poetry shell plugin" >}} 
+```shell
+poetry self add poetry-plugin-shell
+```
+
 ---
 
+## GitHub
+
+Git is a tool for `version control`. It allows you to see the history of your code, and to collaborate with other people! It's sort of like google docs for code.
+
+
+{{< code-action "Make a Github Account" >}}   
+
+Go to [GitHub](https://github.com/) to register. Feel free to skip all the personalization steps. 
+
+*Use your school email for your account, but please **don't use your id # as your username**! Memorable usernames help your teachers keep track of who is who.*
+
+
+{{< code-action "Run this command in your terminal." >}} 
+```shell
+git --version
+```
+If you do not see a version number, it will automatically install `git` for you.
+
+{{< code-action "Run each of these commands in your terminal to configure Git.">}} 
+
+> Make sure to replace `your_name` and `your_school_email` with your information.
+
+```shell
+git config --global user.name your_name
+```
+
+```shell
+git config --global user.email your_school_email
+```
+
+{{< code-action "Run this command to install the Github CLI." >}}
+```shell
+brew install gh
+```
+{{< code-action "Run this command to authorize." >}} This will take you through a few prompts to log in to your github account.
+```shell
+gh auth login
+```
+
+**You will be asked the following questions to finish the authorization process. You should accept all the default highlighted options, which are:**
+
+0. "What account do you want to log into?" - GitHub.com
+0. "What is your preferred protocol for Git operations?" - HTTPS
+0. "Authenticate Git with your GitHub credentials?" - Yes
+0. "How would you like to authenticate GitHub CLI?" - Log in with a web browser
+
+> **If you are asked for your computer password, you won't see any letters appear as you type.** This is normal--it's to keep the person standing behind you from seeing your password.
+
+{{< code-action "When prompted, copy your code and press enter." >}} Then you can follow the prompts in your browser.
+<br>
+
+{{< code-action "Run this command to add a shortcut to easily open Github" >}} 
+```shell
+echo 'alias remote="open \"\$(git remote get-url origin | sed \"s/\.git\$//\")\""' >> ~/.zshrc
+```
+
+---
 
 ## Testing your Setup
 
+💻 **Close your Terminal window and open a new Terminal window.**
 
-
-💻 **Run each of the following checks one at a time to check your setup.** If you do not see an `version number`, there was an error with the install.
+💻 **Run each of the following checks one at a time to check your setup.** If you do not see an `version number`, there was an error with the install. You can try to debug yourself by referencing the `Debugging` section below. 
 
 ✔️ *Checks `Visual Studio Code`*
 
@@ -194,10 +262,10 @@ poetry --version
 
 {{< deliverables "Fill out the Install Form" >}}
 
-✅ **Fill out this form to notify your teachers if your install was successfull:** [forms.gle/xSKm6Xv7G3NYQ4EF7](https://forms.gle/xSKm6Xv7G3NYQ4EF7)
+✅ **Fill out this form to notify your teachers if your install was successfull or not:** [forms.gle/xSKm6Xv7G3NYQ4EF7](https://forms.gle/AabMrNKgSs4snuBWA)
 
 
-A successful setup will look something like this:
+A successful setup will look something like below. It is okay if the version numbers do not match. This just means the package has been updated. 
 
 {{< figure src="images/courses/cs9/unit00/-000_initialsetup15.png" width="80%" alt-text="mwc setup" >}}
 
