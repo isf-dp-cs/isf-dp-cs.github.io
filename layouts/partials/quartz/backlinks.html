@@ -3,9 +3,16 @@
     {{$url := urls.Parse .Site.BaseURL }}
     {{$host := strings.TrimRight "/" $url.Path }}
     {{$curPage := strings.TrimPrefix $host (strings.TrimRight "/" .Page.RelPermalink)}}
-    {{$linkIndex := getJSON "/assets/indices/linkIndex.json"}}
+    {{$linkIndexRemote := resources.Get "/assets/indices/linkIndex.json" | transform.Unmarshal }}
+    {{$linkIndex := $linkIndexRemote.Content}}
+
     {{$inbound := index $linkIndex.index.backlinks $curPage}}
-    {{$contentTable := getJSON "/assets/indices/contentIndex.json"}}
+
+
+    {{$contentTableRemote := resources.Get "/assets/indices/contentIndex.json" | transform.Unmarshal }}
+    {{$contentTable := $contentTableRemote.Content}}
+
+
     {{if $inbound}}
     {{$backlinks := dict "SENTINEL" "SENTINEL"}}
     {{range $k, $v := $inbound}}

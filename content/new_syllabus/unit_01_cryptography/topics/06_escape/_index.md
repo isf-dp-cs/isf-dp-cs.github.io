@@ -57,7 +57,7 @@ NUM = 5 mod 2
 
 ## Let's Go!
 {{< yeehaw "Are you ready to begin?" >}}
- Click [here]({{< ref "/pseudo_escape" >}}) to start your adventure
+ Click [here] to start your adventure
  <br>
  <br>
  🏜🐄🌵

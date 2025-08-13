@@ -16,7 +16,7 @@ Pseudocode is a language designed by the IB to help you focus on the `logic` of 
  > [This pseudocode compiler](http://ibcomp.fis.edu/pseudocode/pcode.html) is more strict, and won't run at all if you don't use the right syntax. 
 
 {{< aside "FYI" >}}
-The more strict compiler does not supply any error messages. If your program isn't running, you can visit the [debugging page]({{< ref "/00_debugging" >}}) to help you troubleshoot.
+The more strict compiler does not supply any error messages. If your program isn't running, you can visit the [debugging page]({{< ref "00_debugging" >}}) to help you troubleshoot.
 {{< /aside >}}
 
 

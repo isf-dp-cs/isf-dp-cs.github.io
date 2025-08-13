@@ -57,7 +57,7 @@ NUM = 5 mod 2
 
 ## Let's Go!
 {{< yeehaw "Are you ready to begin?" >}}
- Click [here]({{< ref "/pseudo_escape" >}}) to start your adventure
+ Click [here] to start your adventure
  <br>
  <br>
  🏜🐄🌵
@@ -77,7 +77,7 @@ The number 410 is at the same as index in the `NUMBERS` array as the `key word` 
 {{< /expand >}}
 
 {{< expand "Hint #3" >}}
-Define two arrays, `NUMBERS` and `WORDS`.   
+Define two arrays,e `NUMBERS` and `WORDS`.   
 Loop through the `NUMBERS` array.   
 If `NUMBERS[I]` is 410, then `WORDS[I]` will be the `key word`.    
 Output the `key word`.   
