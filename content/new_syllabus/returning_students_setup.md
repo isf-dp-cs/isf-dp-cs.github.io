@@ -81,13 +81,14 @@ brew upgrade
 
 {{< code-action "Upgrade Poetry " >}} 
 ```shell
-brew upgrade poetry
+poetry self update
 ```
 
 {{< code-action "Add the poetry shell plugin" >}} 
 ```shell
 poetry self add poetry-plugin-shell
 ```
+
 
 ---
 
@@ -152,7 +153,7 @@ poetry --version
 
 ## Debugging 
 
-**If `code --version` showes `EACCES: permission denied, unlink '/usr/local/bin/code'`**
+**If `code --version` shows `EACCES: permission denied, unlink '/usr/local/bin/code'`**
 1.  First double check `VS Code` is in your “Applications” folder
 2.  In the top menu click `View > Comannd Palette...`
 3.  Type `uninstall code`, click the option 
@@ -161,6 +162,13 @@ poetry --version
 6.  If you do not see a version number, run this command: `sudo chown -R your_user_name /usr/local/bin`
 7.  In Terminal, try `code --version`.
 3. If still does not show a verison number, ask a teacher.
+
+---
+
+ **If you see `Error: poetry not installed` or if your poetry version starts with a 1, e.g. `1.8.3`**   
+    
+1. Run this command in your terminal `pipx install poetry`   
+2. Try `poetry self add poetry-plugin-shell` again
 
 ---
 
