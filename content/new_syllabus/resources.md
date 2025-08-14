@@ -6,18 +6,19 @@ draft: false
 
 # Resources 
 
-## Join Code HS
+<!-- ## Join Code HS
 
 - [Join SL](https://moodle.isf.edu.hk/mod/url/view.php?id=40035)
-- [Join HL](https://moodle.isf.edu.hk/mod/url/view.php?id=40036)
+- [Join HL](https://moodle.isf.edu.hk/mod/url/view.php?id=40036) -->
 
 ## Join InThinking
 
-- [Join SL](https://moodle.isf.edu.hk/mod/url/view.php?id=40040)
-- [Join HL](https://moodle.isf.edu.hk/mod/url/view.php?id=40039)
+- [Join SL](https://student.thinkib.net/group/BDFLNY4)
+- [Join HL](https://student.thinkib.net/group/GKX3458)
+<!-- - [Access InThinking](https://student.thinkib.net/computerscience) -->
 
 ## IB Guides
 
 - [Subject Guide](https://drive.google.com/file/d/1IyDQ1cJRKcKCeKFvi5CB_5qPPrwvgmTl/view?usp=sharing)
-- [Glossary of Command Terms](https://drive.google.com/file/d/15lUr3yt7zXasXS_cxqCVqGBy-Ucg6bas/view?usp=sharing)
+- [Glossary of Command Terms](https://drive.google.com/file/d/1eIbekAKzZFSbecOu1OGrwpNNSzH2wSrq/view?usp=sharing)
 
