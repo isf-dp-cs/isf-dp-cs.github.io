@@ -1,9 +1,9 @@
 ---
-title: "Unit 00: Cryptography"
+title: "Unit 00: String Manipulation"
 weight: 10
 bookFlatSection: false 
 bookCollapseSection: true 
-draft: true
+# draft: true
 
 ---
 
