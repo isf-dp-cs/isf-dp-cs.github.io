@@ -42,6 +42,7 @@ In addition, you can use these shortcuts to help you out:
 ---
 ## [1] Using GitHub
 
+
 {{< code-action "Go to your" >}} **`dpcs/unit00_strings` folder using the `cd` command.**
 
 ```shell
@@ -79,6 +80,7 @@ cd lab_python_basics
 ```shell
 poetry shell
 ```
+
 
 <!-- {{< aside "Exiting the poetry shell" >}}
 When you want to exit the shell, you can type `exit` or `^D`
@@ -210,7 +212,8 @@ age_string = input("How old are you? ")
 age_num = int(age_string) #convert to an integer
 ```
 
-{{< code-action "Write pseudocode to convert a given temperature from celcius to fahrenheit." >}} 
+{{< code-action >}} **In `variable_test3.py`, write code to convert a given temperature from celcius to fahrenheit.** *Remember, how do you open a file to edit in Visual Studio Code?*
+
 The forumula for calculating fahrenheit is **(temp x 1.8) + 32**
 
 Here is an example interaction:
@@ -301,9 +304,7 @@ code selection_example.py
 
 ### Conditional Output
 
-{{< code-action "In the file" >}}  **`generation_labeler.py` write pseudocode to tell someone what generation they are in.**
-
-Open the file `generation_labeler.py`
+{{< code-action "In the file" >}}  **`generation_labeler.py` write code to tell someone what generation they are in.**
 
 {{< code-action >}} **Open the code:**
 ```shell
