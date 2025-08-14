@@ -11,13 +11,12 @@ weight: 2
 In this lab we are going to explore lots of ways to manipulate strings with Python.
 
 ---
-### Syllabus Topics
+#### Syllabus Topics
 * **B2.1.2** Construct programs that can extract and manipulate substrings.
-* **B2.1.3** Describe how programs use common exception handling techniques.
 * **B2.3.2** Construct programs utilizing appropriate selection structures.
 * **B2.3.3** Construct programs that utilize looping structures to perform repeated actions.
 
-### Key Vocabulary
+#### Key Vocabulary
 
 | Term | Definition |
 | :--- | :--- |
@@ -77,44 +76,174 @@ When you want to exit the shell, you can type `exit` or `^D`
 
 ---
 
-## [2] Strings
+## [1] String Methods
 
-`Strings` are more complex objects that come with certain features. Here are some examples:
+### Star Tree 🌲
 
-```java
-String firstName = "John";
-String lastName = "Doe";
-System.out.println(firstName + " " + lastName); // add Strings together
+{{< expand "Concatenate and Multiply Strings" >}}
+
+You can `concatenate` (combine) strings using `+`. 
+```python
+"tree" + "house"
+>>> "treehouse"
 ```
 
-```java
-String txt = "Hello! World";
-int length = txt.length(); // get the length of a String
+You can `multiply` strings using `*`:
+```python
+"why" + "y"*5
+>>> "whyyyyyy"
+```
+{{< /expand >}}
+
+{{< code-action "In">}} **`star_tree.py`, write code that prints out `*` in a tree pattern.** 
+   
+The height of the tree should be determined by user input. For example:
+
+```shell
+How tall is the tree? 
+>>> 4
+
+   *
+  ***
+ *****
+*******
 ```
 
-```java
-String first = "java programming";
-String second = "java programming";
+```shell
+How tall is the tree? 
+>>> 2
 
-boolean result1 = first.equals(second); // compare first and second Strings
+ *
+***
+```
+---
+
+### Abracadabra
+
+{{< expand "Slicing" >}}
+
+You can get a substring using `slicing`. Just like for loops, the `start index` is **inclusive** and the `end index` is **exclusive**.
+```python
+my_string = "hello world!"
+
+my_string[1:6]
+  >>> "ello "
+my_string[4:7]
+  >>> "o w"
+```
+If you leave one of the numbers blank, it includes everything.
+```python
+my_string[1:]
+  >>> "ello world!"
+my_string[:3]
+  >>> "hel"
+my_string[:]
+  >>> "hello world!"
+```
+{{< /expand >}}
+
+{{< code-action "In">}} **`abracadabra.py`, write code that prints out a word in a triangle pattern.** The user should input the word. For example:
+
+```shell
+Tell me a word and I'll show you a trick: abracadabra
+           
+          a
+         ra
+        bra
+       abra
+      dabra
+     adabra
+    cadabra
+   acadabra
+  racadabra
+ bracadabra
+abracadabra
+```
+```shell
+Tell me a word and I'll show you a trick: Huh?
+    
+   ?
+  h?
+ uh?
+Huh?
 ```
 
-```java
-String txt = "Hello World";
-char letter = txt.charAt(2); // returns character at index 2
+
+---
+
+### camelCase 🐪
+
+{{< expand "upper() and  lower()" >}}
+
+Python has built-in functions to convert strings to upper case or lower case. 
+```python
+my_string = "Hello World!"
+
+my_string.upper()
+  >>> "HELLO WORLD!"
+my_string.lower()
+  >>> "hello world!"
+```
+{{< /expand >}}
+
+{{< expand "split()" >}}
+
+`.split()`converts a string into a list of sub-strings. By default, it splits on spaces
+
+```python
+my_string = "Wow! Why are camels so fast?"
+word_list = my_string.split()
+word_list
+  >>> ['Wow!', 'Why', 'are', 'camels', 'so', 'fast?']
 ```
 
-### ANSI Codes
-ANSI escape codes are special codes that can change the formatting when you print to the console
+If you give a specific character as a parameter, it will split on that character instead:
+```python
+poem = "But still; like dust; I’ll rise."
+poem_list = poem.split(";")
+poem_list
+  >>> ['But still', ' like dust', ' I’ll rise.']
+```
+{{< /expand >}}
 
-```java
-String yellowBackground = "\u001b[43;1m";
-String reset = "\u001b[0m";
-System.out.println(yellowBackground + "the sun is yellow" + reset);
+
+When naming your variables, it can be inconvenient that you can't use spaces. To solve this problem, programmers have come up with a few standard naming conventions:
+
+**`snake_case` is commonly used by Python programmers, since it's used in Python's built-in functions:**
+
+```python
+# snake_case
+number_of_donuts = 34
 ```
 
-{{< code-action "Choose at least two additional ANSI codes from the charts below, and use them in your code.">}}
+**`camelCase` is commonly used by Java, JavaScript, and TypeScript programmers:**
 
+```python
+# snake_case
+numberOfDonuts = 34
+```
+
+*There are also other less common options, such as **PascalCase** and **kebab-case**.*
+
+{{< code-action "In the file" >}} `snake_to_camel.py`, write code that can convert a snake_case variable into camelCase variable. For example
+
+```shell
+Variable name: number_of_donuts
+           
+numberOfDonuts
+
+```
+
+---
+
+## [2] ANSI Codes
+ANSI escape codes are special codes that you can `concatenate` onto strings to change the formatting when you print to the console.
+
+```python
+yellow_bg = "\u001b[43;1m" # code for a yellow background
+reset_code = "\u001b[0m" # code to set formatting back to normal
+print(yellow_bg + "the sun is yellow" + reset)
+```
 
 {{< expand "Standard Text Colors" "click to expand ⬇️" >}}
 | code         | description        | code           | description               |
@@ -171,18 +300,22 @@ System.out.println(yellowBackground + "the sun is yellow" + reset);
 | `\u001b[0m` | Reset all styles |
 | `\u001b[1m` | Bold             |
 | `\u001b[4m` | Underline        |
+| `\u001b[5m` | Blinking         |
 | `\u001b[7m` | Reversed         |
 
 {{< /expand >}}
 
 ---
+### Formatting Text
 
+{{< code-action "Open up">}} **`ansi_test.py` and complete all 4 `TODO:` tasks**
 
-The **256 Background Colors** follow a simple forumula: `\u001b[48;5;` + n + `m `
-
-{{< code-action "Edit the loop to give an example of every possible background color.">}} 
-
-{{< figure src="images/courses/java/ansi_colors.png" width="12%">}}
+* Add some more color codes
+* Add color to the poem
+* Give each letter a different color
+* Print a grid of every possible background color (0-255)   
+  >*Hint: the **256 Background Colors** follow a simple forumula: `\u001b[48;5;` + n + `m `*
+  > {{< figure src="images/courses/java/ansi_colors.png" width="12%">}}
 
 
 ---
@@ -190,31 +323,62 @@ The **256 Background Colors** follow a simple forumula: `\u001b[48;5;` + n + `m 
 ## [3] Deliverables
 
 
-{{< deliverables "For this lab, you should:" >}}
+{{< deliverables "Once you complete the lab, be sure to complete these two steps:" >}}
 
-**Once you've successfully completed the sequence be sure to fill out [this Google form](https://docs.google.com/forms/d/e/1FAIpQLScz0x6-s3GRD9P7oZlcqq24XifGDTw9BQ_j8t8TIqqRYw0naw/viewform?usp=sf_link)**.
+<!-- **Once you've successfully completed the sequence be sure to fill out [this Google form](https://docs.google.com/forms/d/e/1FAIpQLScz0x6-s3GRD9P7oZlcqq24XifGDTw9BQ_j8t8TIqqRYw0naw/viewform?usp=sf_link)**. -->
 
+**📋 Update Syllabus Tracker**  
 
-{{< code-action "Push your work to Github:" >}}
-- git status
-- git add file_name.py file_name2.py
-- git status
-- git commit -m "describe your drawing and your process here"
-  > be sure to customize this message, do not copy and paste this line
-- git push
+>These are the topics covered in this lab:
+>
+>* **B2.1.2** Construct programs that can extract and manipulate substrings.
+>* **B2.3.2** Construct programs utilizing appropriate selection structures.
+>* **B2.3.3** Construct programs that utilize looping structures to perform repeated actions.
+>
+>Go to your **Syllabus Content Checklist** in your Google Drive and update it accordingly.
+
+{{< code-action "Push your work to Github" >}}
+>- git status
+>- git add -A
+>- git status
+>- git commit -m \"describe your code here\"   
+>- git push
+>- git remote
 
 {{< /deliverables >}}
 
 
 ---
 
-# [4] Extension
+## [4] Extension
+
+### Print Vertical
+
+{{< code-action "In">}} **`print_vertical.py`, write code that takes a sentence and prints it vertically.** The user should input the sentence. For example:
+
+```shell
+Enter your text: how are you doing today?
+
+haydt
+orooo
+weuid
+   na
+   gy
+    ?
+```
+
+```shell
+Enter a string: When I was a youthful lad...
+
+WIwayl
+h a oa
+e s ud
+n   t.
+    h.
+    f.
+    u 
+    l 
+```
 
 
-{{< code-action "Open the file:" >}} `extension_animation.py` in Atom. It is just an empty file. 
-
-
-{{< code-action "Code a custom animation of your choosing!" >}} Here is an example of what you could create:
-
-{{< figure src="images/courses/cs9/unit00/extension_animation.gif" width="50%">}}
 
