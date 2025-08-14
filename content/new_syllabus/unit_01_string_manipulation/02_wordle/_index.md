@@ -3,7 +3,7 @@ title: "02. Wordle"
 bookFlatSection: false
 weight: 2
 # bookCollapseSection: true
-# draft: true
+draft: true
 ---
 
 # Wordle 

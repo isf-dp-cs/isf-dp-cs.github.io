@@ -23,12 +23,12 @@ In this lab we are going to explore lots of ways to manipulate strings with Pyth
 | **Variable** | A named storage location in a computer's memory that can hold a value. The value can change during the execution of a program. |
 | **Initialize** | The process of giving a variable its very first value when it is created. |
 | **Assign** | To give a variable a new value after it has been initialized. |
-| **Data Type** | A classification that specifies which type of value a variable can hold, such as a char, string, integer, or a boolean (true/false) value. It determines the operations that can be performed on the data. |
-| **Char** | Short for character, it's a single letter, number, symbol, or space. A string is made up of multiple characters. |
-| **String** | A sequence of characters, such as letters, numbers, and symbols, treated as a single piece of text. |
-| **Substring** | A continous string of charachters within a string |
-| **Slicing** | The process of extracting a portion of a string |
-| **Concatenation** | Joining strings together |
+| **Data Type** | A classification that specifies which type of value a variable can hold, such as a char, string, int, or a boolean (true/false) value. It determines the operations that can be performed on the data. |
+| **Char** | A data type. Short for character, it's a single letter, number, symbol, or space. A string is made up of multiple characters. |
+| **String** | A data type. A sequence of characters, such as letters, numbers, and symbols, treated as a single piece of text. |
+| **Substring** | A continous string of characters within a string |
+| **Slicing** | The process of extracting a portion of a string using `[start:stop]`|
+| **Concatenation** | Joining strings together using `+`|
 
 ---
 
@@ -66,8 +66,6 @@ poetry shell
 {{< aside "Exiting the poetry shell" >}}
 When you want to exit the shell, you can type `exit` or `^D`
 {{< /aside >}}
-
-
 
 ---
 
