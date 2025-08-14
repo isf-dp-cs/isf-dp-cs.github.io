@@ -508,3 +508,46 @@ for i in range(len(message)):
 ```
 
 {{< /expand >}}
+
+---
+
+## [6] For Loops
+
+A for loop enabled you to easily repeat code. 
+
+This loop runs 5 times, repeating everything indented to the right of the `for i in range(5):` line. `i` is a variable that gets incremented by one every time the loop runs. 
+
+```python
+for i in range(5):
+    print(i)
+```
+
+It will output: 
+```shell
+0
+1
+2
+3
+4
+```
+> *Remember, in Computer Science counting starts at 0*
+
+---
+
+You don't necessarily need to use the `i` variable inside the loop. Depending on the situation, it can be useful. 
+
+```python
+for i in range(3):
+    print("Hello World!")
+```
+
+Will output:
+
+```shell
+Hello World!
+Hello World!
+Hello World!
+```
+
+
+Loops are incredibly useful for increasing the readability and efficency of your code. 
