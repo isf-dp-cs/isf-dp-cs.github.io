@@ -3,48 +3,53 @@ title: "02. Wordle"
 bookFlatSection: false
 weight: 2
 # bookCollapseSection: true
-draft: true
+# draft: true
 ---
 
 # Wordle 
 
 In this project, you will experience the IB IA structure and develop the code for a game based on the NYT Wordle.
 
-{{< figure src="images/courses/java/wordle_icon.png" width="20%">}}
+{{< figure src="images/courses/string_manipulation/wordle_icon.png" width="20%">}}
 
 ---
-### Syllabus Topics
+### Syllabus Topics [SL]
 * **B1.1.4** Trace flowcharts for a range of programming algorithms.
-* **B2.1.2** Construct programs that can extract and manipulate substrings.
+<!-- * **B2.1.2** Construct programs that can extract and manipulate substrings. -->
 * **B2.1.3** Describe how programs use common exception handling techniques.
-* **B2.3.2** Construct programs utilizing appropriate selection structures.
-* **B2.3.3** Construct programs that utilize looping structures to perform repeated actions.
+<!-- * **B2.3.2** Construct programs utilizing appropriate selection structures. -->
+<!-- * **B2.3.3** Construct programs that utilize looping structures to perform repeated actions. -->
+
+### Syllabus Topics [HL]
+* **B1.1.4** Trace flowcharts for a range of programming algorithms.
+<!-- * **B2.1.2** Construct programs that can extract and manipulate substrings. -->
+* **B2.1.3** Describe how programs use common exception handling techniques.
 
 ---
 
-## [0] Set up
+# [0] Set up
 
 
-{{< code-action "Go to your" >}} `cs9/unit00_drawing` **folder.**
+{{< code-action "Go to your" >}} `dpcs/unit00_strings` **folder.**
 
 ```shell
-cd ~/desktop/making_with_code/cs9/unit00_drawing/
+cd ~/desktop/dpcs/unit00_strings/
 ```
 
 {{< code-action "Clone your repo. This will copy it onto your computer." >}}  
 ```shell
-git clone https://github.com/the-isf-academy/lab_ball_animation_yourGithubUsername
+git clone https://github.com/the-isf-academy/lab_wordle_yourGithubUsername
 ```
 > Below you'll see that the `git clone` command has a `yourGithubUsername`. 
 >
 > **You need to replace this with your username**
 >
-> *e.g. `https://github.com/the-isf-academy/lab_ball_animation_emmaqbrown`*
+> *e.g. `https://github.com/the-isf-academy/lab_wordle_emmaqbrown`*
 
 
 {{< code-action "In the Terminal, type the following command to open the lab folder." >}}
 ```shell
-cd lab_ball_animation_yourGithubUsername
+cd lab_wordle_yourGithubUsername
 ```
 
 {{< code-action "Enter the Poetry Shell to start the lab." >}} As a reminder, we will run this command at the start of each lab, but only when we are inside a lab folder.
@@ -56,30 +61,80 @@ poetry shell
 When you want to exit the shell, you can type `exit` or `^D`
 {{< /aside >}}
 
-{{< code-action "Take a look at the files inside with:" >}} `ls`
-- `breathing_animation.py`
-- `movement_animation.py`
-- `color_animation.py`
-- `basic_shapes.py`
-- `helpers.py`
-- `settings.py`
-- `extension_animation.py`
 
 ---
 
-## [4] Wordle
+# [1] Planning
 
-Now it's time to put all your new skills to good use! You will be coding the game `Wordle`.
+Now it's time to put all your new skills to good use! You will be coding the game `Wordle` and documenting your planning and your evaluation of your work. 
+
+## Success Claims
+
+| Feature | Description |
+| :--- | :--- |
+| User input | The game allows the user to input a guess. |
+| Color Feedback | The game provides accurate color feedback based on the user's input letter correctness and position (grey for an incorrect letter, yellow for a correct letter in an incorrect placement, green for a correct letter in a correct placement). |
+| Guess limit | The game ends if the user guesses 6 times and outputs the correct word. |
+| Correct user guess | The game outputs if the user has successfully guessed the word. |
+| Random word | The game randomly selects a word from a list of possible words. |
+| Error handling for word length | The game includes error handling if the user's input contains too few or too many letters. |
+
+---
+
+# [2] System Overview
+
+## Flowchart
 
 
-### Looping
+👀 **First, let's consider the logic by looking at the flow chart.**
+
+{{< figure src="images/courses/string_manipulation/wordle_flowchart.png" width="75%">}}
+
+
+## Psueocode for the color formatting
+
+```python
+loop each letter in guess by index
+	Set guess_letter to input_word[i]
+	Set bg_color to no_bg
+
+	If guess_letter matches secret_word at same position:
+		Set bg_color to green_bg
+
+	Else:
+		For each letter in secret_word (by index j):
+			If guess_letter matches secret_word[j]:
+				Set bg_color to yellow_bg
+				Break inner loop
+
+	Append bg_color + guess_letter + no_bg to word_feedback
+```
+
+---
+
+# [3] Development
+
+{{< aside "Choose your own adventure" >}} 
+
+Either follow along with each steps or attempt Worlde on your own. 
+
+It is your responsiblity to complete as many success claims as you can. 
+{{< /aside >}}
+
+{{< expand "Detailed Steps" >}}
+
+
+## Looping
 Right now, the code picks a random 5-letter word, and allows the user a single guess. Not much of a game!
 
 {{< code-action "Add a loop to the code, so that the user gets 6 guesses.">}} You can reference your code from the other files to write your loop.
 
+{{< code-action "Edit the loop so that if the user guesses correctly, it will end early.">}}
+
+
 ---
 
-### Highlight
+## Highlight
 A big part of `Wordle` is the feedback from the game. After each guess, the user is shown their guess, and each letter is highlighted according to these rules:
 
 - **GRAY backround**: guess letters not included in the word 
@@ -88,119 +143,50 @@ A big part of `Wordle` is the feedback from the game. After each guess, the user
 
 {{< code-action "Each time the user guesses a word, print the word in the terminal, formatted with background colors.">}}
 
-<!-- Here are some ANSI codes for you to use:
+Here are some ANSI codes for you to use:
 ```java
 String gray = "\u001b[47;1m";
 String yellow = "\u001b[43;1m";
 String green = "\u001b[42;1m";
 String reset = "\u001b[0m";
-``` -->
+```
 
 ---
 
-### End the loop early
+## End the loop early
 
 Right now, the user will be asked for 6 guesses no matter what. However, if they guess correctly, the loop should end early. Here are three examples of `while` loops:
 
-```java
-// java while loop
-while (i < 6) {
-	System.out.println("Hello World");
-	i++;
-}
+```python 
+num = int(input("Enter a number: "))
+attemps = 0
+won = False
+
+while attemps < 5 and won == False:
+	num = int(input("Enter a number: "))
+
+	if num == 5:
+		won = True
 ```
+{{< /expand >}}
 
-```java
-// java while loop with OR logic 
-while (i < 6 || i < 1) {
-	System.out.println("Hello World");
-	i++;
-}
-```
+**Example Completed Game**
 
-```java
-// java while loop with AND logic 
-while (i < 6 && i > 0) {
-	System.out.println("Hello World");
-	i++;
-}
-```
-
-{{< code-action "Edit the loop so that if the user guesses correctly, it will end early.">}}
-
+{{< figure src="images/courses/string_manipulation/wordle_example.png" width="40%">}}
 
 
 ---
 
-### Example steps for Wordle
-
-<!-- {{< expand "View the steps to complete Wordle" >}} -->
-<!-- {{< /expand >}} -->
->**// first some setup**   
->create variable `yellowBackground`, set to  `\u001b[47;1m`    
->create variable `greenBackground`, set to  `\u001b[42;1m`   
->create variable `greyBackground`, set to `\u001b[47;1m`   
->create variable `reset`, set to `\u001b[0m`   
->
->print "Enter a 5-letter word"   
->create variable `found`, set to `false`   
->
->**// begin the guessing**     
->create variable `i`, set to 0   
->loop while `i` <= 6 and `found` is `false`   
->>create variable `input`, set to the user's input  
->>      
->>**// let's check if they got it right**     
->>if `input` is the same as `word`
->>>  print "Well done! You guessed the word!"   
->>>  set `found` to `true`
->>>    
->> end if    
->>    
->>**// we need to format the output string correctly**    
->>create variable `output` set to an empty string     
->>      
->>**//now we loop through each letter to format it correctly**       
->> loop `j` from 0 to the length of the `input`    
->>> create variable `wordLetter`, set to the letter from the actual `word`     *// (use `.charAt(j)`)*      
->>> create variable `guessLetter`, set to the letter from the `input`    *//(use `.charAt(j)`)*       
->>>create variable `formattedLetter`, set to the `guessLetter` with the grey background    
->>>    
->>>**// should the letter be green?**    
->>>if the letters `wordLetter` and `guessLetter` match    
->>>>set `formattedLetter` to the `guessLetter` with green background    
->>>>         
->>>**// should the letter be yellow?**     
->>>else      
->>>> loop `h` from 0 to length of the `word`     
->>>>create variable `compareLetter`, set to the letter from the `word`  *// (use `.charAt(h)`)*         
->>>>>if the `compareLetter` matches the `guessLetter`        
->>>>>>set `formattedLetter` to the `guessLetter` with yellow background      
->>>>>>         
->>>>>end if    
->>>>>       
->>>>end loop     
->>>>        
->>>end if    
->>>add the `formattedLetter` to the end of the `output` 
->>>end loop   
->>>    
->>print the `output`
->>increment `i`     
->>end loop
-
----
-
-## [5] Deliverables
+# [4] Deliverables
 
 
+
+{{< deliverables>}}
 
 {{< code-action "Push your code to GitHub using the following steps." >}} 
 
 **✋ If you would like teacher feedback, begin your commit message with `#feedback`**
 
-
-{{< deliverables>}}
 {{< code-action "Select Commit from the menu on the left." >}} Select all your updated files. **Be sure to include a descriptive commit message.**
 
 {{< figure src="images/courses/java/git_commit_1.png" width="40%">}}
@@ -216,36 +202,6 @@ while (i < 6 && i > 0) {
 {{< /deliverables>}}
 
 
+# [5] HL: ADT Intro
 
-
-## [3] Deliverables
-
-
-{{< deliverables "For this lab, you should:" >}}
-
-**Once you've successfully completed the sequence be sure to fill out [this Google form](https://docs.google.com/forms/d/e/1FAIpQLScz0x6-s3GRD9P7oZlcqq24XifGDTw9BQ_j8t8TIqqRYw0naw/viewform?usp=sf_link)**.
-
-
-{{< code-action "Push your work to Github:" >}}
-- git status
-- git add file_name.py file_name2.py
-- git status
-- git commit -m "describe your drawing and your process here"
-  > be sure to customize this message, do not copy and paste this line
-- git push
-
-{{< /deliverables >}}
-
-
----
-
-# [4] Extension
-
-
-{{< code-action "Open the file:" >}} `extension_animation.py` in Atom. It is just an empty file. 
-
-
-{{< code-action "Code a custom animation of your choosing!" >}} Here is an example of what you could create:
-
-{{< figure src="images/courses/cs9/unit00/extension_animation.gif" width="50%">}}
 

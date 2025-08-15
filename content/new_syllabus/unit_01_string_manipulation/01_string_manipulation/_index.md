@@ -11,7 +11,7 @@ weight: 2
 In this lab we are going to explore lots of ways to manipulate strings with Python.
 
 ---
-#### Syllabus Topics 
+#### Syllabus Topics [HL & SL]
 * **B2.1.2** Construct programs that can extract and manipulate substrings.
 * **B2.3.2** Construct programs utilizing appropriate selection structures.
 * **B2.3.3** Construct programs that utilize looping structures to perform repeated actions.
