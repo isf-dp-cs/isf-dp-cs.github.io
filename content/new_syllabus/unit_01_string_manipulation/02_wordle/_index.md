@@ -295,7 +295,7 @@ The evaluatioin of the product must evaluate if the Success Criteria were met an
 
 ---
 
-# [5] HL: Dictionaries
+# [5] HL: Abstract Data Types (ADTs)
 
 ## Vocabulary
 
@@ -306,7 +306,26 @@ The evaluatioin of the product must evaluate if the Success Criteria were met an
 | **Python Dictionary** | An unordered, key-value pairs. It is Python's implementation of a **hash table**. Each key in a dictionary must be unique and immutable. |
 | **Set** | Stores unordered, mutables, and unique values.  |
 
-## Optional Starting Words
+
+## Sets
+
+Wouldn't it be great if we had a Worlde helper program that could give a list of the possible words every round? 
+
+A `Set` is perfect for this situation. 
+
+💻 **Create a new file `word_finder.py` and write the function `get_possible_words()`.**
+- inputs: a string of good letters, a string of bad letters, and a list of five letter words
+- output: a list of possible words 
+
+Consider which Set operations to use: 
+- `union`
+- `intersection`
+- `difference`
+
+
+## Dictionaries
+
+
 
 Let's use a dictionary to help us find the optiminal starting words in Worlde.  
 
@@ -326,4 +345,4 @@ sorted(dictionary.items(), key=lambda x: x[1], reverse = True)
 - output: a list of the top 10 best words 
 
 Tips
-- Use a set to delete words with duplicate letters
+- Use a set to delete words with duplicate letters -->
