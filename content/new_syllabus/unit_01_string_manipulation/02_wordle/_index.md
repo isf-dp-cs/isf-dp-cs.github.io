@@ -85,16 +85,18 @@ The System Overview should enable another developer to recreate the product. It 
 ## Flowchart
 
 
-👀 **First, let's consider the logic by looking at the flow chart.**
+👀 **First, let's consider the game logic by looking at the flow chart.**
 
 {{< figure src="images/courses/string_manipulation/wordle_flowchart.png" width="75%">}}
 
 
 ## Psueocode for the color formatting
 
+You may noticed the logic for the `process guess and format color` does not include details. This is becuase, sometimes psueodocode is better suited for communicated an algothirm. 
+
 {{< checkpoint  >}}
 
-**✏️ In your `World IA` document and fill out the Critiera C Pseudocode section.**
+**✏️ In the Critiera C Pseudocode section  `World IA` document, write psueodocde for processing the sugess and formatting the color. .**
 
 {{< /checkpoint>}}
 
