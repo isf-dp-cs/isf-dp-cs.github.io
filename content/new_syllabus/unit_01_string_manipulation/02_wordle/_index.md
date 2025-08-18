@@ -21,9 +21,9 @@ In this project, you will experience the IB IA structure and develop the code fo
 <!-- * **B2.3.3** Construct programs that utilize looping structures to perform repeated actions. -->
 
 ### Syllabus Topics [HL]
-* **B1.1.4** Trace flowcharts for a range of programming algorithms.
+
+* **B4.1.6** Explain the core principles of ADTs
 <!-- * **B2.1.2** Construct programs that can extract and manipulate substrings. -->
-* **B2.1.3** Describe how programs use common exception handling techniques.
 
 ---
 
@@ -147,9 +147,9 @@ Right now, the code picks a random 5-letter word, and allows the user a single g
 
 {{< expand "Solution" >}}
 ```python
-from word_list import words
+from list_of_words import five_letter_words
 
-solution_word = words[0]
+solution_word = five_letter_words[0]
 
 won = False 
 while won == False:
@@ -165,9 +165,9 @@ The game outputs if the user has successfully guessed the word and the game stop
 {{< expand "Solution" >}}
 
 ```python
-from word_list import words
+from list_of_words import five_letter_words
 
-solution_word = words[0]
+solution_word = five_letter_words[0]
 
 won = False 
 while won == False:
@@ -295,6 +295,35 @@ The evaluatioin of the product must evaluate if the Success Criteria were met an
 
 ---
 
-# [5] HL: ADT Intro
+# [5] HL: Dictionaries
+
+## Vocabulary
+
+| Word | Definition |
+| :--- | :--- |
+| **Abstract Data Type (ADT)** | A model that defines operations and behavior for a data structure, without defining how these operations are implmeneted. |
+| **Hash Table** | A data structure that stores key-value pairs. It uses a **hash function** to compute an index into an array of buckets or slots, from which the desired value can be found. O(1) time complexity. |
+| **Python Dictionary** | An unordered, key-value pairs. It is Python's implementation of a **hash table**. Each key in a dictionary must be unique and immutable. |
+| **Set** | Stores unordered, mutables, and unique values.  |
+
+## Optional Starting Words
+
+Let's use a dictionary to help us find the optiminal starting words in Worlde.  
+
+For ease of sorting, you can use this build in Python function. It will return a list of tuples, in descending order of the values. 
+```python
+sorted(dictionary.items(), key=lambda x: x[1], reverse = True)
+```
 
 
+💻 **Create a new file `helpers.py` and write the function `create_letter_ranking()`.** You will need to create dictionary with key-value pairs representing frequency of each letter's number of appearances. Then process that dictionary into an easily sortable list of letter. 
+- input: list of words
+- output: 
+
+
+💻 **Write a new function `score_words()`**
+- inputs: frequency dictionary and list of words five letter words 
+- output: a list of the top 10 best words 
+
+Tips
+- Use a set to delete words with duplicate letters
