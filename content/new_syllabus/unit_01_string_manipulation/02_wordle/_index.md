@@ -79,6 +79,14 @@ Now it's time to put all your new skills to good use! You will be coding the gam
 | Random word | The game randomly selects a word from a list of possible words. |
 | Error handling for word length | The game includes error handling if the user's input contains too few or too many letters. |
 
+
+
+{{< checkpoint  >}}
+
+**👀 Open your `World IA` document and review the Sucess Claims and Testing Strategy in Critiera A Pseudocode section.**
+
+{{< /checkpoint>}}
+
 ---
 
 # [2] System Overview
@@ -92,6 +100,16 @@ Now it's time to put all your new skills to good use! You will be coding the gam
 
 
 ## Psueocode for the color formatting
+
+{{< checkpoint  >}}
+
+**✏️ In your `World IA` document and fill out the Critiera C Pseudocode section.**
+
+{{< /checkpoint>}}
+
+
+{{< expand "Solution" >}}
+
 
 ```python
 loop each letter in guess by index
@@ -109,6 +127,8 @@ loop each letter in guess by index
 
 	Append bg_color + guess_letter + no_bg to word_feedback
 ```
+{{< /expand >}}
+
 
 ---
 
@@ -121,35 +141,14 @@ Either follow along with each steps or attempt Worlde on your own.
 It is your responsiblity to complete as many success claims as you can. 
 {{< /aside >}}
 
-{{< expand "Detailed Steps" >}}
+{{< expand "Success Claim 1: User Input" >}}
 
-
-## Looping
 Right now, the code picks a random 5-letter word, and allows the user a single guess. Not much of a game!
 
 {{< code-action "Add a loop to the code, so that the user gets 6 guesses.">}} You can reference your code from the other files to write your loop.
 
 {{< code-action "Edit the loop so that if the user guesses correctly, it will end early.">}}
 
-
----
-
-## Highlight
-A big part of `Wordle` is the feedback from the game. After each guess, the user is shown their guess, and each letter is highlighted according to these rules:
-
-- **GRAY backround**: guess letters not included in the word 
-- **YELLOW backround**: guess letters in the wrong location
-- **GREEN backround**: guess letters in the correct location
-
-{{< code-action "Each time the user guesses a word, print the word in the terminal, formatted with background colors.">}}
-
-Here are some ANSI codes for you to use:
-```java
-String gray = "\u001b[47;1m";
-String yellow = "\u001b[43;1m";
-String green = "\u001b[42;1m";
-String reset = "\u001b[0m";
-```
 
 ---
 
@@ -170,6 +169,33 @@ while attemps < 5 and won == False:
 ```
 {{< /expand >}}
 
+{{< expand "Success Claim 1: xxx" >}}
+
+{{< /expand >}}
+
+
+{{< expand "Success Claim 1: Color Feedback" >}}
+
+A big part of `Wordle` is the feedback from the game. After each guess, the user is shown their guess, and each letter is highlighted according to these rules:
+
+- **GRAY backround**: guess letters not included in the word 
+- **YELLOW backround**: guess letters in the wrong location
+- **GREEN backround**: guess letters in the correct location
+
+{{< code-action "Each time the user guesses a word, print the word in the terminal, formatted with background colors.">}}
+
+Here are some ANSI codes for you to use:
+```java
+String gray = "\u001b[47;1m";
+String yellow = "\u001b[43;1m";
+String green = "\u001b[42;1m";
+String reset = "\u001b[0m";
+```
+{{< /expand >}}
+
+
+
+
 **Example Completed Game**
 
 {{< figure src="images/courses/string_manipulation/wordle_example.png" width="40%">}}
@@ -183,19 +209,23 @@ while attemps < 5 and won == False:
 
 {{< deliverables>}}
 
+**✏️ Ensure you have complelted Critiera E on your document**
+
+---
+
 {{< code-action "Push your code to GitHub using the following steps." >}} 
 
-**✋ If you would like teacher feedback, begin your commit message with `#feedback`**
 
-{{< code-action "Select Commit from the menu on the left." >}} Select all your updated files. **Be sure to include a descriptive commit message.**
+{{< code-action "Select Commit from the menu on the left." >}} Select all your updated files. **Be sure to include a descriptive commit message. If you would like teacher feedback, begin your commit message with `#feedback`**
 
-{{< figure src="images/courses/java/git_commit_1.png" width="40%">}}
+
+{{< figure src="images/courses/java/git_commit_1.png" width="30%">}}
 {{< code-action "Click Commit and Push" >}} 
 
-{{< figure src="images/courses/java/git_commit_2.png" width="40%">}}
+{{< figure src="images/courses/java/git_commit_2.png" width="30%">}}
 
 {{< code-action "Click Push" >}}  
-{{< figure src="images/courses/java/git_commit_3.png" width="40%">}}
+{{< figure src="images/courses/java/git_commit_3.png" width="0%">}}
 
 
 
