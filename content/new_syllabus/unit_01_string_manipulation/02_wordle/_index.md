@@ -22,7 +22,9 @@ In this project, you will experience the IB IA structure and develop the code fo
 
 ### Syllabus Topics [HL]
 
-* **B4.1.6** Explain the core principles of ADTs
+* **B4.1.1** Explain the core principles of ADTs
+* **B4.1.5**  Construct and apply sets as an ADT
+
 <!-- * **B2.1.2** Construct programs that can extract and manipulate substrings. -->
 
 ---
@@ -302,28 +304,79 @@ The evaluatioin of the product must evaluate if the Success Criteria were met an
 | Word | Definition |
 | :--- | :--- |
 | **Abstract Data Type (ADT)** | A model that defines operations and behavior for a data structure, without defining how these operations are implmeneted. |
-| **Hash Table** | A data structure that stores key-value pairs. It uses a **hash function** to compute an index into an array of buckets or slots, from which the desired value can be found. O(1) time complexity. |
-| **Python Dictionary** | An unordered, key-value pairs. It is Python's implementation of a **hash table**. Each key in a dictionary must be unique and immutable. |
 | **Set** | Stores unordered, mutables, and unique values.  |
+| **Mutable** | Data that can be changed after its been initialized  |
+| **Casting** | Convert a variable from one data type to another |
 
 
 ## Sets
 
-Wouldn't it be great if we had a Worlde helper program that could give a list of the possible words every round? 
+Wouldn't it be great if we had a Wordle helper program that could give a list of the possible words every round? 
 
 A `Set` is perfect for this situation. 
 
-💻 **Create a new file `word_finder.py` and write the function `get_possible_words()`.**
+💻 **In the file `word_finder.py`, finish the function `get_possible_words()`.**
 - inputs: a string of good letters, a string of bad letters, and a list of five letter words
 - output: a list of possible words 
 
-Consider which Set operations to use: 
-- `union`
-- `intersection`
-- `difference`
+**It uses `sys` to access command line arguements to easily run the program from the Terminal.** The first arguement represents good letters (letters in the word) and the second arguement represents bad letters (letters not in the word). Here is how to run the file. 
+```shell
+$ python3 word_finder.py rog asefn
+['glory', 'gourd', 'groom', 'group', 'grout', 'growl', 'rigor', 'rough']
+```
+
+Consider which Set operations to use. Take a look [this resources](https://www.programiz.com/python-programming/set) for how to use a Set in Python.
+- `union`  - join two sets
+- `intersection` - find common values
+- `difference` - only items from first set
+- `subset` - if all of items in first set are in second set
+- `superset` - if all items of the items in the second set are in the first set
+
+```python
+# union
+a = {1,2,3,4}
+b = {3,4,5,6}
+unioin_set = a | b
+# union_set = {1,2,3,4,5,6}
+
+# intersection
+a = {1,2,3,4}
+b = {3,4,5,6}
+interesection_set = a & b
+# intersection_set = {3, 4}
+
+# difference
+a = {1,2,3,4}
+b = {3,4,5,6}
+difference_set = a - b
+# difference_set = {1,2}
+
+# subset
+a = {1,2}
+b = {1,2,3,4}
+print(a.subset(b)) # True
+
+print(b.subsect(a)) # False
+
+# superset
+print(b.superset(a)) # True
+print(a.superset(b)) # False
+
+# To cast a List to a Set
+fruit = ['apples', 'organges', 'peaches', 'apples']
+set(fruit)
+```
+
+👾 **Test your `word_finder.py` with the real [Wordle](https://www.nytimes.com/games/wordle/index.html)!** *Consider, how you could rank the possible words in best to worst?*
+
+{{< deliverables>}}
+
+{{< code-action "Push your code to GitHub!" >}} 
+
+{{< /deliverables>}}
 
 
-## Dictionaries
+<!-- ## Dictionaries
 
 
 
@@ -345,4 +398,4 @@ sorted(dictionary.items(), key=lambda x: x[1], reverse = True)
 - output: a list of the top 10 best words 
 
 Tips
-- Use a set to delete words with duplicate letters -->
+- Use a set to delete words with duplicate letters --> 
