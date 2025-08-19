@@ -306,4 +306,27 @@ Note:
 {{< /expand >}}
 
 
+---
+## ThinkIB Resources
+[HL | Worksheets for OOP](https://student.thinkib.net/computerscience/page/61857/?lg=95204)
+[SL | Worksheets for OOP](https://student.thinkib.net/computerscience/page/61857/?lg=95205)   
+
+---
+
+## Past Papers
+
+[May 2024 Paper 2 SL](https://drive.google.com/file/d/1Nb4CClZFWkYndB55X552fQFav39lwLCT/view?usp=drive_link)
+>[May 2024 Paper 2 SL Markscheme](https://drive.google.com/file/d/1rIR9WjjOHwMQ1-inufuy3kBLSsKpsnOh/view?usp=drive_link)
+
+
+[May 2024 Paper 2 HL](https://drive.google.com/file/d/1bssmy9--YTKisIZGffnEQNJmWsMAfRwE/view?usp=drive_link)
+>[May 2024 Paper 2 HL Markscheme](https://drive.google.com/file/d/1E1qbn9UbXJ2zD-6SBbhE0fcSdYfGQ2gp/view?usp=sharing)   
+
+
+[Nov 2023 Paper 2 SL](https://drive.google.com/file/d/1HjJt142NQGu2WR5HnnDNMCXb1gxtY9TN/view?usp=sharing)
+>[Nov 2023 Paper 2 SL Markscheme](https://drive.google.com/file/d/1IW9yiSd0Hjw2ahTsMY2wEQeuzVNXxM5L/view?usp=sharing)
+
+
+[Nov 2023 Paper 2 HL](https://drive.google.com/file/d/1I_trl2a3pzuPlWYqTxzAk7gycFOsJPZp/view?usp=sharing)
+>[Nov 2023 Paper 2 HL Markscheme](https://drive.google.com/file/d/1ccbwPTsTpx0CGlwpmE7IFlTSYw9yUK7E/view?usp=sharing)
 
