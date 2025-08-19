@@ -18,8 +18,8 @@ In this lab we are going to introduce Abstract Data Types (ADTs), and specifical
 
 | Word | Definition |
 | :--- | :--- |
-| **Abstract Data Type (ADT)** | A model that defines operations and behavior for a data structure, without defining how these operations are implmeneted. |
-| **Set** | Stores unordered, mutables, and unique values.  |
+| **Abstract Data Type (ADT)** | A model that defines operations and behavior for a data structure, without defining how these operations are implemeneted. |
+| **Set** | Stores unordered, mutable, and unique values.  |
 | **Mutable** | Data that can be changed after its been initialized  |
 | **Casting** | Convert a variable from one data type to another |
 
@@ -137,9 +137,9 @@ When you want to exit the shell, you can type `exit` or `^D`
 
 ## [2] Music Playlists 
 
-Sets are particularly useful for determining what is similar and what is different in sets of data. In this lab you will compare and contrast 10 individual's favorite music. 
+Sets are particularly useful for determining what is similar and what is different in sets of data. In this lab you will compare and contrast 10 individuals' favorite music. 
 
-💻 **In `set_music_examples` follow along and complete each `TODO` item.** They are generally in order of difficulty. It can help to write out a mini example on a whiteboard/notebook. 
+💻 **In `set_music_examples` follow along and complete each `TODO` item.** They get more challenging as you work from top to bottom. It can help to write out a mini example on a whiteboard/notebook. 
 
 ✅ **Check your answers with a friend. When you're confident, check with a teacher.**
 
