@@ -138,7 +138,7 @@ Development is where you actually create the product. You must justify your Succ
 It is your responsiblity to complete as many success claims as you can. 
 {{< /aside >}}
 
-## Success Claim 1: User Input
+## Success Crtieria 1: User Input
 
 Right now, the code picks a random 5-letter word, and allows the user a single guess. Not much of a game!
 
@@ -160,9 +160,9 @@ while won == False:
 ```
 {{< /expand >}}
 
-## Success Claim 2: Correct User Guess 
+## Success Crtieria 2: Correct User Guess 
 
-The game outputs if the user has successfully guessed the word and the game stops. 
+**Sucess Crtieria:** The game outputs if the user has successfully guessed the word and the game stops. 
 
 {{< expand "Solution" >}}
 
@@ -182,11 +182,11 @@ while won == False:
 ```
 {{< /expand >}}
 
-## Success Claim 3: Guess Limit
+## Success Crtieria 3: Guess Limit
 
 Right now, the user can guess infinitely. However, if they guess correctly, the loop should end early. 
 
-**Succes Claim:** The game ends if the user guesses 6 times and outputs the correct word 
+**Succes Crtieria:** The game ends if the user guesses 6 times and outputs the correct word 
 
 
 {{< expand "Tip" >}}
@@ -202,9 +202,9 @@ while attempts < 7:
 ```
 {{< /expand >}}
 
-## Success Claim 4: Random Word
+## Success Crtieria 4: Random Word
 
-**Success Claim:** The game randomly selects a word from a list of possible words  
+**Success Crtieria:** The game randomly selects a word from a list of possible words  
 
 
 {{< expand "Tip" >}}
@@ -216,7 +216,7 @@ solution_word = words[random.randint(0,len(words))]
 ```
 {{< /expand >}}
 
-## Success Claim 5: Color Feedback
+## Success Crtieria 5: Color Feedback
 
 A big part of `Wordle` is the feedback from the game. After each guess, the user is shown their guess, and each letter is highlighted according to these rules:
 
@@ -239,9 +239,9 @@ String reset = "\u001b[0m";
 
 {{< /expand >}}
 
-## Success Claim 7: Error Handling
+## Success Crtieria 7: Error Handling
 
-**Sucess Claim:** The game includes error handling  if the user input contains too few or too many letters 
+**Sucess Crtieria:** The game includes error handling  if the user input contains too few or too many letters 
 
 
 {{< expand "Tips" >}}
