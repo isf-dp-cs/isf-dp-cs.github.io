@@ -1,5 +1,5 @@
 ---
-title: "02. ADT: Set"
+title: "02. ADT: Sets"
 bookFlatSection: false
 weight: 2
 # bookCollapseSection: true
