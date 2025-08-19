@@ -261,25 +261,20 @@ if len(guess) < 3:
 {{< figure src="images/courses/string_manipulation/wordle_example.png" width="40%">}}
 
 
-{{< deliverables>}}
 
-{{< code-action "Push your code to GitHub using the following steps." >}} 
+{{< deliverables "Once you complete the lab, be sure to complete these two steps:" >}}
 
+✏️ **Go to your **Syllabus Content Checklist** in your Google Drive and update it accordingly.**
 
-{{< code-action "Select Commit from the menu on the left." >}} Select all your updated files. **Be sure to include a descriptive commit message. If you would like teacher feedback, begin your commit message with `#feedback`**
+{{< code-action "Push your work to Github" >}}
+- git status
+- git add -A
+- git status
+- git commit -m \"describe your code here\"   
+- git push
+- git remote
 
-
-{{< figure src="images/courses/java/git_commit_1.png" width="30%">}}
-{{< code-action "Click Commit and Push" >}} 
-
-{{< figure src="images/courses/java/git_commit_2.png" width="30%">}}
-
-{{< code-action "Click Push" >}}  
-{{< figure src="images/courses/java/git_commit_3.png" width="0%">}}
-
-
-
-{{< /deliverables>}}
+{{< /deliverables >}}
 
 ---
 
@@ -293,6 +288,7 @@ The evaluatioin of the product must evaluate if the Success Criteria were met an
 **✏️ Complelted Critiera E on your document**
 
 {{< /checkpoint>}}
+
 
 
 ---
