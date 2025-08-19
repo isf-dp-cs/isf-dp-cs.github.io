@@ -3,7 +3,7 @@ title: "02. Wordle"
 bookFlatSection: false
 weight: 2
 # bookCollapseSection: true
-# draft: true
+draft: true
 ---
 
 # Wordle 
@@ -295,15 +295,6 @@ The evaluatioin of the product must evaluate if the Success Criteria were met an
 
 # [5] HL: Abstract Data Types (ADTs)
 
-## Vocabulary
-
-| Word | Definition |
-| :--- | :--- |
-| **Abstract Data Type (ADT)** | A model that defines operations and behavior for a data structure, without defining how these operations are implmeneted. |
-| **Set** | Stores unordered, mutables, and unique values.  |
-| **Mutable** | Data that can be changed after its been initialized  |
-| **Casting** | Convert a variable from one data type to another |
-
 
 ## Sets
 
@@ -328,40 +319,6 @@ Consider which Set operations to use. Take a look [this resources](https://www.p
 - `subset` - if all of items in first set are in second set
 - `superset` - if all items of the items in the second set are in the first set
 
-```python
-# union
-a = {1,2,3,4}
-b = {3,4,5,6}
-unioin_set = a | b
-# union_set = {1,2,3,4,5,6}
-
-# intersection
-a = {1,2,3,4}
-b = {3,4,5,6}
-interesection_set = a & b
-# intersection_set = {3, 4}
-
-# difference
-a = {1,2,3,4}
-b = {3,4,5,6}
-difference_set = a - b
-# difference_set = {1,2}
-
-# subset
-a = {1,2}
-b = {1,2,3,4}
-print(a.subset(b)) # True
-
-print(b.subsect(a)) # False
-
-# superset
-print(b.superset(a)) # True
-print(a.superset(b)) # False
-
-# To cast a List to a Set
-fruit = ['apples', 'organges', 'peaches', 'apples']
-set(fruit)
-```
 
 👾 **Test your `word_finder.py` with the real [Wordle](https://www.nytimes.com/games/wordle/index.html)!** *Consider, how you could rank the possible words in best to worst?*
 
