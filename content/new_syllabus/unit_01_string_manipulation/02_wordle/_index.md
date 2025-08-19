@@ -321,7 +321,7 @@ A `Set` is perfect for this situation.
 
 **It uses `sys` to access command line arguements to easily run the program from the Terminal.** The first arguement represents good letters (letters in the word) and the second arguement represents bad letters (letters not in the word). Here is how to run the file. 
 ```shell
-$ python3 word_finder.py rog asefn
+$ python word_finder.py rog asefn
 ['glory', 'gourd', 'groom', 'group', 'grout', 'growl', 'rigor', 'rough']
 ```
 
