@@ -1,9 +1,9 @@
 ---
-title: "02. Wordle"
+title: "03. Wordle"
 bookFlatSection: false
-weight: 2
+weight: 4
 # bookCollapseSection: true
-draft: true
+# draft: true
 ---
 
 # Wordle 
@@ -40,18 +40,18 @@ cd ~/desktop/dpcs/unit00_strings/
 
 {{< code-action "Clone your repo. This will copy it onto your computer." >}}  
 ```shell
-git clone https://github.com/the-isf-academy/lab_wordle_yourGithubUsername
+git clone https://github.com/the-isf-academy/project_wordle_yourGithubUsername
 ```
 > Below you'll see that the `git clone` command has a `yourGithubUsername`. 
 >
 > **You need to replace this with your username**
 >
-> *e.g. `https://github.com/the-isf-academy/lab_wordle_emmaqbrown`*
+> *e.g. `https://github.com/the-isf-academy/project_wordle_emmaqbrown`*
 
 
 {{< code-action "In the Terminal, type the following command to open the lab folder." >}}
 ```shell
-cd lab_wordle_yourGithubUsername
+cd project_wordle_yourGithubUsername
 ```
 
 {{< code-action "Enter the Poetry Shell to start the lab." >}} As a reminder, we will run this command at the start of each lab, but only when we are inside a lab folder.
@@ -66,23 +66,23 @@ When you want to exit the shell, you can type `exit` or `^D`
 
 ---
 
-# [1] Critiera A: Problem Specification
+# [1] Criteria A: Problem Specification
 
-The Problem Specification is to where you outline the description of. your problem and how the product will address it. 
+The Problem Specification is where you outline the description of your problem and how the product will address it. 
 
-In this lab we will focus on the Success Criteria. The Success Criteria are measuare outcomes of the solution requirement.
+In this lab we will focus on the Success Criteria. The Success Criteria measuare outcomes of the solution requirement.
 
 {{< checkpoint  >}}
 
-**👀 Open your `World IA` document and review the Sucess Critiera.**
+**👀 Open the `Wordle IA` document in your Google Drive and review the Sucess Criteria.**
 
 {{< /checkpoint>}}
 
 ---
 
-# [2] Critiera C: System Overview
+# [2] Criteria C: System Overview
 
-The System Overview should enable another developer to recreate the product. It should include system models, algothirms, and a testing strategy. 
+The System Overview should enable another developer to recreate the product. It should include system models, algorithms, and a testing strategy. 
 
 ## Flowchart
 
@@ -92,18 +92,18 @@ The System Overview should enable another developer to recreate the product. It 
 {{< figure src="images/courses/string_manipulation/wordle_flowchart.png" width="75%">}}
 
 
-## Psueocode for the color formatting
+## Psuedocode for the color formatting
 
-You may noticed the logic for the `process guess and format color` does not include details. This is becuase, sometimes psueodocode is better suited for communicated an algothirm. 
+You may noticed the logic for the `process guess and format color` does not include details. This is becuase, sometimes psueodocode is better suited for communicating an algorithm. 
 
 {{< checkpoint  >}}
 
-**✏️ In the Critiera C Pseudocode section  `World IA` document, write psueodocde for processing the sugess and formatting the color. .**
+**✏️ In the Criteria C Pseudocode section  `World IA` document, write psueodocde for processing the guess and formatting the color.**
 
 {{< /checkpoint>}}
 
 
-{{< expand "Solution" >}}
+<!-- {{< expand "Solution" >}}
 
 
 ```python
@@ -118,36 +118,33 @@ loop each letter in guess by index
 		For each letter in secret_word (by index j):
 			If guess_letter matches secret_word[j]:
 				Set bg_color to yellow_bg
-				Break inner loop
 
 	Append bg_color + guess_letter + no_bg to word_feedback
 ```
-{{< /expand >}}
+{{< /expand >}} -->
 
 
 ---
 
-# [3] Critiera D: Development
+# [3] Criteria D: Development
 
 Development is where you actually create the product. You must justify your Success Criteria and demonstrate your ability to pass the tests outlined in the Testing Strategy.
 
 {{< aside "Choose your own adventure" >}} 
 
-💻 **Either follow along with each success crtieria or attempt Worlde on your own.**
+💻 **Follow along coding each success criteria.**
 
-It is your responsiblity to complete as many success claims as you can. 
+It is your goal to complete as many success claims as you can. Test each one before moving onto the next.
 {{< /aside >}}
 
-## Success Crtieria 1: User Input
+## Success Criteria 1: User Input
 
-Right now, the code picks a random 5-letter word, and allows the user a single guess. Not much of a game!
-
-{{< code-action "Add a loop to the code, so that the user gets 6 guesses.">}} You can reference your code from the other files to write your loop.
-
-{{< code-action "Edit the loop so that if the user guesses correctly, it will end early.">}}
+**Success Criteria:** The game allows the user to input guess
 
 
-{{< expand "Solution" >}}
+
+
+<!-- {{< expand "Solution" >}}
 ```python
 from list_of_words import five_letter_words
 
@@ -158,13 +155,16 @@ while won == False:
 	guess = input("Enter a guess: ")
 
 ```
-{{< /expand >}}
+{{< /expand >}} -->
 
-## Success Crtieria 2: Correct User Guess 
+## Success Criteria 2: Correct User Guess 
 
-**Sucess Crtieria:** The game outputs if the user has successfully guessed the word and the game stops. 
+**Sucess Criteria:** The game provides output and the game stops if the user has successfully guessed the word
 
-{{< expand "Solution" >}}
+{{< code-action "Edit the loop so that if the user guesses correctly, it will end early.">}}
+
+
+<!-- {{< expand "Solution" >}}
 
 ```python
 from list_of_words import five_letter_words
@@ -180,16 +180,16 @@ while won == False:
 		print("You correctly guessed the word!")
 
 ```
-{{< /expand >}}
+{{< /expand >}} -->
 
-## Success Crtieria 3: Guess Limit
+## Success Criteria 3: Guess Limit
 
 Right now, the user can guess infinitely. However, if they guess correctly, the loop should end early. 
 
-**Succes Crtieria:** The game ends if the user guesses 6 times and outputs the correct word 
+**Succes Criteria:** The game ends if the user guesses 6 times and outputs the correct word 
 
 
-{{< expand "Tip" >}}
+<!-- {{< expand "Tip" >}}
 
 ```python 
 attempts = 0
@@ -200,23 +200,23 @@ while attempts < 7:
 	attempts = attemps + 1
 
 ```
-{{< /expand >}}
+{{< /expand >}} -->
 
-## Success Crtieria 4: Random Word
+## Success Criteria 4: Random Word
 
-**Success Crtieria:** The game randomly selects a word from a list of possible words  
+**Success Criteria:** The game randomly selects a word from a list of possible words  
 
 
-{{< expand "Tip" >}}
+<!-- {{< expand "Tip" >}}
 ```python
 from word_list import words
 import random
 
 solution_word = words[random.randint(0,len(words))]
 ```
-{{< /expand >}}
+{{< /expand >}} -->
 
-## Success Crtieria 5: Color Feedback
+## Success Criteria 5: Color Feedback
 
 A big part of `Wordle` is the feedback from the game. After each guess, the user is shown their guess, and each letter is highlighted according to these rules:
 
@@ -234,24 +234,24 @@ String green = "\u001b[42;1m";
 String reset = "\u001b[0m";
 ```
 
-{{< expand "Solution" >}}
+<!-- {{< expand "Solution" >}}
 
 
-{{< /expand >}}
+{{< /expand >}} -->
 
-## Success Crtieria 7: Error Handling
+## Success Criteria 7: Error Handling
 
-**Sucess Crtieria:** The game includes error handling  if the user input contains too few or too many letters 
+**Sucess Criteria:** The game includes error handling  if the user input contains too few or too many letters 
 
 
-{{< expand "Tips" >}}
+<!-- {{< expand "Tips" >}}
 ```python
 guess = input("Enter a guess: ")
 
 if len(guess) < 3: 
 	print("too short")
 ```
-{{< /expand >}}
+{{< /expand >}} -->
 
 
 
@@ -285,7 +285,7 @@ The evaluatioin of the product must evaluate if the Success Criteria were met an
 
 {{< checkpoint  >}}
 
-**✏️ Complelted Critiera E on your document**
+**✏️ Complelted Criteria E on your document**
 
 {{< /checkpoint>}}
 
