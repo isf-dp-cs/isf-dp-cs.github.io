@@ -59,7 +59,7 @@ for fruit in myset:
   print(fruit)
 
 # create an empty set
-myset = {}
+myset = set()
 
 ```
 
