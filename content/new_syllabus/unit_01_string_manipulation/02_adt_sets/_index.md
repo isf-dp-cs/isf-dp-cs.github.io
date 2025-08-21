@@ -89,7 +89,7 @@ a = {1,2}
 b = {1,2,3,4}
 print(a.subset(b)) # True
 
-print(b.subsect(a)) # False
+print(b.subset(a)) # False
 
 # superset
 print(b.superset(a)) # True
