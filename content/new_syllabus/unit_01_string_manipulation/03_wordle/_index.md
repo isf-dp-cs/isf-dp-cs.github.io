@@ -253,7 +253,7 @@ if len(guess) < 3:
 ```
 {{< /expand >}} -->
 
-
+---
 
 
 **Example Completed Game**
@@ -278,14 +278,14 @@ if len(guess) < 3:
 
 ---
 
-# [4] Evaluation
+# [4] Criteria E: Evaluation
 
 The evaluatioin of the product must evaluate if the Success Criteria were met and consider future improvements to the product. 
 
 
 {{< checkpoint  >}}
 
-**✏️ Complelted Criteria E on your document**
+**✏️ Fill out Criteria E on your document**
 
 {{< /checkpoint>}}
 
