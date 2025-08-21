@@ -207,14 +207,14 @@ while attempts < 7:
 **Success Criteria:** The game randomly selects a word from a list of possible words  
 
 
-<!-- {{< expand "Tip" >}}
+{{< expand "Tip" >}}
 ```python
 from word_list import words
 import random
 
 solution_word = words[random.randint(0,len(words))]
 ```
-{{< /expand >}} -->
+{{< /expand >}}
 
 ## Success Criteria 5: Color Feedback
 
