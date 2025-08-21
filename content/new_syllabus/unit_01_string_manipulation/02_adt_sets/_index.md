@@ -139,10 +139,77 @@ When you want to exit the shell, you can type `exit` or `^D`
 
 Sets are particularly useful for determining what is similar and what is different in sets of data. In this lab you will compare and contrast 10 individuals' favorite music. 
 
-💻 **In `set_music_examples` follow along and complete each `TODO` item.** They get more challenging as you work from top to bottom. It can help to write out a mini example on a whiteboard/notebook. 
 
+💻 **In `set_music_examples` follow along and complete each `TODO` item.** They get more challenging as you work from top to bottom. It can help to write out a mini example on a whiteboard/notebook. 
 ✅ **Check your answers with a friend. When you're confident, check with a teacher.**
 
+
+{{< expand "Solutions" >}}
+```python
+from data import favorite_music
+import random 
+
+# 💻 1) TODO: Create a class playlist with music from all people
+class_playlist = set()
+for music_set in favorite_music:
+    class_playlist = class_playlist | music_set
+
+print(class_playlist, len(class_playlist))
+print()
+
+# 💻  2) TODO: What is the percentage of unique songs compared to total songs in entire dataset(including duplicates)?
+count = 0 
+for music in favorite_music:
+    count += len(music)
+
+print(len(class_playlist)/count)
+print()
+
+# 💻 3) TODO: How many times does the song "Espresso" appear?
+
+count = 0 
+for music in favorite_music:
+    if "Espresso" in music:
+        count +=1
+print(count)
+print()
+
+# 💻 4) TODO: If Index 0 of favorite_music listened to all the music in Index 3 and 4,
+#       - How many new songs did they listen to?
+#       - What are the song titles? 
+
+total_music = favorite_music[0] | favorite_music[3] | favorite_music[4]
+new_songs = total_music - favorite_music[0] 
+print(new_songs, len(new_songs))
+print()
+
+# 💻 5) TODO: Create a playlist with only songs everyone likes 
+common_songs = class_playlist
+for music_set in favorite_music:
+    common_songs = common_songs & music_set
+
+print(common_songs, len(common_songs))
+print()
+
+# 💻  6) TODO: Which index of favorite_music has the most unique music?
+most_difference = None
+most_index = 0
+
+for i in range(len(favorite_music)):
+    current_difference = len(class_playlist-favorite_music[i])
+
+    if i == 0:
+        most_difference = current_difference
+
+    if current_difference < most_difference:
+        most_difference = current_difference
+        most_index = i
+
+
+print(most_index)
+print()
+```
+{{< /expand >}}
 
 ---
 
