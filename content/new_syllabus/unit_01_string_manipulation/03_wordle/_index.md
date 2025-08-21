@@ -40,13 +40,13 @@ cd ~/desktop/dpcs/unit00_strings/
 
 {{< code-action "Clone your repo. This will copy it onto your computer." >}}  
 ```shell
-git clone https://github.com/the-isf-academy/project_wordle_yourGithubUsername
+git clone https://github.com/isf-dp-cs/project_wordle_yourGithubUsername
 ```
 > Below you'll see that the `git clone` command has a `yourGithubUsername`. 
 >
 > **You need to replace this with your username**
 >
-> *e.g. `https://github.com/the-isf-academy/project_wordle_emmaqbrown`*
+> *e.g. `https://github.com/isf-dp-cs/project_wordle_emmaqbrown`*
 
 
 {{< code-action "In the Terminal, type the following command to open the lab folder." >}}
