@@ -144,7 +144,32 @@ Sets are particularly useful for determining what is similar and what is differe
 ✅ **Check your answers with a friend. When you're confident, check with a teacher.**
 
 
-{{< expand "Solutions" >}}
+---
+
+## [3] Deliverables
+
+
+{{< deliverables "Once you complete the lab, be sure to complete these two steps:" >}}
+
+**📋 Update Syllabus Tracker:** Go to your **Syllabus Content Checklist** in your Google Drive and update it accordingly.
+
+{{< code-action "Push your work to Github" >}}
+- git status
+- git add -A
+- git status
+- git commit -m \"describe your code here\"   
+- git push
+- git remote
+
+{{< /deliverables >}}
+
+
+---
+
+## [4] Solutions
+ 
+
+{{< expand "Code Solutions" >}}
 ```python
 from data import favorite_music
 import random 
@@ -211,25 +236,19 @@ print()
 ```
 {{< /expand >}}
 
----
 
-## [3] Deliverables
+{{< expand "Output Solutions" >}}
+```shell
+{'Mambo No. 5', 'We Will Rock You', 'WAP', 'Bad Guy', 'Bad Romance', 'You Shook Me All Night Long', 'Rolling in the Deep', 'Push It', 'The Weight', 'Anti-Hero', 'Believe', 'Watermelon Sugar', 'Juicy', 'Die with a Smile', 'Sicko Mode', 'Die for You', 'Last Night', 'Redemption Song', 'Not Like Us', 'Old Town Road', 'Say My Name', 'Levitating', 'Cruel Summer', '...Baby One More Time', 'Drivers License', 'Heat Waves', 'Come Together', 'Bridge Over Troubled Water', "We Don't Talk About Bruno", 'Thunder Road', 'Blinding Lights', 'Smooth', 'Flowers', 'Genie in a Bottle', 'Sweet Dreams (Are Made of This)', 'As It Was', 'Single Ladies (Put a Ring on It)', 'Kill Bill', 'Without Me', 'Shivers', 'Beautiful Things', 'Need to Know', 'Shallow', 'Lola', 'Espresso', "What's Up?", 'Poker Face', 'The House of the Rising Sun', 'First Class', 'I Will Always Love You', 'Happier Than Ever', 'Bad Habit', 'Girls Just Want to Have Fun', 'All Star', 'Another Brick in the Wall, Part 2', 'Happier', 'Go Your Own Way', 'Kryptonite', "Stayin' Alive", 'Losing My Religion', 'STAY', 'The Revolution Will Not Be Televised', 'No Scrubs', "Let's Dance", 'Savage', 'Sunflower', 'Under the Bridge', 'High Hopes', 'Someone You Loved', 'Paint The Town Red', 'Enter Sandman', 'I Want You Back', 'Montero (Call Me by Your Name)', 'I Want to Hold Your Hand', 'Wait for U', 'Permission to Dance', 'With or Without You', 'Dynamite', 'One', 'golden hour', 'Creep', 'Dancing Queen', 'Take My Breath Away', 'My Universe', 'Smells Like Teen Spirit', 'I Wanna Dance with Somebody (Who Loves Me)', 'Crazy Little Thing Called Love', 'About Damn Time', 'The Box', 'Butter', 'Old Town Road - Lil Nas X ft. Billy Ray Cyrus', 'Beat It', 'Eye of the Tiger', 'Lose Control', 'Unholy', 'Birds of a Feather', 'Good 4 U', 'Uptown Funk', 'Save Your Tears', "It's Gonna Be Me"} 100
 
+0.373134328358209
 
-{{< deliverables "Once you complete the lab, be sure to complete these two steps:" >}}
+4
 
-**📋 Update Syllabus Tracker:** Go to your **Syllabus Content Checklist** in your Google Drive and update it accordingly.
+{'We Will Rock You', 'Die with a Smile', 'Happier Than Ever', 'The Box', 'WAP', 'Bad Habit', 'Last Night', 'Beautiful Things', 'Savage', 'Lose Control', 'Birds of a Feather', 'First Class'} 12
 
-{{< code-action "Push your work to Github" >}}
-- git status
-- git add -A
-- git status
-- git commit -m \"describe your code here\"   
-- git push
-- git remote
+{'STAY', 'Heat Waves', 'Blinding Lights', 'Flowers', 'Unholy', 'As It Was', 'Cruel Summer', 'Levitating'} 8
 
-{{< /deliverables >}}
-
-
-
-
+6
+```
+{{< /expand >}}
