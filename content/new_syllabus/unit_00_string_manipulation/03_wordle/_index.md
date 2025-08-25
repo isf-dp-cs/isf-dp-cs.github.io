@@ -15,7 +15,6 @@ In this project, you will experience the IB IA structure and develop the code fo
 ---
 ### Syllabus Topics [SL]
 * **B1.1.4** Trace flowcharts for a range of programming algorithms.
-* **B2.1.3** Describe how programs use common exception handling techniques.
 <!-- * **B2.3.2** Construct programs utilizing appropriate selection structures. -->
 <!-- * **B2.3.3** Construct programs that utilize looping structures to perform repeated actions. -->
 
@@ -242,35 +241,6 @@ String reset = "\u001b[0m";
 
 **Sucess Criteria:** The game includes error handling if the user input contains too few or too many letters 
 
-💻 **Include `try`, `except` and `raise Exception` in your program. You can use them in whatever way makes the most sense to you.** Read more here:
-- [`try` and `except`](https://www.w3schools.com/python/python_try_except.asp)
-- [Build-in Exceptions](https://www.w3schools.com/python/python_ref_exceptions.asp)
-
-
-{{< expand "Tips" >}}
-```python
-letter = 'a'
-try:
-	letter = letter + 3
-except: 
-	print("letter is not a number")
-
-# RAISE EXCEPTIONS 
-try:
-	print(x)
-except: 
-	raise Exception("Impossible!")
-
-
-# BUILT-IN EXCEPTIONS
-try:
-	print(x)
-except: 
-	raise ValueError("x does not exist")
-```
-
-
-{{< /expand >}}
 
 ---
 

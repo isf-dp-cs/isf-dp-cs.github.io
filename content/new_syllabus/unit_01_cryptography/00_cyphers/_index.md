@@ -14,17 +14,15 @@ In this project, you will experience the IB IA structure and develop the code fo
 
 ---
 ### Syllabus Topics [SL]
-* **B1.1.4** Trace flowcharts for a range of programming algorithms.
+* **B1.1.4** B2.3.4 Construct functions and modularization.
 * **B2.1.3** Describe how programs use common exception handling techniques.
-<!-- * **B2.3.2** Construct programs utilizing appropriate selection structures. -->
-<!-- * **B2.3.3** Construct programs that utilize looping structures to perform repeated actions. -->
 
-### Syllabus Topics [HL]
+
+<!-- ### Syllabus Topics [HL]
 
 * **B4.1.1** Explain the core principles of ADTs
-* **B4.1.5**  Construct and apply sets as an ADT
+* **B4.1.5**  Construct and apply sets as an ADT -->
 
-<!-- * **B2.1.2** Construct programs that can extract and manipulate substrings. -->
 
 ---
 
@@ -64,6 +62,92 @@ When you want to exit the shell, you can type `exit` or `^D`
 
 
 ---
+
+[1] What is a function? 
+
+input -> transformation -> output
+
+```python
+def number_to_letter(number):
+    alpha = 'abcdefghijklmnopqrstuvwxyz'
+    letter = alpha[number]
+
+    return letter
+
+convert_five = number_to_letter(5) 
+```
+
+Construct a function to convert a string of any length into numbers. 
+
+
+
+---
+
+[2] File I/O
+
+Reading a file
+
+Writing to a file
+
+---
+
+[3] Caesar Cipher
+
+```python
+def caesar_cipher(plain_text, encryption_key ):
+    # returns the plain_text encrypted by the encryption key number
+
+    alphabet = 'abcdefghijklmnopqrstuvwxyz'
+    cipher_text = ""
+
+    for letter in plain_text: 
+        letter = letter.lower()
+        if letter in alphabet:
+            letter_index = alphabet.index(letter)
+            letter_encrypted_index = letter_index + encryption_key
+            letter_encrypted_index = letter_encrypted_index%26
+            cipher_text += alphabet[letter_encrypted_index]
+        
+        else:
+            cipher_text += letter
+
+    return cipher_text
+```
+
+
+
+💻 **Include `try`, `except` and `raise Exception` in your program. You can use them in whatever way makes the most sense to you.** Read more here:
+- [`try` and `except`](https://www.w3schools.com/python/python_try_except.asp)
+- [Build-in Exceptions](https://www.w3schools.com/python/python_ref_exceptions.asp)
+
+
+{{< expand "Tips" >}}
+```python
+letter = 'a'
+try:
+	letter = letter + 3
+except: 
+	print("letter is not a number")
+
+# RAISE EXCEPTIONS 
+try:
+	print(x)
+except: 
+	raise Exception("Impossible!")
+
+
+# BUILT-IN EXCEPTIONS
+try:
+	print(x)
+except: 
+	raise ValueError("x does not exist")
+```
+
+
+{{< /expand >}}
+
+
+--- 
 
 
 {{< deliverables "Once you complete the lab, be sure to complete these two steps:" >}}
