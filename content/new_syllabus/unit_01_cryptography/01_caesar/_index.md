@@ -1,12 +1,12 @@
 ---
-title: "00. Subsitution"
+title: "00. Caesar"
 bookFlatSection: false
 weight: 4
 # bookCollapseSection: true
 # draft: true
 ---
 
-# Subsitution 
+# Caesar 
 
 In this project, you will experience the IB IA structure and develop the code for a game based on the NYT Wordle.
 
@@ -14,8 +14,8 @@ In this project, you will experience the IB IA structure and develop the code fo
 
 ---
 ### Syllabus Topics [SL]
-* **B1.1.4** B2.3.4 Construct functions and modularization.
-
+* **B2.1.3** Describe how programs use common exception handling techniques.
+* **B2.5.1** Construct code to perform file-processing operations.
 
 <!-- ### Syllabus Topics [HL]
 
