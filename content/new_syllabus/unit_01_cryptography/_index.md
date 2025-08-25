@@ -1,5 +1,5 @@
 ---
-title: "Unit 00: String Manipulation"
+title: "Unit 01: Cryptography"
 weight: 10
 bookFlatSection: false 
 bookCollapseSection: true 
@@ -7,7 +7,7 @@ bookCollapseSection: true
 
 ---
 
-# Unit 00: Cryptography
+# Unit 02: Cryptography
 
 
 This unit introduces the basics of imperative and functional programming, using cryptography as a theme of interest.
