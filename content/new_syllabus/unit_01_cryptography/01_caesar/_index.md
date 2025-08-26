@@ -1,5 +1,5 @@
 ---
-title: "00. Caesar"
+title: "1. Caesar"
 bookFlatSection: false
 weight: 4
 # bookCollapseSection: true
@@ -22,6 +22,13 @@ In this project, you will experience the IB IA structure and develop the code fo
 * **B4.1.1** Explain the core principles of ADTs
 * **B4.1.5**  Construct and apply sets as an ADT -->
 
+## Key Vocabulary
+
+| Word | Definition |
+| :--- | :--- |
+| **Files I/O** | EDIT |
+| **Exception Handeling** | EDIT |
+
 
 ---
 
@@ -31,19 +38,13 @@ In this project, you will experience the IB IA structure and develop the code fo
 {{< code-action "Go to your" >}} `dpcs/unit00_strings` **folder.**
 
 ```shell
-cd ~/desktop/dpcs/unit00_strings/
+cd ~/desktop/dpcs/cd unit01_cryptography/
 ```
 
-{{< code-action "Clone your repo. This will copy it onto your computer." >}}  
+{{< code-action "Clone your repo. This will copy it onto your computer." >}} Be sure to replace `yourGithubUsername` with your actual username. 
 ```shell
-git clone https://github.com/isf-dp-cs/project_wordle_yourGithubUsername
+git clone https://github.com/isf-dp-cs/https://github.com/isf-dp-cs/lab_substitution_ciphers.git
 ```
-> Below you'll see that the `git clone` command has a `yourGithubUsername`. 
->
-> **You need to replace this with your username**
->
-> *e.g. `https://github.com/isf-dp-cs/project_wordle_emmaqbrown`*
-
 
 {{< code-action "In the Terminal, type the following command to open the lab folder." >}}
 ```shell
