@@ -232,7 +232,7 @@ String reset = "\u001b[0m";
 
 {{< /expand >}} -->
 
-## Success Criteria 7: Error Handling
+## Success Criteria 6: Error Handling
 
 **Sucess Criteria:** The game includes error handling if the user input contains too few or too many letters 
 
