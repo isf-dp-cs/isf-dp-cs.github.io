@@ -8,8 +8,17 @@ bookCollapseSection: true
 
 ---
 
-# Unit 00: String Manipulatio
+# Unit 00: String Manipulation
 
 
+### Syllabus Topics [SL]
+* **B1.1.4** Trace flowcharts for a range of programming algorithms.
+* **B2.1.2** Construct programs that can extract and manipulate substrings.
+* **B2.3.2** Construct programs utilizing appropriate selection structures.
+* **B2.3.3** Construct programs that utilize looping structures to perform repeated actions.
+
+### Syllabus Topics [HL]
+* **B4.1.1** Explain the core principles of ADTs
+* **B4.1.5**  Construct and apply sets as an ADT
 
 

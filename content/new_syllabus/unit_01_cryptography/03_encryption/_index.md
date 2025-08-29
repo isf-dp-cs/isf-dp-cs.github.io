@@ -1,57 +1,38 @@
 ---
-title: "0. Subsitution Ciphers"
+title: "2. 3 rail"
 bookFlatSection: false
 weight: 4
 # bookCollapseSection: true
-# draft: true
+draft: true
 ---
 
-# Subsitution Ciphers 
+# What is encyprtpion?! 
 
-In this lab you will be introduced to `functions` by constructing multiple substitution ciphers.
+In this project, you will experience the IB IA structure and develop the code for a game based on the NYT Wordle.
 
 {{< figure src="images/courses/string_manipulation/wordle_icon.png" width="20%">}}
 
 ---
 ### Syllabus Topics [SL]
-* **B1.1.4** B2.3.4 Construct functions and modularization.
+- A1.2.1 Describe the principal methods of representing data.
+- A2.4.4 Describe the process of encryption and digital certificates.
 
-
-POTENTIAL TOPICS
-A1.2.1 Describe the principal methods of representing data.
-A2.4.4 Describe the process of encryption and digital certificates.
-A1.2.1 Describe the principal methods of representing data.
-<!-- ### Syllabus Topics [HL]-->
-
-
-## Key Vocabulary
-
-| Word | Definition |
-| :--- | :--- |
-| **Function** | A reusuable block of code that returns a value. |
-| **Scope** | EDIT |
-| **Encryption** | EDIT. |
-| **Symmetric Cryptography** | EDIT.  |
 
 ---
 
 # [0] Set up
 
 
-{{< code-action "Go to your" >}} `dpcs` **folder** and create a new folder for this unit.
+{{< code-action "Go to your" >}} `dpcs/unit00_strings` **folder.**
 
 ```shell
-cd ~/desktop/dpcs/
-mkdir unit01_cryptography
-cd unit01_cryptography
+cd ~/desktop/dpcs/cd unit01_cryptography/
 ```
 
 {{< code-action "Clone your repo. This will copy it onto your computer." >}} Be sure to replace `yourGithubUsername` with your actual username. 
 ```shell
 git clone https://github.com/isf-dp-cs/https://github.com/isf-dp-cs/lab_substitution_ciphers.git
 ```
-
-
 
 {{< code-action "In the Terminal, type the following command to open the lab folder." >}}
 ```shell
@@ -70,11 +51,9 @@ When you want to exit the shell, you can type `exit` or `^D`
 
 ---
 
-# [1] What is a function? 
+[1] What is a function? 
 
-A function is a reusable block of code. We often think of functions as taking an `input` of information, transfomrating the information, and returning an `output` of information. 
-
-In this example the `numbter_to_letter()` function takes any integer as an input and returns the corresponding letter as an output. 
+input -> transformation -> output
 
 ```python
 def number_to_letter(number):
@@ -89,6 +68,71 @@ convert_five = number_to_letter(5)
 Construct a function to convert a string of any length into numbers. 
 
 
+
+---
+
+[2] File I/O
+
+Reading a file
+
+Writing to a file
+
+---
+
+[3] Caesar Cipher
+
+```python
+def caesar_cipher(plain_text, encryption_key ):
+    # returns the plain_text encrypted by the encryption key number
+
+    alphabet = 'abcdefghijklmnopqrstuvwxyz'
+    cipher_text = ""
+
+    for letter in plain_text: 
+        letter = letter.lower()
+        if letter in alphabet:
+            letter_index = alphabet.index(letter)
+            letter_encrypted_index = letter_index + encryption_key
+            letter_encrypted_index = letter_encrypted_index%26
+            cipher_text += alphabet[letter_encrypted_index]
+        
+        else:
+            cipher_text += letter
+
+    return cipher_text
+```
+
+
+
+💻 **Include `try`, `except` and `raise Exception` in your program. You can use them in whatever way makes the most sense to you.** Read more here:
+- [`try` and `except`](https://www.w3schools.com/python/python_try_except.asp)
+- [Build-in Exceptions](https://www.w3schools.com/python/python_ref_exceptions.asp)
+
+
+{{< expand "Tips" >}}
+```python
+letter = 'a'
+try:
+	letter = letter + 3
+except: 
+	print("letter is not a number")
+
+# RAISE EXCEPTIONS 
+try:
+	print(x)
+except: 
+	raise Exception("Impossible!")
+
+
+# BUILT-IN EXCEPTIONS
+try:
+	print(x)
+except: 
+	raise ValueError("x does not exist")
+```
+
+
+{{< /expand >}}
 
 
 --- 
