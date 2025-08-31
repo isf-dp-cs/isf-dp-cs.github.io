@@ -3,7 +3,7 @@ title: "Unit 01: Cryptography"
 weight: 10
 bookFlatSection: false 
 bookCollapseSection: true 
-draft: true
+# draft: true
 
 ---
 
@@ -12,8 +12,7 @@ draft: true
 
 This unit introduces the basics of imperative and functional programming, using cryptography as a theme of interest.
 
-### Syllabus Topics [SL]
-- - **B2.3.1** Construct programs that implement the correct sequence of code instructions to meet
+#### Syllabus Topics [SL]
 - **B2.3.1** Construct programs that implement the correct sequence of code instructions to meet program objectives.
 - **B2.1.3** Describe how programs use common exception handling techniques.						
 - **B2.3.4** Construct functions and modularization.

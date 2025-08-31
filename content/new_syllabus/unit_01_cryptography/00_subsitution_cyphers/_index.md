@@ -12,7 +12,7 @@ In this lab you will be introduced to `functions` by constructing multiple subst
 
 
 ---
-### Syllabus Topics [SL]
+## Syllabus Topics [SL]
 - **B2.3.1** Construct programs that implement the correct sequence of code instructions to meet
 program objectives.
 - **B2.3.4** Construct functions and modularization.
@@ -22,11 +22,14 @@ program objectives.
 
 | Word | Definition |
 | :--- | :--- |
-| **Function** | A reusuable block of code that returns a value. |
-| **Modularization** | The process of dividing into smaller parts that work independently.  |
-| **Local Scope** | A variable defined inside a function may only be used in that function. |
+| **Function** | A reusuable block of code that takes input and gives an output. |
+| **Parameter/Argument** | The input value(s) of a function. There can be many parameters.|
+| **Return value** | The value that a function outputs. There can only be one output. |
+| **Modularization** | The process of dividing a larger task into smaller parts that work independently. |
+| **Scope** | Where a variable can be accessed in the code. |
+| **Local Scope** | A variable defined inside a function, loop, or condition that may only be used within that indented block. |
 | **Global Scope** | A variable defined in the main body of a program, may be used thorughout the program. |
-| **Infinite Loop** | A loop that will never end.  |
+<!-- | **Infinite Loop** | A loop that will never end.  | -->
 <!-- | **Deadlock** | A variable defined in the main body of a program, may be used thorughout the program. | -->
 
 
@@ -46,7 +49,7 @@ cd unit01_cryptography
 
 {{< code-action "Clone your repo. This will copy it onto your computer." >}} Be sure to replace `yourGithubUsername` with your actual username. 
 ```shell
-git clone https://github.com/isf-dp-cs/https://github.com/isf-dp-cs/lab_substitution_ciphers_yourGithubUsername.git
+git clone https://github.com/isf-dp-cs/lab_substitution_ciphers_yourGithubUsername
 ```
 
 
@@ -70,9 +73,9 @@ When you want to exit the shell, you can type `exit` or `^D`
 
 # [1] What is a function? 
 
-A function is a reusable block of code. We often think of functions as taking an `input` of information, transfomrating the information, and returning an `output` of information. 
+A function is a reusable block of code. We often think of functions as taking an `input` of information, transforming the information, and returning an `output` of information. 
 
-In this example the `pluralize()` function takes any string as an input and returns the string in its pluralized form.
+In this example, the `pluralize()` function takes any string as an input, and returns the string in its pluralized form.
 
 ```python{linenos=table}
 def pluralize(word):
@@ -83,8 +86,8 @@ def pluralize(word):
     return word
 
 ```
-- `line 1` defines the function with an arguement/parameter
-- `line 2-5` contains a conditional checking the final letters of the noun. Most English nouns are pluralized by adding “s” (“tree” becomes “trees”). But nouns ending in “s”, “ch”, or “sh” are pluralized by adding “es” (“beach” becomes “beaches”).
+- `line 1` defines the function with an argument/parameter
+- `line 2-5` contains a conditional to check the final letters of the noun. Most English nouns are pluralized by adding “s” (“tree” becomes “trees”). But nouns ending in “s”, “ch”, or “sh” are pluralized by adding “es” (“beach” becomes “beaches”).
 - `line 6` returns the pluralized word
 
 To use this function you must `call` it. Functions make it really easy to reuse code, becuase you can them an unlimited amount of times.
@@ -120,37 +123,66 @@ A cipher is an algorithm for disguising a message. In this lab you will write a 
 ---
 
 
-### `reverese_message()`
+### `reverse_message()`
 
-💻 **Construct the code for the `reverese_message()` function.** *You may not use `.reverse()`.*
-- inputs - origianl_message (str)
+💻 **Construct the code for the `reverse_message()` function.** *You may not use `.reverse()`.*
+- inputs - original_message (str)
 - output - returns the new message reversed
 
 
 💻 **Test your function at the bottom of the file.** Be sure to test multiple cases. 
 ```python
 if __name__ == "__main__":
-    reversed_message = reverese_message('hello world')
+    reversed_message = reverse_message('hello world')
     print(reversed_message)
     # OUPUT: dlrow olleh
 ```
+💻 **Once you have it working, decrypt the secret messages.** 
+{{< expand "Secret Message 1" >}}
+```text
+selif ruoy gnidaer morf stnemnrevog rojam pots lliw taht yhpgotpyrc dna ,selif ruoy gnidaer morf retsis dik ruoy pots lliw taht yhpgotpyrc :dlrow siht ni yhpgotpyrc fo sdnk owt era erehT
+```
+— Bruce Schneier
+
+{{< /expand >}}
+
+{{< expand "Secret Message 2" >}}
+```text
+LLEH OTNI SDRAWKCAB KLAW DNA DOG ECAf lliw I SLAMINA EHT TA GNIRELLOH ROF EM SNAB OOZ EHT FI
+```
+― @dril
+
+{{< /expand >}}
 
 ---
 
-### `charachter_to_integer()`
+### `character_to_integer()`
 
-💻 **Construct the code for the `charachter_to_integer()` function.** 
-- inputs - origianl_message (str), charachter (str), integer(int) 
-- output - returns the new message with all instances of the charachter, replaced by the integer
+💻 **Construct the code for the `character_to_integer()` function.** 
+- inputs - original_message (str), character (str), integer(int) 
+- output - returns the new message with all instances of the character, replaced by the integer
 
 
 💻 **Test your function at the bottom of the file.** Be sure to test multiple cases. 
 ```python
 if __name__ == "__main__":
-    replace_p = charachter_to_integer('apple','p',5)
+    replace_p = character_to_integer('apple','p',5)
     print(replace_p)
     # OUPUT: a55le
 ```
+
+💻 **Once you have it working, decrypt the secret message.** 
+
+{{< expand "Secret Message 3" >}}
+Replace all `m` with `o`     
+Replace all `q` with `e`     
+Replace all `P` with `I`     
+Replace all `j` with `d`     
+```text
+Pf P gmt any cmmlqr P wmulj frqqzq tm jqath
+```
+-Kanye West
+{{< /expand >}}
 
 ---
 
@@ -167,12 +199,27 @@ if __name__ == "__main__":
 💻 **Test your function at the bottom of the file.** Be sure to test multiple cases. 
 ```python
 if __name__ == "__main__":
-    replace_p = charachter_to_integer('apple','p',5)
+    replace_p = character_to_integer('apple','p',5)
     print(replace_p)
     # OUPUT: a55le
 ```
 
+💻 **Once you have it working, decrypt the secret message.** 
+
+{{< expand "Secret Message 4" >}}
+Replace all `ham` with `the`     
+Replace all `el` with `in`     
+Replace all `barbie` with `you`     
+Replace all `qu` with `re`     
+    
+```text
+If barbie quveal barbier secquts to ham weld, barbie should not blame ham weld for quvealelg hamm to ham tques.
+```
+-Kahlil Gibran
+{{< /expand >}}
+
 ---
+
 
 # [3] Deliverables
 
@@ -200,8 +247,8 @@ if __name__ == "__main__":
 
 💻 **In`extension_ciphers.py`, construct the code for the `reverse_each_word()` function.** 
 Be sure to consider:
-- what existing function  you use? 
-- what should it input and output
+- what existing function can you utilize? 
+- what should it input and output?
 
 
 💻 **Test your function at the bottom of the file.** Be sure to test multiple cases. 
@@ -214,9 +261,9 @@ if __name__ == "__main__":
 ---
 
 
-### `reverse_each_word()`
+### `string_to_integer()`
 
-💻 **In`extension_ciphers.py`, construct the code for the `string_to_integer()` function.** It will transform each charachter to its coresponding index in the English alphabet. Be sure to consider:
+💻 **In`extension_ciphers.py`, construct the code for the `string_to_integer()` function.** It will transform each character to its coresponding index in the English alphabet. Be sure to consider:
 - what should it input and output
 
 💻 **Test your function at the bottom of the file.** Be sure to test multiple cases. 
