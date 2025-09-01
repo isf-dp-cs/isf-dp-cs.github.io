@@ -1,18 +1,18 @@
 ---
-title: "0. Subsitution Ciphers"
+title: "0. Substitution Ciphers"
 bookFlatSection: false
 weight: 4
 # bookCollapseSection: true
 # draft: true
 ---
 
-# Subsitution Ciphers 
+# Substitution Ciphers 
 
 In this lab you will be introduced to `functions` by constructing multiple substitution ciphers.
 
 
 ---
-### Syllabus Topics [SL]
+## Syllabus Topics [SL]
 - **B2.3.1** Construct programs that implement the correct sequence of code instructions to meet
 program objectives.
 - **B2.3.4** Construct functions and modularization.
@@ -27,6 +27,8 @@ program objectives.
 | **Local Scope** | A variable defined inside a function may only be used in that function. |
 | **Global Scope** | A variable defined in the main body of a program, may be used thorughout the program. |
 | **Infinite Loop** | A loop that will never end.  |
+| **Casting** | Convert a variable from one data type to another |
+
 <!-- | **Deadlock** | A variable defined in the main body of a program, may be used thorughout the program. | -->
 
 

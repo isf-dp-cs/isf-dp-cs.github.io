@@ -15,7 +15,6 @@ In this project, you will experience the IB IA structure and develop the code fo
 ---
 ### Syllabus Topics [SL]
 * **B2.1.3** Describe how programs use common exception handling techniques.
-* **B2.5.1** Construct code to perform file-processing operations.
 
 <!-- ### Syllabus Topics [HL]
 

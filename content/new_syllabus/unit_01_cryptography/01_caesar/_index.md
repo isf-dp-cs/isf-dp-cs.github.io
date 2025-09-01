@@ -1,33 +1,28 @@
 ---
-title: "1. Caesar"
+title: "1. Encryption Ciphers"
 bookFlatSection: false
 weight: 4
 # bookCollapseSection: true
-draft: true
+# draft: true
 ---
 
-# Caesar 
+# Encryption Ciphers 
 
-In this project, you will experience the IB IA structure and develop the code for a game based on the NYT Wordle.
+In this lab you will continue to practice functions and are introduced to file handling.
 
-{{< figure src="images/courses/string_manipulation/wordle_icon.png" width="20%">}}
+{{< figure src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Caesar_cipher_left_shift_of_3.svg/1200px-Caesar_cipher_left_shift_of_3.svg.png" width="50%">}}
 
 ---
-### Syllabus Topics [SL]
-* **B2.1.3** Describe how programs use common exception handling techniques.
+## Syllabus Topics [SL]
 * **B2.5.1** Construct code to perform file-processing operations.
-
-<!-- ### Syllabus Topics [HL]
-
-* **B4.1.1** Explain the core principles of ADTs
-* **B4.1.5**  Construct and apply sets as an ADT -->
 
 ## Key Vocabulary
 
 | Word | Definition |
 | :--- | :--- |
-| **Files I/O** | EDIT |
-| **Exception Handeling** | EDIT |
+| **Path** | Location of a file  |
+| **Absolute Path** | Location of a file specificed from the root/home directory  |
+| **Relative Path** | Location of a file specificed from the current directory |
 
 
 ---
@@ -35,21 +30,18 @@ In this project, you will experience the IB IA structure and develop the code fo
 # [0] Set up
 
 
-{{< code-action "Go to your" >}} `dpcs/unit00_strings` **folder.**
+{{< code-action "Go to your" >}} `dpcs/unit01_cryptography` **folder.**
 
 ```shell
 cd ~/desktop/dpcs/cd unit01_cryptography/
 ```
 
-{{< code-action "Clone your repo. This will copy it onto your computer." >}} Be sure to replace `yourGithubUsername` with your actual username. 
+{{< code-action "Clone your repo and go into the directory." >}} Be sure to replace `yourGithubUsername` with your actual username. 
 ```shell
-git clone https://github.com/isf-dp-cs/https://github.com/isf-dp-cs/lab_substitution_ciphers.git
+git clone https://github.com/isf-dp-cs/https://github.com/isf-dp-cs/lab_encryption_ciphers.git
+cd lab_encryption_ciphers_yourGithubUsername
 ```
 
-{{< code-action "In the Terminal, type the following command to open the lab folder." >}}
-```shell
-cd project_wordle_yourGithubUsername
-```
 
 {{< code-action "Enter the Poetry Shell to start the lab." >}} As a reminder, we will run this command at the start of each lab, but only when we are inside a lab folder.
 ```shell
@@ -63,89 +55,92 @@ When you want to exit the shell, you can type `exit` or `^D`
 
 ---
 
-[1] What is a function? 
+# [1] File Handling 
 
-input -> transformation -> output
+In this lab you will use file handling techniques to encrypt and decrypt large text files. 
+
+
+📖 **To open a file**
 
 ```python
-def number_to_letter(number):
-    alpha = 'abcdefghijklmnopqrstuvwxyz'
-    letter = alpha[number]
+file = open('example.txt', 'r')
+file.read()
+file.close()
+```
+- `open()` - opens a file in a specific mode, if the file does not exisit it creates a new file
+- `example.txt` is the name of the file you want to open, read, or create 
+- `r` represents the mode mode, important modes to remember are:
+    - `r` - read the text
+    - `w` - write over existing text 
+    - `a` - append text to the end of the file
+- `read()` - returns all text in the file
+- `close()` - closes the file
 
-    return letter
-
-convert_five = number_to_letter(5) 
+📖 **To write to a file**
+```python
+file = open('example.txt', 'a')
+file.write('Hello world')
+file.close()
 ```
 
-Construct a function to convert a string of any length into numbers. 
+📖 **To loop through each line in a file**
+```python
+file = open('example.txt', 'r')
+for line in file:
+    print(line)
+file.close()
+```
 
+
+💻 **Open `file_handling.py` and construct the following actions.** 
+
+0) Open `song.txt`, read the file, and print the text
+0) Append the last line of the song. Be sure it is appended on the next line. 
+    - last line: `You're my soda pop, gotta drink every drop`
+0) Create a new file `capitalized_song.txt` with lyrics of the song in all capital letters, print the full text
 
 
 ---
 
-[2] File I/O
+# [2] Caesar Cipher
 
-Reading a file
+The caesar cipher is a type of substitution cipher used in the Roman empire. It takes a message, the `plain text` and transforms it by shifting each letter by a set value, the `encryption key`. 
 
-Writing to a file
+For example the plain text `"cat"` with the encryption key `3`, becomes `"fdw"`.
+- `c` shifts by 3, becoming `f`
+- `a` shifts by 3, becoming `d`
+- `t` shifts by 3, becoming `w`
+
+
+💻 **In `caesar_cipher.py`, construct the function `decrypt_caesar_cipher()` to decrypt a message that has been encrypted by a caesar cipher.** 
+
+💻 **Test your decryption function `decrypt_caesar_cipher()` on words and short phrases**
+
+💻 **Use your `decrypt_caesar_cipher()` function and file handling methods to decrypt the message in `caesar_encrypted_text.txt`.** You should then create a new file with the decrypted text.
+
+✅ **Check your work by openning the created file and ensuring it makes sense as English text.** *Do you recogonize the text?*
 
 ---
 
-[3] Caesar Cipher
+# [3] Vigenere Cipher
 
-```python
-def caesar_cipher(plain_text, encryption_key ):
-    # returns the plain_text encrypted by the encryption key number
+The Vigenere cipher is another substitution cipher. It takes a message, the `plain text` and transforms it by shifting each letter by a set value relative a repeating `encryption key`.  Unline the caesar cipher, the encryption key is a `string`. 
 
-    alphabet = 'abcdefghijklmnopqrstuvwxyz'
-    cipher_text = ""
+For example the plain text `"apple" `with the encryption key `"be"`, becomes `"btqpf"`. 
+- the first letter `a` is shifted by `1` positions because of the letter `i`
+- the second letter `p` is shifted by `5` positions because of the letter `t`
+- then, the encryption key repeats. 
+- the third letter `p` is shifted by `1`
+- the fourth letter `l` is shifted by `5`
+- the fifth letter `e` is shifted by `1`
 
-    for letter in plain_text: 
-        letter = letter.lower()
-        if letter in alphabet:
-            letter_index = alphabet.index(letter)
-            letter_encrypted_index = letter_index + encryption_key
-            letter_encrypted_index = letter_encrypted_index%26
-            cipher_text += alphabet[letter_encrypted_index]
-        
-        else:
-            cipher_text += letter
+💻 **In `vigenere_cipher.py`, construct the function `decrypt_vigenere_cipher()` to decrypt a message that has been encrypted by a caesar cipher.** 
 
-    return cipher_text
-```
+💻 **Test your decryption function `decrypt_vigenere_cipher()` on words and short phrases**
 
+💻 **Use your `decrypt_vigenere_cipher()` function and file handling methods to decrypt the message in `caesar_vigenere_text.txt`.** The encryption key is the encryption key from the caesar_cipher problem written in English (e.g. 1 is one). is the You should then create a new file with the decrypted text.
 
-
-💻 **Include `try`, `except` and `raise Exception` in your program. You can use them in whatever way makes the most sense to you.** Read more here:
-- [`try` and `except`](https://www.w3schools.com/python/python_try_except.asp)
-- [Build-in Exceptions](https://www.w3schools.com/python/python_ref_exceptions.asp)
-
-
-{{< expand "Tips" >}}
-```python
-letter = 'a'
-try:
-	letter = letter + 3
-except: 
-	print("letter is not a number")
-
-# RAISE EXCEPTIONS 
-try:
-	print(x)
-except: 
-	raise Exception("Impossible!")
-
-
-# BUILT-IN EXCEPTIONS
-try:
-	print(x)
-except: 
-	raise ValueError("x does not exist")
-```
-
-
-{{< /expand >}}
-
+✅ **Check your work by openning the created file and ensuring it makes sense as English text.** *Do you recogonize the text?*
 
 --- 
 
@@ -164,22 +159,4 @@ except:
 
 {{< /deliverables >}}
 
----
-
-# [4] Criteria E: Evaluation
-
-The evaluatioin of the product must evaluate if the Success Criteria were met and consider future improvements to the product. 
-
-
-{{< checkpoint  >}}
-
-**✏️ Fill out Criteria E on your document**
-
-{{< /checkpoint>}}
-
-
-
----
-
-# [5] HL: Abstract Data Types (ADTs)
 
