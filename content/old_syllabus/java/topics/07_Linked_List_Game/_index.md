@@ -54,8 +54,25 @@ Iterators are used so that you can conveniently
 - print out a winning message
 ---
 
+## [4] Add sound effects
+Here are some helpful methods to add sound effects:
 
-## [4] Deliverables
+```java
+// start the clip
+sound.clip.setFramePosition(0);
+sound.clip.start();
+
+// get length of clip
+sound.clip.getMicrosecondLength()
+
+// stop clip
+sound.clip.stop();
+
+// check if clip is running
+sound.clip.isRunning()
+```
+
+## [5] Deliverables
 
 {{< deliverables>}}
 
