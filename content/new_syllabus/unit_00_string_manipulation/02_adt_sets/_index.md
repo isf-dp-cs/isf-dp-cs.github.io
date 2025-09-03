@@ -87,13 +87,13 @@ difference_set = a - b
 # subset
 a = {1,2}
 b = {1,2,3,4}
-print(a.subset(b)) # True
+print(a.issubset(b)) # True
 
-print(b.subset(a)) # False
+print(b.issubset(a)) # False
 
 # superset
-print(b.superset(a)) # True
-print(a.superset(b)) # False
+print(b.issuperset(a)) # True
+print(a.issuperset(b)) # False
 
 # To cast a List to a Set
 fruit = ['apples', 'organges', 'peaches', 'apples']
