@@ -68,9 +68,17 @@ weight: 30
 ## Example Problems
 
 ---
+### Hardware
 
-### Types of Networks
+**Outline what is meant by a media access control (MAC) address. [2]**
 
+{{< expand "Markscheme" >}}
+*Award [2 max]*  
+- A physical address/hardware identification number/12-digit hexadecimal number assigned by the manufacturer to a network interface in a device;  
+- That helps to uniquely identify each device on a network;  
+{{< /expand >}}
+
+---
 
 **Describe the purpose of the following hardware component of a network: Router. [2]**
 
@@ -111,6 +119,8 @@ weight: 30
 
 ---
 
+### Types of Networks
+
 **Identify two characteristics of a personal area network (PAN). [2]**
 
 {{< expand "Markscheme" >}}
@@ -119,6 +129,23 @@ weight: 30
 - Consists of connected devices in close proximity to the individual using them;  
 - Connected via Bluetooth/wireless;  
 - Suitable example: smartphone to car connection;  
+{{< /expand >}}
+
+---
+
+**Identify two differences between a wide area network (WAN) and a local area network (LAN).**
+[2]
+
+{{< expand "Markscheme" >}}
+*Award [2 max]*  
+- WAN covers a much larger area (national/international), LANs usually cover a smaller area (such as a single site);
+- Nodes connected to WANs often make use of connections through public networks (such as the telephone system), nodes connected to LANs are usually connected through private infrastructure;
+- LANs are more secure than WANs (due to how WANs transmit the data /how far the data would need to travel);
+- A higher bandwidth is available for transmission in a LAN than a WAN/ LANs can have a higher data transfer rate than a WAN;
+- LAN is typically cheaper than WAN to implement/ maintain (as the equipment required for LAN is less expensive);
+- WAN includes a large number of devices connected together, LAN includes less;
+- WANs are typically slower than LANs due to the distance data must travel;
+- WAN requires hardware to connect different networks, such as a router, LAN can be simple and does not need to connect to other networks;
 {{< /expand >}}
 
 ---
@@ -194,57 +221,6 @@ weight: 30
 ---
 
 
-### Wireless Networks
-
----
-
-**Distinguish between a wired network and a wireless network in terms of reliability of transmission. [4]**
-
-{{< expand "Markscheme" >}}
-*Award [4 max]*  
-- The reliability of wireless depends on the strength of the wireless signal;  
-    - Depends on distance from router;  
-    - Depends on the topology/shape of the surroundings;  
-    - A wireless LAN has slower data transfer;  
-- Ethernet is more reliable as the strength of the signal does not depend on the distance from the router / wired LAN supports longer distances;  
-- Wired is immune to interference;  
-- There is no issue with the topology/shape of the surrounding;  
-- But the Ethernet cable may be cut/broken affecting reliability;  
-{{< /expand >}}
-
----
-
-**Outline why a wireless network may be less secure than a wired network. [2]**
-
-{{< expand "Markscheme" >}}
-*Award [2 max]*  
-- Wired network is only accessible with a physical cable connection;  
-- In wireless networks, signals are broadcasted outside of the building, leaving it open to the public and potential hackers / easy to intercept transmissions;  
-- A wireless network is more open to misuse;  
-- Network administrator cannot directly monitor a specific machine;  
-{{< /expand >}}
-
-
-
----
-
-**Identify two characteristics of wireless transmission. [2]**
-
-{{< expand "Markscheme" >}}
-*Award [2 max]*  
-- Uses radio waves / electromagnetic waves to transfer data;  
-- Transmission speed of data is limited;  
-- Range of transmission / transmission reliability can be affected by distance from access point / number of other users / obstacles etc;  
-- Inexpensive to install / no need to spend on cabling;  
-- Relatively easy to expand / add new devices / scale down to accommodate changes in demand;  
-- Security can be poor (unless encryption is applied) / subject to eavesdropping / interception;  
-- Allows users to move around without losing access to the network;  
-{{< /expand >}}
-
----
-
-
-
 ### Protocols
 
 ---
@@ -280,6 +256,15 @@ Award [1] for a reason, award [1] for an extension, x3.
     - For example, HTTPS and SSL secure web traffic;  
 - Protocols include mechanisms for error checking, flow control, and congestion control to maintain data integrity and network performance;  
     - For example, error detection helps identify and correct transmission errors, while flow control prevents data loss;  
+{{< /expand >}}
+
+---
+
+**Outline one reason for the use of standards in the construction of networks.**
+{{< expand "Markscheme" >}}
+*Award [2 max]*  
+- Standards ensure compatibility between nodes on the network;
+- Through the use of common techniques/protocols/language;
 {{< /expand >}}
 
 ---
@@ -362,15 +347,7 @@ Award [1] for a reason, award [1] for an extension, x3.
 
 ---
 
-**Outline what is meant by a media access control (MAC) address. [2]**
 
-{{< expand "Markscheme" >}}
-*Award [2 max]*  
-- A physical address/hardware identification number/12-digit hexadecimal number assigned by the manufacturer to a network interface in a device;  
-- That helps to uniquely identify each device on a network;  
-{{< /expand >}}
-
----
 
 The staff at a doctor’s practice consist of a receptionist and a doctor.
 The patients’ medical records and payments, the doctor’s appointment calendar, and other important data are stored in a database on the central computer.
@@ -397,6 +374,7 @@ The patients’ medical records and payments, the doctor’s appointment calenda
 
 ---
 
+When the doctor visits a patient in their home, she needs to be able to access the patient’s medical records stored on the central computer in the practice.     
 **Outline two reasons for the use of a virtual private network (VPN) in this situation. [4]**
 
 {{< expand "Markscheme" >}}
@@ -448,6 +426,21 @@ The patients’ medical records and payments, the doctor’s appointment calenda
 
 ---
 
+**Explain one benefit to the staff of using a VPN to remotely access the school network.**
+
+{{< expand "Markscheme" >}}
+*Award [3 max]*  
+- - Enhanced security of data;
+- for example, using encryption;
+- This prevents unauthorised access;
+
+- Remote access to data and resources (from any location);
+- Normal access of materials on the network;
+- as though the user was using the network on site;
+{{< /expand >}}
+
+---
+
 ### Packets
 
 ---
@@ -478,6 +471,8 @@ The patients’ medical records and payments, the doctor’s appointment calenda
 {{< /expand >}}
 
 ---
+
+### Packet Switching
 
 **Explain how data is transmitted by packet switching. [3]**
 
@@ -518,6 +513,167 @@ The patients’ medical records and payments, the doctor’s appointment calenda
 - Packets (may) arrive at the destination out of order;  
 - Packets are re-ordered / joined together at the destination;  
 - Missing packets can be re-sent;  
+{{< /expand >}}
+
+---
+
+### Compression
+
+
+**Outline the reason for compression when transmitting data. [2]**
+
+{{< expand "Markscheme" >}}
+*Award [2 max]*  
+- The reason for compression when transmitting data is to save on transfer times;  
+    - As it reduces the number of bits needed to represent data (when compared with the original data);  
+- Compressing data involves modifying/restructuring files, so that they take up less space;  
+    - And this results in cost savings in cloud storage;  
+- To take up less bandwidth;  
+    - Because data compression reduces the size of files to be transmitted over a network;  
+
+*Note to examiners: Award [1] for a reason (for example, to save data usage for sending files over the internet, to save storage capacity, to speed up file transfer, to decrease costs for network bandwidth, etc.), and award [1] for an expansion.*
+{{< /expand >}}
+
+---
+
+**Explain why data compression would be used when data is transmitted. [3]**
+
+{{< expand "Markscheme" >}}
+*Award [3 max]*  
+- Compression reduces the size of a file / size of data / the number of packets to be transmitted;  
+- This reduces transmission time / consumes less bandwidth;  
+- Can result in significant cost savings;  
+{{< /expand >}}
+
+---
+
+### Encryption
+
+
+**Define the term data encryption. [1]**
+
+{{< expand "Markscheme" >}}
+*Award [1 max]*  
+- Data encryption refers to calculations/algorithms that transform plain text into a form that is non-readable to unauthorized parties (authorized recipient of an encrypted text uses a key and the algorithm to decrypt the data/ to transform it to the original plain text version);
+{{< /expand >}}
+
+---
+
+**Outline how encryption is used to protect data. [2]**
+
+{{< expand "Markscheme" >}}
+*Award [2 max]*  
+- Encryption scrambles readable text;  
+    - So, it can only be read/understood by the person who has the decryption key;  
+- Data encryption translates plain text into ciphertext;  
+    - That can be viewed/read in its original form only if it is decrypted with the correct key;  
+{{< /expand >}}
+
+---
+
+
+**Describe how encryption is used to protect data during transmission.**
+{{< expand "Markscheme" >}}
+*Award [3 max]* 
+- Plain text is changed to cypher text / Data is scrambled using an encryption algorithm / key / A Key is required by sender and receiver for authentication;
+- Cypher text / data cannot be understood if intercepted;
+- The cypher text/data is then decrypted using a (decryption) key when received by the receiver;
+{{< /expand >}}
+
+
+---
+
+### Transmission Medium
+
+**Identify two characteristics of fibre optic cables as a transmission medium.**
+{{< expand "Markscheme" >}}
+*Award [2 max]* 
+
+- Allows very fast transmission of data / Extremely high bandwidth possible;
+(Made of glass / plastic fibre) that can transfer information via pulses of light;
+- Immune to electromagnetic interference / temperature changes / severe weather / highly resistant to noise and moisture;
+- Very high security rating;
+- Safe to use in high-voltage locations, areas where flammable gases / chemicals;
+-Very long distance of transmission before requiring repeaters / attenuation;
+- They have a long lifespan (thinner and light weighted, so more flexible than other media);
+- Expensive / harder to install;
+{{< /expand >}}
+
+---
+
+**Identify two characteristics of wireless transmission.**
+
+{{< expand "Markscheme" >}}
+*Award [2 max]*  
+- Uses radio waves / electromagnetic waves to transfer data;  
+- Transmission speed of data is limited;  
+- Range of transmission / transmission reliability can be affected by distance from access point / number of other users / obstacles etc;  
+- Inexpensive to install / no need to spend on cabling;  
+- Relatively easy to expand / add new devices / scale down to accommodate changes in demand;  
+- Security can be poor (unless encryption is applied) / subject to eavesdropping / interception;  
+- Allows users to move around without losing access to the network;  
+{{< /expand >}}
+
+---
+
+**Identify two reasons why fibre optic cable would be preferred over wireless connectivity.**
+
+{{< expand "Markscheme" >}}
+*Award [2 max]* 
+- Fibre optics allow faster transmission speeds;
+- Fibre optic cables are more secure/harder to break into;
+- Fibre optic cable transmission is more reliable/less likely to suffer interference;
+- Fibre optics allow transmission over longer distance;
+- Fibre optics allow greater bandwidth;
+{{< /expand >}}
+
+---
+
+### Wireless Networks
+
+---
+
+**Distinguish between a wired network and a wireless network in terms of reliability of transmission. [4]**
+
+{{< expand "Markscheme" >}}
+*Award [4 max]*  
+- The reliability of wireless depends on the strength of the wireless signal;  
+    - Depends on distance from router;  
+    - Depends on the topology/shape of the surroundings;  
+    - A wireless LAN has slower data transfer;  
+- Ethernet is more reliable as the strength of the signal does not depend on the distance from the router / wired LAN supports longer distances;  
+- Wired is immune to interference;  
+- There is no issue with the topology/shape of the surrounding;  
+- But the Ethernet cable may be cut/broken affecting reliability;  
+{{< /expand >}}
+
+---
+
+**Outline why a wireless network may be less secure than a wired network. [2]**
+
+{{< expand "Markscheme" >}}
+*Award [2 max]*  
+- Wired network is only accessible with a physical cable connection;  
+- In wireless networks, signals are broadcasted outside of the building, leaving it open to the public and potential hackers / easy to intercept transmissions;  
+- A wireless network is more open to misuse;  
+- Network administrator cannot directly monitor a specific machine;  
+{{< /expand >}}
+
+
+
+---
+
+**Identify two characteristics of wireless transmission. [2]**
+
+{{< expand "Markscheme" >}}
+*Award [2 max]*  
+- Uses radio waves / electromagnetic waves to transfer data;  
+- Transmission speed of data is limited;  
+- Range of transmission / transmission reliability can be affected by distance from access point / number of other users / obstacles etc;  
+- Inexpensive to install / no need to spend on cabling;  
+- Relatively easy to expand / add new devices / scale down to accommodate changes in demand;  
+- Security can be poor (unless encryption is applied) / subject to eavesdropping / interception;  
+- Allows users to move around without losing access to the network;  
 {{< /expand >}}
 
 
