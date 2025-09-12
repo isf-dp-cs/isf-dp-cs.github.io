@@ -18,7 +18,8 @@ This unit introduces the basics of imperative and functional programming, using 
 - **B2.3.4** Construct functions and modularization.
 - **B2.5.1** Construct code to perform file-processing operations.			
 - **A2.4.4** Describe the process of encryption and digital certificates.
+<!-- - A1.2.1 Describe the principal methods of representing data. -->
 
-<!-- ### Syllabus Topics [HL]
-- A1.2.1 Describe the principal methods of representing data.
-- A2.4.4 Describe the process of encryption and digital certificates. -->
+### Syllabus Topics [HL]
+- **B2.4.4** Explain the fundamental concept of recursion and its applications in programming. 
+- **B2.4.5** Construct and trace recursive algorithms in a programming language.
