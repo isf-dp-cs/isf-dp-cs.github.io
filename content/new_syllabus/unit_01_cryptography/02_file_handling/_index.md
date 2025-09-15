@@ -10,7 +10,7 @@ weight: 4
 
 
 ---
-### Syllabus Topics [SL]
+## Syllabus Topics [SL]
 * **B2.5.1** Construct code to perform file-processing operations.
 * **B2.1.3** Describe how programs use common exception handling techniques.
 
@@ -19,6 +19,17 @@ weight: 4
 * **B4.1.1** Explain the core principles of ADTs
 * **B4.1.5**  Construct and apply sets as an ADT -->
 
+## Key Vocabulary
+
+| Word | Definition |
+| :--- | :--- |
+| **Exception** | Less severe problem that occurs at runtime and can be managed using exception handling (e.g., invalid input, missing files) |
+| **ValueError** | An exception that occurs when a function receives an argument of the correct type but with an invalid value (e.g., converting "abc" to an integer). |
+| **ZeroDivisionError** | An exception that occurs when you attempt to divide a number by zero.|
+| **NameError** | An exception that occurs when you use a variable or function name that has not been defined |
+| **FileNotFoundError** | An exception that occurs when a file or directory is requested but cannot be found  |
+| **Boolean Operators** | Symbols used for performing arithmetic on the values `True` and `False`. Includes `AND` `OR` `NOT`|
+| **Relational Operators** | Symbols used for comparing values. Includes `<`, `<=`, `>`, `>=`, `==`, `!=`. |
 
 ---
 
@@ -28,12 +39,13 @@ weight: 4
 {{< code-action "Go to your" >}} `dpcs/unit01_cryptography` **folder.**
 
 ```shell
-cd ~/desktop/dpcs/cd unit01_cryptography/
+cd ~/desktop/dpcs/unit01_cryptography/
 ```
+
 
 {{< code-action "Clone your repo. This will copy it onto your computer." >}} Be sure to replace `yourgithubusername` with your actual username. 
 ```shell
-git clone https://github.com/isf-dp-cs/https://github.com/isf-dp-cs/lab_file_handling_yourgithubusername
+git clone https://github.com/isf-dp-cs/lab_file_handling_yourgithubusername
 ```
 
 {{< code-action "In the Terminal, type the following command to open the lab folder." >}}
@@ -97,7 +109,7 @@ while line != "": # check that we're not at the end of the file
 
 Boolean Operators are `AND`, `OR`, and `NOT`. You can use these in any condition. 
 
-### AND
+#### AND
 The statement returns `True` if **both** conditions are `True`
 ```python
 # the student will only study for hl tests
@@ -109,7 +121,7 @@ if has_test and is_hl:
 >> True
 ```
 
-### OR
+#### OR
 The statement returns `True` if **either** condition is `True`
 
 ```python
@@ -123,7 +135,7 @@ if has_fever or sneezing:
 >> True
 ```
 
-### NOT 
+#### NOT 
 Reverses the value of the boolean. Works similarly to `!`.
 ```python
 while not line == "":
@@ -153,9 +165,11 @@ text = "392"
 number = int(text) ## cast a string to an integer
 ```
 
+---
+
 # [2] File I/O Exercises
 
-### Camping Trip
+## Camping Trip
 
 On an ELP camping trip, each student has brought snacks with them. The students take turns writing down the number of calories contained by the various snacks that they've brought with them, one item per line. Each student separates their own inventory from the previous student's inventory (if any) by a blank line.
 
@@ -189,7 +203,7 @@ The food log is stored in `food.txt`.
 
 ---
 
-### Merge Poem
+## Merge Poem
 
 A beautiful poem has sadly been broken into two incomplete files. The lines from the two incomplete files should be interleaved into the output file (e.g., first line from poem_pt_1, first line from poem_pt_2, second line from poem_pt_1, etc.)    
 
@@ -197,7 +211,7 @@ A beautiful poem has sadly been broken into two incomplete files. The lines from
 
 ---
 
-### Check the inventory
+## Check the inventory
 
 The file `inventory.txt` stores which items are for sale at a technology store. However, there is extra detail included, and some items are out of stock, and shouldn't be shown to customers.
 
