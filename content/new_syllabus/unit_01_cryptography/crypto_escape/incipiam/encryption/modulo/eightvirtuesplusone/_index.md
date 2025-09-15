@@ -6,7 +6,7 @@ bookHidden: true
 # draft: true
 ---
 
-# /eightvirtuesplusone 
+# Yay!
 
 Congrats! You saved the ISF!
 

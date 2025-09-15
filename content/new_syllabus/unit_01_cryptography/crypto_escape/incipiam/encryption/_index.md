@@ -6,7 +6,7 @@ bookHidden: true
 # draft: true
 ---
 
-# /encryption
+# Room 2
 
 You bypass the first secrutiy measure. But then another cryptic message appears. 
 
