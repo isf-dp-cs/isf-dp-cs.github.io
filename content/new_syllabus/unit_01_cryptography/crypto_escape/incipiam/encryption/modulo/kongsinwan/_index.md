@@ -6,7 +6,7 @@ bookHidden: true
 # draft: true
 ---
 
-# /kongsinwan 
+# Boo
 
 You downloaded the viruses and released ISF's secrets :( 
 

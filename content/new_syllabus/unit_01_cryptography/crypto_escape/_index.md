@@ -13,14 +13,4 @@ To get out of each "room" (webpage) of this escape room, you will need to solve 
 
 You will need to use the labs to help you escape. 
 
----
-
-There's a hacker in ISF attempting to release the personal information of students. It's your responsiblity to save the school! 
-
-The head of ISF's IT brings you to a supercomputer in the middle of the Head of School's conference room on A11. There are a series of numbers printed on the console. 
-
-{{< figure src="images/courses/new/crypto_escape0.png" width="50%">}}
-
-
-
-
+The teacher will reveal the first password when everyone is ready to begin...
