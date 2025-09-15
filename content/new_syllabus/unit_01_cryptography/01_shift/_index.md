@@ -177,6 +177,30 @@ The plain text `"beg"` with the encryption key `3`, becomes `"ehj"`.
 
 ✅ **Check your work by opening the created file and ensuring it makes sense as English text.** *Do you recogonize the text?*
 
+{{< expand "Solution" >}}
+
+```python
+def decrypt_caesar_cipher(plain_text, encryption_key): 
+    alphabet = 'abcdefghijklmnopqrstuvwxyz'
+    new_text = ""
+
+    for letter in plain_text: 
+        letter = letter.lower()
+        
+        if letter in alphabet:
+            letter_index = alphabet.index(letter)
+            letter_encrypted_index = letter_index - encryption_key
+
+            letter_encrypted_index = letter_encrypted_index%26
+            new_text += alphabet[letter_encrypted_index]
+        
+        else:
+            new_text += letter
+
+    return new_text
+```
+
+{{< /expand >}}
 
 ---
 
@@ -209,6 +233,44 @@ Therefore, we will shift our letters by 1 and 5, in an alternating pattern. For 
 
 ✅ **Check your work by opening the created file and ensuring it makes sense as English text.** *Do you recogonize the text?*
 
+
+{{< expand "Solution" >}}
+
+```python
+def decrypt_vigenere_cipher(plain_text, encryption_key): 
+    alphabet = 'abcdefghijklmnopqrstuvwxyz'
+    new_text = ""
+    key_index = 0
+
+    for i in range(len(plain_text)):
+        letter = plain_text[i].lower()
+
+        if letter in alphabet:
+            letter_index = alphabet.index(letter)
+            
+            # Determine the key letter and its position
+            key_letter = encryption_key[key_index % len(encryption_key)].lower()
+            key_position = alphabet.index(key_letter)
+
+            # Calculate the new index for decryption
+            # (original index - key index + 26) % 26
+            new_index = (letter_index - key_position + 26) % 26
+
+            # Get the new letter and append to the result
+            new_text += alphabet[new_index]
+            
+            # Increment the key index
+            key_index += 1
+        
+        else:
+            # Append non-alphabetic characters directly
+            new_text += letter
+
+    return new_text
+```
+
+{{< /expand >}}
+
 --- 
 
 # [5] Deliverables
@@ -226,6 +288,4 @@ Therefore, we will shift our letters by 1 and 5, in an alternating pattern. For 
 - git remote
 
 {{< /deliverables >}}
-
-
 

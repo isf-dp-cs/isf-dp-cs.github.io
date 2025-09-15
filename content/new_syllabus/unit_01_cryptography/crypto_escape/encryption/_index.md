@@ -6,7 +6,7 @@ bookHidden: true
 # draft: true
 ---
 
-# crypto_escape/encryption
+# /encryption
 
 You bypass the first secrutiy measure. But then another cryptic message appears. 
 
