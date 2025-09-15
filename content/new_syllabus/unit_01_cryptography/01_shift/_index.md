@@ -20,7 +20,7 @@ In this lab you will continue to practice functions and are introduced to modulo
 
 | Word | Definition |
 | :--- | :--- |
-| **Encryption** | Converting data into a secure format that cannot be easily understood by unauthorized people. |
+| **Encryption** | Converting plain text into a secure format, cipher text, that cannot be easily understood by unauthorized people. |
 | **Encryption Key** | A string of characters or numbers used by an encryption algorithm to encode or decode data.|
 | **Modulo** | An operation that returns the remainder of a division. |
 | **Path** | Location of a file  |
