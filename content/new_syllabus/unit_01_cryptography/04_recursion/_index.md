@@ -1,29 +1,30 @@
 ---
 title: "4. Recursion"
 bookFlatSection: false
-weight: 4
+weight: 50
 # bookCollapseSection: true
-draft: true
+# draft: true
 ---
 
 # Recursion 
 
-In this lab you will continue to practice functions and are introduced to modulo and file handling.
-
-{{< figure src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Caesar_cipher_left_shift_of_3.svg/1200px-Caesar_cipher_left_shift_of_3.svg.png" width="50%">}}
+In this lab you will apply the concept of recursion to two classic applications - traversing nested file folders and creating fractal images
+{{< figure src="images/courses/new/recursion_sierpinsky_triangle.png" width="30%">}}
 
 ---
-## Syllabus Topics [SL]
-* **B2.5.1** Construct code to perform file-processing operations.
+## Syllabus Topics [HL]
+* **B2.4.4**  Explain the fundamental concept of recursion and its applications in programming. (HL only).
+* **B2.4.5**  Construct and trace recursive algorithms in a programming language. (HL only)
+
 
 ## Key Vocabulary
 
 | Word | Definition |
 | :--- | :--- |
-| **Encryption** | Converting data into a secure format that cannot be easily understood by unauthorized people. |
-| **Encryption Key** | A string of characters or numbers used by an encryption algorithm to encode or decode data.|
-| **Modulo** | An operation that returns the remainder of a division. |
-| **Path** | Location of a file  |
+| **Recursive Function** | A function that calls on itself. |
+| **Recursive Case** | The step where the function calls itself with a smaller subproblem. The recursive case must eventually lead to the base case to ensure the recursion terminates. |
+| **Base Case** | The condition that stops the recursion. Without a base case, the recursion would continue infinitely, leading to a stack overflow error.|
+| **Stack Overflow** |  Each recursive call adds a new frame to the call stack. Excessive recursion can exhaust the stack memory, leading to stack overflow errors and crashing the program.  |
 ---
 
 # [0] Set up
@@ -35,14 +36,20 @@ In this lab you will continue to practice functions and are introduced to modulo
 cd ~/desktop/dpcs/unit01_cryptography/
 ```
 
-{{< code-action "Clone your repo and go into the directory." >}} Be sure to replace `yourGithubUsername` with your actual username. 
+{{< code-action "Clone your repo and go into the directory." >}} Be sure to replace `yourgithubusername` with your actual username. 
+
 ```shell
-git clone https://github.com/isf-dp-cs/lab_shift_ciphers_yourGithubUsername
-```
-```shell
-cd lab_shift_ciphers_yourGithubUsername
+git clone https://github.com/isf-dp-cs/lab_recursive_drawing_yourgithubusername
 ```
 
+```shell
+cd lab_recursive_drawing_yourgithubusername
+```
+
+{{< code-action "Install Tkinter." >}} We’ll need this for our drawings.
+```shell
+brew install python-tk
+```
 
 {{< code-action "Enter the Poetry Shell to start the lab." >}} As a reminder, we will run this command at the start of each lab, but only when we are inside a lab folder.
 ```shell
@@ -57,161 +64,117 @@ When you want to exit the shell, you can type `exit` or `^D`
 
 
 
-# [1] File Handling 
+# [1] Folders Structure
 
-In this lab you will use file handling techniques to encrypt and decrypt large text files. 
+Recursion can be helpful for searching through the file system of your computer. 
 
+{{< figure src="images/courses/new/recursion_file_system.png" width="30%">}}
 
-📖 **To read a whole file**
+#### OS Module
+
+In order to search through your files, you'll need to utilize the Python `OS Module`. Most of the functions you need are included in the starter code, but you will also need these important two:
+
+📖 **Important OS functions**
 ```python
-file = open('example.txt', 'r')
-file.read()
-file.close()
-```
-- `open()` - opens a file in a specific mode, if the file does not exisit it creates a new file
-- `'example.txt'` is the name of the file you want to open or create 
-- `'r'` represents the mode. important modes to remember are:
-    - `'r'` - read the text
-    - `'w'` - write over existing text 
-    - `'a'` - append text to the end of the file
-- `read()` - returns all text in the file
-- `close()` - closes the file
-
-📖 **To read a single line**
-```python
-file = open('example.txt', 'r')
-file.readline()
-file.close()
+os.path.isfile(filepath) # returns True if the filepath is a file
+os.path.isdir(filepath) # returns True if the filepath is a folder (directory)
 ```
 
-
-📖 **To read a file line-by-line**
-```python
-file = open('example.txt', 'r')
-for line in file:
-    print(line)
-file.close()
-```
-
-
-
-📖 **To add to an existing file**
-```python
-file = open('log.txt', 'a')
-file.write('A new entry. \n')
-file.close()
-```
-
-📖 **To write to a new file**
-```python
-file = open('new_document.txt', 'w')
-file.write('Hello world')
-file.close()
-```
-
-💻 **Open `file_handling.py` and construct code to perform the following actions.** 
-
-0) Open `song.txt`, read the file, and print the text
-0) Append the last line of the song. Be sure it is appended on the next line. 
-    - last line: `You're my soda pop, gotta drink every drop`
-0) Create a new file `capitalized_song.txt` with lyrics of the song in all capital letters
-
+If you want to read more, you can find some helpful documentation [here](https://www.codecademy.com/resources/docs/python/os-module)
 
 ---
 
-# [2] Modulo
+## File Search
 
+💻 **In `file_search.py` finish the code for `find_file()`.** 
 
-Python has many operators that allow you to perform calculations with values. You've probably
-seen and used the basic ones like `+`(add), `-` (subtract), `*` (multiply), and `/` (divide).
+-  Parameters: 
+    - folder (string): filepath of the folder to search
+    - target (string): name of the file to find
+- If it finds the `target` file, it should print out the entire filepath
 
-However, Python has other operators that can be really helpful.
-
-One such operator is **the modulo operator** (`%`). This operator **takes two values, divides them, and returns the remainder of the division.**
-> For example:
->
-> 5/2 has a remainder of 1
->
-> `5%2` = 1
-
-Here are some more modulo examples:
+Example usage:
 
 ```python
-print(5%2)
->> 1
-print(3%3)
->> 0
-print(6%2)
->> 0
-print(9%2)
->> 1
-print(3%4)
->> 3
+find_file(desktop_path, "file_search.py")
+```
+```shell
+/Users/bgenzlinger/Desktop/dpcs/unit01_cryptography/lab_recursive_drawing/file_search.py
 ```
 
+---
+
+## Print Python Files
+
+💻 **In `file_search.py` finish the code for `print_python_files()`.** 
+
+-  Parameter:     
+    - folder (string): filepath of the folder to search
+- Any time it finds a `.py` file, it should print out the entire filepath.
+- You may use the `in` keyword to check membership. 
+
+
+Example Usage: 
+```python
+find_file(desktop_path)
+```
+
+```shell
+spotify_export.py
+export_whatsapp.py
+whatsapp_df.py
+class_planner.py
+selection_sort.py
+```
 
 ---
 
-# [3] Caesar Cipher
+# [2] Fractal Drawing
 
-The caesar cipher is a type of substitution cipher used by ancient Romans. It takes a message, the `plain text` and transforms it by `shifting` each letter by a set value, the `encryption key`. 
+A fractal is a geometric pattern which is self-similar in some way. These patterns often look similar at different scales, no matter how much you zoom in or out. Fractals can be found throughout nature (snowflakes, ferns, riverbeds, circulatory systems, etc.) One popular example of fractal geometry is the Sierpinsky Triangle
 
-For example imagine that the alphabet is shifted by 3.
+## Sierpinsky Triangle
 
-| A | `B` | C | D | `E` | F | `G` | H | I | J | K | L | M | N | O | P | Q | R | S | T | U | V | W | X | Y | Z | 
- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | 
-| D | `E` | F | G | `H` | I | `J` | K | L | M | N | O | P | Q | R | S | T | U | V | W | X | Y | Z | A | B | C |
+{{< figure src="images/courses/new/recursion_sierpinsky_triangle.png" width="30%">}}
+
+The sierpinsky triangle is created by repeating one basic rule:     
+**Every time you draw a triangle, draw 3 smaller triangles inside it instead.**
+{{< figure src="images/courses/new/recursion_sierpinsky_progress.png" width="50%">}}
+
+**The points of the smaller triangles are located at the midpoints of the larger triange's side.**
+{{< figure src="images/courses/new/recursion_sierpinsky_midpoints.png" width="50%">}}
 
 
-The plain text `"beg"` with the encryption key `3`, becomes `"ehj"`.
-- `b` shifts by 3, becoming `e`
-- `e` shifts by 3, becoming `h`
-- `g` shifts by 3, becoming `j`
+💻 **In `sierpinsky_triangle.py`, code the recursive function `sierpinsky()` to draw the triangle pattern.** 
+- Parameters: 
+    - size (int):  side length 
+    - loc (turtle.Vec2D): location of the bottom left corner
+- Base case: when the size gets below a certain number (you choose) just draw a normal triangle using the provided `triangle()` function
 
-
-💻 **In `caesar_cipher.py`, construct the function `decrypt_caesar_cipher()` to decrypt a message that has been encrypted by a caesar cipher.** 
-
-💻 **Test your decryption function `decrypt_caesar_cipher()` on words and short phrases.**
-
-💻 **Use your `decrypt_caesar_cipher()` function and file handling methods to decrypt the message in `caesar_encrypted_text.txt`.** You should then create a new file with the decrypted text.
-
-✅ **Check your work by opening the created file and ensuring it makes sense as English text.** *Do you recogonize the text?*
-
+**Helpful Turtle Functions**
+```python
+# locations
+my_location = turtle.pos() # get the turtle's current position
+```
+```python
+# moving the turtle
+turtle.forward() # go forward a certain amount
+turtle.backward() # go backward a certain amount
+turtle.goto(my_location) # go to a previously stored position
+```
+```python
+# changing direction
+turtle.right(60) # turn right a certain amount (angle)
+turtle.left(60) # turn right a certain amount (angle)
+turtle.setheading(0) # set the turtle due east
+turtle.setheading(90) # set the turtle due north
+turtle.setheading(180) # set the turtle due west
+turtle.setheading(270) # set the turtle due south
+```
 
 ---
 
-# [4] Vigenere Cipher
-
-The Vigenere cipher is another substitution cipher. It takes a message, the `plain text` and transforms it by shifting each letter by a set value according to a repeating `encryption key`. Unlike the caesar cipher, the encryption key is a `string`. 
-
-**For example, imagine that encryption key is `'be'`.**  
-
-| b | e | 
-| ----- | ----- |
-| 1 | 5 | 
-
-`'b'` is number 1 in the alphabet and `'e'` is number 5. 
-
-Therefore, we will shift our letters by 1 and 5, in an alternating pattern. For example the plain text `"apple" `with the encryption key `"be"`, becomes `"buqpf"`. 
-
-| a->b | shift by 1 |   
-|------|------------|
-| p->u | shift by 5 |   
-| p->q | shift by 1 |   
-| l->q | shift by 5 |   
-| e->f | shift by 1 |
-
-💻 **In `vigenere_cipher.py`, construct the function `decrypt_vigenere_cipher()` to decrypt a message that has been encrypted by a vigenere cipher.** 
-
-💻 **Test your decryption function `decrypt_vigenere_cipher()` on words and short phrases**
-
-💻 **Use your `decrypt_vigenere_cipher()` function and file handling methods to decrypt the message in `"vigenere_encrypted_text.txt"`.** The encryption key is the encryption key from the caesar_cipher problem written in English (e.g. 1 is `one`). You should then create a new file with the decrypted text.
-
-✅ **Check your work by opening the created file and ensuring it makes sense as English text.** *Do you recogonize the text?*
-
---- 
-
-# [5] Deliverables
+# [3] Deliverables
 
 {{< deliverables "Once you complete the lab, be sure to complete these two steps:" >}}
 
