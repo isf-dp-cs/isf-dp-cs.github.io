@@ -23,3 +23,4 @@ This unit introduces the basics of imperative and functional programming, using 
 ### Syllabus Topics [HL]
 - **B2.4.4** Explain the fundamental concept of recursion and its applications in programming. 
 - **B2.4.5** Construct and trace recursive algorithms in a programming language.
+
