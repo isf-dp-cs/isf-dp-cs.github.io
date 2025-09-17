@@ -1,7 +1,7 @@
 ---
 title: "1. Shift Ciphers"
 bookFlatSection: false
-weight: 4
+weight: 20
 # bookCollapseSection: true
 # draft: true
 ---

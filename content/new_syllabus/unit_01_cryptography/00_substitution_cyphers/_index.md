@@ -1,7 +1,7 @@
 ---
 title: "0. Substitution Ciphers"
 bookFlatSection: false
-weight: 4
+weight: 10
 # bookCollapseSection: true
 # draft: true
 ---

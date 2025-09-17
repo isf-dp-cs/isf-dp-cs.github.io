@@ -25,3 +25,4 @@ You can find the slides [HERE](https://docs.google.com/presentation/d/1gB8GSNnB9
 ### Syllabus Topics [HL]
 - **B2.4.4** Explain the fundamental concept of recursion and its applications in programming. 
 - **B2.4.5** Construct and trace recursive algorithms in a programming language.
+
