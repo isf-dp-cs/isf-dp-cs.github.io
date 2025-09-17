@@ -12,6 +12,8 @@ bookCollapseSection: true
 
 This unit introduces the basics of imperative and functional programming, using cryptography as a theme of interest.
 
+You can find the slides [HERE](https://docs.google.com/presentation/d/1gB8GSNnB9NiIHX6TSEYEDwquO-5romTfaDX3ykSUOxA/edit?usp=sharing).
+
 #### Syllabus Topics [SL]
 - **B2.3.1** Construct programs that implement the correct sequence of code instructions to meet program objectives.
 - **B2.1.3** Describe how programs use common exception handling techniques.						
