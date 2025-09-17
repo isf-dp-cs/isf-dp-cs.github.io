@@ -1,5 +1,5 @@
 ---
-weight: 0
+weight: 40
 bookCollapseSection: true
 title: "3. Crypto Escape Room"
 # bookHidden: true
