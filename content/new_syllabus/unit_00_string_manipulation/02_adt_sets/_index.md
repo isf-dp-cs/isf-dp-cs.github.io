@@ -159,7 +159,7 @@ Sets are particularly useful for determining what is similar and what is differe
 - git status
 - git commit -m \"describe your code here\"   
 - git push
-- git remote
+- remote
 
 {{< /deliverables >}}
 
