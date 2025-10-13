@@ -21,6 +21,8 @@ This lab introduces lists, a common data structure.
 | **List** | A data structure that stores elements that are accessible by an index. |
 | **Index** | An integer that represents the position in a data structure |
 | **Append** | To add an item to the end of a list |
+| **Linear Search** | To find an element in a list by iterating over all of the element in the list, until the current element is equivilent to the target element |
+
 
 --- 
 
