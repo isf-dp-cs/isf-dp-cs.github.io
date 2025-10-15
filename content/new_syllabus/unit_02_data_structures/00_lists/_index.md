@@ -13,6 +13,7 @@ This lab introduces lists, a common data structure.
 ---
 ## Syllabus Topics [SL]
 - **B2.2.2** Construct programs that apply arrays and Lists.
+- **B2.4.2** Construct and trace algorithms to implement a linear search ~and a binary search~ for data retrieval.
 
 ## Key Vocabulary
 
