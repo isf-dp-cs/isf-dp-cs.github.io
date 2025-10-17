@@ -1,2 +1,10 @@
-{{- $.Site.Params.WriteAction -}}
-<strong class="markdown-inner"> {{ .Get 0 }}</strong>
+<blockquote class="book-hint info" style="padding-top: 5px; padding-bottom: 5px;">
+    <strong class="markdown-inner">📝 {{ "Practice Coding by Hand" }} </strong> 
+  <br>
+<p class="markdown-inner" >
+{{ if .Inner }}
+  {{ .Inner | markdownify }}
+{{ else }}
+{{ end }}
+</p>
+</blockquote>
