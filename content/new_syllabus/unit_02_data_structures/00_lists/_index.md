@@ -25,7 +25,7 @@ This lab introduces Lists, a built-in Python data structure.
 | **Dynamic Data structure** | A data structure that can change its size as needed as elements are added or deleted. |
 | **Python List** | A built-in Python data structure. It implements a dynamic array. |
 | **Append** | To add an item to the end of a List |
-| **Linear Search** | To find an item in a List by iterating over all of the items in the List, until the current item is equivilent to the target item |
+| **Linear Search** | To find an item in a List by iterating over all of the items in the List, until the current item is equivalent to the target item |
 
 
 --- 
@@ -48,11 +48,7 @@ dessert_list[-1]     # returns "timtams"
 # count number of items in list
 len(dessert_list)   # returns 4
 
-# loop through a list
-for item in dessert_list:
-    print(item)
-
-# loop through a list
+# loop through a list with indexing
 for i in range(len(dessert_list)):
     print(dessert_list[i])
 ```
@@ -113,6 +109,7 @@ When you want to exit the shell, you can type `exit` or `^D`
 💻 **In `number_analysis.py`, write 6 functions that take a list of numbers as a parameter.** Each function will perform an different analysis on the list.
 - `total_sum(num_list)`
 - `contains(num_list, num)`
+- `reverse_list(num_list)`
 - `count(num_list, num)`
 - `minimum(num_list)`
 - `maximum(num_list)`
@@ -130,15 +127,14 @@ assert total_sum([2,4,6]) == 12
 
 ✅ **Check your functions with a peer**
 
----
 
- {{< write-action >}}
+{{< write-action >}}
 
-- **Take out a piece of paper and write out entire the function for `total_sum(num_list)`.**
+1) **Take out a piece of paper and write out entire the function for `total_sum(num_list)` without looking at your solution.**
 
-- Double check your handwritten code against your typed code.
-- If you made mistakes, take note of them and try again with another function. Continue until you complete one without errors.
+2) Double check your handwritten code against your typed code.
 
+3) If you made mistakes, take note of them and try again with another function. Continue until you complete one without errors.
 
 {{< /write-action >}}
 
@@ -163,14 +159,13 @@ assert total_sum([2,4,6]) == 12
 
 ✅ **Check your answers with a peer**
 
----
-
  {{< write-action >}}
 
-- **Take out a piece of paper and write out entire the function for `get_words_of_length(word_list, length)`.**
+1) **Take out a piece of paper and write out entire the function for `get_words_of_length(word_list, length)`.**
 
-- Double check your handwritten code against your typed code.
-- If you made mistakes, take note of them and try again with another function. Continue until you complete one without errors.
+2) Double check your handwritten code against your typed code.
+
+3) If you made mistakes, take note of them and try again with another function. Continue until you complete one without errors.
 
 
 {{< /write-action >}}
