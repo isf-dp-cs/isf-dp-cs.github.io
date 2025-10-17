@@ -55,18 +55,20 @@ for i in range(len(dessert_list)):
 
 📖 **Operations for altering Lists**
 ```python
+dessert_list = ["ice cream", "brownies", "mochi", "timtams"]
+
 # set a particular item by index
-list[2] = "egg tart" # ["ice cream", "mochi", "egg tart", "cookies"]
-list[-1] = "chocolate" # ["ice cream", "mochi", "egg tart", "chocolate"]
+dessert_list[2] = "egg tart" # ["ice cream", "brownies", "egg tart", "timtams"]
+list[-1] = "chocolate" # ["ice cream", "brownies", "egg tart", "chocolate"]
 
 # add item to end of list
-dessert_list.append("cookies")  # ["ice cream", "brownies", "mochi", "timtams", "cookies"]
+dessert_list.append("cookies")  # ["ice cream", "brownies", "egg tart", "chocolate", "cookies"]
 
 # remove item from list
-dessert_list.remove("brownies")  # ["ice cream", "mochi", "timtams", "cookies"]
+dessert_list.remove("brownies")  # ["ice cream", "egg tart", "chocolate", "cookies"]
 
 # insert item at specific index of list
-dessert_list.insert("cookies", 2) # ["ice cream", "mochi", "cookies", "mochi", "timtams"]
+dessert_list.insert("cookies", 2) # ["ice cream", "egg tart", "cookies", "chocolate", "cookies"]
 ```
 
 
