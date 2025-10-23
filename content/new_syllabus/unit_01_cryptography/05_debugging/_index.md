@@ -82,11 +82,11 @@ When you want to exit the shell, you can type `exit` or `^D`
 
 ---
 
-# [1] Debugging
+# [1] Error Messages
 
-[This page](https://code.visualstudio.com/docs/debugtest/debugging) provides helpful instructions for debugging in Visual Studio Code.
+Syntax errors are easy to fix by reading error messages. 
 
-## Palindrome (Syntax Errors)
+## Palindrome
 
 At the moment, the file `palindrome.py` is full of syntax errors. When it runs correctly, it should allow the user to input a word, and then report whether the word is a palindrome. For example:
 
@@ -99,22 +99,18 @@ Congrats, it's a palindrome!
     
 **💻 Fix the syntax errors in `palindrome.py`** 
 
+---
+
+# [2] IDE Debugger
+
+When using an IDE debugger (such as the Python Debugger in Visual Studio Code), two basic techniques are *breakpoint debugging* and *step-by-step execution*. 
+- [Go here](https://code.visualstudio.com/docs/debugtest/debugging#_debug-actions) to remind yourself how to step through the code.
+- [Go here](https://code.visualstudio.com/docs/debugtest/debugging#_breakpoints) to read about setting breakpoints.
 
 ---
 
-## Calculate Average (Logic Errors)
 
-Right now, `calculate_average.py` doesn't work properly. It always thinks the average is 0.0. 
-
-💻 **Use `breakpoint debugging` and `step-by-step execution` to find and fix the errors in `calculate_average.py`.** 
-
-[Go here](https://code.visualstudio.com/docs/debugtest/debugging#_breakpoints) to read about setting breakpoints.
-
-[Go here](https://code.visualstudio.com/docs/debugtest/debugging#_debug-actions) to remind yourself how to step through the code.
-
----
-
-## Arithmetic Game (Logic Errors)
+## Arithmetic Game 
 
 Right now, `arithmetic_game.py` doesn't work properly. No matter how many answers you guess correctly, your score is always 0.0%. 
 
@@ -122,7 +118,7 @@ Right now, `arithmetic_game.py` doesn't work properly. No matter how many answer
 
 ---
 
-# [2] Deliverables
+# [3] Deliverables
 
 {{< deliverables "Once you complete the lab, be sure to complete these two steps:" >}}
 
@@ -137,6 +133,18 @@ Right now, `arithmetic_game.py` doesn't work properly. No matter how many answer
 - git remote
 
 {{< /deliverables >}}
+
+---
+
+# [4] Extension: Calculate Average
+
+This task requires knowledge of `Lists`.
+
+Right now, `calculate_average.py` doesn't work properly. It should calculate the average of a list of numbers, but it always thinks the average is 0.0. 
+
+💻 **Use `breakpoint debugging` and `step-by-step execution` to find and fix the errors in `calculate_average.py`.** 
+
+---
 
 
 
