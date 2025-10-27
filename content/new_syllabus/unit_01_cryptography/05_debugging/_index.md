@@ -144,7 +144,7 @@ Right now, `calculate_average.py` doesn't work properly. It should calculate the
 
 💻 **Use `breakpoint debugging` and `step-by-step execution` to find and fix the errors in `calculate_average.py`.** 
 
----
+
 
 
 

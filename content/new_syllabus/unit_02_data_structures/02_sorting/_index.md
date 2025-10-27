@@ -3,7 +3,7 @@ title: "02. Sorting"
 bookFlatSection: false
 weight: 1
 # bookCollapseSection: true
-# draft: true
+draft: true
 ---
 
 # Sorting
