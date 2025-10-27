@@ -3,8 +3,7 @@ title: "Unit 02: Data Structures"
 weight: 10
 bookFlatSection: false 
 bookCollapseSection: true 
-draft: true
-
+# draft: true
 ---
 
 # Unit 02: Data Structures
@@ -13,10 +12,8 @@ draft: true
 This unit introduces Data Structures
 
 #### Syllabus Topics [SL]
-- **B2.2.1** Compare static and dynamic data structures.
 - **B2.2.2** Construct programs that apply arrays and Lists.
 - **B2.2.3** Explain the concept of a stack as a “last in, first out” (LIFO) data structure.
-- **B2.4.1** Describe the efficiency of specific algorithms by calculating their Big O notation to analyse their scalability.
 - **B2.4.2** Construct and trace algorithms to implement a linear search and a binary search for data retrieval.
 
 

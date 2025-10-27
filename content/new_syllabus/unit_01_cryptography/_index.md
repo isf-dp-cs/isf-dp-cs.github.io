@@ -27,5 +27,6 @@ You can find the Cryptography slides [HERE](https://docs.google.com/presentation
 ### Syllabus Topics [HL]
 - **B2.4.4** Explain the fundamental concept of recursion and its applications in programming. 
 - **B2.4.5** Construct and trace recursive algorithms in a programming language.
+- **A1.4.1** Evaluate the translation processes of interpreters and compilers. 
 
 You can find the Recursion slides [HERE](https://docs.google.com/presentation/d/1gF57VfRIdCDxXDaU7pbWXUmQGfX2ktP_eusX5GqUul0/edit?usp=sharing).
