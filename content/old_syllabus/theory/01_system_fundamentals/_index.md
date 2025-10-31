@@ -29,7 +29,7 @@ weight: 10
 | Human-machine interaction  | The relationship and interaction between humans and machines, particularly in the context of computer systems.                                       |
 | Social and ethical issues  | Issues related to the impact of computer systems on society, including privacy, intellectual property, and the environment.                          |
 
-## Example Problems
+## Example Problems | 1.1 Systems in Organizations
 
 ### System Installation
 
@@ -438,6 +438,18 @@ State **two** compatibility issues that may occur when two information technolog
 ### Documentation
 
 
+State the purpose of technical documentation provided with software.  **\[1\]**
+
+{{< expand "Markscheme" >}}
+
+*Award **\[1 max\]***.
+- Technical documentation explains how to install software;
+- Technical documentation describes the hardware configuration/operating system needed(to install this software); 
+{{< /expand >}}
+
+---
+
+
 Outline **one** reason why accurate user documentation is necessary for a system.  **\[2\]**
 
 {{< expand "Markscheme" >}}
@@ -497,20 +509,6 @@ Identify **one** method of training for end users.  **\[1\]**
 ---
 
 
-Outline **one** method that can be used to deliver user training.  **\[2\]**
-
-{{< expand "Markscheme" >}}
-
-*Award **\[2 max\]***
-*Award **\[1\]** for the method and award **\[1\]** for correct description*\ Self-instruction / Self-study / Self-learning;
-- The user would work through documentation / watch instructional videos / learn the features of the application / system by themselves and understand how to use it; Formal classes / Instructor led training / Face to face training;
-- Organised (online / classroom) sessions in which a tutor would train a class of users in specific features of an application or system;
-- \ Online training / Distance training\ Users are trained over the net / over a digital platform / remotely using training materials designed to show them how to use the application or system;
-- \ <br><br>  *Note: Accept other suitable responses (Workshops / Seminars / On the job training) with suitable description.* 
-{{< /expand >}}
-
----
-
 Evaluate the advantages and disadvantages for the end user of the method of training identified above.  **\[3\]**
 
 {{< expand "Markscheme" >}}
@@ -528,6 +526,21 @@ Evaluate the advantages and disadvantages for the end user of the method of trai
 - Self-learning is neither location constrained nor time-bound (end users can choose their own pace/materials/methods);
 - less stressed out about failing in front of another person/no social interaction;
 - lack of input from trainers can lead to slower progress than f2f training; 
+{{< /expand >}}
+
+---
+
+
+Outline **one** method that can be used to deliver user training.  **\[2\]**
+
+{{< expand "Markscheme" >}}
+
+*Award **\[2 max\]***
+*Award **\[1\]** for the method and award **\[1\]** for correct description*\ Self-instruction / Self-study / Self-learning;
+- The user would work through documentation / watch instructional videos / learn the features of the application / system by themselves and understand how to use it; Formal classes / Instructor led training / Face to face training;
+- Organised (online / classroom) sessions in which a tutor would train a class of users in specific features of an application or system;
+- \ Online training / Distance training\ Users are trained over the net / over a digital platform / remotely using training materials designed to show them how to use the application or system;
+- \ <br><br>  *Note: Accept other suitable responses (Workshops / Seminars / On the job training) with suitable description.* 
 {{< /expand >}}
 
 ---
@@ -806,15 +819,99 @@ Outline **two** backup strategies that may be used to limit data loss.  **\[4\]*
 
 
 
+## Example Problems | 1.2 System Design Basics
 
-<!-- 
+### Components of a Computer System
+
+Define the term *peripheral*.  **\[1\]**
+
+{{< expand "Markscheme" >}}
+
+*Award **\[1 max\]***
+-  A hardware/device that is connected to/ attached to /external to/ auxiliary to the computer;
+- A device used for input, output or storage that is external/ attached to a computer; 
+{{< /expand >}}
+
+---
+
+*An airline has a server that holds the flight database. Passengers can check in using a number of self-service client kiosks located in the airport.*
 
 
-# 1.2 System Design Basics
+Define the term *client*.  **\[1\]**
 
-## System Design
+{{< expand "Markscheme" >}}
 
-## Stakeholders
+*Award **\[1 max\]***.
+- A client is a simple application or a whole system that accesses services being provided by a (remote) computer/server; 
+{{< /expand >}}
+
+---
+
+
+
+Identify **two** roles that a computer can perform in a network.  **\[2\]**
+
+{{< expand "Markscheme" >}}
+
+*Award **\[2 max\]***
+- Client;
+- Server/email server/DNS server/file server;
+- Router;
+- Firewall; 
+{{< /expand >}}
+
+---
+
+
+Define the term *server*.  **\[1\]**
+
+{{< expand "Markscheme" >}}
+
+*Award **\[1 max\]***.
+- A server is a computer / software which manages access to a centralized resource or service in a network.\ A server is a computer/software that provides data to other computers/clients in a network; 
+{{< /expand >}}
+
+---
+
+
+*A school has a local area network (LAN) connecting its computers and peripheral devices. The LAN also provides access to the internet.*
+
+
+Describe the role of a router in this network.  **\[3\]**
+
+{{< expand "Markscheme" >}}
+
+*Award **\[3 max\]***.
+- controls the flow of data in the network;
+- inspects address of data packets;
+- directs to the appropriate network path/ selects a path between networks (by inspecting address of data packets);
+- securely transmits data packets (across that path toward the intended destination); 
+{{< /expand >}}
+
+---
+
+
+*An airline has a server that holds the flight database. Passengers can check in using a number of self-service client kiosks located in the airport.*
+
+
+Explain the functions performed by the server in this situation.  **\[4\]**
+
+{{< expand "Markscheme" >}}
+
+*Award **\[4 max\]***
+- 
+- the central computer receives requests from the kiosks/terminals at the check-in desks/mobile phones;
+- can manage several clients simultaneously (in order, each providing a different set of services);
+- makes sure that the request is valid by accessing its database;
+- processes the request;
+- sends information to the kiosk;
+- all requests/information are sent over the network connection; 
+{{< /expand >}}
+
+---
+
+
+### Stakeholders
 
 
 *A business's computer system needs to be updated.*
@@ -830,6 +927,8 @@ Identify **one** stakeholder to be considered when planning the new system.  **\
 {{< /expand >}}
 
 ---
+
+
 
 Outline **one** consequence of not including all stakeholders in the design of the new system.  **\[2\]**
 
@@ -847,20 +946,17 @@ Outline **one** consequence of not including all stakeholders in the design of t
 
 ---
 
-Describe **two** appropriate techniques to gather the information needed to find a suitable solution for the updated system.  **\[4\]**
+### Gathering Requirements
+
+Identify **one** method of gathering requirements from end users.  **\[1\]**
 
 {{< expand "Markscheme" >}}
 
-*Award **\[4 max\]***.
-- Examining current systems (using interviews/ surveys/direct observation);
-- To compare the existing system against possible requirements to identify missing features; 
-- Examining competing products;
-- To compare own system with competitors to enable decisions on features to add; 
-- Review of organizational capabilities;
-- To determine how well the organization manages resources to gain an advantage over competitors; 
-- Literature searches;
-- To research current methods and to help inform development choices; 
-- *Mark as 2 and 2* 
+*Award **\[1 max\]***
+- Observation;
+- Survey/Questionnaire;
+- Interview;
+- Brainstorming (get as many ideas as possible from a representative group of end users); 
 {{< /expand >}}
 
 ---
@@ -893,6 +989,74 @@ Outline **one** advantage of using the method identified in part (a)(i) in prefe
 
 ---
 
+Describe **two** appropriate techniques to gather the information needed to find a suitable solution for the updated system.  **\[4\]**
+
+{{< expand "Markscheme" >}}
+
+*Award **\[4 max\]***.
+- Examining current systems (using interviews/ surveys/direct observation);
+- To compare the existing system against possible requirements to identify missing features; 
+- Examining competing products;
+- To compare own system with competitors to enable decisions on features to add; 
+- Review of organizational capabilities;
+- To determine how well the organization manages resources to gain an advantage over competitors; 
+- Literature searches;
+- To research current methods and to help inform development choices; 
+- *Mark as 2 and 2* 
+{{< /expand >}}
+
+---
+
+Describe **two** advantages of using surveys to determine user requirements for updating a computer system.  **\[4\]**
+
+{{< expand "Markscheme" >}}
+
+*Award **max** \[4\].* *Award \[1\] for an advantage and \[1\] for 
+- description, **x2**.*\ Cost effective/flexible way of gathering data;
+- from large number of users/surveys can be sent out as offline or online form (for better reach); Fast way of gathering data;
+- data from a large number of users can be collected in a short period of time; Standardized question formats;
+- can yield more reliable data than other methods (interviews, observation, etc.); Anonymity/privacy for respondents;
+- can lead to more honest responses; Simple to administer (less time consuming than other methods);
+- A large amount of data gathered in a short period of time; Fast results/easy to extract quantitative data/easy to analyse data;
+- because all the users are asked the same questions;
+- *<br><br>  *Note**: *Reward other correct responses.* 
+{{< /expand >}}
+
+---
+
+Describe **two** advantages of using direct observations to determine user requirements for updating a computer system.  **\[4\]**
+
+{{< expand "Markscheme" >}}
+
+*Award **max** \[4\].*
+*Award \[1\] for a strength and \[1\] for a description.*\ Direct observation allows for studying a process in its natural setting;
+- this provides a deeper/more comprehensive understanding of the process; Observing enables a full assessment of the process/how users interact with their surroundings;
+- uncovering insights that might be missed through other means; By observing directly, reliable data and information is obtained/real-time behaviour is captured;
+- unlike other methods, where responses might be influenced by memory or social desirability; Cost-effective/an efficient way to gather information;
+- direct observation doesn't require extensive surveys/interviews/specialized equipment; The data collected through direct observation can lead to clear statistical/qualitative outcomes;
+- a valuable tool for understanding user requirements.;
+- <br><br>  ***Note**: Reward other correct responses.* 
+{{< /expand >}}
+
+---
+
+### System Design
+
+Outline the purpose of a system flow chart.  **\[2\]**
+
+{{< expand "Markscheme" >}}
+
+*Award **\[2 max\]***
+-  to graphically/diagrammatically present a system;
+- describing the devices/files/media used and tasks/events to be performed by the system;
+- so, to help better understand the system/ identify bottlenecks/ inefficiencies/ redundancies/ suggest improvements/ optimizations; to represent all the components in a system (inputs and outputs, storage, processes, and decisions);
+- using standard symbols (shapes, arrows);
+- that provide visual clarity/ help to understand/ analyse the flow of the process; 
+{{< /expand >}}
+
+---
+
+
 Outline the purpose of prototypes.  **\[2\]**
 
 {{< expand "Markscheme" >}}
@@ -903,6 +1067,47 @@ Outline the purpose of prototypes.  **\[2\]**
 {{< /expand >}}
 
 ---
+
+
+*A company is using a prototyping approach as part of their software development process.*
+
+
+Outline **one** advantage of prototyping.  **\[2\]**
+
+{{< expand "Markscheme" >}}
+
+*Award **\[2\]** max.*
+- Prototyping approach allows the end users (employees, management, owner) to visualize how the final solution might look;
+- So, they can provide feedback to the system analysis team; 
+- Gives the design team the chance to explore different possibilities;
+- Before choosing the best one / most likely one; 
+- Feedback from end users;
+- Saves wasting time at a later stage; 
+<br><br>  ***Note**: Reward other suitable answers*. 
+*Award **\[1\]** for stating an advantage and **\[1\]** for a
+- expansion*. 
+{{< /expand >}}
+
+---
+
+
+Outline **one** situation in which the use of a prototype is not the best approach.  **\[2\]**
+
+{{< expand "Markscheme" >}}
+
+*Award **\[2\]** max.*
+- Software developer works on a rather simple project / in a small company;
+- No end-users so no need for feedback / to explore different possibilities; 
+- The software developer is the only end-user;
+- No need to waste time and money on a prototype / to view how the solution might look; 
+- When designing very large/resources intensive systems;
+- A prototype may be too expensive/ cost inefficient; 
+- In a case where trial/error is a dangerous approach/can be lethal/harmful for human lives/unethical;
+- For example, systems that overlook nuclear power plants/ surgical equipment, etc. 
+{{< /expand >}}
+
+---
+
 
 Describe the role of end users in the process of replacing an old computer system with a new one.  **\[2\]**
 
@@ -918,52 +1123,156 @@ Describe the role of end users in the process of replacing an old computer syste
 
 ---
 
-Identify **one** method of gathering requirements from end users.  **\[1\]**
+
+
+### Usability and Accessibility
+
+
+State **two** usability issues that could occur when using a cell phone (mobile phone).  **\[2\]**
+
+{{< expand "Markscheme" >}}
+
+*Award **\[2 max\]***
+- Very small text and readability;
+- Very small functional elements / difficult to navigate;
+- Clutter on the screen;
+- Low contrast between text and functional elements / poor colour choices for visibility;
+- Size of screen (difficult to see in poor light);
+- Size of keys (difficult to access functions);
+- Battery life (may need to recharge frequently);
+- Touch screen keys (lack of tactile feedback);
+- Gesture (unresponsive gestures in user interfaces);
+- Too many clicks to complete tasks;
+- Limited storage/ RAM;   <br><br>  ***Note:*** *Reward other suitable issues* 
+{{< /expand >}}
+
+---
+
+
+
+Identify **two** usability problems that can occur in a voice recognition system.  **\[2\]**
+
+{{< expand "Markscheme" >}}
+
+*Award **\[2 max\]**.*
+- number of rejected/hypothesized words (speech commands);
+- number of audio signal issues (users being either too loud, too slow or too fast/noisy environment -- means decreased accuracy of speech recognition);
+- difficulty distinguishing between similar sounding words;
+- different dialects/accents which the system may not be able to deal with;
+- limited database of commands; <br><br>  ***Note:** Accept other reasonable answers.* 
+{{< /expand >}}
+
+---
+
+
+Identify **one** common feature found in the user interface of application software to improve its usability.  **\[1\]**
 
 {{< expand "Markscheme" >}}
 
 *Award **\[1 max\]***
-- Observation;
-- Survey/Questionnaire;
-- Interview;
-- Brainstorming (get as many ideas as possible from a representative group of end users); 
+- Toolbars;
+- Menus;
+- Dialogue boxes; 
 {{< /expand >}}
 
 ---
 
-
-## Accessibility
-
-Identify **two** features that could be used to improve the accessibility of the new user interface.  **\[2\]**
+Identify **two** methods that can be used to improve the accessibility of a computer system for users.  **\[2\]**
 
 {{< expand "Markscheme" >}}
 
-*Award **\[2 max\]***.
-- Touch screens;
+*Award **\[2 max\]***
+- Touch screen;
 - Voice recognition;
-- Text-to-speech;
-- Braille keyboard\ A colour-blind option\ Large font option; 
-<br><br>  *Note to examiners: allow other correct accessibility features* 
+- Braille keyboards;
+- Text-to-speech/screen readers;
+- Hotkeys;
+- Larger screens;
+- Larger text/font options;
+- A colour-blind option;
+- Size and sensitivity of touchpad - larger/ less sensitive touchpads; <br><br>  
+***Note:*** *Reward other suitable answers* 
 {{< /expand >}}
 
 ---
 
-Identify **two** features that could be used to improve the accessibility of the new user interface.  **\[2\]**
+### Social Issues
+
+Describe **one** way a cell phone app can help the user improve their health.  **\[2\]**
 
 {{< expand "Markscheme" >}}
 
-*Award **\[2 max\]***.
-- Touch screens;
-- Voice recognition;
-- Text-to-speech;
-- Braille keyboard\ A colour-blind option\ Large font option; 
-<br><br>  *Note to examiners: allow other correct accessibility features* 
+*Award **\[2 max\]***
+*Award **\[1\]** for identifying a way and award **\[1\]** for an expansion.*   Different health cell phone apps can track/record data;
+- To detect unhealthy conditions;   <br><br>  ***Note**: Accept examples of cell phone apps that can monitor any vital signs and be used in diagnostic, such as sleep tracking functionality in prenatal care, etc.*   Cell phone apps can access nutrition information/guide;
+- So, users can eat healthier food; Cell phone apps to monitor/track exercise (track distance, time, speed, and calories burned);
+- And serve a role as motivator to do more of it;   <br><br>  ***Note**: Accept other reasonable answers.* 
 {{< /expand >}}
 
 ---
 
-## Ethics
+Outline **one** concern of cell phone apps sharing the location of the user.  **\[2\]**
 
+{{< expand "Markscheme" >}}
+
+*Award **\[2 max\]***
+*Award **\[1\]** for a concern and **\[1\]** for an expansion.* Privacy concerns;
+- All the time and at all locations/ in a place and time when a user has a reasonable expectation of privacy; Safety concerns;
+- surveillance is possible/ possible sharing the user's whereabouts with stalkers; Advertisers could profile;
+- User's physical/online habits; Erroneous data could be created;
+- Because of missing/incorrect location information; 
+{{< /expand >}}
+
+---
+
+*Employees are increasingly working from home.*
+
+
+Discuss the social impacts of this changed work pattern on employees.  **\[4\]**
+
+{{< expand "Markscheme" >}}
+
+*Award **\[4 max\]***
+*Award **\[2 max\]** for positive aspects, 1 mark for stating any of the positive aspects (of working from home) and 1 mark for discussion.*\ *Award **\[2 max\]** for negative aspects, 1 mark for stating any of the negative aspects (of working from home) and 1 mark for discussion.* Examples (Positive aspects):\ Flexibility and agility\ Increased productivity - due to fewer interruptions\ Increased motivation\ Autonomy\ Improved health and wellbeing\ Better work/life balance Examples (negative aspects):\ Working from home doesn\'t suit everyone\ Employees feeling isolated\ Home distractions\ Negative impact on mental health\ Not all jobs suit home working <br><br>  ***Note:** When a change to the work pattern is identified it can be an advantage or a disadvantage. For example, working at home can improve interaction with the family but also provide a distraction to work.* 
+{{< /expand >}}
+
+---
+
+
+State **one** other hardware or software problem associated with the use of images.  **\[1\]**
+
+{{< expand "Markscheme" >}}
+
+*Award **\[1 max\]**.*
+- Expensive hardware needed for high performance;
+- Need for special skills in use of graphic design software;
+- Unable to decode the file format;
+- File corruption; <br><br>  ***Note:** Accept hardware or software examples, such as expensive colour printing, expensive high-resolution screens, high storage requirements, complexity/cost/limitations of graphic design software.* 
+{{< /expand >}}
+
+---
+
+
+### Ethical Issues
+
+*A student posts images and videos on a public website of her friends at a party.*
+
+
+Outline **one** ethical issue with the student posting these images and videos.  **\[2\]**
+
+{{< expand "Markscheme" >}}
+
+*Award **\[2\]** max.*
+- the video/images could be viewed by anyone;
+- which may not be desirable since some people may not wish to have themselves regarded by everyone; 
+- anybody could download the images/video;
+- and they can be manipulated by outsiders; 
+- posting images of other people at a private function requires their permission;
+- did she get permission from her friends? ;
+- that they were fine with her posting and share their pictures with everyone; 
+{{< /expand >}}
+
+---
 
 
 *Using images in design may have ethical considerations.*
@@ -987,6 +1296,9 @@ Explain **one** ethical problem associated with using images.  **\[3\]**
 
 ---
 
+
+
+
 Discuss the social and ethical issues associated with the introduction of a new computer system.  **\[4\]**
 
 {{< expand "Markscheme" >}}
@@ -1000,23 +1312,7 @@ Discuss the social and ethical issues associated with the introduction of a new 
 - Code of ethics (system resources should not be used without approval); 
 {{< /expand >}}
 
----
 
 
-## Unknown
-
-*Laptops are used daily for data storage, web browsing, gaming, and email.*
 
 
-State **one** precaution a user can take to secure their data in case their laptop is stolen.  **\[1\]**
-
-{{< expand "Markscheme" >}}
-
-*Award **\[1 max\]***
--  A password should be assigned to the device (biometric passwords could be used);
-- Should not store sensitive data on the laptop;
-- Safeguard all passwords / should not store username/password account logins (or "remember me" cookies) on the device;
-- Encrypt the SSD / hard drive;   <br><br>  ***Note**: Reward other correct responses.* <br><br>  ***Note**: Backing-up will not keep the data secure, it will only allow recovery of data removed, so no marks for the answer: 'Regularly back up the SSD / hard drive to another location'.* 
-{{< /expand >}}
-
---- -->
