@@ -127,10 +127,13 @@ Describe **one** method of implementation for a new computer system.  **\[2\]**
 - 
 - Parallel;
 - old system and new system are operated at the same time until the current system is proved to be successful; 
+<br><br> 
 - Pilot;
 - the new (whole) system is operated in one branch/part of the organization before it is rolled out to the whole organization; 
+<br><br> 
 - Direct;
 - the new system replaces the old system in an immediate switchover; 
+<br><br> 
 - Phased;
 - the new system in phases / stages, gradually replaces parts of the old system until the current system is completely replaced by the new system; 
 {{< /expand >}}
@@ -142,10 +145,14 @@ Describe the pilot running method for the implementation of a new system.  **\[2
 {{< expand "Markscheme" >}}
 
 *Award **\[2 max\]***
-*Award **\[1\]** for the description and award **\[1\]** for the extension of its purpose*   <br><br>  ***Examples:*** One area/branch of the
-- business is selected to try the new computer system;
-- Once the new system is fully tested and able to function correctly / without errors / as per the user requirements, it is implemented for everyone; The system is introduced only to a small group of users;
-- It reduces the risks of failure or malfunction before introducing to the full group; Pilot running is a small-scale implementation of the system for a limited number of users;
+*Award **\[1\]** for the description and award **\[1\]** for the extension of its purpose*   <br><br>  ***Examples:*** 
+- One area/branch of the business is selected to try the new computer system;
+- Once the new system is fully tested and able to function correctly / without errors / as per the user requirements, it is implemented for everyone; 
+<br><br> 
+- The system is introduced only to a small group of users;
+- It reduces the risks of failure or malfunction before introducing to the full group; 
+<br><br> 
+- Pilot running is a small-scale implementation of the system for a limited number of users;
 - It allows the developers make improvements in the system based on users' feedback before its full release / roll out; 
 {{< /expand >}}
 
@@ -376,7 +383,9 @@ Explain **one** problem that may occur during data migration.  **\[3\]**
 <br><br>  **Example 1**
 - Data loss/data available in legacy system but after migration process it is not available in the new system;
 - because data is accidentally deleted/ something causes data to become corrupted/ viruses/physical damage/incomplete transfer;
-- cost involved in rectifying data loss leads to financial risk for the organization / sets back productivity / reputation risk (can cause the organization to lose customers); <br><br>  **Example 2**
+- cost involved in rectifying data loss leads to financial risk for the organization / sets back productivity / reputation risk (can cause the organization to lose customers); <br><br>  
+>
+**Example 2**
 - Data Corruption/ Data integrity;
 - format and content of data in legacy system and new system is different / incompatible data/ anomalies or redundant or duplicated data or presence of non-meaningful data;
 - this affects the efficiency/ it can totally beat purpose of migration; <br><br>  *Note: Students may write an example for this, such as: the legacy system may have had gender details of the employees, but the new system may not have/require them).* 
@@ -392,10 +401,12 @@ Describe how large image files can be sent by email.  **\[3\]**
 {{< expand "Markscheme" >}}
 
 *Award **\[3 max\]**.*
-- by compressing the file;
+- **by compressing the file;**
 - if the compressed file does not fit then split the file up into smaller parts;
 - then attach each of the individual pieces to separate emails;
-- the recipient would have to (download each attachment separately and then) use a file extraction program to extract the larger (divided-up) file, and piece it back together; *Accept examples, such as, use (file compression software like) 7-Zip to create an archive containing that 60MB file, splitting it into eight 7.5 MB pieces then use a file extraction program to extract file and piece it back together.* Use file-sharing services (Google Drive/OneDrive);
+- the recipient would have to (download each attachment separately and then) use a file extraction program to extract the larger (divided-up) file, and piece it back together; *Accept examples, such as, use (file compression software like) 7-Zip to create an archive containing that 60MB file, splitting it into eight 7.5 MB pieces then use a file extraction program to extract file and piece it back together.* 
+<br><br> 
+- **Use file-sharing services** (Google Drive/OneDrive);
 - upload the large file to the cloud;
 - and share the link; use an online storage service (that doesn't integrate directly with an email provider/ Dropbox);
 - upload the large file and "share link";
@@ -415,13 +426,17 @@ Outline **two** issues that could arise concerning data migration.  **\[4\]**
 *Award **\[1\]** for an issue and **\[1\]** for a reasonable expansion, x*2. 
 
 - Different languages used;
-- Which leads to translation/communication issues; 
+- Which leads to translation/communication issues;
+<br><br> 
 - Different character sets used;
 - Which could lead to inconsistent/incorrect results; 
+<br><br> 
 - Incompatible file formats;
 - Which could lead to incomplete or incorrect data transfer / data loss; 
+<br><br> 
 - Different file structures / different employee records;
-- Which will result in a mismatch of data/ incorrect data; 
+- Which will result in a mismatch of data/ incorrect data;
+<br><br>  
 - New validation rules differ to the old validation rules (used in the Africa headquarters);
 - Which could lead to inconsistent/incorrect results;
 {{< /expand >}}
@@ -481,10 +496,13 @@ Outline **one** reason why accurate user documentation is necessary for a system
 *Award **\[2 max\]***.
 - User efficiency;
 - To ensure that users know how to use the system correctly; 
+<br><br> 
 - Support/Troubleshoot;
 - To provide users help when they encounter errors; 
+<br><br> 
 - Accuracy;
 - To ensure the correct methods are used to enable reliable output; 
+<br><br> 
 - Improved user experience;
 - the user is aware of all available features, so they can make the most out of the system; 
 {{< /expand >}}
@@ -538,15 +556,19 @@ Evaluate the advantages and disadvantages for the end user of the method of trai
 {{< expand "Markscheme" >}}
 
 *Award **\[3 max\]***
-*Award up to **\[2\]** for any advantage to end-user (trainee) evaluated, and **up to** \[2\] for any disadvantage evaluated*. <br><br>  ***Note: The response should match the method of training identified in (i)***. *Award marks for the advantages and disadvantages involving convenience, cost, time, effectiveness, comprehensiveness, learning needs, etc*. <br><br>  **Example 1 *(remote /online training)***
+<br>*Award up to **\[2\]** for any advantage to end-user (trainee) evaluated, and **up to** \[2\] for any disadvantage evaluated*. <br><br>  ***Note: The response should match the method of training identified in (i)***. *Award marks for the advantages and disadvantages involving convenience, cost, time, effectiveness, comprehensiveness, learning needs, etc*. <br><br>  **Example 1 *(remote /online training)***
 - advantage of online training is that it allows end-users to attend classes from any location of their choice;
 - with reduced financial costs (because online learning eliminates the cost of transportation / meals / the study materials are cheaper (available online));
-- but there are also disadvantages such as: struggle with focusing on the screen for long periods of time/ technology issues (requirements of internet enabled devices/ smart devices/ live internet connection) /sense of isolation / time zone differences between the trainer and the trainees;      <br><br>  **Example 2 *(formal classes)***
+- but there are also disadvantages such as: struggle with focusing on the screen for long periods of time/ technology issues (requirements of internet enabled devices/ smart devices/ live internet connection) /sense of isolation / time zone differences between the trainer and the trainees;      <br><br>  
+>
+**Example 2 *(formal classes)***
 - Direct interaction between the trainer and trainees (end-users);
 - no technology issues/no sense of isolation;
 - Verified study materials and trainers allow immediate answer to end-users/ gives enduser (trainees) the benefit of receiving immediate feedback;
 - but it involves high costs (the expenses associated with end-user training);
-- it is time intensive/requires time away from the work; <br><br>  **Example 3 *(self-instruction)***
+- it is time intensive/requires time away from the work; <br><br>  
+>
+**Example 3 *(self-instruction)***
 - Self-learning is neither location constrained nor time-bound (end users can choose their own pace/materials/methods);
 - less stressed out about failing in front of another person/no social interaction;
 - lack of input from trainers can lead to slower progress than f2f training; 
@@ -586,8 +608,10 @@ Outline **one** way in which users can be informed of software updates.  **\[2\]
 
 - A message can be sent to the user (When the software is installed and registered, the user provides an email address / phone number);
 - With a link to the update; 
+<br><br> 
 - notifications/alerts are sent to the computer (a cookie is placed on the user\'s computer which communicates with the software developer);
 - about automatic updates; 
+<br><br> 
 - (when the program is run) it queries a URL the program developer has built in to check whether the current version matches the latest version;
 - if not, notifications/alerts are sent; 
 {{< /expand >}}
@@ -641,6 +665,7 @@ Outline **one** reason testing should take place at every stage of the developme
 *Award **\[2 max\]***.
 - Testing is important (at every stage) to make sure the system operates in line with user requirements/as intended;
 - To prevent the end user being dissatisfied with the final system; 
+<br><br> 
 - Testing is important to enable early discovery of errors;
 - to reduce time delay/ using more resources / avoid higher cost; 
 {{< /expand >}}
@@ -652,10 +677,14 @@ Describe the purpose of user acceptance testing.  **\[2\]**
 {{< expand "Markscheme" >}}
 
 *Award **\[2 max\]***
-Award ***\[1\]** for the purpose and award **\[1\]** for an appropriate extension*   <br><br>  ***Examples:*** User acceptance testing evaluates a
-- product/software to make sure it is up to specifications/ user\ requirements/functions as intended;
-- before putting it into production/ before release; It tests for the functionality of the product;
-- ensuring that bug fixes / modifications can be completed (in a more cost-effective manner); It serves as a form of quality check;
+<br> Award ***\[1\]** for the purpose and award **\[1\]** for an appropriate extension*   <br><br>  ***Examples:*** 
+- User acceptance testing evaluates a product/software to make sure it is up to specifications/ user\ requirements/functions as intended;
+- before putting it into production/ before release; 
+<br><br>
+- It tests for the functionality of the product;
+- ensuring that bug fixes / modifications can be completed (in a more cost-effective manner); 
+<br><br> 
+- It serves as a form of quality check;
 - to identify problems and defects through user feedback; 
 {{< /expand >}}
 
@@ -782,11 +811,21 @@ Describe **one** method that can be used to prevent data loss.  **\[2\]**
 
 *Award **\[2 max\]**.*
 - Offsite/online backups/hard copy backups of patients\' records should be made;
-- To be used in case of system failure; With data loss prevention software/backup software;
-- That creates a file back/a copy doctor's files to a secondary device in an automated fashion; Firewall and antivirus software/all the software;
-- Need to be updated and properly maintained (to avoid corruption); Training the staff with security practices;
-- to avoid human errors; Physical security;
-- to protect against theft; Maintaining the suitable conditions/following best practices for usage;
+- To be used in case of system failure; 
+<br><br> 
+- With data loss prevention software/backup software;
+- That creates a file back/a copy doctor's files to a secondary device in an automated fashion; 
+<br><br> 
+- Firewall and antivirus software/all the software;
+- Need to be updated and properly maintained (to avoid corruption); 
+<br><br> 
+- Training the staff with security practices;
+- to avoid human errors; 
+<br><br> 
+- Physical security;
+- to protect against theft; 
+<br><br> 
+- Maintaining the suitable conditions/following best practices for usage;
 - to avoid hardware destruction; <br><br>  *Note: Reward other reasonable answers.* 
 {{< /expand >}}
 
@@ -800,8 +839,10 @@ Describe **one** way offsite storage can be used to prevent data loss.  **\[2\]*
 *Award **\[2 max\]***.
 - Internet backup service could automatically back up (all important) data files;
 - to a remote server that could be accessed/controlled over the internet; 
+<br><br> 
 - Copies of all important data files (backup) could be placed on two separate hardware devices;
 - which are placed in two different physical locations; 
+<br><br> 
 - A remote file server could be set up;
 - for uploading all important data files; 
 {{< /expand >}}
@@ -819,10 +860,13 @@ Describe **two** possible causes of data loss.  **\[4\]**
 - *Mark as **\[2\]** and **\[2\]***. 
 - Malicious activities;
 - An unauthorized user gaining access to data and deleting/altering it; 
+<br><br> 
 - Natural disasters / earthquake / storm / power loss;
 - Causing the system to crash and destroy data; 
+<br><br> 
 - Malware/viruses/spyware/worms;
 - Which infiltrate and damage the data; 
+<br><br> 
 - Human error;
 - Accidental deletion/overwriting of files; 
 {{< /expand >}}
@@ -838,9 +882,11 @@ Outline **two** backup strategies that may be used to limit data loss.  **\[4\]*
 *Award **\[4 max\]***.
 - *Mark as **\[2\]** and **\[2\]***. 
 - Copies of backup could be kept off-site/cloud backup;
-- Unlikely that the other site would be affected by the natural disaster/can be reloaded/reinstalled if needed; 
+- Unlikely that the other site would be affected by the natural disaster/can be reloaded/reinstalled if needed;
+<br><br> 
 - Incremental backup only backs up data that has changed;
 - Therefore, requiring less storage capacity / can be completed more quickly than a complete backup; 
+<br><br> 
 - Failover system/mirrored system/disk mirroring;
 - A duplicate copy to be used in the event the main system fails; 
 {{< /expand >}}
@@ -897,7 +943,8 @@ Define the term *server*.  **\[1\]**
 {{< expand "Markscheme" >}}
 
 *Award **\[1 max\]***.
-- A server is a computer / software which manages access to a centralized resource or service in a network.\ A server is a computer/software that provides data to other computers/clients in a network; 
+- A server is a computer / software which manages access to a centralized resource or service in a network.
+- A server is a computer/software that provides data to other computers/clients in a network; 
 {{< /expand >}}
 
 ---
@@ -928,7 +975,7 @@ Explain the functions performed by the server in this situation.  **\[4\]**
 {{< expand "Markscheme" >}}
 
 *Award **\[4 max\]***
-- 
+
 - the central computer receives requests from the kiosks/terminals at the check-in desks/mobile phones;
 - can manage several clients simultaneously (in order, each providing a different set of services);
 - makes sure that the request is valid by accessing its database;
@@ -1011,8 +1058,10 @@ Outline **one** advantage of using the method identified in part (a)(i) in prefe
 {{< expand "Markscheme" >}}
 
 *Award **\[2 max\]**.*
-<br><br>  *Note: The answer to a(ii) should align with the answer to a(i).* Surveys are a practical/fast way to gather information from a large group of people about something specific in the company (which gives a good composition of data)/anonymity (confidentiality) thus allowing the respondents to express their opinions freely/surveys provide fast results because of today's mobile and online tools this method of data collection can generate results quickly;
-- it is difficult/time consuming/costly/ineffective to collect all the specific data interviewing all the end users/analysis of collected data will take more time; Observation allows the entire graphic design company to account for all processes (parts/participants)/gives more realistic view than interview/can highlight aspects that are not detected in interviews/helps to speed up the work of collecting information/ helps to prove or disprove an idea while keeping the overall costs of the collection of information down;
+<br><br>  *Note: The answer to a(ii) should align with the answer to a(i).* 
+- Surveys are a practical/fast way to gather information from a large group of people about something specific in the company (which gives a good composition of data)/anonymity (confidentiality) thus allowing the respondents to express their opinions freely/surveys provide fast results because of today's mobile and online tools this method of data collection can generate results quickly;
+- it is difficult/time consuming/costly/ineffective to collect all the specific data interviewing all the end users/analysis of collected data will take more time;
+- Observation allows the entire graphic design company to account for all processes (parts/participants)/gives more realistic view than interview/can highlight aspects that are not detected in interviews/helps to speed up the work of collecting information/ helps to prove or disprove an idea while keeping the overall costs of the collection of information down;
 - compared to interviewing many end-users which is costly/time consuming, etc.; <br><br>  *Note: Reward other suitable answers.* 
 {{< /expand >}}
 
@@ -1023,15 +1072,19 @@ Describe **two** appropriate techniques to gather the information needed to find
 {{< expand "Markscheme" >}}
 
 *Award **\[4 max\]***.
+<br>*Mark as 2 and 2* 
 - Examining current systems (using interviews/ surveys/direct observation);
 - To compare the existing system against possible requirements to identify missing features; 
+<br><br>
 - Examining competing products;
 - To compare own system with competitors to enable decisions on features to add; 
+<br><br>
 - Review of organizational capabilities;
 - To determine how well the organization manages resources to gain an advantage over competitors; 
+<br><br>
 - Literature searches;
 - To research current methods and to help inform development choices; 
-- *Mark as 2 and 2* 
+
 {{< /expand >}}
 
 ---
@@ -1040,15 +1093,25 @@ Describe **two** advantages of using surveys to determine user requirements for 
 
 {{< expand "Markscheme" >}}
 
-*Award **max** \[4\].* *Award \[1\] for an advantage and \[1\] for 
-- description, **x2**.*\ Cost effective/flexible way of gathering data;
-- from large number of users/surveys can be sent out as offline or online form (for better reach); Fast way of gathering data;
-- data from a large number of users can be collected in a short period of time; Standardized question formats;
-- can yield more reliable data than other methods (interviews, observation, etc.); Anonymity/privacy for respondents;
-- can lead to more honest responses; Simple to administer (less time consuming than other methods);
-- A large amount of data gathered in a short period of time; Fast results/easy to extract quantitative data/easy to analyse data;
+*Award **max** \[4\].* 
+<br>*Award \[1\] for an advantage and \[1\] for description, **x2**.*
+-  Cost effective/flexible way of gathering data;
+- from large number of users/surveys can be sent out as offline or online form (for better reach); 
+<br><br>
+- Fast way of gathering data;
+- data from a large number of users can be collected in a short period of time; 
+<br><br>
+- Standardized question formats;
+- can yield more reliable data than other methods (interviews, observation, etc.); 
+<br><br>
+- Anonymity/privacy for respondents;
+- can lead to more honest responses; 
+<br><br>
+- Simple to administer (less time consuming than other methods);
+- A large amount of data gathered in a short period of time; <br><br>
+- Fast results/easy to extract quantitative data/easy to analyse data;
 - because all the users are asked the same questions;
-- *<br><br>  *Note**: *Reward other correct responses.* 
+*<br><br>  *Note**: *Reward other correct responses.* 
 {{< /expand >}}
 
 ---
@@ -1058,13 +1121,21 @@ Describe **two** advantages of using direct observations to determine user requi
 {{< expand "Markscheme" >}}
 
 *Award **max** \[4\].*
-*Award \[1\] for a strength and \[1\] for a description.*\ Direct observation allows for studying a process in its natural setting;
-- this provides a deeper/more comprehensive understanding of the process; Observing enables a full assessment of the process/how users interact with their surroundings;
-- uncovering insights that might be missed through other means; By observing directly, reliable data and information is obtained/real-time behaviour is captured;
-- unlike other methods, where responses might be influenced by memory or social desirability; Cost-effective/an efficient way to gather information;
-- direct observation doesn't require extensive surveys/interviews/specialized equipment; The data collected through direct observation can lead to clear statistical/qualitative outcomes;
-- a valuable tool for understanding user requirements.;
-- <br><br>  ***Note**: Reward other correct responses.* 
+<br>*Award \[1\] for a strength and \[1\] for a description.*
+- Direct observation allows for studying a process in its natural setting;
+- this provides a deeper/more comprehensive understanding of the process; 
+<br><br>
+- Observing enables a full assessment of the process/how users interact with their surroundings;
+- uncovering insights that might be missed through other means; 
+<br><br>
+- By observing directly, reliable data and information is obtained/real-time behaviour is captured;
+- unlike other methods, where responses might be influenced by memory or social desirability; 
+<br><br>
+- Cost-effective/an efficient way to gather information;
+- direct observation doesn't require extensive surveys/interviews/specialized equipment; 
+<br><br>
+- The data collected through direct observation can lead to clear statistical/qualitative outcomes;
+- a valuable tool for understanding user requirements.;<br><br>  ***Note**: Reward other correct responses.* 
 {{< /expand >}}
 
 ---
@@ -1076,9 +1147,10 @@ Outline the purpose of a system flow chart.  **\[2\]**
 {{< expand "Markscheme" >}}
 
 *Award **\[2 max\]***
--  to graphically/diagrammatically present a system;
+- to graphically/diagrammatically present a system;
 - describing the devices/files/media used and tasks/events to be performed by the system;
-- so, to help better understand the system/ identify bottlenecks/ inefficiencies/ redundancies/ suggest improvements/ optimizations; to represent all the components in a system (inputs and outputs, storage, processes, and decisions);
+- so, to help better understand the system/ identify bottlenecks/ inefficiencies/ redundancies/ suggest improvements/ optimizations; 
+- to represent all the components in a system (inputs and outputs, storage, processes, and decisions);
 - using standard symbols (shapes, arrows);
 - that provide visual clarity/ help to understand/ analyse the flow of the process; 
 {{< /expand >}}
@@ -1106,15 +1178,17 @@ Outline **one** advantage of prototyping.  **\[2\]**
 {{< expand "Markscheme" >}}
 
 *Award **\[2\]** max.*
+<br>*Award **\[1\]** for stating an advantage and **\[1\]** for an expansion*. 
 - Prototyping approach allows the end users (employees, management, owner) to visualize how the final solution might look;
 - So, they can provide feedback to the system analysis team; 
+<br><br>
 - Gives the design team the chance to explore different possibilities;
 - Before choosing the best one / most likely one; 
+<br><br>
 - Feedback from end users;
 - Saves wasting time at a later stage; 
 <br><br>  ***Note**: Reward other suitable answers*. 
-*Award **\[1\]** for stating an advantage and **\[1\]** for a
-- expansion*. 
+
 {{< /expand >}}
 
 ---
@@ -1125,12 +1199,17 @@ Outline **one** situation in which the use of a prototype is not the best approa
 {{< expand "Markscheme" >}}
 
 *Award **\[2\]** max.*
+<br>*Award **\[1\]** for stating an advantage and **\[1\]** for an expansion*. 
+
 - Software developer works on a rather simple project / in a small company;
 - No end-users so no need for feedback / to explore different possibilities; 
+<br><br>
 - The software developer is the only end-user;
 - No need to waste time and money on a prototype / to view how the solution might look; 
+<br><br>
 - When designing very large/resources intensive systems;
 - A prototype may be too expensive/ cost inefficient; 
+<br><br>
 - In a case where trial/error is a dangerous approach/can be lethal/harmful for human lives/unethical;
 - For example, systems that overlook nuclear power plants/ surgical equipment, etc. 
 {{< /expand >}}
