@@ -91,20 +91,27 @@ Outline **two** aspects of change management that need to be considered, **other
 
 {{< expand "Markscheme" >}}
 
-*Award **\[4\]** max.*
+*Award **\[4\]** max.*      
+*Mark as **\[2\]** and **\[2\]***
+<br> *Award **\[1\]** for identifying an aspect that could arise and **\[1\]** for an expansion, x2*. 
+<br>
 - Issues with personnel;
 - such as redundancy/retraining/employee not willing to move to Europe, etc.; 
+<br><br>
 - Changeover decisions;
 - such as direct changeover/ parallel running etc.; 
+<br><br>
 - Time needed;
 - for merging/aligning the two systems; 
+<br><br>
 - Costs involved;
 - in the aligning of the two systems/ in the changeover period of time/ for buying new software or hardware/ cost for additional working hours/ cost of additional staff; 
+<br><br>
 - Testing;
 - Of the new systems with the new data; 
+<br><br>
 - Data entry;
 - If migration not possible/ cost and time involved; 
-- *Mark as **\[2\]** and **\[2\]***\ *Award **\[1\]** for identifying an aspect that could arise and **\[1\]** for an expansion, x2*. 
 {{< /expand >}}
 
 ---
@@ -156,13 +163,19 @@ Explain **one** advantage of using parallel running instead of a direct changeov
 <br><br>  **Example 1**
 - Parallel running is less risky than direct changeover;
 - if the new system fails, operation can continue under the old system;
-- whilst in direct changeover if the new system fails the data is lost/ operation cannot continue; <br><br>  **Example 2**
+- whilst in direct changeover if the new system fails the data is lost/ operation cannot continue; <br><br>  
+>
+**Example 2**
 - Parallel running allows organization to test the new system (all features of the new system can be fully trialled);
 - and the organization switches over to the new one if(when) it is found to be more efficient than the old one;
-- Whilst in direct changeover the new system is started without ensuring that the new system is working correctly/efficiently before the old system is terminated; <br><br>  **Example 3**
+- Whilst in direct changeover the new system is started without ensuring that the new system is working correctly/efficiently before the old system is terminated; <br><br>  
+>
+**Example 3**
 - Parallel running ensures new system runs without errors;
 - if errors are found, refer to old system to resolve and make modifications to new system;
-- Whilst in direct changeover the old system is terminated (and the new system is started without ensuring that it is working correctly); <br><br>  **Example 4**
+- Whilst in direct changeover the old system is terminated (and the new system is started without ensuring that it is working correctly); <br><br>  
+>
+**Example 4**
 - Parallel running allows staff can be trained in the new system gradually;
 - helps them gain confidence in new system;
 - as the changeover does not happen immediately; <br><br>  ***Note:** Reward other suitable responses.* 
@@ -213,7 +226,9 @@ Evaluate phased conversion as a method of installation for a new system.  **\[4\
 - Issues with one phase only affect a small area of the organization;
 - The conversion is done gradually so more time is available for adjustments/ time for the users to adapt is longer;
 - Users gain early process and software knowledge that they can use in the subsequent phases;
-- Technical staff can concentrate on part of the system or some of the users/the burden on the technical staff is minimal in this method; ***Weaknesses/limitations:***\ Project duration for full implementation is long/system deadline is unclear;
+- Technical staff can concentrate on part of the system or some of the users/the burden on the technical staff is minimal in this method; <br><br>  
+>
+***Weaknesses/limitations:***\ Project duration for full implementation is long/system deadline is unclear;
 - The implementation may appear unclear to the users;
 - Training sessions are confusing for users as they are asked to work with the new and the old system;
 - A 'fall back' to the old system is becoming more difficult with every new phase;
@@ -252,17 +267,17 @@ Evaluate **two** methods the business could use to implement the new system. Inc
 
 {{< expand "Markscheme" >}}
 
-*Award **\[6 max\]***.
+*Award **\[6 max\]***.<br>
 *Award **\[1\]** for method, award **\[1\]** for benefit and award **\[1\]** for drawback*. 
 - Parallel running;
 - The old and new systems run together, so if a problem is found with the new system, it can be repaired/the old system can take over;
-- This is expensive as duplicate systems and staff are needed; 
+- This is expensive as duplicate systems and staff are needed; <br><br>  
 - Pilot running;
 - The new system is only implemented in one branch of the organization so disruption is kept to a minimum;
-- It can take a long time for the new system to be fully implemented / two systems are still in operation within the organization, leading to duplication and possible errors; 
+- It can take a long time for the new system to be fully implemented / two systems are still in operation within the organization, leading to duplication and possible errors; <br><br>  
 - Direct changeover;
 - The new system is implemented overnight so the changes happen very quickly;
-- If the new system fails, the company has no working system to fall back on; 
+- If the new system fails, the company has no working system to fall back on; <br><br>  
 - Phased conversion;
 - Only one area/department/part of the system is updated at a time, so the disruption is kept to a minimum;
 - Multiple systems which may not be compatible with each other will be running at the same time; 
@@ -295,12 +310,19 @@ Identify **two** issues concerning the roles of end users that must be considere
 
 {{< expand "Markscheme" >}}
 
-*Award **\[2 max\]*** *Award **\[1\]** for identifying an issue (benefi
-- or problem) caused by the introduction of a new computer system which transforms how end users perform and interact, **×2**.* Examples *(the list is not exhaustive):*\ Need for training;
-- lack of knowledge of the end-users about the new system/ lack of ability to use the new system/ resistance to training?; Resistance to changes;
-- turnover-some end users leave the organisation, end user not giving feedback or requirements for the new system; End-user satisfaction;
-- end-users excited about changes? increased efficiency/ productivity/ increased employee morale; Change in roles/ role specification;
-- agreements/ disagreements on job duties/ fear of redundancy; Poor processes management;
+*Award **\[2 max\]*** 
+<br> *Award **\[1\]** for identifying an issue caused by the introduction of a new computer system which transforms how end users perform and interact, **×2**.*
+<br>
+**Examples**(the list is not exhaustive):
+- Need for training;
+- lack of knowledge of the end-users about the new system/ lack of ability to use the new system/ resistance to training?; <br><br>   
+- Resistance to changes;
+- turnover-some end users leave the organisation, end user not giving feedback or requirements for the new system; <br><br>  
+- End-user satisfaction; 
+- end-users excited about changes? increased efficiency/ productivity/ increased employee morale; <br><br>  
+- Change in roles/ role specification;
+- agreements/ disagreements on job duties/ fear of redundancy; <br><br>  
+- Poor processes management;
 - employees may not understand what is expected of them/ employees could feel that new practices are in conflict with previous / existing practices; 
 {{< /expand >}}
 
@@ -388,7 +410,10 @@ Outline **two** issues that could arise concerning data migration.  **\[4\]**
 
 {{< expand "Markscheme" >}}
 
-*Award **\[4\]** max.*
+*Award **\[4\]** max.*       
+*Mark as **\[2\]** and **\[2\]***     
+*Award **\[1\]** for an issue and **\[1\]** for a reasonable expansion, x*2. 
+
 - Different languages used;
 - Which leads to translation/communication issues; 
 - Different character sets used;
@@ -398,8 +423,7 @@ Outline **two** issues that could arise concerning data migration.  **\[4\]**
 - Different file structures / different employee records;
 - Which will result in a mismatch of data/ incorrect data; 
 - New validation rules differ to the old validation rules (used in the Africa headquarters);
-- Which could lead to inconsistent/incorrect results; 
-- *Mark as **\[2\]** and **\[2\]***\ *Award **\[1\]** for an issue and **\[1\]** for a reasonable expansion, x*2. 
+- Which could lead to inconsistent/incorrect results;
 {{< /expand >}}
 
 ---
@@ -517,7 +541,7 @@ Evaluate the advantages and disadvantages for the end user of the method of trai
 *Award up to **\[2\]** for any advantage to end-user (trainee) evaluated, and **up to** \[2\] for any disadvantage evaluated*. <br><br>  ***Note: The response should match the method of training identified in (i)***. *Award marks for the advantages and disadvantages involving convenience, cost, time, effectiveness, comprehensiveness, learning needs, etc*. <br><br>  **Example 1 *(remote /online training)***
 - advantage of online training is that it allows end-users to attend classes from any location of their choice;
 - with reduced financial costs (because online learning eliminates the cost of transportation / meals / the study materials are cheaper (available online));
-- but there are also disadvantages such as: struggle with focusing on the screen for long periods of time/ technology issues (requirements of internet enabled devices/ smart devices/ live internet connection) /sense of isolation / time zone differences between the trainer and the trainees; <br><br>  **Example 2 *(formal classes)***
+- but there are also disadvantages such as: struggle with focusing on the screen for long periods of time/ technology issues (requirements of internet enabled devices/ smart devices/ live internet connection) /sense of isolation / time zone differences between the trainer and the trainees;      <br><br>  **Example 2 *(formal classes)***
 - Direct interaction between the trainer and trainees (end-users);
 - no technology issues/no sense of isolation;
 - Verified study materials and trainers allow immediate answer to end-users/ gives enduser (trainees) the benefit of receiving immediate feedback;
@@ -536,11 +560,16 @@ Outline **one** method that can be used to deliver user training.  **\[2\]**
 {{< expand "Markscheme" >}}
 
 *Award **\[2 max\]***
-*Award **\[1\]** for the method and award **\[1\]** for correct description*\ Self-instruction / Self-study / Self-learning;
-- The user would work through documentation / watch instructional videos / learn the features of the application / system by themselves and understand how to use it; Formal classes / Instructor led training / Face to face training;
-- Organised (online / classroom) sessions in which a tutor would train a class of users in specific features of an application or system;
-- \ Online training / Distance training\ Users are trained over the net / over a digital platform / remotely using training materials designed to show them how to use the application or system;
-- \ <br><br>  *Note: Accept other suitable responses (Workshops / Seminars / On the job training) with suitable description.* 
+*Award **\[1\]** for the method and award **\[1\]** for correct description* 
+- Self-instruction / Self-study / Self-learning;
+- The user would work through documentation / watch instructional videos / learn the features of the application / system by themselves and understand how to use it;    
+<br>
+- Formal classes / Instructor led training / Face to face training;
+- Organised (online / classroom) sessions in which a tutor would train a class of users in specific features of an application or system;     
+<br>
+- Online training / Distance training;
+- Users are trained over the net / over a digital platform / remotely using training materials designed to show them how to use the application or system;
+<br><br>  *Note: Accept other suitable responses (Workshops / Seminars / On the job training) with suitable description.* 
 {{< /expand >}}
 
 ---
@@ -553,8 +582,8 @@ Outline **one** way in which users can be informed of software updates.  **\[2\]
 
 {{< expand "Markscheme" >}}
 
-*Award **\[2 max\
-- *** 
+*Award **\[2 max\]*** 
+
 - A message can be sent to the user (When the software is installed and registered, the user provides an email address / phone number);
 - With a link to the update; 
 - notifications/alerts are sent to the computer (a cookie is placed on the user\'s computer which communicates with the software developer);
