@@ -58,10 +58,10 @@ When you want to exit the shell, you can type `exit` or `^D`
 
 ## What is Bubble Sort?
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/WaNLJf8xzC4?si=8F15tbbbs5es7mhS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/WaNLJf8xzC4?si=jPblfo2q-k-GfwG2&amp;clip=UgkxVkPrNq8p4acrBjb7c0hyfa0tkxwkM8f6&amp;clipt=EIqyAhjb-gQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 
-📖 **Here are the key steps the algorithm.** 
+📖 **Here are the key steps in the Bubble Sort algorithm.** 
 
 ```md
 start at the beginning of the list
@@ -75,7 +75,7 @@ repeat until all elements have been sorted
 ## Code Bubble Sort
 
 
-💻 **In `bubble_sort.py`, write the function `bubble_sort()`.** 
+💻 **In `bubble_sort.py`, complete the function `bubble_sort()`.** 
 
 
 💻 **Run your function using the test data at the bottom of the file.** 
@@ -103,7 +103,7 @@ repeat until all elements have been sorted
 
 
 
-📖 **Here are the key steps the algorithm.** 
+📖 **Here are the key steps in the Selection Sort algorithm.** 
 
 ```md
 at the start, the whole list is unsorted, so the **unsorted part** of the list starts at index 0
@@ -115,7 +115,7 @@ repeat until all elements have been sorted
 
 ## Code Selection Sort
 
-💻 **In `selection_sort.py`, write the function `selection_sort()`.** 
+💻 **In `selection_sort.py`, complete the function `selection_sort()`.** 
 
 
 💻 **Run your function using the test data at the bottom of the file.** 
@@ -178,7 +178,7 @@ Bubble sort already an inefficient algorithm, but your code is probably wasting 
 
 Before you start optimizing, you want to be able to measure your progress as you improve your code.
 
-{{< code-action "Edit">}} **your `bubble_sort()` to count how many times it has to compare the value of numbers (in the if-statement), and print this number out after it finishes.**
+{{< code-action "Edit">}} **your `bubble_sort()` to count how many times it has to compare the value of two numbers (in the if-statement). It should print this number out after it finishes.**
 
 {{< code-action >}} **Put your edits to Github to track your progress.**
 

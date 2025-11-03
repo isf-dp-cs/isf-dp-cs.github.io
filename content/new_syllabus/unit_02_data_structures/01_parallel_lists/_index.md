@@ -40,7 +40,7 @@ print(f"{cities[0]} is in {country[0]}") # Beijing is in China
 
 {{< code-action "Go into your unit folder and clone your repo." >}} Be sure to replace `yourGithubUsername` with your actual username. 
 ```shell
-cd ~/desktop/dpcs//unit02_data_structures
+cd ~/desktop/dpcs/unit02_data_structures
 git clone https://github.com/isf-dp-cs/lab_parallel_lists_yourGithubUsername
 ```
 
