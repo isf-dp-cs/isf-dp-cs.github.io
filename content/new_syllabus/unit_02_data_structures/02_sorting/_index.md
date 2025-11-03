@@ -58,6 +58,9 @@ When you want to exit the shell, you can type `exit` or `^D`
 
 ## What is Bubble Sort?
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/WaNLJf8xzC4?si=8F15tbbbs5es7mhS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+
 📖 **Here are the key steps the algorithm.** 
 
 ```md
@@ -69,17 +72,7 @@ for each element in the list
 repeat until all elements have been sorted 
 ```
 
-
->start at the beginning of the list
->
->for each element in the list 
->>compare the current element with the next element
->>>if the two values are not in order, 
->>>>swap the elements
->
-repeat until all elements have been sorted 
-
---- 
+## Code Bubble Sort
 
 
 💻 **In `bubble_sort.py`, write the function `bubble_sort()`.** 
@@ -87,27 +80,28 @@ repeat until all elements have been sorted
 
 💻 **Run your function using the test data at the bottom of the file.** 
 
----
-
 {{< write-action >}}
 
-1) **Take out a piece of paper and write out entire the function for `buuble_sort()` without looking at your solution.**
+1) **Take out a piece of paper and write out entire the function for `bubble_sort()` without looking at your solution.**
 
 2) Double check your handwritten code against your typed code.
 
 3) If you made mistakes, take note of them and fix your handwritten code. 
+
 4) Hand your written code it in to a teacher
 
 {{< /write-action >}}
 
 ---
 
-# [1] Selection Sort
-
-
-
+# [2] Selection Sort
 
 ## What is Selection Sort?
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/EwjnF7rFLns?si=5qLPtmd1KzgMc-E1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+
 
 📖 **Here are the key steps the algorithm.** 
 
@@ -119,39 +113,30 @@ update the start location of the **unsorted part** of the list
 repeat until all elements have been sorted 
 ```
 
-at the start, the whole list is unsorted, so the **unsorted part** of the list starts at index 0
->loop through the **unsorted part** to find the smallest item
->
->swap that smallest item with the first item in the **unsorted part**
->
-update the start location of the **unsorted part** of the list
-
-repeat until all elements have been sorted 
-
----
+## Code Selection Sort
 
 💻 **In `selection_sort.py`, write the function `selection_sort()`.** 
 
 
 💻 **Run your function using the test data at the bottom of the file.** 
 
----
-
 {{< write-action >}}
 
-1) **Take out a piece of paper and write out entire the function for `buuble_sort()` without looking at your solution.**
+1) **Take out a piece of paper and write out entire the function for `selection_sort()` without looking at your solution.**
 
 2) Double check your handwritten code against your typed code.
 
 3) If you made mistakes, take note of them and fix your handwritten code. 
+
 4) Hand your written code it in to a teacher
 
 {{< /write-action >}}
 
+
 ---
 
 
-# [2] Deliverables
+# [3] Deliverables
 
 
 {{< deliverables "Once you complete the lab, be sure to complete these two steps:" >}}
@@ -169,10 +154,8 @@ repeat until all elements have been sorted
 {{< /deliverables >}}
 
 ---
-# [3] Exension: Sorting Parallel Lists
 
 
-{{< code-action "Write" >}} **a function**
 
 # [4] Extension: Optimizing Bubble Sort
 
@@ -182,6 +165,8 @@ Before you start optimizing, you want to be able to measure your progress as you
 
 {{< code-action "Edit">}} **your `bubble_sort()` to count how many times it has to compare the value of numbers (in the if-statement), and print this number out after it finishes.**
 
+{{< code-action >}} **Put your edits to Github to track your progress.**
+
 
 ## Already sorted elements
 
@@ -189,9 +174,11 @@ Before you start optimizing, you want to be able to measure your progress as you
 
 Take a look at the first two "Unoptimized" visualizations. The red signifies numbers that are being compared. Even this "Unoptimized" algorithm is probably more efficient than your code. **It doesn't compare all the items every time.** Which items does it ignore? Why?
 
-{{< code-action "Write a new function" >}} **`efficient_bubble_sort()` which ignores already-sorted elements like the "Unoptimized" visualization**
+{{< code-action >}} **In `bubble_sort.py` write a new function `efficient_bubble_sort()` which ignores already-sorted elements like the "Unoptimized" visualization**
 
 {{< code-action "Run" >}} **`efficient_bubble_sort()` and `bubble_sort()` and notice the difference in how many comparisons each algorithm makes**
+
+{{< code-action >}} **Put your edits to Github to track your progress.**
 
 ##  Retire the non-swaps
 
@@ -203,7 +190,7 @@ Study up, and see if you can tell what it's doing. The semisorted visualization 
 This optimization tracks when it has to swap/doesn't swap, and if there are k non-swaps at the end, (k+1) elements can be retired (they don't need to be compared any more).
 
 
-{{< code-action "Write a new function">}} **`optimized_bubble_sort()` which ignores ALL already-sorted elements.**
+{{< code-action >}} **In `bubble_sort.py` write a new function `optimized_bubble_sort()` which ignores ALL already-sorted elements.**
 
 **Make sure to test it out thoroughly to make sure it's working. Use semi-sorted lists to showcase the changes you made.**
 
@@ -211,5 +198,5 @@ This optimization tracks when it has to swap/doesn't swap, and if there are k no
 {{< code-action "Run">}} **`optimized_bubble_sort()`, `efficient_bubble_sort()`, and `bubble_sort()` using the same **semi-sorted** starting list.**
  Notice the difference in how many comparisons each algorithm makes
 
-
+{{< code-action >}} **Put your edits to Github to track your progress.**
 
