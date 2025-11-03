@@ -135,6 +135,21 @@ repeat until all elements have been sorted
 
 ---
 
+# [3] Parallel Lists: Sorting
+
+Currently your `bubble_sort()` and `selection_sort()` only sort one list. Let's write new functions to ensure we can sort parallel lists using both sorting methods. 
+
+{{< code-action >}} **In `bubble_sort.py` write `bubble_sort_parallel(alist, blist)` that takes two lists and sorts them using bubble sort.**
+
+{{< code-action >}} **Test `bubble_sort_parallel(alist, blist)` using `assert`.**
+
+{{< code-action >}} **In `selection_sort.py` write `selection_sort_parallel(alist, blist)` that takes two lists and sorts them using selection sort.**
+
+{{< code-action >}} **Test `selection_sort_parallel(alist, blist)` using `assert`.**
+
+
+---
+
 
 # [3] Deliverables
 
