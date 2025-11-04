@@ -35,6 +35,23 @@ weight: 50
 | Recursion             | A programming technique where a function calls itself.                                                                                     |
 | Base case             | The terminating condition for a recursive function.                                                                                        |
 | Recursive case        | The condition where a recursive function continues to call itself.                                                                         |
+| Linked lists          | A data structure that stores elements in nodes, where each node contains a value and a pointer to the next node.                           |
+| Double linked lists   | A linked list where each node has a pointer to both the next and the previous node.                                                        |
+| Circular linked lists | A linked list where the last node points to the first node, creating a circular structure.                                                 |
+| Pointers              | A variable that stores the memory address of another variable.                                                                             |
+| Binary trees          | A tree-based data structure where each node has at most two children.                                                                      |
+| Non-binary trees      | A tree-based data structure where each node can have more than two children.                                                               |
+| Nodes                 | An individual element of a data structure, such as a linked list or a tree.                                                                |
+| Parent node           | A node that has one or more children.                                                                                                      |
+| Left-child node       | The child node of a parent that appears to the left.                                                                                       |
+| Right-child node      | The child node of a parent that appears to the right.                                                                                      |
+| Subtree node          | A smaller tree that is part of a larger tree.                                                                                              |
+| Root node             | The topmost node in a tree.                                                                                                                |
+| Leaf node             | A node that has no children.                                                                                                               |
+| Tree traversal        | The process of visiting all nodes in a tree data structure.                                                                                |
+| Pre-order traversal   | A type of tree traversal where the root node is visited first, followed by the left subtree and then the right subtree.                    |
+| Post-order traversal  | A type of tree traversal where the left subtree is visited first, followed by the right subtree, and then the root node.                   |
+| In-order traversal    | A type of tree traversal where the left subtree is visited first, followed by the root node, and then the right subtree.                   |
 
 {{< /expand >}}
 
@@ -764,27 +781,659 @@ Of all digits in N;
 
 ---
 
-## Key Terms (not covered)
+## Example Problems Trees
 
-*Not covered for Class of 2026*
 
-| Term                  | Meaning                                                                                                                                    |
-| --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| Heaps                 | A tree-based data structure that is used to implement priority queues, where the highest priority element is always at the root.           |
-| Linked lists          | A data structure that stores elements in nodes, where each node contains a value and a pointer to the next node.                           |
-| Double linked lists   | A linked list where each node has a pointer to both the next and the previous node.                                                        |
-| Circular linked lists | A linked list where the last node points to the first node, creating a circular structure.                                                 |
-| Pointers              | A variable that stores the memory address of another variable.                                                                             |
-| Binary trees          | A tree-based data structure where each node has at most two children.                                                                      |
-| Non-binary trees      | A tree-based data structure where each node can have more than two children.                                                               |
-| Nodes                 | An individual element of a data structure, such as a linked list or a tree.                                                                |
-| Parent node           | A node that has one or more children.                                                                                                      |
-| Left-child node       | The child node of a parent that appears to the left.                                                                                       |
-| Right-child node      | The child node of a parent that appears to the right.                                                                                      |
-| Subtree node          | A smaller tree that is part of a larger tree.                                                                                              |
-| Root node             | The topmost node in a tree.                                                                                                                |
-| Leaf node             | A node that has no children.                                                                                                               |
-| Tree traversal        | The process of visiting all nodes in a tree data structure.                                                                                |
-| Pre-order traversal   | A type of tree traversal where the root node is visited first, followed by the left subtree and then the right subtree.                    |
-| Post-order traversal  | A type of tree traversal where the left subtree is visited first, followed by the right subtree, and then the root node.                   |
-| In-order traversal    | A type of tree traversal where the left subtree is visited first, followed by the root node, and then the right subtree.                   |
+*Consider the following binary tree:*
+
+
+{{< mermaid >}}
+graph TB;
+    A-->X;
+    A-->C;
+    C-->E;
+    C-->Y;
+    Y-->H;
+{{< /mermaid >}}
+
+
+\(a\)State the result of postorder traversal of the binary tree.  **\[1\]**
+
+{{< expand "Markscheme" >}}
+
+*Award **\[1 max\]***
+-  X E H Y C A; 
+{{< /expand >}}
+
+
+\(b\)State the result of inorder traversal of the binary tree.  **\[1\]**
+
+{{< expand "Markscheme" >}}
+
+*Award **\[1 max\]***
+-  X A E C H Y; 
+{{< /expand >}}
+
+---
+
+<!-- *Linked lists and binary trees are examples of dynamic data structures.*
+
+
+Outline **one** benefit of using dynamic data structures.  **\[2\]**
+
+{{< expand "Markscheme" >}}
+
+*Award* ***\[2 max\]***
+*Award* ***\[1\]*** *for the benefit and award* ***\[1\]*** *for expansion.*   
+- Efficient use of memory;
+- memory is allocated during the execution of the program as needed / memory is deallocated and re-used when no longer required; 
+<br><br>
+- There is no need to predefine the size of a dynamic data structure;
+- so, they can grow/data can be added or shrink in size/data removed depending on the requirements; 
+<br><br>
+- Efficient insertion and deletion operations can be carried out;
+- with the adjustment of pointers/ no need to shift elements / as they are stored in chained memory locations; 
+{{< /expand >}}
+
+--- -->
+
+<!-- Outline **one** drawback of using dynamic data structures.  **\[2\]**
+
+{{< expand "Markscheme" >}}
+
+*Award* ***\[2 max\]***
+*Award* ***\[1\]*** *for drawback and award* ***\[1\]*** *for further expansion.*   
+- (Memory) overflow;
+- Can happen if more memory is actually used than has been allocated/available; 
+<br><br>
+- (Memory) underflow;
+- can happen if attempting to delete an element from an empty data structure; 
+<br><br>
+- Harder to program;
+- because it is more difficult to keep track of the size and location of the data structure; 
+<br><br>
+- Potential for memory leaks;
+- when allocated memory is not properly deallocated after use; 
+<br><br>
+- Errors, crashes & security vulnerabilities;
+- due to null pointer dereferencing, dangling pointers, or memory access violations; 
+<br><br>
+- More memory usage for the set amount of data;
+- as dynamic data structures require additional memory to store pointers; 
+
+- Slower execution time/longer to traverse etc;
+- due to more programming statements required/ manipulation of pointers; 
+{{< /expand >}}
+
+--- -->
+
+
+
+
+<!-- *These numbers are input in the following order:*
+
+
+*17    11    23    5    3    19    37    31*
+
+
+*and inserted in a binary tree such that an inorder traversal of the binary tree outputs the numbers sorted in ascending order.*
+
+
+(d.i)Sketch the resulting binary tree.  **\[3\]**
+
+{{< expand "Markscheme" >}}
+
+*Award* ***\[3 max\]***
+-  Root node correct;
+- Left subtree correct;
+- Right subtree correct; 
+
+
+
+{{< /expand >}}
+
+--- -->
+
+<!-- (d.ii)State all the leaf nodes in the binary tree sketched in part (d)(i).  **\[1\]**
+
+{{< expand "Markscheme" >}}
+
+*Award* ***\[1 max\]***
+-  3, 19, 31  *match their answer to part (d)(i).*\ *Allow follow through from part (d)(i).* 
+{{< /expand >}}
+
+--- -->
+
+
+
+\(c\)Describe the structure of a node in a binary tree.  **\[2\]**
+
+{{< expand "Markscheme" >}}
+
+*Award **\[2 max\]***
+-  A node contains a data element;
+- A node has two pointers (a pointer to a left child (node) and a pointer to the right child (node)) 
+{{< /expand >}}
+
+---
+<!-- 
+*These numbers are input in the following order:*
+
+
+*18    15    25    6    2    21    36    30    40*
+
+
+*and inserted in a binary tree such that an inorder traversal of the binary tree outputs the numbers sorted in ascending order.*
+
+
+\(d\)\[N/A\](d.i)Sketch the resulting binary tree.  **\[3\]**
+
+{{< expand "Markscheme" >}}
+
+*Award **\[3 max\]***
+-  Root node correct;
+- Left subtree correct;
+- Right subtree correct; 
+- ![](media/rId32.png){width="6.347222222222222in" height="4.0in"} 
+{{< /expand >}}
+
+---
+
+(d.ii)State all the leaf nodes in the binary tree sketched in part (d)(i).  **\[1\]**
+
+{{< expand "Markscheme" >}}
+
+*Award **\[1 max\]***
+-  2, 21, 30,40  match their answer to part (d)(i).*\ *Allow follow through from part (d)(i).* 
+{{< /expand >}}
+
+--- -->
+
+<!-- These flower names should be inputted in the following order,Gladiolus, Lantana, Hyacinth, Iris, Columbineand inserted into a binary tree in such a way that an inorder traversal of the binary tree visits the nodes in alphabetical order of the names.Sketch the resulting binary tree.  **\[3\]**
+
+{{< expand "Markscheme" >}}
+
+*Award **\[3 max\]**.*
+*Award **\[1\]** for the correct root*\ *Award **\[1\]** for the correct left subtree*\ *Award **\[1\]** for correct right subtree.* ![](media/rId35.png){width="4.041666666666667in" height="2.2916666666666665in"} <br><br>  *Note: Accept the mirror image.* 
+{{< /expand >}}
+
+---
+
+*Consider the following binary tree, in which each node stores a value greater than all the values in the node's left subtree and less than those in its right subtree.*
+
+
+*![](media/rId38.png){width="6.5in" height="2.3925076552930884in"}*
+
+
+\(a\)Identify the leaf nodes in this binary tree.  **\[1\]**
+
+{{< expand "Markscheme" >}}
+
+*Award **\[1 max\]*** A C E G
+- 
+{{< /expand >}}
+
+---
+
+\(b\)State the result of the postorder traversal.  **\[1\]**
+
+{{< expand "Markscheme" >}}
+
+*Award **\[1 max\]*** A C B E G F D
+- 
+{{< /expand >}}
+
+---
+
+\(c\)Sketch the resulting binary tree after the deletion of the root node.  **\[3\]**
+
+{{< expand "Markscheme" >}}
+
+*Award **\[3 max\]***
+*Award **\[1\]** for the correct root*\ *Award **\[1\]** for the correct left subtree*\ *Award **\[1\]** for the correct right sub-tree.* 
+- ![](media/rId41.png){width="5.569444444444445in" height="2.5833333333333335in"} 
+- OR 
+- ![](media/rId44.png){width="5.458333333333333in" height="2.5277777777777777in"} 
+{{< /expand >}}
+
+---
+
+*Consider the following binary tree, in which each node stores a number greater than all the numbers in the node's left subtree and less than those in its right subtree.*
+
+
+*![](media/rId47.png){width="6.5in" height="3.714284776902887in"}*
+
+
+\(a\)Identify the leaf nodes in this binary tree.  **\[1\]**
+
+{{< expand "Markscheme" >}}
+
+*Awar
+- **\[1 max\]*** 4 7 9; 
+{{< /expand >}}
+
+---
+
+\(b\)State the result of the preorder traversal.  **\[1\]**
+
+{{< expand "Markscheme" >}}
+
+*Awar
+- **\[1 max\]*** 6 3 5 4 8 7 9; 
+{{< /expand >}}
+
+---
+
+\(c\)Sketch the resulting binary tree after the deletion of the root node.  **\[3\]**
+
+{{< expand "Markscheme" >}}
+
+*Awar
+- **\[3 max\]***\ *Award **\[1\]** for the correct root*\ *Award **\[1\]** for the correct left subtree*\ *Award **\[1\]** for the correct right sub-tree.* 
+- ![](media/rId50.png){width="6.5in" height="2.697367672790901in"} 
+-  
+- OR 
+- ![](media/rId53.png){width="6.5in" height="3.7088232720909886in"} 
+{{< /expand >}}
+
+---
+
+*A list of students' names and test scores are written in a teacher's notebook in alphabetical order. The teacher uses an application that allows her to input all of the names and scores in the order they appear in her notebook. The application orders the scores from highest to lowest and then outputs all the names and scores (see **Figure 1**).*
+
+
+***Figure 1: An example of the input and output of the application***
+
+
+*![](media/rId56.png){width="2.9027777777777777in" height="2.3333333333333335in"}*
+
+
+*The application: - inputs the names and scores - stores the input data in two arrays: `NAMES` and `SCORES` (see **Figure 2**)*
+
+
+***Figure 2: The** `NAMES` **and** `SCORES` **arrays***
+
+
+*![](media/rId59.png){width="6.5in" height="1.6728871391076114in"}*
+
+
+*For example, `NAMES[3]` holds the student's name (Emma), and her score (87) can be found in `SCORES[3]`.*
+
+
+*The application also:   - sorts the input data in order of scores from the highest to the lowest by using a bubble sort algorithm. - outputs the sorted data.* -->
+
+
+*A decision has been made to create a new application. It will use a binary tree as an alternative to the two arrays.*
+
+
+\(b\)Identify the components of a node in a binary tree.  **\[3\]**
+
+{{< expand "Markscheme" >}}
+
+*Award **\[3\]** max*.
+- Components data / two data fields: 
+- name and score;
+- pointer to the left child;
+- pointer to the right child; 
+{{< /expand >}}
+
+---
+
+\(c\)The input data will be inserted into the binary tree so that an inorder traversal of the binary tree would output all the students' names and scores, sorted from the highest to the lowest score. Describe the steps in this insertion process.  **\[6\]**
+
+{{< expand "Markscheme" >}}
+
+*Award **\[6\]** max*.
+*Award **\[1\]** for a loop (to input all the data)*\    
+*Award **\[1\]** for placing the inputted data into a newly created node*\.   
+ *Award **\[1\]** for setting the root node to the new node (if the tree is empty/ no root node)*\.   
+  *Award **\[1\]** for start searching from the root node*\     
+  *Award **\[1\]** for searching for the empty location in the left subtree if the input score is higher than the current value*\     
+  *Award **\[1\]** for inserting the new node in the left subtree when the proper location is found*\     
+  *Award **\[1\]** for searching for the empty location in the right subtree if the input score is **lower** than the current value*\.   
+   *Award **\[1\]** for inserting the new node in the right subtree when the proper location is found* 
+**<br><br>  **Example 1**:**
+- Repeat the following steps (until all the names and scores are inputted);
+- input the values (name and score of one student), create a new node and\ place the input values into the newly created node;
+- If the tree is empty, set the root to a new node;
+- Else (if the tree is not empty)\ repeat the following until a leaf node is reached;
+- If a new node is smaller than or equal to the node (here it is a root node)\ move to its right child;
+- If a new node is larger than the node, move to its left child:\ insert the new node (as a right or left child of the leaf node based on node\ is less or greater than the leaf node); 
+**<br><br>  **Example 2**:**
+- Repeat the following steps (until all the names and scores are inputted);
+- Create a new node (for example, named ITEM); input the values (name and score of one student) and place them into the new node (ITEM) ( and set its left and right to NULL);
+- If there isn\'t a root node, set the root node to ITEM;
+- If there is a root node, start searching from the root node (to find ITEM\'s proper location),\ if the score in ITEM is greater than the score in the root search for the empty\ location in the left subtree;
+- otherwise (if the score in ITEM is lesser than the score in the root), search for the empty location in the right subtree;
+- insert ITEM into empty location; 
+**<br><br>  **Example 3**:**
+- While the end of the input list is not reached do the following;
+- input the values (name and score of one student), create a new node\ and place the input values into the newly created node;
+- if there is no root node, set the root to the new node;
+- if there is a root node\ start from the root node and if the score in the node to insert is less than\ the root, go to right child;
+- otherwise go to the left child of the root;
+- continue this process (Note: each node is a root for some subtree) until\ a null pointer (or leaf node) is found ( where it is not possible to go any further);
+- when the leaf node is found, insert the node as a right or left child of the leaf node\ ( based on node is less or greater than the leaf node); 
+{{< /expand >}}
+
+---
+
+Define the term child in relation to a binary tree.  **\[2\]**
+
+{{< expand "Markscheme" >}}
+
+*Award **\[2 max\]***
+- Child (is either null or) is a node that has up to two references /links to other nodes;
+- and has (only) one predecessor (parent) node; 
+- "Child" is every node in a binary tree which is descendant/ the node which has a link from its predecessor (the node which is a predecessor of any node is called as parent node);
+- The child node can have up to two descendants (child nodes);
+- (All the nodes except the node which is the origin of the binary tree data structure (called root) are child nodes;) 
+{{< /expand >}}
+
+---
+<!-- 
+*Reverse Polish notation (RPN) is a method used to represent mathematical expressions so they can be evaluated without the need for parentheses.*
+
+
+*An expression written in this form is known as postfix notation, whereas an expression written the traditional way is known as infix notation.*
+
+
+*For example:*
+
+
+*Infix notation: `(8 − 5) * 7`*
+
+
+*Postfix notation: `8 5 − 7 *`*
+
+
+*Both the infix and postfix expressions have the same result: 21*
+
+
+*RPN expressions are evaluated from left to right as follows:*
+
+
+*Each character is checked,   - if it is a digit, it is pushed onto a stack. - if it is a mathematical operator, the last two digits are popped from the stack and evaluated as though the current operator was between them. The result of this operation is then pushed back onto the stack.*
+
+
+*The process is repeated until all the characters in the RPN expression have been used.*
+
+
+*The value left in the stack is the result of the expression.*
+
+
+*A collection named RPN already stores an expression formatted in Reverse Polish notation.\ The algorithm reads the values from the collection and, using a stack data structure, evaluates it.*
+
+
+```java
+    RPN.resetNext()
+    loop while RPN.hasNext()
+        VALUE = RPN.getNext()
+        loop while not (VALUE = "+" or VALUE = "-" or VALUE = "*" or VALUE = "/")
+            stack.push(VALUE)
+            VALUE = RPN.getNext()
+        end loop
+        OPERAND2 = stack.pop()
+        OPERAND1 = stack.pop()
+        if VALUE = "+" then
+          NEW_VAL = OPERAND1 + OPERAND2
+          stack.push(NEW_VAL)
+        end if
+        if VALUE = "-" then
+          NEW_VAL = OPERAND1 - OPERAND2
+          stack.push(NEW_VAL)
+        end if
+        if VALUE = "*" then
+          NEW_VAL = OPERAND1 * OPERAND2
+          stack.push(NEW_VAL)
+        end if
+        if VALUE = "/" then
+          NEW_VAL = OPERAND1 / OPERAND2
+          stack.push(NEW_VAL)
+        end if
+    end loop
+    RESULT = stack.pop()
+    output "The result is: ", RESULT
+```
+
+\(a\)Copy and complete the trace table for the algorithm using the RPN collection data:`5 2 + 25 16 − * 3 /`![](media/rId62.png){width="6.5in" height="1.1002843394575679in"}  **\[6\]**
+
+{{< expand "Markscheme" >}}
+
+*Award **\[6 max\
+- ***\ *Award **\[1\]** for correct values in* VALUE column;
+- *Award **\[1\]** for correct values of* OPERAND2, OPERAND1 and NEW_VAL when VALUE is '+';
+- *Award **\[1\]** for correct values of* OPERAND2, OPERAND1 and NEW_VAL when VALUE is '-';
+- *Award **\[1\]** for correct values of* OPERAND2, OPERAND1 and NEW_VAL when VALUE is '\*';
+- *Award **\[1\]** for correct values of* OPERAND2, OPERAND1 and NEW_VAL when VALUE is '/';
+- *Award **\[1\]** correct output:* 'The result is: 21'; 
+- ![](media/rId65.png){width="6.5in" height="3.0662357830271216in"} 
+<br><br>  ***Note**: The trace table may be differently presented.* 
+<br><br>  ***Note**: Allow Follow Through.* 
+{{< /expand >}}
+
+--- -->
+<!-- 
+\(b\)Explain why a stack is used in the process of evaluating the expression in the algorithm.  **\[3\]**
+
+{{< expand "Markscheme" >}}
+
+*Award **\[3 max\
+- ***\ A stack is a last in first out (LIFO) / first in last out (FILO) data structure;
+- ...which means data is popped off the stack in the reverse order to which it was pushed;
+- In the expression, it is important to evaluate some of the values in a certain order(to obtain the correct result);
+- For example, 25 − 16 would give the wrong value if it was evaluated as 16 − 25; 
+- Pushing items onto a stack and then popping them off reverses the order;
+- To evaluate e.g. "10 2 /" we must treat it as "do the operation on the operands 10 and 2"/ i.e. we have to access the operator before we can apply it to the operands;
+- A stack achieves the reversing of the order of the operators and their operands as a group (but it also reverses the operands which must be fixed); 
+{{< /expand >}}
+
+---
+
+*An alternative data structure in which the expression used in **part (a)** may be stored is a binary tree. If the tree is traversed using postorder tree traversal, the output is formatted in RPN.*
+
+
+*![](media/rId68.png){width="6.5in" height="3.3752088801399824in"}*
+ -->
+
+\(c\)Outline the steps involved in traversing the given tree using postorder tree traversal.  **\[4\]**
+
+{{< expand "Markscheme" >}}
+
+*Award **\[4 max\
+- ***\ Start from the root node;
+- If the root is null, return immediately;
+- Traverse left subtree;
+- Traverse right subtree;
+- Visit root; 
+- start from the root node (for example traverse (root)) ;
+- terminate traversal (and backtrack) when/if root equals null;
+- (before visiting the root node) traverse (and visit/process/output) each node in the left subtree (i.e., traverse(root.left));
+- (before visiting the root node) traverse (and visit/process/output) each node in the right subtree (i.e., traverse(root.right));
+- visit/output/process root (for example, output(root)); 
+{{< /expand >}}
+
+---
+<!-- 
+\(d\)State the output from the given tree using inorder tree traversal.  **\[2\]**
+
+{{< expand "Markscheme" >}}
+
+*Award **\[2 max\
+- ***\ *Award **\[1\]** if the answer contains no more than one error.* 
+- `(5+2)*(25−16)/3` 
+<br><br>  *Note to examiners: Ignore the brackets -- these represent the completely correct mathematical expression, but they are not read from the tree. Some candidates might include them because they realise that they may be needed so the expression works correctly.* 
+{{< /expand >}}
+
+--- -->
+
+\(a\)Identify **one** difference between a binary tree and a non-binary tree.  **\[1\]**
+
+{{< expand "Markscheme" >}}
+
+*Award **\[1 max\
+- ***\ Binary tree (is a tree) in which every node has (no, one or) at most two children whilst\ a non binary tree can have nodes with more than 2 children (non binary trees do not have an upper limit on number of children nodes); 
+- Each node in a binary tree can have at most two subtrees (left and right subtree), a node in a non binary tree can have any number of subtrees; 
+{{< /expand >}}
+
+---
+<!-- 
+\(b\)Given the following binary search tree (BST), draw the resulting BST after the deletion of the root node.![](media/rId71.png){width="3.0in" height="3.1805555555555554in"}  **\[2\]**
+
+{{< expand "Markscheme" >}}
+
+*Award **\[2 max\
+- *** 
+*Award **\[1\]** for the root (1)*
+*Award **\[1\]** for the correct right subtree* 
+- ![](media/rId74.png){width="2.2222222222222223in" height="2.388888888888889in"} 
+- Alternative answer 
+*Award **\[1\]** for the root (4)*
+*Award **\[1\]** for the correct right subtree* 
+- ![](media/rId77.png){width="3.0555555555555554in" height="1.6805555555555556in"} 
+{{< /expand >}}
+
+---
+
+Sketch a balanced binary tree that would allow the following output when traversed using in order traversal:Zebra, Tango, Hotel, Foxtrot, Delta, Bravo, Alpha.  **\[3\]**
+
+{{< expand "Markscheme" >}}
+
+- ![](media/rId80.png){width="6.5in" height="2.282442038495188in"} 
+*Award **\[3 max\
+- ***\ Correct root;
+- Correct left sub-tree;
+- Correct right sub-tree;
+- <br><br>  ***Note***: Award 1 mark for any binary tree with the same number of nodes in the left and right subtree; 
+{{< /expand >}}
+
+---
+
+*Consider the following binary tree.*
+
+
+*![](media/rId83.png){width="3.138888888888889in" height="3.0833333333333335in"}*
+
+
+\(a\)State the result of inorder traversal of this binary tree.  **\[1\]**
+
+{{< expand "Markscheme" >}}
+
+*Award **\[1 max\]***
+- B, A, D, C; 
+{{< /expand >}}
+
+---
+
+\(b\)State the result of preorder traversal of this binary tree.  **\[1\]**
+
+{{< expand "Markscheme" >}}
+
+*Award **\[1 max\]***
+- A, B, C, D; 
+{{< /expand >}}
+
+---
+
+\(a\)State **two** applications of stacks.  **\[2\]**
+
+{{< expand "Markscheme" >}}
+
+*Award **\[2 max\]***
+- Holding all data of a function/method call; simulation of recursion;
+- Conversion of expressions (infix to postfix, infix to prefix, etc.)\ Evaluating expression;
+- Parsing; 
+{{< /expand >}}
+
+---
+
+\(b\)Explain the use of a one-dimensional array as a static stack. Your answer should include brief outlines of the push and pop operations and the tests for empty and full stacks.  **\[6\]**
+
+{{< expand "Markscheme" >}}
+
+*Award **\[6 max\]***
+*Award **\[3 max\]** for the following*:\ An array A of N elements should be initialized (fixed, predetermined size); 
+- ![](media/rId86.png){width="6.5in" height="0.9337685914260717in"} 
+- keep track of the top of the stack since not all of the array holds stack elements (in an integer variable, for example, named TOP); 
+- the main property of a stack is that stack values/objects go on and come off of the one end of the stack (LIFO data structure); 
+*Award **\[1\]** for each stack method outlined*
+- 
+- *Push*\ Places a value (object) on the top of the stack;
+- Increase TOP by one and set A\[TOP\]= value; 
+- *Pop*\ Returns a value from the top of the stack and removes that value from the top of the stack;
+- Returns A\[TOP\] and decreases TOP by 1; 
+- *IsEmpty*\ Reports whether the stack is empty or not / returns True if the stack is empty, False otherwise;
+- Returns True if TOP is less than 0, False otherwise; 
+- *IsFull*\ Reports whether the stack is full or not/ returns True is stack is full, False otherwise;
+- Returns True if TOP is greater than N-1 (where N is size of the array), False otherwise; 
+{{< /expand >}}
+
+---
+
+*Consider the following binary tree.*
+
+
+*An inorder traversal of this binary tree will produce a list of names sorted in ascending order.*
+
+
+*![](media/rId89.png){width="6.5in" height="1.5191207349081364in"}*
+
+
+(c.i)State the result of postorder traversal.  **\[1\]**
+
+{{< expand "Markscheme" >}}
+
+*Award **\[1 max\
+-  ***The names must be in the following order:***\ Elm, Elder, Holly, Rowan, Larch, Hazel; 
+{{< /expand >}}
+
+---
+
+(c.ii)Draw the binary tree after deleting the root node.  **\[3\]**
+
+{{< expand "Markscheme" >}}
+
+*Award **\[3 max\
+-  *Award **\[1\]** for the correct root.*\ *Award **\[1\]** for the correct left subtree.*\ *Award **\[1\]** for the correct right subtree.* 
+- ![](media/rId92.png){width="6.5in" height="4.537735126859142in"} 
+{{< /expand >}}
+
+--- -->
+
+<!-- \(d\)Compare the use of static and dynamic data structures.  **\[3\]**
+
+{{< expand "Markscheme" >}}
+
+*Award **\[3 max\]***
+- Static data structures are fixed sized (for example, arrays) whilst dynamic data structure (for example, trees, linked lists) have flexible size; 
+- The size of static data structures is predetermined; the amount of memory once allocated to them at compile time cannot change on run time whereas dynamic data structures they can grow or shrink as needed to contain the data to be stored; 
+- Slower access to elements of dynamic data structure (sequential access) when compared with (direct) access to elements of static data structures; 
+{{< /expand >}}
+
+--- -->
+<!-- 
+State the output from the binary tree using postorder traversal.![](media/rId95.png){width="3.361111111111111in" height="1.9583333333333333in"}  **\[2\]**
+
+{{< expand "Markscheme" >}}
+
+*Award **\[2\]** for completely correct answer and **\[1\]** for any 
+- numbers in correct order*. 
+- Postorder traversal: 76 75 79 70 68 72 83 
+{{< /expand >}}
+
+--- -->
+
+Outline why a binary tree would be a good choice of data structure for maintaining an address book.  **\[2\]**
+
+{{< expand "Markscheme" >}}
+
+*Award **\[2 max\]***.
+- Time efficient searching / traversing for a contact in an address book;
+- Each iteration / comparison allows the size of the search to be reduced (by skipping about half of the remaining contacts); 
+- Fast/easy addition / removal of contacts in an address book;
+- Quick search for the leaf node / empty node where a new contact can be placed / for the node containing the contact to be deleted; 
+- Contacts can be listed / output in alphabetical order/ fast sorting;
+- using inorder traversal; 
+{{< /expand >}}
+
+
+
