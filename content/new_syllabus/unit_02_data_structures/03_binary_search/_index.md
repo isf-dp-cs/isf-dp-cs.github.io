@@ -3,7 +3,7 @@ title: "03. Binary Search"
 bookFlatSection: false
 weight: 1
 # bookCollapseSection: true
-# draft: true
+draft: true
 ---
 
 # Binary Search
