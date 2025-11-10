@@ -3,7 +3,7 @@ title: "03. Binary Search"
 bookFlatSection: false
 weight: 1
 # bookCollapseSection: true
-draft: true
+# draft: true
 ---
 
 # Binary Search
@@ -18,6 +18,7 @@ This lab introduces an alternate technique for searching for an item in a list, 
 
 | Word | Definition |
 | :--- | :--- |
+| **Iterate** |  To loop/repeat  |
 | **Binary Search** |  To find an item in a sorted List by repeatedly dividing it into halves to find a target value  |
 
 --- 
@@ -32,7 +33,7 @@ git clone https://github.com/isf-dp-cs/lab_binary_search_yourGithubUsername
 
 {{< code-action "In the Terminal, type the following command to open the lab folder." >}}
 ```shell
-cd lab_binary_search__yourGithubUsername
+cd lab_binary_search_yourGithubUsername
 ```
 
 {{< code-action "Enter the Poetry Shell to start the lab." >}} As a reminder, we will run this command at the start of each lab, but only when we are inside a lab folder.
@@ -53,13 +54,18 @@ When you want to exit the shell, you can type `exit` or `^D`
 📖 **Here are the key steps the algorithm.** 
 
 ```md
-start at the middle of the list
-    if the current element is the target value, return element
+`high` is the index at the end of the search area
+`low` is the index at beginning of the search area
+`mid` is the average of `high` and `low` 
 
-    if the target value is less than the current element, discard the right right of the list
-
-    if the target value is greater than the current element, discard the left right of the list
-repeat until target element is found
+keep looping until `low` is bigger than `high`
+    `current` is the value located at `mid`
+    if `current` is the `target` value
+        return `mid`
+    else if `current` is higher than the `target` value
+        update `high`
+    else
+        update `mid`
 ```
 
 ## Code Binary Search
@@ -94,9 +100,9 @@ Binary 17/370105
 📖 **Here are the key steps the algorithm.** 
 
 ```md
-iterate, starting at the beginning of the list
+iterate through the list
     if the current element is the target value, return index
-    repeat until target element is found
+    repeat until target element is found or until you reach the end of the list
 ```
 
 ## Code Linear Search
@@ -134,7 +140,7 @@ for i in tqdm(range(10), desc="Running Tests"):
 💻 **Be sure to run the test multiple times. Then, try increasing the number of tests. What do you notice about the average times and step ratio?**
 
 
-# [3] Deliverables
+# [4] Deliverables
 
 
 {{< deliverables "Once you complete the lab, be sure to complete these two steps:" >}}
@@ -151,7 +157,7 @@ for i in tqdm(range(10), desc="Running Tests"):
 
 {{< /deliverables >}}
 
-# [4] Extension 
+# [5] Extension 
 
 ## SL: Practice handwriting
 
@@ -161,14 +167,29 @@ for i in tqdm(range(10), desc="Running Tests"):
 B2.4.2 - Construct and trace algorithms to implement a linear search and a binary search for data retrieval.
 ```
 
+✏️ [Add your question to the google form](https://docs.google.com/forms/d/e/1FAIpQLSeXnyjxhKc8oEyp_jL_Auc5VqGZeAQu_4nvzYtmk223-nV57g/viewform?usp=header)
+
 ✏️  **Answer your potential test questions & check with a peer/teacher.**
 
 
 
 ## HL: Binary Search Recursive
+You can solve binary search recursively two ways - one uses indexes to track your progress, or we can use our usual slicing technique.
+<br>
 
-💻 **In `search.py`, write the function `binary_search_recursive()`.** 
+### Recursive with indexes
 
-💻 **In `runtime_test.py`, add in a test for `binary_search_recursive()`** 
+💻 **In `search.py`, write the function `bin_search_recursive(low, high, target, list)`.** 
+- the `low` and `high` parameters should be indexes
+- the list does not be sliced or altered in this solution. instead, alter `low` and `high` to approach the base case
+
+💻 **In `runtime_test.py`, add in a test for `bin_search_recursive()`** 
+
+### Recursive with slicing 
+
+💻 **In `search.py`, write the function `bin_search_recursive_slicing(target, list)`.** 
+- this time, use slicing to approach the base case
+💻 **In `runtime_test.py`, add in a test for `bin_search_recursive_slicing()`** 
+
 
 💻  **Push your work to Github.**
