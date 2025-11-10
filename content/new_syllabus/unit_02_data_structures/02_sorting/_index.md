@@ -151,7 +151,7 @@ Currently your `bubble_sort()` and `selection_sort()` only sort one list. Let's 
 ---
 
 
-# [3] Deliverables
+# [4] Deliverables
 
 
 {{< deliverables "Once you complete the lab, be sure to complete these two steps:" >}}
@@ -172,7 +172,7 @@ Currently your `bubble_sort()` and `selection_sort()` only sort one list. Let's 
 
 
 
-# [4] Extension: Optimizing Bubble Sort
+# [5] Extension: Optimizing Bubble Sort
 
 Bubble sort already an inefficient algorithm, but your code is probably wasting even more time than it needs to. 
 
