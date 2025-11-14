@@ -159,7 +159,21 @@ for i in tqdm(range(10), desc="Running Tests"):
 
 # [5] Extension 
 
-## SL: Practice handwriting
+## SL+HL: Practice handwriting
+
+{{< write-action >}}
+
+1) **Take out a piece of paper and write out entire the function for `linear_search()` and for `binary_search()` without looking at your solution.**
+
+2) Double check your handwritten code against your typed code.
+
+3) If you made mistakes, take note of them and fix your handwritten code. 
+
+4) Hand in your written code to your teacher
+
+{{< /write-action >}}
+
+## SL+HL: Test Questions
 
 ✏️ **Brainstorm potential test questions for this syllabus topic using these command terms:** state, define, identify, explain, construct
 
@@ -173,7 +187,7 @@ B2.4.2 - Construct and trace algorithms to implement a linear search and a binar
 
 
 
-## HL: Binary Search Recursive
+## HL only: Binary Search Recursive
 You can solve binary search recursively two ways - one uses indexes to track your progress, or we can use our usual slicing technique.
 <br>
 
