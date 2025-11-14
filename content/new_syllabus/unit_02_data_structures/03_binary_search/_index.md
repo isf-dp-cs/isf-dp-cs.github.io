@@ -49,7 +49,11 @@ When you want to exit the shell, you can type `exit` or `^D`
 
 # [1] Binary Search
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/KXJSjte_OAI?si=p1IsgnWKquUNV5pT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+Overview of the algorithm:
+<iframe width="560" height="315" src="https://www.youtube.com/embed/KXJSjte_OAI?si=RrLeamVTtymgkVsX&amp;start=119&amp;end=190;" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+Specifics on the algorithm steps:
+<iframe width="560" height="315" src="https://www.youtube.com/embed/HQnDzjo7MNw?si=KYKzxMy0D5IdVxKF&amp;start=11" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 📖 **Here are the key steps the algorithm.** 
 
