@@ -17,11 +17,13 @@ This unit introduces Data Structures
 - **B2.4.2** Construct and trace algorithms to implement a linear search and a binary search for data retrieval.
 
 
-<!-- 
-You can find the Data Structures slides [HERE](https://docs.google.com/presentation/d/1gB8GSNnB9NiIHX6TSEYEDwquO-5romTfaDX3ykSUOxA/edit?usp=sharing). -->
+
+You can find the Data Structures slides [HERE](https://docs.google.com/presentation/d/1K-MHKLgzS66Mm9pMBQh0VEgHBOoFnngKDC6VNMnm5NY/edit?usp=sharing).
+
+You can find the Efficiency and Big O slides [HERE] https://docs.google.com/presentation/d/13n4KUhImTXmHHztkQahyyutOXbVqPRoBtBIGfcf37kw/edit?usp=sharing
 
 ### Syllabus Topics [HL]
-<!-- - **B2.4.4** Explain the fundamental concept of recursion and its applications in programming. 
-- **B2.4.5** Construct and trace recursive algorithms in a programming language. -->
+- **B2.4.4** Explain the fundamental concept of recursion and its applications in programming. (HL only)
+- **B2.4.5** Construct and trace recursive algorithms in a programming language.
 
-<!-- You can find the Recursion slides [HERE](https://docs.google.com/presentation/d/1gF57VfRIdCDxXDaU7pbWXUmQGfX2ktP_eusX5GqUul0/edit?usp=sharing). -->
+You can find the Recursion slides [HERE](https://docs.google.com/presentation/d/1gF57VfRIdCDxXDaU7pbWXUmQGfX2ktP_eusX5GqUul0/edit?usp=sharing).
