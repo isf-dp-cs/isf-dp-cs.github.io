@@ -119,6 +119,23 @@ weight: 30
 
 ---
 
+
+Describe the role of a DNS server.  **\[2\]**
+
+{{< expand "Markscheme" >}}
+
+*Award **max** \[2\].*
+- contains a database of public IP addresses and their associated hostnames/domain names;
+- translates/matches those website hostnames to their corresponding IP addresses; translates human-readable domain names (like www.ibschool.com) into machine-readable IP addresses (like 2001:0db8:85a3:1111:0000:8a2e:0380);
+- allows users to access websites by using meaningful names (instead of IP addresses which are difficult to remember)/presents the corresponding web page of the domain name entered by the user; acts like a directory of webservers on the internet;
+- lets web browsers connect to the web servers; converts human-readable domain names into IP addresses;
+- ensures that internet traffic reaches the correct destination based on the domain name;
+- *<br><br>  *Note**: *Reward other correct responses*. 
+{{< /expand >}}
+
+---
+
+
 ### Types of Networks
 
 **Identify two characteristics of a personal area network (PAN). [2]**
@@ -216,6 +233,30 @@ weight: 30
 - Quality / characteristics of network equipment (such as the router or transmission media / cable / fibre / wireless);  
 - Number of network users (and their demand at any particular time);  
 - Type of encryption used or the encryption strength / server bandwidth / size of the user data / type of protocol used;  
+{{< /expand >}}
+
+---
+
+
+*Users have been troubled by slow speeds when accessing the internet.*
+
+
+Outline **two** reasons why there might be a reduction in data transmission speed at certain times.  **\[4\]**
+
+{{< expand "Markscheme" >}}
+
+*Award **\[4 max\]***.
+- malicious software/spyware/malware / viruses;
+- attacking the system; 
+- the type of connection;
+- valid outline for the slow down (depending on the type of connection); 
+<br><br>  ***Note**: There are many types of internet connection: wireless connections, wireless hotspots, mobile internet, broadband connections, fixed wireless and satellite connection, cable, DSL*; 
+- hardware malfunction;
+- internet speed can considerably slow down if modem-router configuration is not correct / updated; 
+- external factors;
+- during the peak hours of daytime the most visited websites encounter more network traffic than what has been anticipated; 
+- ***NOTE**: Accept examples. For example, too many students try to connect to an e-learning site at the same time*. 
+- *Mark as 2 and 2* 
 {{< /expand >}}
 
 ---
@@ -334,6 +375,29 @@ Award [1] for a reason, award [1] for an extension, x3.
  
 ---
 
+
+Suggest **two** measures to protect the school's LAN from external network security threats.  **\[4\]**
+
+{{< expand "Markscheme" >}}
+
+*Award **max** \[4\].*
+*Award \[1\] for a security measure and \[1\] for justification, **x2**.*\ Enable firewalls;
+- To monitor/prevent unauthorized access to the network/to alert network administrators to any intrusion attempts/to monitor all the incoming and outgoing traffic of the school network/to set the rules to blacklist certain websites; Router/access point can be configured;
+- to allow only pre-approved MAC addresses (approved by network administrator) to connect to the network/whitelist/blacklist filtering; Fibre optics;
+- To reduce the chances of interception/more challenging for hackers to intercept; Install new updates/enable automatic updates (OS/firmware/apps, whenever/wherever possible);
+- to ensure running the latest/most secure versions; Use encryption;
+- if cybercriminals gain access to the network, encryption prevents them from reading/understanding any of sensitive information; Install an antivirus program on all computers;
+- run or schedule regular virus scans to keep computers virus-free; Install anti-spyware software;
+- that records/prevents/removes every attempt/keystroke to gain access to passwords/other sensitive information; Train/educate users (teachers, students);
+- to use complex passwords/to update passwords on regular basis/to ignore email messages from unknown parties and never click on links or open attachments; Use multi-factor authentication (MFA)/two or more different types of actions to verify identity;
+- to defend against the threat of password-related cyberattacks; Use of VPN;
+- ensures secure access through encryption/tunnelling; A captive portal/implement an authorisation online portal;
+- Newly connected users should enter password/user ID before they are granted access to network resources;
+- *<br><br>  *Note**: *Do not accept backup as a method as it does not prevent the threat.* *<br><br>  *Note**: *Reward other reasonable responses.* 
+{{< /expand >}}
+
+---
+
 **Describe the role of a firewall. [2]**
 
 {{< expand "Markscheme" >}}
@@ -347,6 +411,20 @@ Award [1] for a reason, award [1] for an extension, x3.
 
 ---
 
+
+
+Describe the role of a firewall.  **\[3\]**
+
+{{< expand "Markscheme" >}}
+
+*Award **\[3 max\]***
+-  *A firewall (a device or software protecting sensitive resources in a network)*\ controls incoming and outgoing network traffic according to predetermined security rules;
+- monitors data packets entering and leaving the guarded network, allowing or blocking them;
+- controls which applications/devices can access the network;
+- detects/ prevents other threats, such as viruses, malware, suspicious behaviour, different types of Internet attacks; 
+{{< /expand >}}
+
+---
 
 
 The staff at a doctor’s practice consist of a receptionist and a doctor.
@@ -369,6 +447,26 @@ The patients’ medical records and payments, the doctor’s appointment calenda
 {{< /expand >}}
 
 ---
+
+**Outline two measures that the school could take to safeguard its data from unlawful access via the internet.**  **\[4\]**
+
+{{< expand "Markscheme" >}}
+
+*Award **\[4 max\]***.
+- Preventing unauthorized access/No access without user names/passwords;
+- which should be regularly changed/made difficult to guess; 
+- Data should be encrypted;
+- Allowing only those with decrypting code access; 
+- Teachers/students should be trained for safe practices;
+- to create a risk-conscious /security-aware culture within the school; 
+- Installation of virus checkers/spyware software;
+- to prevent damage to data files or the system / to prevent data being extracted from the files/system; 
+- *Mark as 2 and 2* 
+<br><br>  ***Note**: Accept appropriate measures such as physical security measures / access control / data security / network and communication security / user awareness and education, etc*. 
+{{< /expand >}}
+
+---
+
 
 ### VPN
 
@@ -625,6 +723,20 @@ When the doctor visits a patient in their home, she needs to be able to access t
 - Fibre optic cable transmission is more reliable/less likely to suffer interference;
 - Fibre optics allow transmission over longer distance;
 - Fibre optics allow greater bandwidth;
+{{< /expand >}}
+
+---
+
+Suggest **one** communications link that would provide high-speed internet access for the school.  **\[2\]**
+
+{{< expand "Markscheme" >}}
+
+*Award **max** \[2\].*
+*Award \[1\] for a communication link and \[1\] for a reason/justification.*\ Fibre-optic cable;
+- Because data transmission is fast/reliable; Coaxial cable (Cable internet);
+- Because it is (still) one of the fastest internet types/is significantly faster than DSL/practical because it uses the same coaxial connections as phone services/cable TV; 5G wireless broadband/mobile internet;
+- Because of greater speed in the transmissions/a greater number of connected devices/the possibility of implementing virtual networks; Satellite link;
+- higher data transmission rate/better coverage; 
 {{< /expand >}}
 
 ---

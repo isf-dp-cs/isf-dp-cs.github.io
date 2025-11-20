@@ -850,7 +850,7 @@ Award [2 max]:
 
 ---
 
-### Operating Systems and Applications
+### Operating Systems
 
 ---
 
@@ -864,6 +864,30 @@ Note: Allow any other correct function of a single-user operating system.
 {{< /expand >}}
 
 ---
+
+
+
+**Explain **one** advantage of using a dedicated operating system on a cell phone instead of a generic operating system.**  **\[3\]**
+
+{{< expand "Markscheme" >}}
+
+*Award **\[3 max\]***
+-  A dedicated operating system for a mobile phone will take up less storage space than a full-sized operating system;
+- this will allow the device to function more quickly;
+- because it doesn't contain features that aren't needed; The operating system is optimized for speed/ made to be as fast as possible;
+- uses resources effectively;
+- because it is created for a specific hardware; Security is improved;
+- by prohibiting services that would run on a generic operating system/ prohibiting software update;
+- only allowing very specific range of IP addresses or keys allowed; To suit a particular individual or task / customization;
+- only a minimal/ basic modification can be made;
+- in user interface/ the network connections/ and virtually anything else; A dedicated OS is designed specifically for a task;
+- makes the most efficient use of hardware available;
+- does not include unnecessary features;   <br><br>  ***Note**: Accept other reasonable answers on customization/ security/ speed/ optimization.* 
+{{< /expand >}}
+
+---
+
+### Applications
 
 **Outline the function of a web browser. [2]**
 
@@ -888,6 +912,21 @@ Award [2 max]:
 - Caching;  
 - Plug-ins – different media;  
 - Bookmarking and favourites;  
+{{< /expand >}}
+
+---
+
+Outline **one** feature of a word processor that could reduce the amount of typing required when writing letters.  **\[2\]**
+
+{{< expand "Markscheme" >}}
+
+*Award **\[2 max\]***.
+- Auto-correct/short sequences/codes;
+- can be used to represent longer phrases; 
+- Mail merge;
+- allows production of many letters by only typing the (body of a) letter once; 
+- Voice recognition;
+- allows easy entry of text; 
 {{< /expand >}}
 
  
