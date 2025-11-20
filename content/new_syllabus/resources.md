@@ -23,5 +23,5 @@ draft: false
 - [Glossary of Command Terms](https://drive.google.com/file/d/1eIbekAKzZFSbecOu1OGrwpNNSzH2wSrq/view?usp=sharing)
 
 ## Class Resources 
-- [Intro Slides](https://docs.google.com/presentation/d/1_BBtil2oZq7xZOhnts3uXBCrZmmdaV_pJ3d0ACT4JW4/edit?usp=sharing)
+- [Intro Quizzes](https://docs.google.com/presentation/d/1_BBtil2oZq7xZOhnts3uXBCrZmmdaV_pJ3d0ACT4JW4/edit?usp=sharing)
 - [Summative Tips Doc](https://docs.google.com/document/d/17d-3OemFpOZ9m083nm-FPLA6xUdWmzrfumSWKpKCxHU/edit?usp=sharing)
