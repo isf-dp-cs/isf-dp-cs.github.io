@@ -315,6 +315,18 @@ from get_data import *
 
 {{< /write-action >}}
 
+## Hints in Game
+
+💻 **Add hints to the historical guessing game.** 
+
+After their first guess, give the user a hint and let them guess again. 
+
+Hints could include:
+- feedback about their guess (too early, too late, 2 years off, etc.)
+- telling them the decade
+- printing the longer description to give them context
+
+
 ## Specific Range
 
 💻 **Write a new function `get_specific_range()` which allows users to specify which month the range should start and stop.** 
