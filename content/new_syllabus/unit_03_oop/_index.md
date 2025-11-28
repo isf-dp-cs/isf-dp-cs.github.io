@@ -1,12 +1,12 @@
 ---
-title: "Unit 02: Data Structures"
+title: "Unit 03: OOP"
 weight: 10
 bookFlatSection: false 
 bookCollapseSection: true 
 # draft: true
 ---
 
-# Unit 04: Object Oriented Programming
+# Unit 03: Object Oriented Programming
 
 #### Syllabus Topics [SL]
 - **B3.1.1** Evaluate the fundamentals of OOP.

@@ -217,7 +217,6 @@ Right now, the function `play()` simply plays each item in the queue, even if th
 
 # [4] Deliverables
 
-
 {{< deliverables "Once you complete the lab, be sure to complete these two steps:" >}}
 
 **📋 Update Syllabus Tracker:** Go to your **Syllabus Content Checklist** in your Google Drive and update it accordingly.
