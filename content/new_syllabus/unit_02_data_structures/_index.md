@@ -13,7 +13,8 @@ This unit introduces Data Structures
 
 #### Syllabus Topics [SL]
 - **B2.2.2** Construct programs that apply arrays and Lists.
-<!-- - **B2.2.3** Explain the concept of a stack as a “last in, first out” (LIFO) data structure. -->
+- **B2.2.3** Explain the concept of a stack as a “last in, first out” (LIFO) data structure.
+- **B2.2.4** Explain the concept of a queue as a “first in, first out” (FIFO) data structure.
 - **B2.4.2** Construct and trace algorithms to implement a linear search and a binary search for data retrieval.
 - **B2.4.3** Construct and trace algorithms to implement bubble sort and selection sort, evaluating their time and space complexities.
 
