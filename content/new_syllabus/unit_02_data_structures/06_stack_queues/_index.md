@@ -5,7 +5,6 @@ weight: 1
 # bookCollapseSection: true
 # draft: true
 ---
-
 # Stacks and Queues
 
 This lab introduces two new data structures, **Stacks** and **Queues**. 
@@ -22,13 +21,13 @@ This lab introduces two new data structures, **Stacks** and **Queues**.
 | **Mutable** |  A data structure that can be changed after it is initialized. Lists, Stacks, and Queues are all mutable. Strings are not mutable. |
 | **LIFO** |  Last in, first out. |
 | **FIFO** |  First in, first out. |
-|  |  |
+|   <br> |     |
 | **Stack** |  A LIFO data structure. Only the top item (most recently added item) can be accessed. Common uses: undo functions, the call stack in a computer, parsing matched punctuation like `()` `{}`, reversing queues or lists. |
 | **`push()`** |  Adds data to the top of the stack. Parameter: data to add to the stack. Returns: none. |
 | **`pop()`** |  Removes data from the top of a stack. Parameter: none. Returns: the data at the top of the stack. |
 | **`peek()`** |  Allows you to view the data at the top of the stack without removing it. Parameter: none. Returns: the data at the top of the stack. |
 | **`isEmpty()`** |  Checks whether the stack contains data. Parameter: none. Returns: boolean.|
-|  |  |
+| <br> |  |
 | **Queue** |  A FIFO data structure. Only the front item can be accessed. Common uses: playlist queues for media, printer queues storing print jobs, internet networks storing data packets. |
 | **`enqueue()`** |  Adds data to the back of the queue. Parameter: data to add to the queue. Returns: none. |
 | **`dequeue()`** |  Removes data from the front of a queue. Parameter: none. Returns: the data at the front of the queue.|
@@ -143,7 +142,7 @@ Currently, the undo functionality doesn't work. Two important actions need to be
 1. Every move should be saved in the `history` stack.
 2. When a user chooses to **undo**, the most recent move should be retrieved from the `history` stack and undone.
 
-💻 **Add undo functionality to `edit_mode()`.** 
+💻 **Add undo functionality to `edit_mode()`.**  It is up to you to decide how to add the moves to the stack. We recommend adding the row, then adding the column. 
 
 ---
 
@@ -173,15 +172,16 @@ The timelapse method should give the user a replay of all their moves, from the 
 
 # [3] Song Queue
 
-💻 **Run `song_queue.py`.** 
+In this file you will be creating a song queue, similar to Spotify's or Apple Music's `queue` feature. Every time a song is "queued", it is added to the end of the queue. 
 
-It has some starter code, but the functionality doesn't work yet. 
+
+💻 **Run `song_queue.py` to experiment with the outline of how this functionality will work.** It has some starter code, but it does not fully work yet.
 
 ---
 
 ## Create Playlist
 
-💻 **Finish `create_playlist()` so that every song is added to the song queue.** 
+💻 **Finish `create_playlist()` so that every song the user inputs is added to the song queue.** Test it by running `song_queue.py`.
 
 ---
 
@@ -189,15 +189,18 @@ It has some starter code, but the functionality doesn't work yet.
 
 A classic task is reversing a queue using a stack.
 
-💻 **Finish `reverse_playlist()` which reverses the order of the song queue.** 
+💻 **Finish `reverse_playlist()` which reverses the order of the song queue.** Test it by running `song_queue.py` .
 
 ---
 
+
 ## Play without Repeats
 
-Right now, the function `play()` simply plays each item in the queue, even if the same song plays multiple times in a row. It is your job to make a function where, if the next song is the same as the one that is currently playing, that next song will be removed.
+Right now, the function `play()` simply plays each item in the queue, even if the same song plays multiple times in a row. 
 
-💻 **Finish `play_without_repeats()`.** 
+It is your job to edit the function, so if the next song is the same as the one that is currently playing, that next song will be removed. 
+
+💻 **Edit `play()` to incorporate this functionality by using the optional parameter `repeats_allowed`.**  Test it by editing the the function call at the bottom of the file to see it's working.
 
 ---
 
@@ -237,7 +240,7 @@ Right now, the function `play()` simply plays each item in the queue, even if th
 
 ## Shuffle Playlist
 
-💻 **Complete `shuffle()` to shuffle the order of `song_q` using a second queue.** 
+💻 **Complete `shuffle()` to shuffle the order of `song_q` using a second queue.** You will need to add your own test to the bottom of the file.
 
 The songs should be shuffled in order, using only a second queue. There are ***many*** different, valid coding approaches to get this done. Resist using a built in shuffling method. Depending on your approach, you may find it useful to use the random library:
 
