@@ -3,7 +3,7 @@ title: "Unit 03: OOP"
 weight: 10
 bookFlatSection: false 
 bookCollapseSection: true 
-draft: true
+# draft: false
 ---
 
 # Unit 03: Object Oriented Programming
@@ -17,12 +17,12 @@ draft: true
 
 
 <!-- You can find the Data Structures slides [HERE](https://docs.google.com/presentation/d/1K-MHKLgzS66Mm9pMBQh0VEgHBOoFnngKDC6VNMnm5NY/edit?usp=sharing). 
+ -->
 
-The Big O Notation slides are [HERE](https://docs.google.com/presentation/d/13n4KUhImTXmHHztkQahyyutOXbVqPRoBtBIGfcf37kw/edit?slide=id.p#slide=id.p). -->
 
 ### Syllabus Topics [HL]
-<!-- - **B2.4.4** Explain the fundamental concept of recursion and its applications in programming. 
-- **B2.4.5** Construct and trace recursive algorithms in a programming language. -->
+- **B3.2.4** Explain the role of composition and aggregation in class relationships.
+
 
 <!-- You can find the Recursion slides [HERE](https://docs.google.com/presentation/d/1gF57VfRIdCDxXDaU7pbWXUmQGfX2ktP_eusX5GqUul0/edit?usp=sharing). -->
 
