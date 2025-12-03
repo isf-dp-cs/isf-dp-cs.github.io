@@ -13,7 +13,6 @@ This lab introduces relationships between classes.
 ---
 ## Syllabus Topics [SL]
 - **B3.1.2** Construct a design of classes, their methods and behaviour.
-- B3.1.1 Evaluate the fundamentals of OOP.
 - **B3.1.4** Construct code to define classes and instantiate objects.
 
 ## Syllabus Topics [HL]
@@ -26,45 +25,13 @@ This lab introduces relationships between classes.
 | Word | Definition |
 | :--- | :--- |
 | **Aggregation** | One object contains one or more other objects, but the other objects can exist independently *(ex. library and books, books are not dependent on the library to exist)*  |
-| **Overloading** | An template for creating objects, representing the properties and methods.  |
-
+| **Overloading** | Two or more methods have the same name, different parameters and functionality.   |
 
 
 ---
 
-# [0] Set up
 
-
-{{< code-action "Go to your" >}} `dpcs` **folder** and create a new folder for this unit.
-
-```shell
-cd ~/desktop/dpcs/
-mkdir unit03_oop
-cd unit02_oop
-```
-
-{{< code-action "Clone your repo. This will copy it onto your computer." >}} Be sure to replace `yourgithubusername` with your actual username. 
-```shell
-git clone https://github.com/isf-dp-cs/lab_oop_songs_yourgithubusername
-```
-
-{{< code-action "In the Terminal, type the following command to open the lab folder." >}}
-```shell
-cd lab_oop_songs_yourgithubusername
-```
-
-{{< code-action "Enter the Poetry Shell to start the lab." >}} As a reminder, we will run this command at the start of each lab, but only when we are inside a lab folder.
-```shell
-poetry shell
-```
-
-{{< aside "Exiting the poetry shell" >}}
-When you want to exit the shell, you can type `exit` or `^D`
-{{< /aside >}}
-
----
-
-## [1] UML Relationship
+# [0] Class Relationships
 
 In this lab, you will make a simple version of Blackjack. For this, we use multiple classes. 
 - `Card()`
@@ -72,14 +39,10 @@ In this lab, you will make a simple version of Blackjack. For this, we use multi
 - `Hand()`
 - `Blackjack`
 
-
---- 
-
-## [1] Class Relationships
-
-Here is the UML diagram for the class relationships.
+📖 **Here is the UML diagram for the class relationships.** The unfilled diamonds represent an `aggregation` relationship. A `Deck` contains `Cards`, but `Cards` exist if the `Deck` is destroyed.
 
 {{< mermaid >}}
+
 classDiagram
     class Card {
         - suit: str
@@ -94,80 +57,46 @@ classDiagram
         + __gt__(other)
     }
 
+
     class Deck {
         - cards: List~Card~
-        + __init__()
-        + shuffle_deck()
+        + get_deck()
         + deal_card()
-        + reset()
-        + count()
+        + shuffle_deck()
     }
+
 
     class Hand {
         - cards: List~Card~
         - owner: str
-        + __init__(owner=None)
+        + __srt__
+        + get_hand()
         + add_card(card: Card)
-        + get_cards()
         + count_rank()
+        + sort_hand()
         + __gt__(other)
         + __eq__(other)
     }
+
 
     class Blackjack {
         - deck: Deck
-        - player: Hand
+        - human: Hand
         - computer: Hand
         + __init__()
-        + start()
+        + deal_cards()
+        + computerTurn()
         + play()
+        + checkBust()
         + determineWinner()
-        + display_player_cards()
-        + sortPlayerHand()
-    }
+    } 
 
-    Card --> Hand
-    Card --> Deck
-    Deck --> Blackjack
-    Hand --> Blackjack
+    Card o--> Hand
+    Card o--> Deck
+    Deck o--> Blackjack
+    Hand o--> Blackjack
    
 {{< /mermaid >}}
-
-
----
-
-# [2] Card
-
-💻 **In `card.py`, test each method at the bottom of the file.**
-
-
-
----
-
-
-# [2] Hand
-
-Here is the UML diagram for the `Hand` class.
-
-{{< mermaid >}}
-classDiagram
-    class Hand {
-		-cards: list of Cards
-        + get_cards()
-        + add_card(new_card)
-        + count_rank()
-        + __gt__(other)
-        + __eq__(other)
-    }
-{{< /mermaid >}}
-
-
-💻 **In `hand.py`, construct each method and test it at the bottom of the file.** Read the docstrings to ensure the method works as expected. 
-- `add_card()` that returns the last `card` in `cards` attribute** If no card exists, return `None.
-- `count_rank()`
-- `__gt__()` - compares the rank of itself and another hand
-- `__eq__()` - compares the rank of itself and another hand
-
 
 ---
 
@@ -178,37 +107,200 @@ Here is the UML diagram for the `Deck` class.
 {{< mermaid >}}
 classDiagram
     class Deck {
-		-cards: list of Cards
+        - cards: List~Card~
         + get_deck()
-        + shuffle()
         + deal_card()
+        + shuffle_deck()
     }
 {{< /mermaid >}}
 
-💻 **In `deck.py`, construct each method and test it at the bottom of the file.** Read the docstrings to ensure the method works as expected. 
-- `deal_card()` that returns the last `card` in `cards` attribute** If no card exists, return `None.
-- `shuffle()`
+💻 **In `deck.py`, construct the following methods and test each at the bottom of the file.** Read the docstrings to ensure the method works as expected. 
+- `deal_card()` - Removes the last Card in the deck. Then, returns that c=Card. If no Cards exist, returns None. 
+- `shuffle()` - manually shuffles the deck
     - loop through every position `cards` array   
-    - each time you loop, randomly generate another location in the array, `rand_idx`     
-    - swap the `card` located at `i` with the `card` located at `rand_idx` 
+    - each time you loop, randomly generate another location in the list, `rand_idx`     
+    - swap the `Card` located at `i` with the `Card` located at `rand_idx` 
+
+
+
+
+
+
+---
+
+# [1] Set up
+
+{{< code-action "Clone your repo in the correct folder." >}} Be sure to replace `yourgithubusername` with your actual username. 
+```shell
+cd ~/desktop/dpcs/unit02_oop
+git clone https://github.com/isf-dp-cs/lab_oop_cards_yourgithubusername
+```
+
+{{< code-action "In the Terminal, type the following command to open the lab folder." >}}
+```shell
+cd lab_oop_cards_yourgithubusername
+```
+
+{{< code-action "Enter the Poetry Shell to start the lab." >}} As a reminder, we will run this command at the start of each lab, but only when we are inside a lab folder.
+```shell
+poetry shell
+```
+
+{{< aside "Exiting the poetry shell" >}}
+When you want to exit the shell, you can type `exit` or `^D`
+{{< /aside >}}
+
+
+---
+
+# [2] Card
+
+The `Card` class has already been constructed for you in `card.py`.
+
+
+{{< mermaid >}}
+classDiagram
+    class Card {
+        - suit: str
+        - rank: int
+        + __init__(suit, rank)
+        + __str__()
+        + get_suit()
+        + get_rank()
+        + set_suit(new_suit)
+        + set_rank(new_rank)
+        + __eq__(other)
+        + __gt__(other)
+    }   
+{{< /mermaid >}}
+
+📖 **In the class, there are three examples of `overloading`.**
+- `__str__()` is called when you print an object
+- `__eq__()` is called when you compare the equivalence of two objects 
+- `__gt__` is called when you compare if an object is greater than another object
+
+```python
+c1 = Card("Hearts", 5)
+c2 = Card("Hearts", 5)
+print(c1)   # calls __str__()
+c1 == c2    # calls __eq__()
+c1 > c2     # calls __gt__()
+```
+
+💻 **Construct tests for each method at the bottom of `card.py`**
+
+---
+
+# [3] Deck
+
+Here is the UML diagram for the `Deck` class.
+
+{{< mermaid >}}
+classDiagram
+    class Deck {
+        - cards: List~Card~
+        + get_deck()
+        + deal_card()
+      + shuffle_deck()
+    }
+{{< /mermaid >}}
+
+💻 **In `deck.py`, construct the following methods and test each at the bottom of the file.** Read the docstrings to ensure the method works as expected. 
+- `deal_card()` - Removes the last Card in the deck and returns it. If no Cards exist, returns None. 
+    - You may use `pop()`
+- `shuffle()` - manually shuffles the deck
+    - loop through every position `cards` array   
+    - each time you loop, randomly generate another location in the list, `rand_idx`     
+    - swap the `Card` located at `i` with the `Card` located at `rand_idx` 
+
+
+{{< write-action >}}
+
+1) **Close your computer, take out a piece of paper, and write out the `shuffle()` method.** 
+
+2) Double check your handwritten code against your typed code.
+
+3) If you made mistakes, take note of them and try again.
+
+{{< /write-action >}}
+
+
+---
+
+
+# [4] Hand
+
+Here is the UML diagram for the `Hand` class.
+
+{{< mermaid >}}
+classDiagram
+    class Hand {
+        - cards: List~Card~
+        - owner: str
+        + __srt__
+        + get_hand()
+        + add_card(card: Card)
+        + count_rank()
+        + sort_hand()
+        + __gt__(other)
+        + __eq__(other)
+    }
+{{< /mermaid >}}
+
+
+💻 **In `hand.py`, construct each method and test it at the bottom of the file.** Read the docstrings to ensure the method works as expected. 
+- `add_card()` - returns the last card in cards attribute. If no card exists, return None
+- `count_rank()` - returns the sum of the rank's of the Cards in the hand
+- `sort_hand()` - sorts the cards in order of rank in ascending order
 - `__gt__()` - compares the rank of itself and another hand
 - `__eq__()` - compares the rank of itself and another hand
 
+{{< write-action >}}
+
+1) **Close your computer, take out a piece of paper, and write out the `count_rank()` method.** 
+
+2) Double check your handwritten code against your typed code.
+
+3) If you made mistakes, take note of them and try again.
+
+{{< /write-action >}}
+
+
 ---
 
+# [5] Blackjack
+
+
+{{< mermaid >}}
+classDiagram
+    class Blackjack {
+        - deck: Deck
+        - human: Hand
+        - computer: Hand
+        + __init__()
+        + deal_cards()
+        + computerTurn()
+        + play()
+        + checkBust()
+        + determineWinner()
+    } 
+{{< /mermaid >}}
+
+The `Blackjack` class ties all of the pieces together into a cohesive game. 
+
+💻 **In blackjack.py, construct each method to build a working game.** Read the docstrings to ensure the method works as expected. 
+- `deal_cards()` - deals 2 cards to the computer and the human
+- `computerTurn()` - if the computer's hand's total rank is less than 16, randomly deal up to 2 cards
+- `checkBust(player)` - check if a given player's total rank is over 21
+- `determine_winner()` - prints a message communicating if the human or computer won, including the corresponding total ranks.
+- `play()` - play a round of blackjack. 
+
+💻 **Run `blackjack.py` to play the game and test as you construct each method.**
 
 
 ---
 
-Blackjack
-
-- add in check if it ties
-- add check if it busts
-
-
----
-
-# [2] Deliverables
+# [6] Deliverables
 
 
 {{< deliverables "Once you finish the lab, be sure to complete these two steps:" >}}
