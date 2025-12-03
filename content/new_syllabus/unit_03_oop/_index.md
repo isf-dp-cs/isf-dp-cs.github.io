@@ -21,6 +21,7 @@ draft: false
 
 
 ### Syllabus Topics [HL]
+- **B3.2.4** Explain the role of composition and aggregation in class relationships.
 
 
 <!-- You can find the Recursion slides [HERE](https://docs.google.com/presentation/d/1gF57VfRIdCDxXDaU7pbWXUmQGfX2ktP_eusX5GqUul0/edit?usp=sharing). -->

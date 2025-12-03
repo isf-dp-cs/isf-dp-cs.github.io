@@ -123,9 +123,9 @@ When you want to exit the shell, you can type `exit` or `^D`
 
 # [1] Query Songs
 
-In `query.py`, there are six functions to query the list of `Song` objects. Be sure to test each function at the bottom of the file to ensure it works as expected. 
+In `query.py`, there are six functions to query the list of `Song` objects.
 
-💻 **Construct code for each function. Read the docstring to learn its functionality.**
+💻 **Construct code for each function. Read the docstring to learn its functionality.** After completed each function, test it at the bottom of the file to ensure it works as expected. 
 
 - `getAllGenre(song_list)`
 - `getRandomSongGenre(song_list, target_genre)`
