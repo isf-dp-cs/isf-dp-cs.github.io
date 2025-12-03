@@ -135,7 +135,7 @@ In `query.py`, there are six functions to query the list of `Song` objects.
 - `getSongByPopularity(song_list, target_popularity)` - use binary search
 
 
- {{< write-action >}}
+{{< write-action >}}
 
 1) **Take out a piece of paper and write out entire the function for 2 functions of your choosing.** Be sure to choose functions that need revision.
 
