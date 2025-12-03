@@ -3,7 +3,7 @@ title: "00. Intro"
 bookFlatSection: false
 weight: 1
 # bookCollapseSection: true
-draft: true
+# draft: true
 ---
 
 # Intro to Object Oriented Programming (OOP)
@@ -18,39 +18,39 @@ This lab introduces object oriented programming (OOP).
 
 | Word | Definition |
 | :--- | :--- |
-| **Object Oriented Programming** | A CS paradigm that creates classes of objects, allowing for increased modularity.  |
-| **Class** | An template for creating objects, representing the properties and methods.  |
-| **Constructor** | A method that creates a new object of a class with default values for the properties/attributes |
-| **Methods** | Functions that are defined in a class. |
-| **Attributes** | Variables that are defined in a class |
-| **Object** | A specific instance of a class that has properties and methods. |
-| **Instantiation** | The process of creating a new instance of a class that is called a object, by calling its constructor. |
-| **Private Attribute** | Only accessible by current object |
+| **Object Oriented Programming** | A style of programming that creates objects using classes, allowing for encapsulation and increased modularity.  |
+| **Class** | A template or blueprint for creating objects. The class defines the attributes and methods.  |
+| **Constructor** | A method that creates a new object of a class and initializes the values of the attributes.|
+| **Methods** | Functions that belong to a class. |
+| **Attributes** | Aka **Instance Variables**. Variables that belong to a particular object. |
+| **Object** | A specific instance of a class that has its own instance variables/attributes. |
+| **Instantiation** | The process of creating a new instance of a class (aka a new **object**), by calling its constructor. |
+| **Private Attribute** | Accessible only within its own class. |
 | **Public Attribute** | Accessible to any code in program.  |
-| **Accessor methods** | Methods that are used to return the private attributes.  |
-| **Setter methods** | Methods that are used to access and manipulate the attributes  |
+| **Accessor methods** | Aka **Getters**. Methods that are used to return the private attributes.  |
+| **Mutator methods** | Aka **Setters**. Methods that are used to update the private attributes.  |
 
 
 --- 
 
 ## UML & Classes
 
-**This is a UML (unified modelling language) diagram.** It is used to represent a class, its attributes, and methods
+**This is a UML (unified modelling language) class diagram.** It is used to represent a class, its attributes, and methods.
 
 {{< mermaid >}}
 
 classDiagram
     class Song {
-        -title: string
-        -artist: string
-        -album: string
-        -popularity: integer
-        -isExplicit: boolean
-        -genre: string
-        -length: float
-        -energy: float
-        -loudness: float
-        -valence: float
+        - title: string
+        - artist: string
+        - album: string
+        - popularity: integer
+        - isExplicit: boolean
+        - genre: string
+        - length: float
+        - energy: float
+        - loudness: float
+        - valence: float
         + __init__(title, artist, album, popularity, isExplicit, genre, length, energy, loudness, valence)
         + accessor methods  ()
         + __str__()
@@ -97,7 +97,7 @@ class Song:
 ```shell
 cd ~/desktop/dpcs/
 mkdir unit03_oop
-cd unit02_oop
+cd unit03_oop
 ```
 
 {{< code-action "Clone your repo. This will copy it onto your computer." >}} Be sure to replace `yourgithubusername` with your actual username. 
