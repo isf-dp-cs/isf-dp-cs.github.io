@@ -3,7 +3,7 @@ title: "01. Aggregation"
 bookFlatSection: false
 weight: 1
 # bookCollapseSection: true
-# draft: true
+draft: true
 ---
 
 # Aggregation
