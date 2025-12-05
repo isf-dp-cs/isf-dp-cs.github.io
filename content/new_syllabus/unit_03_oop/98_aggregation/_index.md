@@ -1,5 +1,5 @@
 ---
-title: "01. Aggregation" 
+title: "04. Aggregation" 
 bookFlatSection: false
 weight: 1
 # bookCollapseSection: true
@@ -8,7 +8,7 @@ draft: true
 
 # Aggregation
 
-This lab introduces relationships between classes.
+This lab introduces a different kind of relationship between classes.
 
 ---
 ## Syllabus Topics [SL]
@@ -26,6 +26,7 @@ This lab introduces relationships between classes.
 | :--- | :--- |
 | **Aggregation** | One object contains one or more other objects, but the other objects can exist independently *(ex. library and books, books are not dependent on the library to exist)*  |
 | **Overloading** | Two or more methods have the same name, different parameters and functionality.   |
+| **Polymorphism** | How objects can perform different    |
 
 
 ---
@@ -91,10 +92,10 @@ classDiagram
         + determineWinner()
     } 
 
-    Card o--> Hand
-    Card o--> Deck
-    Deck o--> Blackjack
-    Hand o--> Blackjack
+    Card --o Hand
+    Card --o Deck
+    Deck --o Blackjack
+    Hand --o Blackjack
    
 {{< /mermaid >}}
 

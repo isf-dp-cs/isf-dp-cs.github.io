@@ -1,5 +1,5 @@
 ---
-title: "02. Linked Lists (HL)" 
+title: "01. Linked Lists (HL)" 
 bookFlatSection: false
 weight: 1
 # bookCollapseSection: true
