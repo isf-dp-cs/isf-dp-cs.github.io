@@ -3,7 +3,7 @@ title: "03. Aggregation"
 bookFlatSection: false
 weight: 1
 # bookCollapseSection: true
-draft: true
+# draft: true
 ---
 
 # Aggregation
@@ -11,6 +11,7 @@ draft: true
 This lab introduces a different kind of relationship between classes.
 
 ---
+
 ## Syllabus Topics [SL]
 - **B3.1.2** Construct a design of classes, their methods and behaviour.
 - **B3.1.4** Construct code to define classes and instantiate objects.
@@ -26,7 +27,6 @@ This lab introduces a different kind of relationship between classes.
 | :--- | :--- |
 | **Aggregation** | One object contains one or more other objects, but the other objects can exist independently *(ex. library and books, books are not dependent on the library to exist)*  |
 | **Overloading** | Two or more methods have the same name, different parameters and functionality.   |
-| **Polymorphism** | How objects can perform different    |
 
 
 ---
