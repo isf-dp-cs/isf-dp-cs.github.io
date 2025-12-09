@@ -24,7 +24,7 @@ This lab introduces relationships between classes.
 | Word | Definition |
 | :--- | :--- |
 | **Composition** | One object contains one or more other objects, but the other objects CANNOT exist independently *(ex. house and room - iff the house is destroyed, so are the rooms)*  |
-| **Encapsulation** | CHANGE DEFINITION  |
+| **Static** | Attributes or methods that belong to the class, not the individual objects  |
 
 
 ---
@@ -35,13 +35,15 @@ This lab introduces relationships between classes.
 In this lab, you will make a model Bank with two classes: `Bank` and `Account`. This is an example of composition because if the bank is destroyed, so are the bank accounts.
 
 
-📖 **Here is the UML diagram for the class relationships.** The filled diamonds represent a `composition` relationship. A `Bank` contains an `Account`, but `Accounts` don't exist if the `Bank` is destroyed.
+📖 **Here is the UML diagram for the class relationships.** 
+- The filled diamonds represent a `composition` relationship. A `Bank` contains an `Account`, but `Accounts` don't exist if the `Bank` is destroyed.
+- The `static next_account_number` is used to ensure each object has a unique number
 
 {{< mermaid >}}
 
 classDiagram
     class Account {
-        static next_account_number: int = 1
+        static next_account_number: int = 0
         - __name: str
         - __balance: float
         + account_number: int
@@ -53,17 +55,19 @@ classDiagram
     }
 
     class Bank {
+        static interest_rate: float = 5.00
         - name: str
         - __accounts: list~Account~
         + __init__(name)
         + get_accounts() : list~Account~
-        + add_account(account_name) : bool
-        + sort_accounts(): none
+        + report(): none
         + get_specific_account(target_account_name): Account | None
+        + sort_accounts(): none
+        + add_account(account_name) : bool
         + deposit(account_name, amount): bool
         + withdraw(account_name, amount): bool
         + transfer(account1, account2, amount): bool
-        + report(activity): none
+        + apply_interest(account_name): bool
     } 
 
     Account --* Bank
@@ -99,7 +103,7 @@ When you want to exit the shell, you can type `exit` or `^D`
 
 # [2] Account
 
-Here is the UML diagram for the `Account` class. It has already been constructed for you in `account.py`.
+Here is the UML diagram for the `Account` class.
 
 
 {{< mermaid >}}
@@ -117,14 +121,19 @@ classDiagram
     }
 {{< /mermaid >}}
 
-💻 **At the bottom of the `account.py`, create multiple objects and test each method.** 
+💻 **Finish the following `Account` methods in `account.py`:**
+- `get_name()`
+- `get_balance()`
+- `change_balance`
+
+💻 **At the bottom of the `account.py`, create multiple `Account` objects and test each method.** 
 
 
 ---
 
 # [2] Bank
 
-Here is the UML diagram for the `Bank` class. The `Bank` is the only way someone would interact with an `Account`.
+Here is the UML diagram for the `Bank` class. **The `Bank` is the only way to interact an `Account`.**
 
 {{< mermaid >}}
 classDiagram
@@ -155,9 +164,9 @@ classDiagram
 
 {{< write-action >}}
 
-1) **Close your computer, take out a piece of paper, and draw the UML diagrams by referencing the classes.** 
+1) **Draw the UML diagrams by ONLY referencing the code.** 
 
-2) Double check your handwritten code against your typed code.
+2) Double check your diagram against the website.
 
 3) If you made mistakes, take note of them and try again.
 
