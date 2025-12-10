@@ -1,5 +1,5 @@
 ---
-title: "01. Aggregation" 
+title: "03. Aggregation" 
 bookFlatSection: false
 weight: 1
 # bookCollapseSection: true
@@ -8,9 +8,10 @@ draft: true
 
 # Aggregation
 
-This lab introduces relationships between classes.
+This lab introduces a different kind of relationship between classes.
 
 ---
+
 ## Syllabus Topics [SL]
 - **B3.1.2** Construct a design of classes, their methods and behaviour.
 - **B3.1.4** Construct code to define classes and instantiate objects.
@@ -91,10 +92,10 @@ classDiagram
         + determineWinner()
     } 
 
-    Card o--> Hand
-    Card o--> Deck
-    Deck o--> Blackjack
-    Hand o--> Blackjack
+    Card --o Hand
+    Card --o Deck
+    Deck --o Blackjack
+    Hand --o Blackjack
    
 {{< /mermaid >}}
 
