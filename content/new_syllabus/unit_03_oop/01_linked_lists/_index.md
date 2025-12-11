@@ -17,22 +17,16 @@ This lab introduces implementations of different types of Linked Lists.
 - **B4.1.3** Construct and apply linked lists: singly, doubly and circular. (HL only)
 
 
-<!-- ## Key Vocabulary (add later!)
+## Key Vocabulary
 
 | Word | Definition |
 | :--- | :--- |
-| **Object Oriented Programming** | A CS paradigm that creates classes of objects, allowing for increased modularity.  |
-| **Class** | An template for creating objects, representing the properties and methods.  |
-| **Constructor** | A method that creates a new object of a class with default values for the properties/attributes |
-| **Methods** | Functions that are defined in a class. |
-| **Attributes** | Variables that are defined in a class |
-| **Object** | A specific instance of a class that has properties and methods. |
-| **Instantiation** | The process of creating a new instance of a class that is called a object, by calling its constructor. |
-| **Private Attribute** | Only accessible by current object |
-| **Public Attribute** | Accessible to any code in program.  |
-| **Accessor methods** | Methods that are used to return the private attributes.  |
-| **Setter methods** | Methods that are used to access and manipulate the attributes  |
- -->
+| **Node** | Object that makes up some data structures. Generally contains data and a pointer. |
+| **SLL Node** | Contains data and a pointer to the next Node. |
+| **DLL Node** | Contains data, a pointer to the next Node, and a pointer to the previous Node. |
+| **Head** | Pointer to the first node of a Linked List. |
+| **Tail** | Pointer to the last node of a Doubly Linked List.|
+| **Overriding** | Changing how a method behaves, based on which kind of object it is called on. For example, changing how `print()` behaves for different objects.  |
 
 --- 
 
@@ -64,17 +58,17 @@ classDiagram
 
 # [0] Set up
 
-
-{{< code-action "Go to your" >}} `dpcs` **folder** and create a new folder for this unit.
+<!-- {{< code-action "Go to your" >}} `dpcs` **folder** and create a new folder for this unit.
 
 ```shell
 cd ~/desktop/dpcs/
 mkdir unit03_oop
 cd unit03_oop
-```
+``` -->
 
 {{< code-action "Clone your repo. This will copy it onto your computer." >}} Be sure to replace `yourgithubusername` with your actual username. 
 ```shell
+cd ~/desktop/dpcs/unit03_oop
 git clone https://github.com/isf-dp-cs/lab_linked_lists_yourgithubusername
 ```
 
