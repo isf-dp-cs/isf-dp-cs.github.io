@@ -21,10 +21,10 @@ This lab introduces object oriented programming (OOP).
 | **Object Oriented Programming** | A style of programming that creates objects using classes, allowing for encapsulation and increased modularity.  |
 | **Class** | A template or blueprint for creating objects. The class defines the attributes and methods.  |
 | **Constructor** | A method that creates a new object of a class and initializes the values of the attributes.|
-| **Methods** | Functions that belong to a class. |
-| **Attributes** | Aka **Instance Variables**. Variables that belong to a particular object. |
 | **Object** | A specific instance of a class that has its own instance variables/attributes. |
 | **Instantiation** | The process of creating a new instance of a class (aka a new **object**), by calling its constructor. |
+| **Methods** | Functions that belong to a class. |
+| **Attributes** | Variables that belong to an object. |
 | **Private Attribute** | Accessible only within its own class. |
 | **Public Attribute** | Accessible to any code in program.  |
 | **Accessor methods** | Aka **Getters**. Methods that are used to return the private attributes.  |
