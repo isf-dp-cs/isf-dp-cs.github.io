@@ -44,8 +44,8 @@ classDiagram
     class Card {
         - suit: str
         - rank: int
-        + __init__(suit, rank)
-        + __str__()
+        + \_\_init__(suit, rank)
+        + \_\_str__()
         + get_suit()
         + get_rank()
         + set_suit(new_suit)
@@ -57,7 +57,7 @@ classDiagram
 
     class Deck {
         - cards: List~Card~
-        + __init__()
+        + \_\_init__()
         + get_deck()
         + deal_card()
         + shuffle_deck()
@@ -68,13 +68,13 @@ classDiagram
     class Hand {
         - cards: List~Card~
         - owner: str
-        + __str__()
+        + \_\_str__()
         + get_hand()
         + add_card(card: Card)
         + count_rank()
         + sort_hand()
-        + __gt__(other)
-        + __eq__(other)
+        + \_\_gt__(other)
+        + \_\_eq__(other)
     }
 
 
@@ -82,7 +82,7 @@ classDiagram
         - deck: Deck
         - human: Hand
         - computer: Hand
-        + __init__()
+        + \_\_init__()
         + deal_cards()
         + computerTurn()
         + play()
@@ -151,14 +151,14 @@ classDiagram
     class Card {
         - suit: str
         - rank: int
-        + __init__(suit, rank)
-        + __str__()
+        + \_\_init__(suit, rank)
+        + \_\_str__()
         + get_suit()
         + get_rank()
         + set_suit(new_suit)
         + set_rank(new_rank)
-        + _ _eq_ _(other)
-        + _ _gt_ _(other)
+        + \_\_eq__(other)
+        + \_\_gt__(other)
     }   
 {{< /mermaid >}}
 
@@ -234,13 +234,13 @@ classDiagram
     class Hand {
         - cards: List~Card~
         - owner: str
-        + __str__()
+        + \_\_str__()
         + get_hand()
         + add_card(card: Card)
         + count_rank()
         + sort_hand()
-        + __gt__(other)
-        + __eq__(other)
+        + \_\_gt__(other)
+        + \_\_eq__(other)
     }
 {{< /mermaid >}}
 
@@ -274,7 +274,7 @@ classDiagram
         - deck: Deck
         - human: Hand
         - computer: Hand
-        + __init__()
+        + \_\_init__()
         + deal_cards()
         + computerTurn()
         + play()
