@@ -106,8 +106,8 @@ classDiagram
         - __name: str
         - __balance: float
         - __account_number: int
-        + \_\_init__(str)
-        + \_\_str__() str
+        + __init__(str)
+        + __str__() str
         + get_name() str
         + set_name(str) None
         + get_account_number() str
@@ -149,8 +149,8 @@ classDiagram
         - __name: str
         - __balance: float
         - __account_number: int
-        + \_\_init__(str)
-        + \_\_str__() str
+        + __init__(str)
+        + __str__() str
         + get_name() str
         + set_name(str) None
         + get_account_number() str
@@ -163,7 +163,7 @@ classDiagram
     class Bank {
         - __bank_name: str
         - __accounts: list~Account~
-        + \_\_init__(str)
+        + __init__(str)
         + get_bank_name() str
         + set_bank_name(str) None
         + get_accounts() list~Account~
