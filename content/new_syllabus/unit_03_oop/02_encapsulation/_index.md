@@ -1,7 +1,7 @@
 ---
 title: "02. Encapsulation" 
 bookFlatSection: false
-weight: 1
+weight: 20
 # bookCollapseSection: true
 # draft: true
 ---
@@ -26,8 +26,9 @@ This lab introduces the ideas of encapsulation, information hiding, static varia
 
 | Word | Definition |
 | :--- | :--- |
-| **Encapsulation** | Bundling datapoints and the methods that manipulate those datapoints together to create objects. This often involves data hiding. |
+| **Encapsulation** | Combining datapoints and methods that manipulate those datapoints together to create objects. This often involves information hiding. | 
 | **Information Hiding** | Restricting access to certain datapoints or methods. |
+| **Class Members** | Any element inside the class definition, including both attributes (variables) and methods (functions) |
 | **Access Modifiers** | Controls where variables and methods can be accessed from. E.g. public (no underscore), and private (two underscores) |
 | **Static** | Attributes or methods that belong to the class, not the individual objects. |
 | **Static Variable** | Attribute which is shared among all objects of a class. |
