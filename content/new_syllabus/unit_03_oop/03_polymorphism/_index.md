@@ -1,12 +1,12 @@
 ---
-title: "03. Aggregation" 
+title: "03. Polymorphism" 
 bookFlatSection: false
 weight: 30
 # bookCollapseSection: true
 draft: true
 ---
 
-# Aggregation
+# Polymorphism
 
 This lab introduces a different kind of relationship between classes and operator overloading.
 
@@ -25,14 +25,16 @@ This lab introduces a different kind of relationship between classes and operato
 
 | Word | Definition |
 | :--- | :--- |
-| **Aggregation** | One object contains one or more other objects, but the other objects can exist independently *(ex. library and books, books are not dependent on the library to exist)*  |
 | **Polymorphism** | When the same method behaves differently depending on the type of object it's working with.|
+| **Aggregation** | One object contains one or more other objects, but the other objects can exist independently *(ex. library and books, books are not dependent on the library to exist)*  |
 | **Operator Overloading** | When an operator like `+` `<` `>=` behaves differently based on the types of objects it's operating on. This is an example of polymorphism. |
 
 ---
 
 
 # [0] Class Relationships
+
+
 
 {{< columns >}}
 
@@ -42,36 +44,37 @@ classDiagram
     class Card {
         - suit: str
         - rank: int
-        + \_\_init__(suit, rank)
-        + \_\_str__()
+        + __init__(suit, rank)
+        + __str__()
         + get_suit()
         + get_rank()
         + set_suit(new_suit)
         + set_rank(new_rank)
-        + \_\_eq__(other)
-        + \_\_gt__(other)
+        + _ _eq_ _(other)
+        + _ _gt_ _(other)
     }
 
 
     class Deck {
         - cards: List~Card~
-        + \_\_init__()
+        + __init__()
         + get_deck()
         + deal_card()
         + shuffle_deck()
+        + add_card(card: Card)
     }
 
 
     class Hand {
         - cards: List~Card~
         - owner: str
-        + \_\_str__()
+        + __str__()
         + get_hand()
         + add_card(card: Card)
         + count_rank()
         + sort_hand()
-        + \_\_gt__(other)
-        + \_\_eq__(other)
+        + __gt__(other)
+        + __eq__(other)
     }
 
 
@@ -79,7 +82,7 @@ classDiagram
         - deck: Deck
         - human: Hand
         - computer: Hand
-        + \_\_init__()
+        + __init__()
         + deal_cards()
         + computerTurn()
         + play()
@@ -89,8 +92,8 @@ classDiagram
 
     Card --o Hand
     Card --o Deck
-    Deck --o Blackjack
-    Hand --o Blackjack
+    Deck --* Blackjack
+    Hand --* Blackjack
    
 {{< /mermaid >}}
 
@@ -109,6 +112,8 @@ In this lab, you will make a simple version of Blackjack. For this, we use multi
 
 {{< /columns >}}
 
+
+
 ---
 
 # [1] Set up
@@ -116,12 +121,12 @@ In this lab, you will make a simple version of Blackjack. For this, we use multi
 {{< code-action "Clone your repo in the correct folder." >}} Be sure to replace `yourgithubusername` with your actual username. 
 ```shell
 cd ~/desktop/dpcs/unit03_oop
-git clone https://github.com/isf-dp-cs/lab_oop_cards_yourgithubusername
+git clone https://github.com/isf-dp-cs/lab_polymorphism_yourgithubusername
 ```
 
 {{< code-action "In the Terminal, type the following command to open the lab folder." >}}
 ```shell
-cd lab_oop_cards_yourgithubusername
+cd lab_polymorphism_yourgithubusername
 ```
 
 {{< code-action "Enter the Poetry Shell to start the lab." >}} As a reminder, we will run this command at the start of each lab, but only when we are inside a lab folder.
@@ -152,8 +157,8 @@ classDiagram
         + get_rank()
         + set_suit(new_suit)
         + set_rank(new_rank)
-        + __eq__(other)
-        + __gt__(other)
+        + _ _eq_ _(other)
+        + _ _gt_ _(other)
     }   
 {{< /mermaid >}}
 
@@ -184,18 +189,27 @@ classDiagram
         - cards: List~Card~
         + get_deck()
         + deal_card()
-      + shuffle_deck()
+        + shuffle_deck()
+        + add_card(card: Card)
+
     }
 {{< /mermaid >}}
 
 💻 **In `deck.py`, construct the following methods and test each at the bottom of the file.** Read the docstrings to ensure the method works as expected. 
-- `deal_card()` - Removes the last Card in the deck and returns it. If no Cards exist, returns None. 
+- `deal_card()` - Removes the first Card in the deck and returns it. If no Cards exist, returns None. 
     - You may use `pop()`
 - `shuffle()` - manually shuffles the deck
     - loop through every position `cards` array   
     - each time you loop, randomly generate another location in the list, `rand_idx`     
     - swap the `Card` located at `i` with the `Card` located at `rand_idx` 
+- `add_card()` - adds a `Card` to the end of the cards. 
 
+
+💻 **Be sure to test this scenario:**
+- shuffling the deck
+- dealing 3 cards 
+- shuffling the deck
+- adding the 3 cards back into the deck
 
 {{< write-action >}}
 
@@ -220,7 +234,7 @@ classDiagram
     class Hand {
         - cards: List~Card~
         - owner: str
-        + \_\_str__()
+        + __str__()
         + get_hand()
         + add_card(card: Card)
         + count_rank()
@@ -300,3 +314,11 @@ The `Blackjack` class ties all of the pieces together into a cohesive game.
 {{< /deliverables >}}
 
 
+---
+
+# [7] Extensions
+
+As you may have realized, our Blackjack game is not totally accurate to the [official rules](https://bicyclecards.com/how-to-play/blackjack). It is up to you improve the game with the following updatesand decide how to implement them: 
+- Cards with a rank of `10-13` should always score for `10`
+- The Card with a `1` rank is an Ace. It should count as `11` if the total value of the hand is equal to or less than `10`. 
+- Allow the player to play multiple rounds of Blackjack. At the end of each round, add the Cards from their Hand, back into the deck.
