@@ -1,14 +1,14 @@
 ---
 title: "03. Aggregation" 
 bookFlatSection: false
-weight: 1
+weight: 30
 # bookCollapseSection: true
 draft: true
 ---
 
 # Aggregation
 
-This lab introduces a different kind of relationship between classes.
+This lab introduces a different kind of relationship between classes and operator overloading.
 
 ---
 
@@ -17,8 +17,8 @@ This lab introduces a different kind of relationship between classes.
 - **B3.1.4** Construct code to define classes and instantiate objects.
 
 ## Syllabus Topics [HL]
+- **B3.2.2** Construct code to model polymorphism and its various forms, such as method overriding.
 - **B3.2.4** Explain the role of composition and aggregation in class relationships.
-
 
 
 ## Key Vocabulary
@@ -26,21 +26,15 @@ This lab introduces a different kind of relationship between classes.
 | Word | Definition |
 | :--- | :--- |
 | **Aggregation** | One object contains one or more other objects, but the other objects can exist independently *(ex. library and books, books are not dependent on the library to exist)*  |
-| **Overloading** | Two or more methods have the same name, different parameters and functionality.   |
-
+| **Polymorphism** | When the same method behaves differently depending on the type of object it's working with.|
+| **Operator Overloading** | When an operator like `+` `<` `>=` behaves differently based on the types of objects it's operating on. This is an example of polymorphism. |
 
 ---
 
 
 # [0] Class Relationships
 
-In this lab, you will make a simple version of Blackjack. For this, we use multiple classes. 
-- `Card()`
-- `Deck()`
-- `Hand()`
-- `Blackjack`
-
-📖 **Here is the UML diagram for the class relationships.** The unfilled diamonds represent an `aggregation` relationship. A `Deck` contains `Cards`, but `Cards` exist if the `Deck` is destroyed.
+{{< columns >}}
 
 {{< mermaid >}}
 
@@ -48,19 +42,20 @@ classDiagram
     class Card {
         - suit: str
         - rank: int
-        + __init__(suit, rank)
-        + __str__()
+        + \_\_init__(suit, rank)
+        + \_\_str__()
         + get_suit()
         + get_rank()
         + set_suit(new_suit)
         + set_rank(new_rank)
-        + __eq__(other)
-        + __gt__(other)
+        + \_\_eq__(other)
+        + \_\_gt__(other)
     }
 
 
     class Deck {
         - cards: List~Card~
+        + \_\_init__()
         + get_deck()
         + deal_card()
         + shuffle_deck()
@@ -70,13 +65,13 @@ classDiagram
     class Hand {
         - cards: List~Card~
         - owner: str
-        + __srt__
+        + \_\_str__()
         + get_hand()
         + add_card(card: Card)
         + count_rank()
         + sort_hand()
-        + __gt__(other)
-        + __eq__(other)
+        + \_\_gt__(other)
+        + \_\_eq__(other)
     }
 
 
@@ -84,7 +79,7 @@ classDiagram
         - deck: Deck
         - human: Hand
         - computer: Hand
-        + __init__()
+        + \_\_init__()
         + deal_cards()
         + computerTurn()
         + play()
@@ -99,33 +94,20 @@ classDiagram
    
 {{< /mermaid >}}
 
----
+<--->
 
-# [3] Deck
+In this lab, you will make a simple version of Blackjack. For this, we use multiple classes. 
+- `Card()`
+- `Deck()`
+- `Hand()`
+- `Blackjack`
 
-Here is the UML diagram for the `Deck` class.
-
-{{< mermaid >}}
-classDiagram
-    class Deck {
-        - cards: List~Card~
-        + get_deck()
-        + deal_card()
-        + shuffle_deck()
-    }
-{{< /mermaid >}}
-
-💻 **In `deck.py`, construct the following methods and test each at the bottom of the file.** Read the docstrings to ensure the method works as expected. 
-- `deal_card()` - Removes the last Card in the deck. Then, returns that c=Card. If no Cards exist, returns None. 
-- `shuffle()` - manually shuffles the deck
-    - loop through every position `cards` array   
-    - each time you loop, randomly generate another location in the list, `rand_idx`     
-    - swap the `Card` located at `i` with the `Card` located at `rand_idx` 
+📖 **Here is the UML diagram for the class relationships.** The unfilled diamonds represent an `aggregation` relationship. A `Deck` contains `Cards`, but `Cards` exist if the `Deck` is destroyed.
 
 
 
 
-
+{{< /columns >}}
 
 ---
 
@@ -133,7 +115,7 @@ classDiagram
 
 {{< code-action "Clone your repo in the correct folder." >}} Be sure to replace `yourgithubusername` with your actual username. 
 ```shell
-cd ~/desktop/dpcs/unit02_oop
+cd ~/desktop/dpcs/unit03_oop
 git clone https://github.com/isf-dp-cs/lab_oop_cards_yourgithubusername
 ```
 
@@ -238,7 +220,7 @@ classDiagram
     class Hand {
         - cards: List~Card~
         - owner: str
-        + __srt__
+        + \_\_str__()
         + get_hand()
         + add_card(card: Card)
         + count_rank()
@@ -297,7 +279,6 @@ The `Blackjack` class ties all of the pieces together into a cohesive game.
 - `play()` - play a round of blackjack. 
 
 💻 **Run `blackjack.py` to play the game and test as you construct each method.**
-
 
 ---
 

@@ -25,3 +25,4 @@ draft: false
 ## Class Resources 
 - [Intro Quizzes](https://docs.google.com/presentation/d/1_BBtil2oZq7xZOhnts3uXBCrZmmdaV_pJ3d0ACT4JW4/edit?usp=sharing)
 - [Summative Tips Doc](https://docs.google.com/document/d/17d-3OemFpOZ9m083nm-FPLA6xUdWmzrfumSWKpKCxHU/edit?usp=sharing)
+- [Flashcards from Mr. Shrimpton](https://quizlet.com/user/JamesShrimptonBIS/folders/ib-computer-science-2027?funnelUUID=20f5791f-4d5e-45ba-8674-5bdb1d2d25ab)
