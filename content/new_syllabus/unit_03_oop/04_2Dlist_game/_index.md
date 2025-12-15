@@ -1,7 +1,7 @@
 ---
 title: "04. 2D list game" 
 bookFlatSection: false
-weight: 1
+weight: 40
 draft: true
 ---
 
@@ -18,17 +18,15 @@ In this lab, you will make a simple version of Blackjack. For this, we use multi
 - `Hand()`
 - `Blackjack`
 
-📖 **Here is the UML diagram for the class relationships.** The unfilled diamonds represent an `aggregation` relationship. A `Deck` contains `Cards`, but `Cards` exist if the `Deck` is destroyed.
+📖 **Here is the UML diagram for the class relationships.** The filled diamonds represent an `composition` relationship. A Stack is a part of a TicTacToe and the TicTacToe cannot exist without the Stack.
 
 {{< mermaid >}}
 
 classDiagram
-  
     class Stack {
-        - \_\_stack: list
+        - stack: list
         + \_\_init__()
         + \_\_str__()
-
         + push(element)
         + pop()
         + peek()
@@ -36,9 +34,9 @@ classDiagram
     }
 
     class TicTacToe {
-        - __board: list[list[str]]
-        - __history: Stack
-        - __game_won: bool
+        - board: list[list[str]]
+        - history: Stack
+        - game_won: bool
         + \_\_init__()
         + \_\_str__()
         + fill_cell(row, col, value): none
@@ -50,8 +48,7 @@ classDiagram
         + play(): none
     }
 
-    stack ---o> TicTacToe
-   
+    Stack --* TicTacToe: part of
 {{< /mermaid >}}
 
 
@@ -102,31 +99,62 @@ classDiagram
     }  
 {{< /mermaid >}}
 
-💻 **You must construct the following methods in `TicTacToe`.**
-- `fill_cell()`
-- `check_valid_cell()`
-- `check_win()`
+💻 **You must construct the following methods in `TicTacToe`.** These are the core functionalities of the game, without considering the games logic. Do not construct the `play()` function with the game logic until the next part of the lab.
+- `fill_cell(row, col, value)`
+- `check_valid_cell(row, col)`
+- `check_win(player)`
+    - check for horizontal and both diagonal win conditions
 - `player_move()`
 - `computer_move()`
 - `undo_rounds()`
-- `play()`
 
 
-💻 **A few testing tips**
-- test each individual method, before starting the `play` 
-- `check_win()`
-    - change the board to different win conditions, so you don't have to play the game
+🤔 **As you're testing, consider what game state you need to ensure each method works.** 
 
-{{< write-action >}}
+---
 
-1) **Close your computer, take out a piece of paper, and write code to iterate through self.__board and do XYZ.** 
+## Game Loop
 
-2) Double check your handwritten code against your typed code.
+Now that you have all of the required functionalities of the game, **it is up to you determine how you would like your game loop to operate.** The only requirement is it must use all of the methods. 
 
-3) If you made mistakes, take note of them and try again.
+✏️ **Before you start coding, draw a flowchart to illustrate your game loop.** You may want to reference the textbook or inThinking to remind yourself of the flowchart requirements.
 
-{{< /write-action >}}
 
+
+💻 **Construct the code for your implementation of the game loop by following your flow chart.**
+
+{{< expand "example game loop" >}}
+```shell
+--  Play TicTacToe -- 
+
+  |   |  
+_________
+  |   |  
+_________
+  |   |  
+_________
+
+Enter cell (row,col) to fill : 0,0
+Computer placed an O at 1,2
+
+X |   |  
+_________
+  |   | O
+_________
+  |   |  
+_________
+
+How many rounds would you like to undo? 1
+  |   |  
+_________
+  |   |  
+_________
+  |   |  
+_________
+
+```
+
+{{< /expand >}}
 
 
 ---
