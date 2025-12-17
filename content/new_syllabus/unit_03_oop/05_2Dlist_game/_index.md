@@ -1,14 +1,15 @@
 ---
-title: "04. 2D list game" 
+title: "05. 2D list game" 
 bookFlatSection: false
-weight: 40
-draft: true
+weight: 50
+# draft: true
 ---
 
 # 2D list in a game: Tic Tac Toe
 
 In this lab you will create an OOP representation of Tic Tac Toe. 
 
+---
 
 # [0] Class Relationships
 
@@ -18,7 +19,7 @@ In this lab, you will make a simple version of Blackjack. For this, we use multi
 - `Hand()`
 - `Blackjack`
 
-📖 **Here is the UML diagram for the class relationships.** The filled diamonds represent an `composition` relationship. A Stack is a part of a TicTacToe and the TicTacToe cannot exist without the Stack.
+📖 **Here is the UML diagram for the class relationships.** The filled diamonds represent an `composition` relationship. A Stack is a part of a TicTacToe and the Stack cannot exist without the TicTacToe.
 
 {{< mermaid >}}
 
@@ -34,18 +35,18 @@ classDiagram
     }
 
     class TicTacToe {
-        - board: list[list[str]]
+        - board: str[][]
         - history: Stack
         - game_won: bool
         + \_\_init__()
         + \_\_str__()
-        + fill_cell(row, col, value): none
-        + check_valid_cell(row, col): bool
-        + check_win(player): bool
-        + computer_move(): none
-        + player_move(): none
-        + undo_rounds(num_rounds): none
-        + play(): none
+        + fill_cell(row, col, value) None
+        + check_valid_cell(row, col) bool
+        + check_win(player) bool
+        + computer_move() None
+        + player_move() None
+        + undo_rounds(num_rounds) None
+        + play() None
     }
 
     Stack --* TicTacToe: part of
@@ -84,18 +85,18 @@ When you want to exit the shell, you can type `exit` or `^D`
 {{< mermaid >}}
 classDiagram
     class TicTacToe {
-        - __board: list[list[str]]
+        - __board: str[][]
         - __history: Stack
         - __game_won: bool
         + \_\_init__()
         + \_\_str__()
-        + fill_cell(row, col, value): none
+        + fill_cell(row, col, value): None
         + check_valid_cell(row, col): bool
         + check_win(player): bool
-        + computer_move(): none
-        + player_move(): none
-        + undo_rounds(num_rounds): none
-        + play(): none
+        + computer_move(): None
+        + player_move(): None
+        + undo_rounds(num_rounds): None
+        + play(): None
     }  
 {{< /mermaid >}}
 
@@ -159,7 +160,7 @@ _________
 
 ---
 
-# [6] Deliverables
+# [3] Deliverables
 
 
 {{< deliverables "Once you finish the lab, be sure to complete these two steps:" >}}
