@@ -1,14 +1,15 @@
 ---
-title: "04. 2D list game" 
+title: "05. Tic Tac Toe" 
 bookFlatSection: false
-weight: 40
-draft: true
+weight: 50
+# draft: true
 ---
 
 # 2D list in a game: Tic Tac Toe
 
 In this lab you will create an OOP representation of Tic Tac Toe. 
 
+---
 
 # [0] Class Relationships
 
@@ -18,7 +19,7 @@ In this lab, you will make a simple version of Blackjack. For this, we use multi
 - `Hand()`
 - `Blackjack`
 
-📖 **Here is the UML diagram for the class relationships.** The filled diamonds represent an `composition` relationship. A Stack is a part of a TicTacToe and the TicTacToe cannot exist without the Stack.
+📖 **Here is the UML diagram for the class relationships.** The filled diamonds represent an `composition` relationship. A Stack is a part of a TicTacToe and the Stack cannot exist without the TicTacToe.
 
 {{< mermaid >}}
 
@@ -34,18 +35,18 @@ classDiagram
     }
 
     class TicTacToe {
-        - board: list[list[str]]
+        - board: str[][]
         - history: Stack
         - game_won: bool
         + \_\_init__()
         + \_\_str__()
-        + fill_cell(row, col, value): none
-        + check_valid_cell(row, col): bool
-        + check_win(player): bool
-        + computer_move(): none
-        + player_move(): none
-        + undo_rounds(num_rounds): none
-        + play(): none
+        + fill_cell(row, col, value) None
+        + check_valid_cell(row, col) bool
+        + check_win(player) bool
+        + computer_move() None
+        + player_move() None
+        + undo_rounds() None
+        + play() None
     }
 
     Stack --* TicTacToe: part of
@@ -58,7 +59,7 @@ classDiagram
 
 {{< code-action "Clone your repo in the correct folder." >}} Be sure to replace `yourgithubusername` with your actual username. 
 ```shell
-cd ~/desktop/dpcs/unit02_oop
+cd ~/desktop/dpcs/unit03_oop
 git clone https://github.com/isf-dp-cs/lab_tictactoe_yourgithubusername
 ```
 
@@ -84,19 +85,19 @@ When you want to exit the shell, you can type `exit` or `^D`
 {{< mermaid >}}
 classDiagram
     class TicTacToe {
-        - __board: list[list[str]]
-        - __history: Stack
-        - __game_won: bool
+        - board: str[][]
+        - history: Stack
+        - game_won: bool
         + \_\_init__()
         + \_\_str__()
-        + fill_cell(row, col, value): none
-        + check_valid_cell(row, col): bool
-        + check_win(player): bool
-        + computer_move(): none
-        + player_move(): none
-        + undo_rounds(num_rounds): none
-        + play(): none
-    }  
+        + fill_cell(row, col, value) None
+        + check_valid_cell(row, col) bool
+        + check_win(player) bool
+        + computer_move() None
+        + player_move() None
+        + undo_rounds() None
+        + play() None
+    } 
 {{< /mermaid >}}
 
 💻 **You must construct the following methods in `TicTacToe`.** These are the core functionalities of the game, without considering the games logic. Do not construct the `play()` function with the game logic until the next part of the lab.
@@ -144,7 +145,7 @@ _________
   |   |  
 _________
 
-How many rounds would you like to undo? 1
+Would you like to undo the last round? (y/n)? y
   |   |  
 _________
   |   |  
@@ -159,7 +160,7 @@ _________
 
 ---
 
-# [6] Deliverables
+# [3] Deliverables
 
 
 {{< deliverables "Once you finish the lab, be sure to complete these two steps:" >}}
