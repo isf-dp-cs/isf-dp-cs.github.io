@@ -1,5 +1,5 @@
 ---
-title: "05. 2D list game" 
+title: "05. Tic Tac Toe" 
 bookFlatSection: false
 weight: 50
 # draft: true
@@ -45,7 +45,7 @@ classDiagram
         + check_win(player) bool
         + computer_move() None
         + player_move() None
-        + undo_rounds(num_rounds) None
+        + undo_rounds() None
         + play() None
     }
 
@@ -59,7 +59,7 @@ classDiagram
 
 {{< code-action "Clone your repo in the correct folder." >}} Be sure to replace `yourgithubusername` with your actual username. 
 ```shell
-cd ~/desktop/dpcs/unit02_oop
+cd ~/desktop/dpcs/unit03_oop
 git clone https://github.com/isf-dp-cs/lab_tictactoe_yourgithubusername
 ```
 
@@ -85,19 +85,19 @@ When you want to exit the shell, you can type `exit` or `^D`
 {{< mermaid >}}
 classDiagram
     class TicTacToe {
-        - __board: str[][]
-        - __history: Stack
-        - __game_won: bool
+        - board: str[][]
+        - history: Stack
+        - game_won: bool
         + \_\_init__()
         + \_\_str__()
-        + fill_cell(row, col, value): None
-        + check_valid_cell(row, col): bool
-        + check_win(player): bool
-        + computer_move(): None
-        + player_move(): None
-        + undo_rounds(num_rounds): None
-        + play(): None
-    }  
+        + fill_cell(row, col, value) None
+        + check_valid_cell(row, col) bool
+        + check_win(player) bool
+        + computer_move() None
+        + player_move() None
+        + undo_rounds() None
+        + play() None
+    } 
 {{< /mermaid >}}
 
 💻 **You must construct the following methods in `TicTacToe`.** These are the core functionalities of the game, without considering the games logic. Do not construct the `play()` function with the game logic until the next part of the lab.
@@ -145,7 +145,7 @@ _________
   |   |  
 _________
 
-How many rounds would you like to undo? 1
+Would you like to undo the last round? (y/n)? y
   |   |  
 _________
   |   |  
