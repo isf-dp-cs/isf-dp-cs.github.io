@@ -290,6 +290,8 @@ This game is loosely based on the game **I 💜 Hue**
 
 As you might recall from the string manipulation/Wordle lab at the beginning of the year, you can print text with background colors. If you add this `pretty_print()` method to your linked list class, it will print each number in your linked list with its corresponding background color. 
 
+💻 **Add a `pretty_print()` to your LinkedList class.**
+
 ```python
 def pretty_print(self):
     result = ""
@@ -328,8 +330,13 @@ The **256 Background Colors** follow a simple forumula: `\u001b[48;5;` + n + `m 
 
 {{< /expand >}}
 
-💻 **Add a `pretty_print()` to your linked list. Test it out in a new file `hue.py` using this code (or your own).**
+<br>       
 
+         
+
+💻 **Create a new file `hue.py`, and test pretty_print to make sure it works as expected.**
+
+{{< expand "Example test code" "click to expand ⬇️" >}}
 ```python
 from linked_list import Linked_List
 import random
@@ -341,20 +348,77 @@ for i in range(12):
     colors.add_last(random_n) # add the color to the linked list
 colors.pretty_print()
 ```
+{{< /expand >}}
 
 ---
 
 ## Insert In Order
 
 💻 **Create a method `insert(data)` in your singly linked list which inserts a new `Node` in the correct (in order) location in the linked list.** 
+       
+{{< expand "Pseudocode for insert()" "click to expand ⬇️" >}}
+```md
+create the new_node
+
+if the list is empty
+	set head to the new node
+
+else if the head is greater than the new_node's data
+    set the new_nodes's next to the head
+    set head to the new node
+
+else:
+    initialize current_node to the head
+    loop while next isn't None and next's data is less or equal to the new_node's data
+        move the current_node to the next node
+
+    set the new_node's next to current_node's next
+    set current_node's next to the new_node
+```
+{{< /expand >}}
+
+<br>       
+
+         
 
 💻 **Then edit your `hue.py` code to use this new method.** 
+
+{{< expand "Example test code" "click to expand ⬇️" >}}
+```python
+from linked_list import Linked_List
+import random
+
+colors = Linked_List()
+
+for i in range(12):
+    random_n = random.randint(130,135) # generate the color number
+    colors.insert(random_n) # add the color to the linked list
+colors.pretty_print()
+```
+{{< /expand >}}
 
 ---
 
 ## Verify Order
 
 💻 **Create a method `in_order()` in your singly linked list which returns `True` or `False` depending on whether the numbers in the linked list are in order or not.** 
+
+{{< expand "Pseudocode for in_order() ascending" "click to expand ⬇️" >}}
+```md
+if the list is empty
+	return True
+
+else
+    initialize current_node to the head
+    loop while next isn't None
+        if the current_node's data is greater than the next nodes's data
+            return False
+        move the current_node to the next node
+
+    return True
+```
+{{< /expand >}}
+
 
 Test this out using your previous code, and see if it can correctly identify a linked list that is ordered.
 
@@ -363,6 +427,106 @@ Test this out using your previous code, and see if it can correctly identify a l
 ## Swap
 
 💻 **Create a method `swap(x,y)` in your singly linked list. It should locate the node containing the data `x` and `y`, and swap them in the linked list.** 
+
+for example:
+```shell
+ 131  132  134  133  130 
+
+ swap(132,134)
+
+130  131  132  133  134
+
+```
+
+{{< expand "Pseudocode for swap(x,y)" "click to expand ⬇️" >}}
+```md
+if x and y are the same
+	return without doing anything
+
+set x_prev variable to None (storing the node before x)
+set x_node variable to None (stores the x node)
+set y_prev variable to None (storing the node before y)
+set y_node variable to None (stores the y node)
+
+set prev variable to None
+set curr variable to the head 
+
+while curr is not None
+    if curr's data matches x
+        set x_prev to prev
+        set x_node to curr
+    if curr's data matches y
+        set y_prev to prev
+        set y_node to curr
+    
+    set prev to curr
+    set curr to curr's next
+
+if either x or y is not in the list
+    return without doing anything
+
+if x is the head
+    set the head to y_node
+else
+    set the next pointer of x_prev to y_node
+
+if y is the head
+    set the head to x_node
+else
+    set the next pointer of y_prev to x_node
+
+use a temp variable to store y_node's next
+set y_node's next to x_node's next
+set x_node's next to temp
+return
+ 
+```
+{{< /expand >}}
+
+<br>       
+
+         
+💻 **Edit your `hue.py` code to make a game that lets users continually swap the colors until it's in order.** 
+
+{{< expand "Example code for I 💜 Hue game" "click to expand ⬇️" >}}
+```python
+from linked_list import Linked_List
+from random import shuffle
+
+# set the range for the colors
+start = 130
+end = 135
+
+# generate the color numbers
+nums = []
+for i in range(start,end):
+    nums.append(i)
+
+# shuffle the color numbers
+shuffle(nums)
+
+# create the linked list for the colors
+colors = Linked_List()
+
+# add the colors to the linked list
+for num in nums:
+    colors.add_last(num) 
+
+
+while colors.is_ordered() == False:
+    colors.pretty_print()
+    try:
+        x = int(input(f"Enter a color number to swap out ({start}-{end}): "))
+        y = int(input(f"Enter a color number to swap out ({start}-{end}): "))
+        colors.swap(x, y)
+
+    except:
+        print(f"Invalid input. Please enter integers between {start} and {end}.")
+
+print("🌈 Nice! The colors are now in order")
+colors.pretty_print()
+```
+{{< /expand >}}
 
 
 ---
