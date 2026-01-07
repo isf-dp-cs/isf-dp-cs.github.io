@@ -169,6 +169,117 @@ What methods will your circular linked lists nee
 
 💻 **Create the spinning game.** 
 
+{{< expand "Example" "click to expand ⬇️" >}}
+
+```python
+from circular_linked_list import CircularLinkedList
+import random 
+from time import sleep
+import os
+import keyboard
+
+"""Create a spinning game that uses multiple linked lists to store various emojis.
+The game should allow players to trigger a random spinning, that utilizes the nature of a circular linked list
+to simulate continuous spinning. 
+"""
+
+
+def simulate_slot_machine():
+    """
+    Creates three circular linked lists (reels), fills them with emojis, 
+    simulates a spin, and returns the resulting emoji combination.
+    """
+    
+    # 1. Define the Emojis for the Reels
+    # We use different sets/orders to make the machine slightly more unpredictable.
+    all_emojis = ["🍒", "🍋", "🍊", "🍇", "🔔", "💰", "💎", "⭐"]
+    
+    # 2. Create the three Circular Linked Lists (Reels)
+    reel1 = CircularLinkedList()
+    reel2 = CircularLinkedList()
+    reel3 = CircularLinkedList()
+    
+    # Create slightly different lists for each reel by rotating the emoji list
+    emojis_r1 = all_emojis * 5  # Add a lot of items for a good simulation
+    emojis_r2 = all_emojis[2:] + all_emojis[:2] # Shifted list
+    emojis_r2 = emojis_r2 * 5
+    emojis_r3 = all_emojis[4:] + all_emojis[:4] # Another shifted list
+    emojis_r3 = emojis_r3 * 5
+    
+    # 3. Add Emojis to the Linked Lists
+    for emoji in emojis_r1:
+        reel1.append(emoji)
+    for emoji in emojis_r2:
+        reel2.append(emoji)
+    for emoji in emojis_r3:
+        reel3.append(emoji)
+
+
+    # print(f"✅ Slot Machine initialized .")
+    # os.system('clear')
+
+    one = reel1.head
+    two = reel2.head
+    three = reel3.head
+
+    try:
+        while True:
+            os.system('clear')
+            print(one.get_data(), two.get_data(), three.get_data())
+            sleep(0.1)
+
+            one = one.get_next()
+            two = two.get_next()
+            three = three.get_next()
+
+    except KeyboardInterrupt:
+        pass
+
+    for i in range(5):
+        os.system('clear')
+        print(one.get_data(), two.get_data(), three.get_data())
+        sleep(0.2)
+
+        two = two.get_next()
+        three = three.get_next()
+
+    for i in range(5):
+        os.system('clear')
+        print(one.get_data(), two.get_data(), three.get_data())
+        sleep(0.3)
+
+
+        three = three.get_next()
+
+    os.system('clear')
+    print(one.get_data(), two.get_data(), three.get_data())
+
+
+
+
+
+
+    # 4. Simulate the Spin
+    
+    # Determine a random number of steps for each reel to land on a random position.
+    # The minimum steps ensures the illusion of spinning.
+    min_steps = 10 
+    max_steps = 50 
+    
+    # Random steps for each reel
+    steps1 = random.randint(min_steps, max_steps)
+    steps2 = random.randint(min_steps, max_steps)
+    steps3 = random.randint(min_steps, max_steps)
+
+  
+
+if __name__ == '__main__':
+
+    simulate_slot_machine()
+
+```
+{{< /expand >}}
+
 ---
 
 # [4] Hue
