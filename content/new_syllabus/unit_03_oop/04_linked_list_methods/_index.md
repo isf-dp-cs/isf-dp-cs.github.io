@@ -171,8 +171,92 @@ What methods will your circular linked lists nee
 
 ---
 
+# [4] Hue
 
-# [4] Deliverables
+This game is loosely based on the game **I 💜 Hue**       
+
+## Pretty Print
+
+As you might recall from the string manipulation/Wordle lab at the beginning of the year, you can print text with background colors. If you add this `pretty_print()` method to your linked list class, it will print each number in your linked list with its corresponding background color. 
+
+```python
+def pretty_print(self):
+    result = ""
+    reset = "\u001b[0m"
+    current = self.__head
+    while current is not None:
+        n = current.get_data()
+        color = f"\u001b[48;5;{n}m {n:3} {reset}"
+        result += color
+        current = current.get_next()
+    result += "\n"
+    print(result)
+```
+
+{{< expand "More Detail on Formatting Text" "click to expand ⬇️" >}}
+
+| code                          | description                                                            |
+| ----------------------------- | ---------------------------------------------------------------------- |
+| `\u001b[48;5;` + n + `m ` | Standard background color where `n` can be a number between 0-7        |
+| `\u001b[48;5;` + n + `m ` | High intensity background color where `n` can be a number between 8-15 |
+| `\u001b[48;5;` + n + `m ` | Rainbow background color where `n` can be a number between 16-231      |
+| `\u001b[48;5;` + n + `m ` | Gray background color where `n` can be a number between 232-255        |
+
+
+
+| code        | description      |
+| ----------- | ---------------- |
+| `\u001b[0m` | Reset all styles |
+| `\u001b[1m` | Bold             |
+| `\u001b[4m` | Underline        |
+| `\u001b[7m` | Reversed         |
+
+The **256 Background Colors** follow a simple forumula: `\u001b[48;5;` + n + `m `
+
+{{< figure src="images/courses/java/ansi_colors.png" width="12%">}}
+
+{{< /expand >}}
+
+💻 **Add a `pretty_print()` to your linked list. Test it out in a new file `hue.py` using this code (or your own).**
+
+```python
+from linked_list import Linked_List
+import random
+
+colors = Linked_List()
+
+for i in range(12):
+    random_n = random.randint(130,135) # generate the color number
+    colors.add_last(random_n) # add the color to the linked list
+colors.pretty_print()
+```
+
+---
+
+## Insert In Order
+
+💻 **Create a method `insert(data)` in your singly linked list which inserts a new `Node` in the correct (in order) location in the linked list.** 
+
+💻 **Then edit your `hue.py` code to use this new method.** 
+
+---
+
+## Verify Order
+
+💻 **Create a method `in_order()` in your singly linked list which returns `True` or `False` depending on whether the numbers in the linked list are in order or not.** 
+
+Test this out using your previous code, and see if it can correctly identify a linked list that is ordered.
+
+---
+
+## Swap
+
+💻 **Create a method `swap(x,y)` in your singly linked list. It should locate the node containing the data `x` and `y`, and swap them in the linked list.** 
+
+
+---
+
+# [5] Deliverables
 
 
 {{< deliverables "Once you finish the lab, be sure to complete these two steps:" >}}
