@@ -158,4 +158,3 @@ isinstance(c, Event)  # Returns True
 
 {{< /deliverables >}}
 
-
