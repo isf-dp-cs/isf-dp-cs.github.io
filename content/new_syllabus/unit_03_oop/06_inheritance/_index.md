@@ -22,8 +22,44 @@ In this lab you will learn inheritance and create an OOP representation of an Ev
 | **Inheritance** | Where a class takes a copy of an existing class as its starting point for its attributes and methods. These can be overridden and extended upon. | 
 | **Superclass / Parent class** | The original class that sets the standard behavior in an inheritance relationship. | 
 | **Subclass / Child class** | The class that inherits attributes/methods from the superclass/parent class, and then extends it. | 
-| **super()** | Refers to the superclass/parent class of the current class, so that you ... | 
-| **Override** | ... | 
+| **super()** | Refers to the superclass/parent class of the current class. This allows you to extend or override superclass methods, while invoking the superclass's functionality. | 
+| **Override** | Changing how a method behaves, based on which kind of object it is called on. | 
+
+---
+
+## Simple Inheritance Example 
+
+Here is a simple example of a `Superclass` and a `Subclass`. Be sure to notice how `super()` is used in the `Dog` constructor and in `speak()`.
+
+```python
+class Animal:                           # Define Superclass
+    def __init__(self, name):
+        self.__name = name
+
+    def speak(self):
+        print(f"{self.__name} says hi!")
+
+class Dog(Animal):                      # Define Subclass
+    def __init__(self, name, breed):
+        super().__init__(name)          # Invoke superclass's constructor
+
+        self.__breed = breed
+
+    def speak(self):
+        super().speak()                 # Invoke the Superclass's speak method
+        print("*bark bark*")             # Extends functionality
+
+
+a = Animal('Ringo')
+a.speak()                               # "Ringo says hi!"
+isinstance(a, Animal)                   # Returns True
+
+d = Dog('Starr', 'Poodle')
+d.speak()                               # "Starr says hi! *bark bark*"
+isinstance(d, Dog)                      # Returns True
+isinstance(d, Animal)                   # Returns True
+```
+
 
 ---
 
@@ -33,12 +69,11 @@ In this lab, you will implement multiple classes for a Event Management System.
 - `Event()`
 - `Concert()`
 - `Sport()`
-- `Attendee()`
+- `Wedding()`
 - `ManagementSystem()`
 
 📖 **Here is the UML diagram for the class relationships.** 
 - The empty arrows represents an `inheritance` relationship 
-- The empty diamond represents a `composition` relationship
 - The filled diamond represents a `aggregation` relationship
 
 {{< mermaid >}}
@@ -48,32 +83,44 @@ classDiagram
         - name: str
         - date: str
         - num_attendees: int
-        - registered_attendees: list
-        + \_\_init__(name, date, num_attendees)
+        - max_attendees: int
+        + \_\_init__(name, date, max_attendees)
         + get_name()
         + get_date()
-        + num_attendees()
-        + register_attendee(name, email)
-        + get_attendees()
+        + get_num_attendees()
+        + get_max_attendees()
+        + register_attendee()
         + \_\_str__()
     }
 
     class Concert {
         - artist: str
+        - num_vips : int
+        + \_\_init__(name, date, max_attendees, artist)
         + \_\_str__()
+        + get_artist()
+        + get_num_vips()
+        + register_attendee(is_vip)
     }
 
     class Sport {
+        + seat_number: int$
         - sport: str
         - home_team: str
         - away_team: str
+        + \_\_init__(name, date, max_attendees, sport, home_team, away_team)
         + \_\_str__()
+        + register_attendee(): int
     }
 
-    class Attendee {
-        - name: str
-        - email: str
+    class Wedding {
+        - venue: str
+        - num_vegetarians: int
+        - num_omnivores: int
+        + \_\_init__(name, date, max_attendees, venue)
         + \_\_str__()
+        + get_venue()
+        + register_attendee(diet)
     }
 
     class ManagementSystem{
@@ -86,7 +133,7 @@ classDiagram
    
     Event <|-- Concert: is a
     Event <|-- Sport: is a
-    Attendee --o Event : part of
+    Event <|-- Wedding: is a
     Event --* ManagementSystem: part of
 
 
@@ -121,30 +168,35 @@ When you want to exit the shell, you can type `exit` or `^D`
 
 ---
 
-# [2] Implement the UML
+# [2] Test the Superclass and a Subclass
 
-💻 **Only parts of the UML diagram are constructed. It is up to you to construct the following classes.** Be sure to refer to the UML to ensure it is implemented as planned.
-- `Sport`
-- `Attendee`
-- `EventManagementSystem`
+💻 **Test the `Event` superclass.** 
 
-
-
-#### Inheritance Tips
-
-```python
-e = Event('Graduation', '08 May 2026', 100)
-isinstance(e, Event)  # Returns True
-
-c = Concert('LNY Concert', '01 February 2026', 50)
-isinstance(c, Concert)  # Returns True
-isinstance(c, Event)  # Returns True
-```
+💻 **Test the `Concert` subclass.**
+- understand how `super()` works.
+- test the superclass methods on a `Concert` object
 
 
 ---
 
-# [3] Deliverables
+# [3] Implement the UML
+
+💻 **Only parts of the UML diagram are constructed. It is up to you to construct the following classes.** Be sure to refer to the UML to ensure it is implemented as planned.
+
+1️⃣ `Sport`
+- `register_attendee()` - should return the `seat_number` and increase the static variable `seat_number`
+
+2️⃣ `Wedding`
+- `register_attendee()` - should increase `num_vegetarians` or `num_omnivores` based on its parameter `diet`
+
+3️⃣ `EventManagementSystem`
+
+
+
+
+---
+
+# [4] Deliverables
 
 
 {{< deliverables "Once you finish the lab, be sure to complete these two steps:" >}}
