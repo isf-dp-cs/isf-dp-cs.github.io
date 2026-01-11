@@ -20,7 +20,10 @@ In this lab you will learn inheritance and create an OOP representation of an Ev
 | Word | Definition |
 | :--- | :--- |
 | **Inheritance** | Where a class takes a copy of an existing class as its starting point for its attributes and methods. These can be overridden and extended upon. | 
-
+| **Superclass / Parent class** | The original class that sets the standard behavior in an inheritance relationship. | 
+| **Subclass / Child class** | The class that inherits attributes/methods from the superclass/parent class, and then extends it. | 
+| **super()** | Refers to the superclass/parent class of the current class, so that you ... | 
+| **Override** | ... | 
 
 ---
 
