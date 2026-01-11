@@ -39,6 +39,11 @@ class Animal:                           # Define Superclass
     def speak(self):
         print(f"{self.__name} says hi!")
 
+class Cat(Animal):                              # Define Subclass
+    def __init__(self, name, color):
+        self.__name = name
+        self.__color = color
+
 class Dog(Animal):                      # Define Subclass
     def __init__(self, name, breed):
         super().__init__(name)          # Invoke superclass's constructor
@@ -50,9 +55,18 @@ class Dog(Animal):                      # Define Subclass
         print("*bark bark*")             # Extends functionality
 
 
+#####
+
+
 a = Animal('Ringo')
 a.speak()                               # "Ringo says hi!"
 isinstance(a, Animal)                   # Returns True
+
+c = Cat('George')
+c.speak()                               # "George says hi!"
+isinstance(c, Cat)                      # Returns True
+isinstance(c, Dog)                      # Returns False
+isinstance(d, Animal)                   # Returns True
 
 d = Dog('Starr', 'Poodle')
 d.speak()                               # "Starr says hi! *bark bark*"
