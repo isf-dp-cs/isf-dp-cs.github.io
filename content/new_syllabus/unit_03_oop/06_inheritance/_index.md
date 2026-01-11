@@ -150,7 +150,6 @@ classDiagram
     Event <|-- Wedding: is a
     Event --* ManagementSystem: part of
 
-
 {{< /mermaid >}}
 
 
@@ -195,15 +194,56 @@ When you want to exit the shell, you can type `exit` or `^D`
 
 # [3] Implement the UML
 
-💻 **Only parts of the UML diagram are constructed. It is up to you to construct the following classes.** Be sure to refer to the UML to ensure it is implemented as planned.
+💻 **Only parts of the UML diagram are constructed. It is up to you to construct the following classes.** Refer to the full UML diagram in `Class Relationships` to ensure it is implemented as planned.
 
-1️⃣ `Sport`
+1️⃣ **`Sport(Event)`**
 - `register_attendee()` - should return the `seat_number` and increase the static variable `seat_number`
 
-2️⃣ `Wedding`
+
+{{< mermaid >}}
+classDiagram
+
+    class Sport {
+        + seat_number: int$
+        - sport: str
+        - home_team: str
+        - away_team: str
+        + \_\_init__(name, date, max_attendees, sport, home_team, away_team)
+        + \_\_str__()
+        + register_attendee(): int
+    }
+
+{{< /mermaid >}}
+
+2️⃣ **`Wedding(Event)`**
 - `register_attendee()` - should increase `num_vegetarians` or `num_omnivores` based on its parameter `diet`
 
-3️⃣ `EventManagementSystem`
+
+{{< mermaid >}}
+classDiagram
+    class Wedding {
+        - venue: str
+        - num_vegetarians: int
+        - num_omnivores: int
+        + \_\_init__(name, date, max_attendees, venue)
+        + \_\_str__()
+        + get_venue()
+        + register_attendee(diet)
+    }
+   {{< /mermaid >}}
+
+3️⃣ **`EventManagementSystem`**
+
+{{< mermaid >}}
+classDiagram
+    class ManagementSystem{
+        - events: list
+        + schedule_event(Event)
+        + register_attendee(event_name, attendee_name, attendee_email)
+        + display_events(event_type: Event = None)
+    }
+{{< /mermaid >}}
+
 
 
 
