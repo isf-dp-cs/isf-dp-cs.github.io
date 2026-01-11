@@ -3,12 +3,12 @@ title: "03. Polymorphism"
 bookFlatSection: false
 weight: 30
 # bookCollapseSection: true
-draft: true
+# draft: true
 ---
 
 # Polymorphism
 
-This lab introduces a different kind of relationship between classes and operator overloading.
+This lab introduces the ideas of polymorphism, operator overloading, and aggregation as a relationship between classes.
 
 ---
 
@@ -35,65 +35,64 @@ This lab introduces a different kind of relationship between classes and operato
 # [0] Class Relationships
 
 
-
 {{< columns >}}
 
 {{< mermaid >}}
 
 classDiagram
     class Card {
-        - suit: str
-        - rank: int
-        + \_\_init__(suit, rank)
-        + \_\_str__()
-        + get_suit()
-        + get_rank()
-        + set_suit(new_suit)
-        + set_rank(new_rank)
-        + _ _eq_ _(other)
-        + _ _gt_ _(other)
+        - __suit: str
+        - __rank: int
+        + \_\_init__(str, int)
+        + get_suit() str
+        + get_rank() int
+        + set_suit(str) None
+        + set_rank(int) None
+        + \_\_str__() str
+        + \_\_eq__(Card) bool
+        + \_\_gt__(Card) bool
     }
 
 
     class Deck {
-        - cards: List~Card~
+        - __cards: List~Card~
         + \_\_init__()
-        + get_deck()
-        + deal_card()
-        + shuffle_deck()
-        + add_card(card: Card)
+        + get_cards() List~Card~
+        + deal_card() Card
+        + shuffle_deck() None
+        + add_card(Card) None
     }
 
 
     class Hand {
-        - cards: List~Card~
-        - owner: str
-        + \_\_str__()
-        + get_hand()
-        + add_card(card: Card)
-        + count_rank()
-        + sort_hand()
-        + \_\_gt__(other)
-        + \_\_eq__(other)
+        - __cards: List~Card~
+        - __owner: str
+        + \_\_str__() str
+        + get_cards() List~Card~
+        + add_card(Card) None
+        + count_rank() int
+        + sort_hand() None
+        + \_\_gt__(Hand) bool
+        + \_\_eq__(Hand) bool
     }
 
 
     class Blackjack {
-        - deck: Deck
-        - human: Hand
-        - computer: Hand
+        - __deck: Deck
+        - __human: Hand
+        - __computer: Hand
         + \_\_init__()
-        + deal_cards()
-        + computerTurn()
-        + play()
-        + checkBust()
-        + determineWinner()
-    } 
+        + deal_cards() None
+        + computer_turn() None
+        + play() None
+        + check_bust(Hand) bool
+        + determine_winner() None
+    }  
 
-    Card --o Hand
-    Card --o Deck
-    Deck --* Blackjack
-    Hand --* Blackjack
+    Card --o Hand : part of
+    Card --o Deck : part of
+    Deck --* Blackjack : part of
+    Hand --* Blackjack : part of
    
 {{< /mermaid >}}
 
@@ -149,23 +148,23 @@ The `Card` class has already been constructed for you in `card.py`.
 {{< mermaid >}}
 classDiagram
     class Card {
-        - suit: str
-        - rank: int
-        + \_\_init__(suit, rank)
-        + \_\_str__()
-        + get_suit()
-        + get_rank()
-        + set_suit(new_suit)
-        + set_rank(new_rank)
-        + \_\_eq__(other)
-        + \_\_gt__(other)
-    }   
+        - __suit: str
+        - __rank: int
+        + \_\_init__(str, int)
+        + get_suit() str
+        + get_rank() int
+        + set_suit(str) None
+        + set_rank(int) None
+        + \_\_str__() str
+        + \_\_eq__(Card) bool
+        + \_\_gt__(Card) bool
+    }  
 {{< /mermaid >}}
 
-📖 **In the class, there are three examples of `overloading`.**
-- `__str__()` is called when you print an object
-- `__eq__()` is called when you compare the equivalence of two objects 
-- `__gt__` is called when you compare if an object is greater than another object
+📖 **In the class, there are three examples of `Polymorphism`.**
+- `__str__()` is called when you print an object. 
+- `__eq__()` is called when you compare the equivalence of two objects. This is an example of `operator overloading`.
+- `__gt__()` is called when you compare if an object is greater than another object. This is an example of `operator overloading`.
 
 ```python
 c1 = Card("Hearts", 5)
@@ -186,23 +185,23 @@ Here is the UML diagram for the `Deck` class.
 {{< mermaid >}}
 classDiagram
     class Deck {
-        - cards: List~Card~
-        + get_deck()
-        + deal_card()
-        + shuffle_deck()
-        + add_card(card: Card)
-
+        - __cards: List~Card~
+        + \_\_init__()
+        + get_cards() List~Card~
+        + deal_card() Card
+        + shuffle_deck() None
+        + add_card(Card) None
     }
 {{< /mermaid >}}
 
 💻 **In `deck.py`, construct the following methods and test each at the bottom of the file.** Read the docstrings to ensure the method works as expected. 
 - `deal_card()` - Removes the first Card in the deck and returns it. If no Cards exist, returns None. 
     - You may use `pop()`
-- `shuffle()` - manually shuffles the deck
+- `shuffle_deck()` - manually shuffles the deck
     - loop through every position `cards` array   
     - each time you loop, randomly generate another location in the list, `rand_idx`     
     - swap the `Card` located at `i` with the `Card` located at `rand_idx` 
-- `add_card()` - adds a `Card` to the end of the cards. 
+- `add_card()` - adds a `Card` object into the cards list. 
 
 
 💻 **Be sure to test this scenario:**
@@ -213,7 +212,7 @@ classDiagram
 
 {{< write-action >}}
 
-1) **Close your computer, take out a piece of paper, and write out the `shuffle()` method.** 
+1) **Close your computer, take out a piece of paper, and write out the `shuffle_deck()` method.** 
 
 2) Double check your handwritten code against your typed code.
 
@@ -232,15 +231,15 @@ Here is the UML diagram for the `Hand` class.
 {{< mermaid >}}
 classDiagram
     class Hand {
-        - cards: List~Card~
-        - owner: str
-        + \_\_str__()
-        + get_hand()
-        + add_card(card: Card)
-        + count_rank()
-        + sort_hand()
-        + \_\_gt__(other)
-        + \_\_eq__(other)
+        - __cards: List~Card~
+        - __owner: str
+        + \_\_str__() str
+        + get_cards() List~Card~
+        + add_card(Card) None
+        + count_rank() int
+        + sort_hand() None
+        + \_\_gt__(Hand) bool
+        + \_\_eq__(Hand) bool
     }
 {{< /mermaid >}}
 
@@ -271,24 +270,24 @@ classDiagram
 {{< mermaid >}}
 classDiagram
     class Blackjack {
-        - deck: Deck
-        - human: Hand
-        - computer: Hand
+        - __deck: Deck
+        - __human: Hand
+        - __computer: Hand
         + \_\_init__()
-        + deal_cards()
-        + computerTurn()
-        + play()
-        + checkBust()
-        + determineWinner()
+        + deal_cards() None
+        + computer_turn() None
+        + play() None
+        + check_bust(Hand) bool
+        + determine_winner() None
     } 
 {{< /mermaid >}}
 
 The `Blackjack` class ties all of the pieces together into a cohesive game. 
 
 💻 **In blackjack.py, construct each method to build a working game.** Read the docstrings to ensure the method works as expected. 
-- `deal_cards()` - deals 2 cards to the computer and the human
-- `computerTurn()` - if the computer's hand's total rank is less than 16, randomly deal up to 2 cards
-- `checkBust(player)` - check if a given player's total rank is over 21
+- `deal_cards()` - deals 2 cards each to the computer and the human
+- `computer_turn()` - if the computer's hand's total rank is less than 16, randomly deal up to 2 cards
+- `check_bust(player)` - check if a given player's total rank is over 21 and return True/False
 - `determine_winner()` - prints a message communicating if the human or computer won, including the corresponding total ranks.
 - `play()` - play a round of blackjack. 
 
@@ -316,7 +315,7 @@ The `Blackjack` class ties all of the pieces together into a cohesive game.
 
 ---
 
-# [7] Extensions
+# [7] Extension
 
 As you may have realized, our Blackjack game is not totally accurate to the [official rules](https://bicyclecards.com/how-to-play/blackjack). It is up to you improve the game with the following updatesand decide how to implement them: 
 - Cards with a rank of `10-13` should always score for `10`
