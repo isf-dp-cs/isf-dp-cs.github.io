@@ -1,5 +1,5 @@
 ---
-title: "04. Tic Tac Toe" 
+title: "05. Tic Tac Toe" 
 bookFlatSection: false
 weight: 40
 # draft: true
