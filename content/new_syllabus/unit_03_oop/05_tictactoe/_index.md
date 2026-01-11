@@ -2,7 +2,7 @@
 title: "04. Tic Tac Toe" 
 bookFlatSection: false
 weight: 40
-draft: true
+# draft: true
 ---
 
 # Tic Tac Toe
