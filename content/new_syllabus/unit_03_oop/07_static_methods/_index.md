@@ -11,7 +11,7 @@ In this lab you will learn about static methods through a Currency Conversion Sy
 
 ---
 
-## Syllabus Topics [HL]
+## Syllabus Topics [SL]
 - **B3.1.3** Distinguish between static and non-static variables and methods.
 
 ## Key Vocabulary
@@ -19,30 +19,31 @@ In this lab you will learn about static methods through a Currency Conversion Sy
 | Word | Definition |
 | :--- | :--- |
 | **Static Method** | A method that belong to the class, not the individual objects.  | 
+| **@staticmethod decorator** | Informs Python that the method is static.  | 
 
 ---
 
 # [0] Class Overview
 
-In this lab, you a class that only has `static methods` and `static attributes`: `CurrencyConverter`.
+In this lab, you will experience a class that only has `static methods` and `static attributes`: `CurrencyConverter`.
 
-**A Currency Conversion System has only static methods and static attributes because it helpful to have the functionaries grouped together in a class, but it does not require objects with unique attributes or methods.** 
+**CurrencyConversion has only static methods and static attributes. It's helpful to have the functions grouped together in a class, but it does not require objects with unique attributes or methods.** 
 
 Static methods can be called without can object, simply on the class itself. 
 
 ```python
 class CurrencyConverter:
     
-    CURRENCIES = ["HKD", "USD", "JPY", "EUR", "GBP", "THB", "KRW"]
-    RATES = [1.0, 0.13, 20.32, 0.11, 0.096, 4.02, 188.68]
+    __CURRENCIES = ["HKD", "USD", "JPY", "EUR", "GBP", "THB", "KRW"]
+    __RATES = [1.0, 0.13, 20.32, 0.11, 0.096, 4.02, 188.68]
 
     @staticmethod
     def get_rate(currency):
         """Returns the rate for the currency"""
 
-        index = CurrencyConverter.CURRENCIES.index(currency)
+        index = CurrencyConverter.__CURRENCIES.index(currency)
 
-        return CurrencyConverter.RATES[index]
+        return CurrencyConverter.__RATES[index]
 
 CurrencyConverter.get_rate("HKD")
 ```
@@ -56,14 +57,14 @@ CurrencyConverter.get_rate("HKD")
 classDiagram
     
     class CurrencyConverter {
-        +CURRENCIES : [] str$
-        +RATES : [] float$
-        +SYMBOLS: [] str$
-        +get_rate(currency)$
-        +convert(amount, from_currency, to_currency)$
-        +format(amount, currency)$
-        +change_rate(currency, new_rate)$
-        +parse_and_convert(user_input)$
+        - CURRENCIES : string[]$
+        - RATES : float[]$
+        - SYMBOLS: string[]$
+        + get_rate(string)$
+        + convert(float, string, string)$
+        + format(float, string)$
+        + change_rate(string, float)$
+        + parse_and_convert(string)$
     }
 
 {{< /mermaid >}}
@@ -120,7 +121,7 @@ When you want to exit the shell, you can type `exit` or `^D`
 
 ---
 
-# [4] Deliverables
+# [3] Deliverables
 
 
 {{< deliverables "Once you finish the lab, be sure to complete these two steps:" >}}
