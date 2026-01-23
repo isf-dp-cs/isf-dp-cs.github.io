@@ -57,14 +57,14 @@ CurrencyConverter.get_rate("HKD")
 classDiagram
     
     class CurrencyConverter {
-        - CURRENCIES : string[]$
+        - CURRENCIES : string[]$ 
         - RATES : float[]$
         - SYMBOLS: string[]$
-        + get_rate(string)$
-        + convert(float, string, string)$
-        + format(float, string)$
-        + change_rate(string, float)$
-        + parse_and_convert(string)$
+        + get_rate(string) float $ 
+        + set_rate(string, float) None$
+        + convert(float, string, string) float$
+        + format(float, string) string$
+        + parse_and_convert(string) string$
     }
 
 {{< /mermaid >}}
