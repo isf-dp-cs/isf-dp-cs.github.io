@@ -64,7 +64,7 @@ Look closely at the Lion.py file. You will notice that the def getDiet(self):is 
 
 ---
 
-# [3] Restaurant Menu
+# [3] Theme Park
 
 You have been asked to help develop a system to manage the attractions at a theme park. The system should be able to handle different types of attractions such as rides, shows, and food stalls. Each type of attraction will have specific details and restrictions that need to be managed.
 
