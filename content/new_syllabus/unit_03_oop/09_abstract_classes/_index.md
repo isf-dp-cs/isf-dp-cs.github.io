@@ -44,14 +44,17 @@ To develop an abstract class in Python you need to import ABC (abstract base cla
 
 ## Lion 
 
-When you run the program you will notice the error:
+When you run `main.py` you will notice the error:
 
+```shell
 Traceback (most recent call last):
-  File "/Multiple Class OOP/Abstract Class/Introduction to Abstract Class/main.py", line 8, in <module>
+  File "/Users/bgenzlinger/Desktop/dpcs/unit03_oop/lab_abstract_classes/zoo_example/main.py", line 8, in <module>
     myZoo.append(Lion("Lion", "Plains", "Meat", False, "Krugar"))
-TypeError: Can't instantiate abstract class Lion with abstract methods getDiet
-Look closely at the Lion.py file. You will notice that the def getDiet(self):is missing. Using this abstract class ensures that you program in all the required functionality.
+                 ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: Can't instantiate abstract class Lion without an implementation for abstract method 'getDiet'
+```
 
+Look closely at the `Lion.py` file. You will notice that the def `getDiet()`is missing. Using this abstract class ensures that you program in all the required functionality.
 
 
 💻 **Now fix the `Lion.py` file..**
