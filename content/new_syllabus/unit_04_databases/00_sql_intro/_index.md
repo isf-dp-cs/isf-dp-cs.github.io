@@ -27,9 +27,10 @@ This lab introduces Structured Query Language (SQL).
 | **Database** |an organized collection of structured information that can be accessed in different ways |
 | **Table** | a structure of rows and columns for storing a group of similar data  |
 | **Field** |the column name  |
-| **Data language types** | XXX  |
-| **Data Manipulation Language Language (DML)** | language that is used to add, modify, delete, and retrieve data stored in relational databases  |
-| **Query** | XXX  |
+| **Data Language Types** | languages used to interact with databases  |
+| **Data Definition Language (DDL)** | language that is used to create, modify, and remove data structures  from a  database  |
+| **Data Manipulation Language Language (DML)** | language that is used to add, modify, delete, and retrieve data stored in  databases  |
+| **Query** | to request information from a database |
 
 ---
 
