@@ -31,6 +31,10 @@ This lab introduces Structured Query Language (SQL).
 | **Data Definition Language (DDL)** | language that is used to create, modify, and remove data structures  from a  database  |
 | **Data Manipulation Language Language (DML)** | language that is used to add, modify, delete, and retrieve data stored in  databases  |
 | **Query** | to request information from a database |
+| **Relational Operators** | `=`, `>`, `<`, `!=`, `<=`, `>=`, `between`, `in`, `like`, `%`, `IS NULL`|
+| **Filtering** | using `WHERE` |
+| **Pattern Matching** |  using `like`, `%`, `_`|
+
 
 ---
 

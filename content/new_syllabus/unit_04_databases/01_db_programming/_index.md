@@ -1,14 +1,14 @@
 ---
-title: "01. Database Design" 
+title: "01. Database Programming" 
 bookFlatSection: false
 weight: 1
 # bookCollapseSection: true
 # draft: true
 ---
 
-# Database Design
+# Database Programming
 
-In this lab you will design and create a database. 
+In this lab you will practice SQL commands and create tables for a relational database. 
 
 ---
 ## Syllabus Topics [SL]
@@ -35,9 +35,7 @@ In this lab you will design and create a database.
 | **Schema** | architecture showing how data is organized and the relationship between data  |
 | **Conceptual Schema** | abstract model describing the structure of the data without considering how it will physically be implemented; an ERD is a conceptual schema |
 | **Logical Schema** | a detailed design of the structure of tables with fields and data types and the relationship between tables and constrains  |
-| **Data Definition Language (DDL)** | a language that is used to create, modify, and remove data structures from a relational database  |
 | **View** | a virtual table based on the result of a query |
-
 
 
 
@@ -48,23 +46,21 @@ In this lab you will design and create a database.
 {{< code-action "Download DB Browser for SQLite onto your computer:" >}} [sqlitebrowser.org/dl/](https://sqlitebrowser.org/dl/)
 
 
-{{< code-action >}} **Download `sqlite3` to run SQL commands from the command line**
+{{< code-action >}} **Download `sqlite3` to run SQL commands from the command line.** The documentation is at [sqlite.org/docs.html](https://sqlite.org/docs.html)
 
 ```shell
 brew install sqlite3
 ```
 
-{{< code-action "Go to your" >}} `dpcs` **folder** and create a new folder for this unit.
+{{< code-action "Go to your" >}} `dpcs/unit04_databases` **folder**.
 
 ```shell
-cd ~/desktop/dpcs/
-mkdir unit04_databases
-cd unit04_databases
+cd ~/desktop/dpcs/unit04_databases
 ```
 
 {{< code-action "Clone your repo. This will copy it onto your computer." >}} Be sure to replace `yourgithubusername` with your actual username. 
 ```shell
-git clone https://github.com/isf-dp-cs/lab_oop_songs_yourgithubusername
+git clone https://github.com/isf-dp-cs/lab_db_programming_yourgithubusername
 ```
 
 --- 
@@ -72,7 +68,7 @@ git clone https://github.com/isf-dp-cs/lab_oop_songs_yourgithubusername
 
 ## [1] Schema 
 
-In this lab you will create your own database.
+In this lab you will create a relational database representing sports teams and players.
 
 
 {{< columns >}}
@@ -114,15 +110,16 @@ erDiagram
     TEAM {
         int team_id PK
         char team_name
-        char coach_name
+        char sport
     }
 
     PLAYER {
         int player_id PK
         int team_id FK
-        string name
+        string first_name
+        string last_name
         char position
-        goals integer
+        games_played integer
     }
 
 {{< /mermaid >}}
@@ -131,20 +128,52 @@ erDiagram
 
 
 
+---
 
 
+## [2] Riddles Worksheet
 
 
+💻 **Open the database file in `sqlite3`**
+
+```shell
+sqlite3 database_riddles.db
+```
+
+💻 **Turn on `headers` to be able to view the columns names`**
+```shell
+.headers on
+```
+
+💻 **Turn on `column` mode to display queries in clear columns**
+
+```shell
+.mode column
+```
+
+💻 **Make queries to answer the questions on the worksheet.** Don't forget the semi-colon `;` to end each statement.
 
 
 ---
 
-## [2] Create your Database
 
-💻 **Create your database file**
+## [3] Create a Database
+
+💻 **Create a new database file**
 
 ```shell
 sqlite3 database.db
+```
+
+💻 **Turn on `headers` to be able to view the columns names`**
+```shell
+.headers on
+```
+
+💻 **Turn on `column` mode to display queries in clear columns**
+
+```shell
+.mode column
 ```
 
 💻 **Create the `teams` table.** The semicolon `;` MUST be used to denote the end of your command.
@@ -153,99 +182,91 @@ sqlite3 database.db
 create table teams(
     team_id integer primary key AUTOINCREMENT,
     team_name char,
-    coach_name char
+    sport char
 );
 ```
 
-💻 **Insert multiple records** Because the `team_id` will auto-increment, we do not need to enter it.
+💻 **Insert 5 records** Because the `team_id` will auto-increment, we do not need to enter it. You can use the `up arrow` to cycle through previous commands.
 
 ```shell
-insert into names (team_name, coach_name) values ("ISF", "Dr. Krammer");
+insert into teams (team_name, sport) values ("ISF", "Basketball");
+```
+
+💻 **Query for all records.** *Don't forget the semi-colon `;`*
+
+```shell
+select * from teams;
+```
+
+💻 **Test the query commands you learned in the last lab.** 
+```shell
+SELECT, DISTINCT, FROM, WHERE, BETWEEN, ORDER BY, GROUP BY, HAVING, ASC,
+DESC, LIKE with % wildcard, AND, OR, NOT
 ```
 
 💻 **Exit `sqlite3`**
 ```shell
-exit.
+control + c OR control + d
 ```
 
 💻 **Open the database file in `DB Browser for SQLite`.** As you try more commands, refresh your database file `(command + r)` to see the changes.
 ```shell
-open .
+open database.db
 ```
 
 ---
 
-## [3] Modify your Database
+## [4] Modify your Database
 
 
-💻 **Re-enter `sqlite3`**
+💻 **Re-enter `sqlite3` with the database file**
 ```shell
 sqlite3 database.db
-```
-
-💻 **Test the queries you learned in the last lab.** 
-```shell
-select * from names;
-
-select * from names
-where team_name like "I%";
-
-select * from names;
-order by coach_name desc
 ```
 
 💻 **Delete a record with a `where` query.** It will delete all records that match the query. Try to delete multiple rows at at time.
 
 ```shell
-delete from names 
-where team_id=12;
+delete from teams 
+where team_id=0;
 ```
 
 💻 **Update a record with a `where` query.** It will delete all records that match the query. Try to delete multiple rows at at time.
 
 ```shell
-update from names 
+update teams 
 set team_name="Hong Kong"
 where team_id=1;
 ```
 
-💻 **Test all of the commands on your database** 
 
-```shell
-# SL must know the following commands
-
-SELECT, DISTINCT, FROM, WHERE, BETWEEN, ORDER BY, GROUP BY, HAVING, ASC,
-DESC, JOIN, LIKE with % wildcard, AND, OR, NOT
-
-# HL must know the following commands
-AVERAGE, COUNT, MAX, MIN, SUM
-```
 
 ---
 
-## [4] Add the Relational Database
+## [5] Add the Relational Database
 
 💻 **Create a new table for the `players`** 
 
 ```shell
 CREATE TABLE players (
-    player_id INTEGER PRIMARY KEY autoincrement,
-    team_id INTEGER,
-    foreign key (team_id) references teams(team_id),
-    name CHAR NOT NULL,
-    position Char NOT NULL,
-    goals INTEGER DEFAULT 0,
+    player_id integer primary key autoincrement,
+    team_id integer,
+    first_name char NOT NULL,
+    last_name char NOT NULL,
+    position char NOT NULL,
+    games_played INTEGER DEFAULT 0,
+    foreign key (team_id) references teams(team_id)
 );
 ```
 
-💻 **Insert 3 records into `players`** 
+💻 **Insert 5 records into `players`** 
 
 💻 **User `JOIN` to view both of the tables combined.** 
 
 
 ---
 
-## [5] HL: Create a View
+## [6] HL: Create a View
 
 💻 **Create a new `view` based on a `SELECT` command.** You can then use the `view_name` as the `table_name` in commands.
 
@@ -256,11 +277,17 @@ select * from teams
 
 💻 **Create a new `view` with both tables combined.** 
 
+💻 **On your `view`, test all aggregation commands**
+
+```SQL
+AVERAGE, COUNT, MAX, MIN, SUM
+```
+
 
 
 ---
 
-# [2] Deliverables
+# [7] Deliverables
 
 
 {{< deliverables "Once you finish the lab, be sure to complete these two steps:" >}}
@@ -278,7 +305,5 @@ select * from teams
 
 {{< /deliverables >}}
 
-
 ---
 
-## [X] HL: Create a View
