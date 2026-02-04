@@ -43,7 +43,7 @@ In this lab you will practice SQL commands and create tables for a relational da
 
 ## [0] Setup
 
-{{< code-action "Download DB Browser for SQLite onto your computer:" >}} [sqlitebrowser.org/dl/](https://sqlitebrowser.org/dl/)
+<!-- {{< code-action "Download DB Browser for SQLite onto your computer:" >}} [sqlitebrowser.org/dl/](https://sqlitebrowser.org/dl/) -->
 
 
 {{< code-action >}} **Download `sqlite3` to run SQL commands from the command line.** The documentation is at [sqlite.org/docs.html](https://sqlite.org/docs.html)
@@ -154,6 +154,12 @@ sqlite3 database_riddles.db
 💻 **Make queries to answer the questions on the worksheet.** Don't forget the semi-colon `;` to end each statement.
 
 
+💻 **Exit `sqlite3`**
+```shell
+control + c OR control + d
+```
+
+
 ---
 
 
@@ -204,25 +210,11 @@ SELECT, DISTINCT, FROM, WHERE, BETWEEN, ORDER BY, GROUP BY, HAVING, ASC,
 DESC, LIKE with % wildcard, AND, OR, NOT
 ```
 
-💻 **Exit `sqlite3`**
-```shell
-control + c OR control + d
-```
-
-💻 **Open the database file in `DB Browser for SQLite`.** As you try more commands, refresh your database file `(command + r)` to see the changes.
-```shell
-open database.db
-```
-
 ---
 
 ## [4] Modify your Database
 
 
-💻 **Re-enter `sqlite3` with the database file**
-```shell
-sqlite3 database.db
-```
 
 💻 **Delete a record with a `where` query.** It will delete all records that match the query. Try to delete multiple rows at at time.
 
