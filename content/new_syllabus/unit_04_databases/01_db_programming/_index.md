@@ -108,17 +108,17 @@ erDiagram
     TEAM ||--|{ PLAYER: "one team has many players"
     
     TEAM {
-        int team_id PK
-        char team_name
-        char sport
+        team_id integer PK
+        team_name text
+        sport text
     }
 
     PLAYER {
-        int player_id PK
-        int team_id FK
-        string first_name
-        string last_name
-        char position
+        player_id integer PK
+        team_id integer FK
+        first_name text
+        last_name text
+        position text
         games_played integer
     }
 

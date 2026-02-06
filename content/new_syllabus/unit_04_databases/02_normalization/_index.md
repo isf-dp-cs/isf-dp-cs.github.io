@@ -21,7 +21,7 @@ In this lab you will consider how to design a database.
 | Word | Definition |
 | :--- | :--- |
 | **Normalization** | XX  |
-| **First Form (1NF)** | XX  |
+| **First Form (1NF)** | - has a primary key - includes no duplicate attributes   |
 | **Second Form (2NF)** | XX  |
 | **Second Form (3NF)** | XX  |
 | **Atomic** | XX  |
