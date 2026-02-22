@@ -3,7 +3,7 @@ title: "02 Normalization"
 bookFlatSection: false
 weight: 1
 # bookCollapseSection: true
-# draft: true
+draft: true
 ---
 
 # Database Normalization

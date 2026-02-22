@@ -52,7 +52,7 @@ SQL allows you to interact with databases that store tables of information.
 
 {{< aside "Commands you must know" >}}
 
-**SL must know the following commands**
+**SL must know the following commands.** Although `AVERAGE, COUNT, MAX, MIN, SUM` are not mentioned, they are often used in conjunction with `GROUP BY`. So, we recommend learning all of the commands. 
 
 ```SQL
 SELECT, DISTINCT, FROM, WHERE, BETWEEN, ORDER BY, GROUP BY, HAVING, ASC,
