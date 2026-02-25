@@ -85,7 +85,7 @@ When you want to exit the shell, you can type `exit` or `^D`
 
 ## [1] Riddle Schema 
 
-In this lab you will create a relational database representing sports teams and players.
+The first example is a simple database with one table. It stores Riddles.
 
 
 {{< columns >}}
