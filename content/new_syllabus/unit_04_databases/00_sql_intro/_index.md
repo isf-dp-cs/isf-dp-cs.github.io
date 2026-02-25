@@ -23,8 +23,8 @@ This lab introduces Structured Query Language (SQL).
 
 | Word | Definition |
 | :--- | :--- |
-| **SQL** |Structured Query Language |
-| **Database** |an organized collection of structured information that can be accessed in different ways |
+| **SQL** | Structured Query Language |
+| **Database** | an organized collection of structured information that can be accessed in different ways |
 | **Table** | a structure of rows and columns for storing a group of similar data  |
 | **Field** |the column name  |
 | **Data Language Types** | languages used to interact with databases  |
@@ -80,7 +80,7 @@ AVERAGE, COUNT, MAX, MIN, SUM
 
 ---
 
-# [2] Deliverables
+## [2] Deliverables
 
 
 {{< deliverables "Once you finish the lab, be sure to complete these two steps:" >}}
