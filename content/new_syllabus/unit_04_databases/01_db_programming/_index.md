@@ -388,7 +388,7 @@ CREATE TABLE players (
 💻 **Create a new `view` based on a `SELECT` command.** You can then use the `view_name` as the `table_name` in commands.
 
 ```shell
-create view view_name as
+create view b_sports as
 select sport from teams
 where sport like "%b%";
 ```
