@@ -393,7 +393,7 @@ select sport from teams
 where sport like "%b%";
 ```
 
-💻 **Create a new `view` with both tables combined.** 
+💻 **Create a new `view` with both tables combined using `JOIN`.** 
 
 💻 **On your `view`, test all aggregation commands**
 
