@@ -263,8 +263,9 @@ CREATE TABLE players (
 💻 **Create a new `view` based on a `SELECT` command.** You can then use the `view_name` as the `table_name` in commands.
 
 ```shell
-create view as view_name
-select * from teams
+create view view_name as
+select sport from teams
+where sport like "%b%";
 ```
 
 💻 **Create a new `view` with both tables combined.** 
