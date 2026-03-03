@@ -1,12 +1,26 @@
 ---
 title: "09. Abstract Classes" 
 bookFlatSection: false
-weight: 80
+weight: 70
 # draft: true
 ---
 
 # Abstract Classes
 
+---
+
+## Syllabus Topics [HL]
+- **B3.2.3**  Explain the concept of abstraction in OOP. 
+
+## Key Vocabulary
+
+| Word | Definition |
+| :--- | :--- |
+| **ABC** | Abstract Base Class. | 
+| **Abstract Class** | A class that will never be instantiated. Instead, it's designed to be inherited and provide a common interface for its subclasses. A class is considered abstract if it has any abstract methods. | 
+| **Abstract Method** | A method in an abstract class that is not implemented. It is designated with the `abstractmethod` decorator. | 
+| **Tightly coupled** | Two classes that are strongly dependent on eachother. If one class changes, the other will need to be updated too. | 
+| **Loosely coupled** | Two classes that are dependent on eachother, but not strongly. If one class changes, the other class usually won't need to be updated. | 
 
 ---
 
