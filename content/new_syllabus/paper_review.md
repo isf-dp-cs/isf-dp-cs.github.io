@@ -494,8 +494,7 @@ Award [2 max]:
 
 ---
 
-**The stack TOWNS holds several town names, and the name “Cardiff”is on the top of
-the TOWNS stack (see Figure 1a).**   
+**The stack TOWNS holds several town names, and the name “Cardiff”is on the top of the TOWNS stack.**   
 
 **An algorithm is needed that will reverse the contents of the TOWNS stack. The name
 “Geneva” should be on top of the `TOWNS` stack after reversing its contents.**
@@ -624,9 +623,11 @@ Compare and contrast the bubble sort algorithm and the selection sort algorithm.
 
 ### [B3 Object-oriented Programming]
 
-<div style="margin-left: 20px">
 
 **A car rental company has offices in cities in Spain and Portugal. It manages its cars as a large, unsorted collection of rental objects.**
+
+<div style="margin-left: 20px">
+
 
 The following UML diagram describes the current main Rental class. Fuel type and transmission type were chosen to be Boolean because they have two choices: petrol or diesel for fuel type, and manual or automatic for transmission type.
 
