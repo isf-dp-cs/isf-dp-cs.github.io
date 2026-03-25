@@ -22,7 +22,7 @@ draft: false
 
 ## Paper 1 (Theme A: Concepts of Computer Science)
 
-### [A1.2: Data representation and computer logic]
+### [A1.2 Data representation and computer logic]
 
 **IP addresses are stored 128-bit binary numbers, but are displayed to the network administrator in hexadecimal format.**
 
@@ -168,10 +168,92 @@ b) State the number of colours that can be represented in each pixel on the comp
 
 </div>
 
+---
+
+### [A3 Databases]
+
+**WineForAll is a retailer that sells wine in its stores. Each store sells wine from a number of vineyards. <br> The following extract from the Wine file contains unnormalized data.**
+
+| NameOfWine | Vineyard | Description | UnitPrice | Region | StoreID | StockQty |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| Chardonnay | Stormy Bay | 2015, Dry, 13% | $19.99 | Gisborne | 1 | 45 |
+| Sauvignon Blanc | Stormy Bay | 2017, Dry, 12% | $29.99 | Gisborne | 2 | 20 |
+| Sauvignon Blanc | Stormy Bay | 2017, Dry, 12% | $29.99 | Gisborne | 1 | 45 |
+| Pelorus | Stormy Bay | 2016, Brut, 14% | $34.99 | Gisborne | 1 | 10 |
+
+
+<div style="margin-left: 20px">
+
+(a) Define the term record. **[1]**
+
+{{< expand "Answer" >}}
+*Award [1 max].*
+
+- A record is one row in a table;
+- All of the fields relating to item of information; 
+{{< /expand >}}
+
+(b) Identify the steps to create a query to find the vineyards and names of fruity wines where the quantity in stock is between 25 and 35 bottles. **[3]**
+
+{{< expand "Answer" >}}
+Fields and Table: Vineyard and NameOfWine FROM Wine;
+Criteria: StockQty >= 25 AND StockQty <= 35; note: allow >25, <35
+Description: Fruit is extracted from the field.
+(Do not award the mark if Description = Fruity)
+
+SELECT Vineyard, NameOfWine FROM Wine
+WHERE (StockQty >= 25 AND StockQty <= 35)
+AND Description LIKE ‘*Fruity*’;
+
+*Accept other versions*
+{{< /expand >}}
+
+(c) Construct the 3rd Normal Form (3NF) of the unnormalized Wine file. **[6]**
+
+{{< expand "Answer" >}}
+*Award [6 max].*
+
+Example of solution (accept different names for tables)
+
+Vineyard (<u>Vineyard</u>, Region)
+Wine (<u>WineID</u>, Wine, Vineyard*, Year, Flavour, APV, UnitPrice)
+Stock (<u>StoreID</u>, <u>WineID</u>*, StockQty)
+
+Vineyard table e.g. Vineyard (<u>Vineyard</u>, Region)
+Award [1] for primary key. Either Vineyard or VineyardID.
+
+Wine table e.g. Wine (<u>WineID</u>, Wine, Vineyard*, Year, Flavour, APV, UnitPrice)
+Award [1] for primary key WineID or composite Wine/Vineyard
+Award [1] for identifying the foreign key (Vineyard)
+Award [1] for splitting the three description fields
+
+Stock table e.g. Stock (<u>StoreID</u>, <u>WineID</u>*, StockQty)
+Award [1] for composite key StoreID/WineID or Store/Wine/Vineyard
+Award [1] for WineID or equivalent key shown as foreign key
+
+Note: Should candidates provide other reasonable solutions, please contact your team leader.
+{{< /expand >}}
+
+(d) Outline why a single-field primary key is not always an appropriate solution for normalized databases. **[2]**
+
+{{< expand "Answer" >}}
+*Award [2 max].*
+
+- Relationship 1-1 might not exist;
+- Which means a single-field PK might not uniquely identify a record;
+So a composite key is needed made up of 2 or more fields;
+Allow any suitable example;
+{{< /expand >}}
+
+</div>
+
+
+
+---
 
 ## Paper 2 (Theme B: Computational Thinking and Problem-solving)
 
-### [B2.1: Programming fundamentals]
+### [B2.1 Programming fundamentals]
 
 **Algorithmic Design**
 
@@ -232,7 +314,7 @@ Award **\[2 max\]**
 
 ---
 
-### [B2.2: Data structures]
+### [B2.2 Data structures]
 
 
 **There are 200 students in a school. Their names are held in the one-dimensional string array `STUDENTS`. The one-dimensional integer array `MARKS` stores marks (0--100 inclusive) that students scored in an examination.**
@@ -508,7 +590,7 @@ Compare and contrast the bubble sort algorithm and the selection sort algorithm.
 
 </div>
 
-### [B3: Object-oriented Programming]
+### [B3 Object-oriented Programming]
 
 <div style="margin-left: 20px">
 
