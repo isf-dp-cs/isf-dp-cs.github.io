@@ -7,6 +7,7 @@ draft: false
 # Paper Review
 
 To prepare for your exams, we recommend...
+- review your syllabus tracker
 - create flash cards for the vocabulary
 - re-do the questions from your previous summatives
 - re-do the questions form the previous practice test 
