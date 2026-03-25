@@ -15,6 +15,38 @@ draft: false
 - review the [Summative Tips Document](https://docs.google.com/document/d/17d-3OemFpOZ9m083nm-FPLA6xUdWmzrfumSWKpKCxHU/edit?usp=sharing)
 
 
+
+**Mock Spring 2026**
+
+SL
+- Paper 1 (75m, 50 marks)
+    - A1.2 Data representation
+    - A2.4.4 Describe the process of encryption and digital certificates
+    - A3 Databases
+- Paper 2 (75, 50 marks)
+    - B1 Computational thinking
+    - B2 Programming
+    - B3 Object-oriented programming
+    
+HL
+- Paper 1 (2 hrs, 80 marks)
+    - A1.2 Data representation
+    - A1.4 Translation
+    - A2.4.4 Describe the process of encryption and digital certificates.
+    - A3 Databases
+    
+- Paper 2 (2 hrs, 80 marks)
+    - B1 Computational thinking
+    - B2 Programming
+    - B3 Object-oriented programming
+    - B4 Abstract data types
+        - except for B4.1.4 & B4.1. 6
+
+
+
+
+
+
 ---
 
 > Here are EVEN MORE example questions.
