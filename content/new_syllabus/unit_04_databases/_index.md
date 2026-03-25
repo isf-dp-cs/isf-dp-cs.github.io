@@ -21,7 +21,7 @@ bookCollapseSection: true
 - **A3.3.2** Construct queries between two tables in SQL.
 - **A3.3.3** Explain how SQL can be used to update data in a database.
 
-You can find the Database slides [HERE](https://docs.google.com/presentation/d/1m2yIp51ZOupfUQTynUNWpYMd4bpaqMepGoRRlDHu37Q/edit?usp=sharing).
+You can find the Database slides [HERE](https://docs.google.com/presentation/d/1m2yIp51ZOupfUQTynUNWpYMd4bpaqMepGoRRlDHu37Q/edit?usp=sharing). It has SL and HL content.
 
 
 
@@ -33,3 +33,6 @@ You can find the Database slides [HERE](https://docs.google.com/presentation/d/1
 - **A3.4.3** Explain the role of online analytical processing (OLAP) and data mining for business intelligence.
 - **A3.4.4** Describe the features of distributed databases.
 
+---
+
+### Summative

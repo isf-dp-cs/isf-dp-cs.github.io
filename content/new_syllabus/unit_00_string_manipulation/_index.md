@@ -23,4 +23,6 @@ bookCollapseSection: true
 * **B4.1.5**  Construct and apply sets as an ADT
 
 
-You can find the ADT slides [HERE](https://docs.google.com/presentation/d/1ZZR4d82KhO3dCL1l0HFE48EPHBQubmibxOpp-Hy0cCU/edit?usp=sharing).
+You can find the slides [HERE](https://docs.google.com/presentation/d/1v76UrWkPm2vH2_2nzIgnVBK7fp5PQxkgpKvXOnthenE/edit?usp=sharing).
+
+---

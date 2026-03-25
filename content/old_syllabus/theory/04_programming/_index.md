@@ -1023,5 +1023,3 @@ Alternate selection constructs accepted provided it leads to the correct grade a
 {{< /expand >}}
 
 ---
-
-
