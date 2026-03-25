@@ -6,8 +6,14 @@ draft: false
 
 # Paper Review
 
-Here is our [Summative Tips Document](https://docs.google.com/document/d/17d-3OemFpOZ9m083nm-FPLA6xUdWmzrfumSWKpKCxHU/edit?usp=sharing).
+To prepare for your exams, we recommend...
+- create flash cards for the vocabulary
+- re-do the questions from your previous summatives
+- re-do the questions form the previous practice test 
+- re-do the [intro quizzes](https://docs.google.com/presentation/d/1_BBtil2oZq7xZOhnts3uXBCrZmmdaV_pJ3d0ACT4JW4/edit)
+- review the [Summative Tips Document](https://docs.google.com/document/d/17d-3OemFpOZ9m083nm-FPLA6xUdWmzrfumSWKpKCxHU/edit?usp=sharing)
 
+---
 
 ## Paper 1 (Theme A: Concepts of Computer Science)
 
