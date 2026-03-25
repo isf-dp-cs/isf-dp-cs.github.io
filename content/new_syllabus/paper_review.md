@@ -20,7 +20,7 @@ draft: false
 
 SL
 - Paper 1 (75m, 50 marks)
-    - A1.2 Data representation
+    - A1.2.1 Describe the principal methods of representing data.
     - A2.4.4 Describe the process of encryption and digital certificates
     - A3 Databases
 - Paper 2 (75, 50 marks)
@@ -30,7 +30,7 @@ SL
     
 HL
 - Paper 1 (2 hrs, 80 marks)
-    - A1.2 Data representation
+    - A1.2.1 Describe the principal methods of representing data.
     - A1.4 Translation
     - A2.4.4 Describe the process of encryption and digital certificates.
     - A3 Databases
