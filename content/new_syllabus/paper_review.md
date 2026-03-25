@@ -10,10 +10,12 @@ draft: false
 - review your syllabus tracker
 - create flash cards for the vocabulary
 - re-do the questions from your previous summatives
-- re-do the questions form the previous practice test 
+- re-do the questions from the previous practice test 
 - re-do the [intro quizzes](https://docs.google.com/presentation/d/1_BBtil2oZq7xZOhnts3uXBCrZmmdaV_pJ3d0ACT4JW4/edit)
 - review the [Summative Tips Document](https://docs.google.com/document/d/17d-3OemFpOZ9m083nm-FPLA6xUdWmzrfumSWKpKCxHU/edit?usp=sharing)
-
+- CodeHs Exercises
+- InThinking Worksheets
+- Hachette Textbook (Review Questions & Exam Practice Questions) | Answers are [here](https://drive.google.com/drive/folders/1-4x9_fYH2rnm8LTWsh6PQlUmQUzTIJDj)
 
 
 **Mock Spring 2026**
