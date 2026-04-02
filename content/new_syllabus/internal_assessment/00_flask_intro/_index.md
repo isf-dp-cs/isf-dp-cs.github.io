@@ -1,5 +1,5 @@
 ---
-Title: "0 Flask Intro"
+Title: "0. Flask Intro"
 # draft: true
 
 ---
@@ -8,19 +8,18 @@ Title: "0 Flask Intro"
 
 In this lab you will be introduced to the Flask framework for making web applications. 
 
-{{< figure src="images/courses/cs10/unit02/04_riddle0.png" width="50%" >}}
+We recommend using this framework for your IA, unless you are ~80% confident in your ability in an alternative pathway.
+
+{{< figure src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Flask_logo.svg" width="30%" >}}
 
 ---
 
 ## [0] Starter Code
 
-{{< code-action "Download dbsqlite onto your computer:" >}} [https://sqlitebrowser.org/dl/](https://sqlitebrowser.org/dl/)
-> If you already have this application from Shuyuan CS, you do not need to re-download it 
-
-{{< figure src="https://sqlitebrowser.org/images/sqlitebrowser.svg" alt-text="database icon" >}}
+{{< code-action "Download dbsqlite:" >}} [sqlitebrowser.org](https://sqlitebrowser.org/dl/). We will use this application to view your database. If you already have it from Shuyuan CS, you do not need to re-download it.
 
 
-{{< code-action "Create a new folder" >}}
+{{< code-action "Then, create a new folder for this mini-unit ." >}}
 
 ```shell
 cd ~/desktop/dpcs/
@@ -55,11 +54,24 @@ code .
 - [Flask-SQLAlchemy](https://flask-sqlalchemy.readthedocs.io/en/stable/)
 - [Flask WTF](https://flask-wtf.readthedocs.io/en/1.2.x/)
 
+
+📁 **Flask File Structure Overview**
+- `app.py` - routes
+- `/templates` - HTML files
+- `/static` - CSS, JS, and images
+- `models.py`
+- `forms.py`
+- `init_db.py`
+
+
 ---
 
 ## [1] Database
 
-In this lab we will create a riddle guessing game. This is the ERD diagram. 
+**We will create a simple Web App for a riddle guessing game.** Those who took Shuyuan CS, this will seem familiar to Django but with a few differences. 
+
+
+This is the ERD diagram for a riddle. 
 
 {{< mermaid >}}
 
@@ -78,9 +90,18 @@ erDiagram
 
 {{< code-action >}} **Look at `models.py` to see the ERD represented as a model.** We are using `flask-sqlalchemy`, an ORM. 
 
+> In this example web app, we only have one table and one model, however in your IA we expect you to have multiple relationships between entities and models. 
+
 {{< code-action >}} **Let's start by making the database file by running `python init_db.py`** This file reads in the data from `riddles_data.py`. Feel free to add your own before making the database file.
 
 {{< code-action >}} **This creates a new folder `/instance` and a new file inside it `riddles.db`.** 
+
+{{< code-action >}} **Open the database file in dbsqlite:**
+```shell
+open /instance/riddles.db`
+```
+
+<br>
 
 {{< aside "Reset Database" >}}
 
@@ -103,35 +124,40 @@ python init_db.py
 
 ## [2] Learn Flask
 
-We are using Flask to create a web application. 
+When developing a web application you can view your progress by running a local server. 
 
-{{< code-action "Start the web app by running" >}}
+{{< code-action "Start the server by running" >}}
 ```shell
 python app.py
 ```
 
-{{< code-action "Then view the app on running on your local server:" >}}  [127.0.0.1:5000](http://127.0.0.1:5000)
+{{< code-action "Then view the app on running on your local server:" >}}  [127.0.0.1:5000](http://127.0.0.1:5000). 
 
+As you use the site, consider all the different components that its made up of. 
+
+
+
+---
 
 ### [Routes]
 
+Web apps are made up of a series of routes. Routes are what connect the frontend and the backend.
 
+
+**This is the route for the `index` page. The index page is the homepage.**
 ```python{linenos=table}
-@app.route("/")
+@app.route(f"/", methods=['GET'])
 def index():
-    color = get_one_color(5)
-
-    name = "stranger"
+    curr_datetime = date.today()
 
     return render_template(
-            'index.html', 
-            color=color, 
-            name = name)
+        'index.html',
+        curr_datetime = curr_datetime)
 
 ```
-> - `line 1` - defines the Route and url path
+> - `line 1` - defines the Route, url path, and HTTP method
 > - `line 2` - defines a simple function to receive a `request`, builds a `response`, and returns it
-> - `line 3` - calls a helper function to retrieve information from the database
+> - `line 3` - gets the current date
 > - `line 7` - returns an HTML file and sends data to the file
 
 --- 
@@ -139,9 +165,10 @@ def index():
 ### [Templates]
 
 ***Templates* are pieces of HTML code that can be used to build a webpage.** The
-call to `render_template()` on line 21 requests the template `templates/index.html`.
-(Every app in the project has a folder called `templates`; when you ask for a
-template, Flask searches the folder for a match). 
+call to `render_template()` on `line 5-7` in the `index()` route requests the template `templates/index.html`.
+
+Every app in the project has a folder called `templates`; when you ask for a
+template, Flask searches the folder for a match. 
 
 {{< code-action >}} **Find this template `templates/index.html` and open it.**
 
@@ -149,86 +176,92 @@ template, Flask searches the folder for a match).
 {% extends 'base.html' %}
 
 {% block content %}
+	
+  <h1>Welcome to the Riddle!</h1>
 
-  <h1> Hello {{name}}</h1>
-  {% include "swatch.html" %}
-  <a href="{{ url_for('color_random') }}">How about a random color?</a>.
-  
+  <p>It is {{curr_datetime}}</p>
+
+  <p>Play the <a href="{{ url_for('game_setup') }}">game</a></p>
+	
+
 {% endblock %}
+
 ```
-There's a lot here, so we'll just take a quick tour. This template is made up of
-HTML tags like `<h1>...</h1>` and template commands like `{% ... %}` and `{{ ...
-}}`. The HTML tags will be read by the client's browser as it presents the webpage; the template
-commands tell Flask what to do. 
-- `extends` (line 1) means this template extends another template (in this
+
+Flask uses [jinja](https://flask.palletsprojects.com/en/stable/templating/) for templates. This allows templates comands like   `{% ... %}` and `{{ ...}}`. 
+- `line 1` - `extends` means this template extends another template (in this
   case, `base.html`, which you can find in `templates/base.html`.
   Extending another template works by overriding particular *blocks*. Here, we
-  are overriding the block called `content` (lines 3-15).
-- `{{name}}` (line 5) is a placeholder which will be replaced with the variable called `name` given to the
-  template by the function `index()` (`app.py`, lines 24). 
-- `include` (line 6) means include another template. Colorama needs to show
-  color swatches all over the place, so we have a special template just for the
-  color swatch circle. 
-- `url_for` (line 9) means look up a url by name (`app`, line 26). Why not
+  are overriding the block called `content`.
+- `line 7` - `{{curr_datetime}}`  is a placeholder which will be replaced with the variable called `curr_datetime` given to the template by the function `index()` in `app.py`. 
+- `line 9`- `url_for()` means look up a url by function name in `app`. Why not
   just type in the url? If you change it later, you might forget to fix it here,
-  especially after you have a few dozen templates. And you might want to deploy
-  this site to multiple hosts, like `http://127.0.0.1:5000` while you're developing it
-  and `colorama.com` when you're ready to go public. 
+  especially after you have a few dozen templates.
+
+
+{{< code-action >}} **You can edit the styles of the site in `static/styles.css`. Take a look a make a small change.** The `/static` directory is also where any images or javascript files should be stored. 
 
 
 ---
 
 ### [Forms]
 
-**Now we're going to extend the app to let users create their own colors.** For this we use [wtfforms](https://wtforms.readthedocs.io/en/3.2.x/) and [flask-wtf](https://flask-wtf.readthedocs.io/en/1.2.x/) libraries. 
+**Forms are used anytime we want to receive data from the user.** We will use the [wtfforms](https://wtforms.readthedocs.io/en/3.2.x/) and [flask-wtf](https://flask-wtf.readthedocs.io/en/1.2.x/) libraries. Forms can also be manually written using plain HTML, but the libraries are useful for things like validation.
 
-{{< code-action >}} **Open `forms.py` and add the following class**
+{{< code-action >}} **In `forms.py` `NewRiddleForm` is one of the three forms. This one is used for users to add new riddles to the database.**
 
 ```python {linenos=table}
-class ColorForm(FlaskForm):
-    name = StringField('Color Name',validators=[DataRequired()])
-    red = IntegerRangeField('Red Value', validators=[NumberRange(min=0, max=100)], default=0)
-    green = IntegerRangeField('Green Value', validators=[NumberRange(min=0, max=100)], default=0)
-    blue = IntegerRangeField('Blue Value', validators=[NumberRange(min=0, max=100)],  default=0)
-
+class NewRiddleForm(FlaskForm):
+    question = StringField('Enter question:',validators=[DataRequired()])
+    answer = StringField('Enter answer:',validators=[DataRequired()])
+    difficulty = SelectField('Enter difficulty', choices=[('easy', 'Easy'), ('medium', 'Medium'), ('hard', 'Hard')])
     submit = SubmitField('Submit')
 ```
-> - `ColorForm` sets up a form that defines which fields are necessary and what data type the field should accept. We use `wtfforms` and `flask-wtf` to easily manage things like validators and default values. 
+> - `lines 2-4` - defines the fields, data types, and validation
+> - `line 5` - defines the submit button `
 
-{{< code-action >}} **Open `app.py` and add the following function**
+{{< code-action >}} **In `app.py` the `add_riddle()` route processes the `NewRiddleForm` form.**
 
 ```python {linenos=table}
-
-@app.route("/new", methods=['GET', 'POST'])
-def color_new():
-    form = ColorForm()
+@app.route(f"/add", methods=['GET', 'POST'])
+def add_riddle():
+    form = NewRiddleForm()
 
     if request.method == 'POST':
-        if form.validate_on_submit():
+        if form.validate_on_submit(): 
             data = form.data 
-            new_color(data)
-
-            return redirect(url_for('color_all'))
-
-    return render_template('color_form.html', form=form, heading="Add a new color!")
+           
+            new_riddle = Riddle(
+                question = data['question'],
+                answer = data['answer'],
+                difficulty = data['difficulty'])
+            
+            db.session.add(new_riddle)
+            db.session.commit()
+           
+            flash("Riddle saved")
+            return redirect(url_for("index"))
+      
+    else:
+        return render_template(
+            'add_riddle.html', 
+            form = form,
+           )
 ```
-> - `color_new()`, creates an empty `NewColorForm` (e.g.
-the name isn't filled in and the colors aren't set) and gives it to the
-template, which renders a response. The user sees a page with sliders and a
-text field to name the color. 
->   - When the user submits the form (this is a `POST`
-request because it's making a change; all the previous requests have been `GET`
-requests), `color_new()` again receives the request. This time, since it's a
-`POST` with form data (name, color values), it creates a `ColorForm`, checks to
-make sure the data is valid, and if so, creates a `Color`, saves it to the
-database, and then sends a redirect response telling the user to go to
-`/colors`. 
-> - `heading="Add a new color!"` is helpful so we can use the same form for multiple use cases, while being able to customize the heading text
+ - `line 3 & lines 19-23` - creates an empty `NewColorForm` (the fields do not have user data) and gives it to the
+template. The user sees a page with text input fields and a dropdown menu.
+ 
+ - `lines 5-17` - when the user submits the form (this is a `POST`
+request because data is being sent), `add_riddle()` again receives the request. This time, since it's a
+`POST` with form data (name, color values), it reads the form data, checks to
+make sure the data is valid, and if so, creates a `Riddle`, commits it to the
+database, and then sends a redirect response telling the user to go to `index()` route. 
 
-{{< code-action >}} **Now go to [`/new`](http://127.0.0.1:5000/new) and add a few color.** Then, go to the [`/all`](http://127.0.0.1:5000/all) page to view your newly added color with all the other colors in the database.
+---
 
+### [Expand the app]
 
-
+Now that you have a brief overview of the components of a Flask app, you will delve deeper by following along with the worksheet.
 
 {{< checkpoint >}}
 
