@@ -1,6 +1,6 @@
 ---
 title: "Resources"
-weight: 1
+weight: 60
 draft: false
 ---
 
