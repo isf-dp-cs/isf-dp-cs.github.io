@@ -27,10 +27,10 @@ mkdir ia_examples
 ```
 
 
-{{< code-action "Download your repository with starter code for your project." >}}
+{{< code-action "Clone your repository with starter code for your project." >}}
 
 ```shell
-git clone https://github.com/the-isf-academy/lab_flask_riddle_yourgithubusername
+git clone https://github.com/isf-dp-cs/lab_flask_riddle_yourgithubusername
 cd lab_flask_riddle_yourgithubusername
 ```
 

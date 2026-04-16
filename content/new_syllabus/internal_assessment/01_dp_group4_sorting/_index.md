@@ -1,12 +1,12 @@
 ---
-Title: "1. Documentation Example"
+Title: "1. DP Group 4 Sorting"
 # draft: true
 
 ---
 
-# Documentation Example
+# DP Group 4 Sorting
 
-In this lab you will be introduced to documentation required for the IA. 
+In this lab you will be introduced to documentation required for the IA by creating a DP Group 4 Science Project Student Sorting app. 
 
 This includes:
 - Criterion A: Problem specification
@@ -21,8 +21,8 @@ This includes:
 
 ```shell
 cd ~/desktop/dpcs/ia_examples
-git clone https://github.com/the-isf-academy/lab_ia_example_yourgithubusername
-cd lab_ia_example_yourgithubusername
+git clone https://github.com/isf-dp-cs/lab_group4_sorting_yourgithubusername
+cd lab_group4_sorting_yourgithubusername
 ```
 
 {{< code-action "Install requirements" >}}
@@ -44,7 +44,7 @@ code .
 
 ## [1] Create a mini-IA
 
-{{< code-action "Open the example documentation doc:" >}} [here](https://docs.google.com/document/d/1I4mLtBr3_OpKsST_lRJpwiyyPSn4m1okorD567DszQo/edit?usp=sharing). 
+{{< code-action "Open the example documentation doc:" >}} [here](https://docs.google.com/document/d/1HrReEbhIgxcnaIShSutnKonD1LYEf8_HUdR1fl66o5U/edit?usp=sharing). 
 
 In this lab, it is up to you to follow the documentation and create a fully working web application that satisfying the success criteria. 
 
