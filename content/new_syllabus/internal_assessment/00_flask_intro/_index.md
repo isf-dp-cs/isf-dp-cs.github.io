@@ -24,6 +24,7 @@ We recommend using this framework for your IA, unless you are ~80% confident in 
 ```shell
 cd ~/desktop/dpcs/
 mkdir ia_examples
+cd ia_examples
 ```
 
 
@@ -98,7 +99,7 @@ erDiagram
 
 {{< code-action >}} **Open the database file in dbsqlite:**
 ```shell
-open /instance/riddles.db`
+open /instance/riddles.db
 ```
 
 <br>
