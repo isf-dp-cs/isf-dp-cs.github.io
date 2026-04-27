@@ -22,3 +22,13 @@ The IA task requires the student to identify a problem of their own choosing and
 
 
 A good rule of thumb is asking yourself the question, **"Am I 80% confident I can build it?"**. If you are over 80%, it is too easy. If you are less than 40% it is too difficult given the timeframe. It should be a reasonable stretch given the content of the course. 
+
+You can find the slides [HERE](https://docs.google.com/presentation/d/1HyDsGsUjjWwYDEknemgwktf4udmFc4LWp9uNtjNAiY0/edit?usp=sharing).
+
+## Deadlines 
+
+For each deadline, you will be expected to upload your planning document to Moodle or push updates to Github.
+
+| Due Date | What's Due |
+| -------- | -------- |
+| 11 May | Draft of Criteria A |
