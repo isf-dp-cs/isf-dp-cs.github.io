@@ -1,6 +1,6 @@
 ---
 Title: "1. DP Group 4 Sorting"
-draft: true
+# draft: true
 
 ---
 
@@ -49,9 +49,42 @@ code .
 In this lab, it is up to you to follow the documentation and create a fully working web application that satisfying the success criteria. 
 
 
-{{< code-action "Referencing the documentation, create a fully working web application that solves the diverse, randomize DP Group 4 project problem." >}}
+{{< code-action "Referencing the documentation, create a fully working web application that solves the diverse, randomize DP Group 4 project problem." >}} We have provided the outline of the file structure and helper functions for the diversity algorithms. 
+
+The goal of this lab is to get more familiar with flask and the expectations of the IA. The goal is NOT to 100% replicate this application in a class. We recommend spending an hour of extra practice and coming to next class with questions.
 
 
+---
+
+### [Querying in SQLAlchemy]
+
+There are two ways to query. One is through a series of functions like you saw in `lab_flask_intro`. Another way is through writing full SQL queries like you're used it. 
+- [sqlalchemy orm guide](https://docs.sqlalchemy.org/en/20/orm/queryguide/index.html)
+
+```Python
+from models import db, Student 
+db.init_app(app)
+
+# Example 1: SQLAlchemy functions
+one_student = db.session.query(Student).where(Student.id==1).one()
+one_student.id  # access any field via it's name
+
+all_students = db.session.query(Student).all()
+
+
+# Example 2: SQL Queries
+one_student =  db.session.execute(text("Select * from student where id=1")).one() # returns tuple
+one_student[0] # access fields by index 
+
+# or convert it to a dictionary with ._mapping
+one_student = one_student._mapping
+one_student['id']
+
+all_students = db.session.execute(text("Select * from student")).all() # returns list of tuples
+
+
+
+```
 
 ---
 
@@ -59,7 +92,7 @@ In this lab, it is up to you to follow the documentation and create a fully work
 
 {{< deliverables >}}
 {{< code-action "Push your work to Github:" >}}
-- `git status`
+- `git status`  
 - `git add -A`
 - `git status`
 - `git commit -m "your message goes here"`
