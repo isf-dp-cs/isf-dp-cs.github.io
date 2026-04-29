@@ -31,4 +31,4 @@ For each deadline, you will be expected to upload your planning document to Mood
 
 | Due Date | What's Due |
 | -------- | -------- |
-| 11 May | Draft of Criteria A |
+| 14 May | Draft of Criteria A |
