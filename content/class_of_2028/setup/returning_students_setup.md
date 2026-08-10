@@ -31,34 +31,6 @@ xcode-select: error: command line tools are already installed, use "Software Upd
 
 ---
 
-## Install Latest Version of Python
-
-(0) **Start by installing the latest version of Python.** [Open this link](https://www.python.org/downloads/), click "Download Python," and follow the installation instructions.
-
-
-(1) **Once the installation finishes, you will see a Finder window showing what was installed**.
-(If you closed the window, open Finder, click on "Applications," and then "Python 3.13" (or whatever version of Python you just installed).
-
-
-(2) **Check Python installed successfully by typing `python3 --version` into the Terminal.** You should see the version number `3.13`.
-
-(3) **Double-click on "Install Certificates.command".** This will will open a Terminal window and run a bunch of commands. Once you see `[Process completed]`, you may close the window.
-
-(4) **Double-click on "Update Shell Profile.command".** Each of these will open a Terminal window and run a bunch of commands. Once you see `[Process completed]`, you may close the window.
-
-[Here is a video that walks you through the steps.](https://youtu.be/OiCiOgeyaWA)
-
-
-{{< aside >}}
-**If you see a red "Permission denied" error message when running "Install Certificates.command"**:
-- open a Terminal window and run **`sudo "/Applications/Python 3.13/Install Certificates.command"`**
-- You will be asked for an administrator password; you won't see any letters appearing as you enter the password. This is a security feature.
-{{</ aside >}}
-
-<!-- {{< youtube "OiCiOgeyaWA" >}} -->
-
----
-
 ## Update Homebrew
 *Homebrew helps you install different libraries and packages*
 
@@ -93,11 +65,6 @@ poetry self add poetry-plugin-shell
 ---
 
 ## Github Setup 
-
-{{< code-action "Add a shortcut command to easily open Github" >}} 
-```shell
-echo 'alias remote="open \"\$(git remote get-url origin | sed \"s/\.git\$//\")\""' >> ~/.zshrc
-```
 
 {{< code-action "Upgrade gh " >}} 
 ```shell

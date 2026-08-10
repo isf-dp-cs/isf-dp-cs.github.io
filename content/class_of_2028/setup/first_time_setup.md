@@ -98,10 +98,15 @@ xcode-select: error: command line tools are already installed, use "Software Upd
 
 <!-- {{< youtube "OiCiOgeyaWA" >}} -->
 
+*Close the Terminal window.*
+
 ---
 
 ## Installing Homebrew
 *Homebrew helps you install different libraries and packages*
+
+
+{{< code-action "Open a new Terminal window." >}} 
 
 {{< code-action "Run the below command to install homebrew." >}} This will install homebrew onto your computer. This may take up to an hour to complete. Don't worry, you can still use your computer and have it running in the background. If you already have homebrew, then this step will be quick.
 > *You may want to follow along with [this youtube video](https://www.youtube.com/watch?v=IWJKRmFLn-g) (watch 1:30 - 3:00)*
@@ -136,11 +141,17 @@ echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile
 eval "$(/opt/homebrew/bin/brew shellenv)"
 ```
 
+{{< code-action "Close the Terminal window." >}} 
+
+
 ---
 
 
 ## Installing Poetry
 *Poetry makes sure your coding environment is set up to work for all your coding projects*
+
+{{< code-action "Open a new Terminal window." >}} 
+
 
 {{< code-action "Run the below command to install Pipx with Brew." >}} You MUST install `pipx` after installing `homebrew`. 
 ```shell
@@ -219,6 +230,8 @@ gh auth login
 ```shell
 echo 'alias remote="open \"\$(git remote get-url origin | sed \"s/\.git\$//\")\""' >> ~/.zshrc
 ```
+
+
 
 ---
 
