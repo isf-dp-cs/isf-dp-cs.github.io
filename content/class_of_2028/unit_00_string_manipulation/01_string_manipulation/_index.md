@@ -320,21 +320,21 @@ print(yellow_bg + "the sun is yellow" + reset)
 
 **📋 Update Syllabus Tracker**  
 
->These are the topics covered in this lab:
->
->* **B2.1.2** Construct programs that can extract and manipulate substrings.
->* **B2.3.2** Construct programs utilizing appropriate selection structures.
->* **B2.3.3** Construct programs that utilize looping structures to perform repeated actions.
->
->Go to your **CS Syllabus Content Checklist [class of 2028]** in your Google Drive and update it accordingly.
+These are the topics covered in this lab:
+
+* **B2.1.2** Construct programs that can extract and manipulate substrings.
+* **B2.3.2** Construct programs utilizing appropriate selection structures.
+* **B2.3.3** Construct programs that utilize looping structures to perform repeated actions.
+
+Go to your **CS Syllabus Content Checklist [class of 2028]** in your Google Drive and update it accordingly.
 
 {{< code-action "Push your work to Github" >}}
->- git status
->- git add -A
->- git status
->- git commit -m \"describe your code here\"   
->- git push
->- git remote
+- git status
+- git add -A
+- git status
+- git commit -m \"describe your code here\"   
+- git push
+- git remote
 
 {{< /deliverables >}}
 

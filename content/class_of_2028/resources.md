@@ -11,11 +11,11 @@ draft: false
 - [Join SL](https://moodle.isf.edu.hk/mod/url/view.php?id=40035)
 - [Join HL](https://moodle.isf.edu.hk/mod/url/view.php?id=40036) -->
 
-<!-- ## Join InThinking
+## Join InThinking
 
 - [Join SL](https://student.thinkib.net/group/ABDGLNR)
 - [Join HL](https://student.thinkib.net/group/BEJLPQ2)
-- [Access InThinking](https://student.thinkib.net/computerscience) -->
+- [Access InThinking](https://student.thinkib.net/computerscience)
 
 ## IB Guides
 
