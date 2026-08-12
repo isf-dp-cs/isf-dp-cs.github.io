@@ -326,7 +326,7 @@ print(yellow_bg + "the sun is yellow" + reset)
 >* **B2.3.2** Construct programs utilizing appropriate selection structures.
 >* **B2.3.3** Construct programs that utilize looping structures to perform repeated actions.
 >
->Go to your **Syllabus Content Checklist** in your Google Drive and update it accordingly.
+>Go to your **CS Syllabus Content Checklist [class of 2028]** in your Google Drive and update it accordingly.
 
 {{< code-action "Push your work to Github" >}}
 >- git status

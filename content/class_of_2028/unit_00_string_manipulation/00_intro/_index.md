@@ -551,3 +551,22 @@ Hello World!
 
 
 Loops are incredibly useful for increasing the readability and efficency of your code. 
+
+
+
+---
+
+## [7] Deliverables
+
+
+{{< deliverables "Once you complete the lab, be sure to complete these two steps:" >}}
+
+{{< code-action "Push your work to Github" >}}
+- git status
+- git add -A
+- git status
+- git commit -m \"briefly describe your additions and changes here\"   
+- git push
+- git remote
+
+{{< /deliverables >}}

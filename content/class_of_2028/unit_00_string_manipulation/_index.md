@@ -18,9 +18,12 @@ bookCollapseSection: true
 * **B2.3.2** Construct programs utilizing appropriate selection structures.
 * **B2.3.3** Construct programs that utilize looping structures to perform repeated actions.
 
+You can find the SL slides [HERE](https://docs.google.com/presentation/d/1v76UrWkPm2vH2_2nzIgnVBK7fp5PQxkgpKvXOnthenE/edit?slide=id.g37997736ff5_1_23#slide=id.g37997736ff5_1_23).
+
+
 ### Syllabus Topics [HL]
-* **B4.1.1** Explain the core principles of ADTs
-* **B4.1.5**  Construct and apply sets as an ADT
+- **B4.1.1** Explain the core principles of ADTs
+- **B4.1.5**  Construct and apply sets as an ADT
+- **B4.1.6** Explain the core principles of ADTs. (HL only)
 
-
-You can find the slides [HERE]().
+You can find the HL slides [HERE](https://docs.google.com/presentation/d/1ZZR4d82KhO3dCL1l0HFE48EPHBQubmibxOpp-Hy0cCU/edit?usp=sharing).
