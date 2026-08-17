@@ -6,18 +6,49 @@ weight: 4
 draft: true
 ---
 
+<style>
+    /* Fix equal column widths or target specific columns */
+table {
+  width: 100%;
+  padding: 0px;
+}
+
+table tbody tr td{
+  padding: 0px;
+  margin: 0px;
+  height: 0px;
+}
+
+img{
+  padding: 0px;
+  margin: 0px;
+}
+
+
+th:nth-child(1) { width: 20%; padding: 0px;} /* Symbol Name */
+th:nth-child(2) { width: 20%; } /* Shape */
+th:nth-child(3) { width: 60%; } /* Purpose and Rules */
+
+
+</style>
+
+
+
 # Wordle 
 
-In this project, you will experience the IB IA structure and develop the code for a game based on the NYT Wordle.
+In this lab, you will be introduced to computational thinking and develop the code for a game based on the NYT Wordle.
 
 {{< figure src="images/courses/string_manipulation/wordle_icon.png" width="20%">}}
 
 ---
 ### Syllabus Topics [SL]
-* **B1.1.4** Trace flowcharts for a range of programming algorithms.
+- **B1.1.1** Construct a problem specification.
+- **B1.1.2** Describe the fundamental concepts of computational thinking.
+- **B1.1.3** Explain how applying computational thinking to fundamental concepts is used to approach and solve problems in computer science.
+- **B1.1.4** Trace flowcharts for a range of programming algorithms.
 
 ### Syllabus Topics [HL]
-* **B4.1.1** Explain the core principles of ADTs
+- **B4.1.1** Explain the core principles of ADTs
 
 
 ---
@@ -33,18 +64,18 @@ cd ~/desktop/dpcs/unit00_strings/
 
 {{< code-action "Clone your repo. This will copy it onto your computer." >}}  
 ```shell
-git clone https://github.com/isf-dp-cs/project_wordle_yourGithubUsername
+git clone https://github.com/isf-dp-cs/lab_wordle_yourGithubUsername
 ```
 > Below you'll see that the `git clone` command has a `yourGithubUsername`. 
 >
 > **You need to replace this with your username**
 >
-> *e.g. `https://github.com/isf-dp-cs/project_wordle_emmaqbrown`*
+> *e.g. `https://github.com/isf-dp-cs/lab_wordle_emmaqbrown`*
 
 
 {{< code-action "In the Terminal, type the following command to open the lab folder." >}}
 ```shell
-cd project_wordle_yourGithubUsername
+cd lab_wordle_yourGithubUsername
 ```
 
 {{< code-action "Enter the Poetry Shell to start the lab." >}} As a reminder, we will run this command at the start of each lab, but only when we are inside a lab folder.
@@ -59,62 +90,30 @@ When you want to exit the shell, you can type `exit` or `^D`
 
 ---
 
-# [1] Criteria A: Problem Specification
+# [1] Problem Specification
 
-The Problem Specification is where you outline the description of your problem and how the product will address it. 
+The Problem Specification is where you outline the description of your problem and how the product will address it. This includes the:
+- problem scenario: description of problem
+- success criteria: measurable outcomes of the solution requirement
 
-In this lab we will focus on the Success Criteria. The Success Criteria measuare outcomes of the solution requirement.
-
-{{< checkpoint  >}}
-
-**👀 Open the `Wordle IA` document in your Google Drive and review the Sucess Criteria.**
-
-{{< /checkpoint>}}
+📖 **Read [this story](https://www.bbc.com/news/articles/c2k3vz48qq7o) to consider the problem specification for Wordle.**
 
 ---
 
-# [2] Criteria C: System Overview
+# [2] System Overview: Flow Chart
 
-The System Overview should enable another developer to recreate the product. It should include system models, algorithms, and a testing strategy. 
-
-## Flowchart
+✏️ **Sketch a flowchart for the Wordle gameplay.** Ensure it completes each success criteria and utilizes the correct symbols.
 
 
-👀 **First, let's consider the game logic by looking at the flow chart.**
 
-{{< figure src="images/courses/string_manipulation/wordle_flowchart.png" width="75%">}}
-
-
-## Psuedocode for the color formatting
-
-You may noticed the logic for the `process guess and format color` does not include details. This is becuase, sometimes psueodocode is better suited for communicating an algorithm. 
-
-{{< checkpoint  >}}
-
-**✏️ In the Criteria C Pseudocode section  `World IA` document, write psueodocde for processing the guess and formatting the color.**
-
-{{< /checkpoint>}}
-
-
-<!-- {{< expand "Solution" >}}
-
-
-```python
-loop each letter in guess by index
-	Set guess_letter to input_word[i]
-	Set bg_color to no_bg
-
-	If guess_letter matches secret_word at same position:
-		Set bg_color to green_bg
-
-	Else:
-		For each letter in secret_word (by index j):
-			If guess_letter matches secret_word[j]:
-				Set bg_color to yellow_bg
-
-	Append bg_color + guess_letter + no_bg to word_feedback
-```
-{{< /expand >}} -->
+| Symbol Name | Shape | Purpose and Rules |
+| :--- | :--- | :--- |
+| **Start/End** | {{< figure src="https://teacher-sites-storage.inthinking.net/ib/computerscience/2025/theme-b-computational-thinking/b1-computational-thinking/b1.1-approaches-to-computational-thinking/startstop.png" width="100%">}} | Marks where the algorithm begins or terminates. Every flowchart has exactly one Start and one End. |
+| **Process / Operation** |  {{< figure src="https://teacher-sites-storage.inthinking.net/ib/computerscience/2025/theme-b-computational-thinking/b1-computational-thinking/b1.1-approaches-to-computational-thinking/process.png" width="100%">}} | Represents any action performed by the algorithm: a calculation, an assignment of a value to a variable, or any other operation. |
+| **Decision** |  {{< figure src="https://teacher-sites-storage.inthinking.net/ib/computerscience/2025/theme-b-computational-thinking/b1-computational-thinking/b1.1-approaches-to-computational-thinking/decision.png" width="100%">}} | Represents a condition that evaluates to true or false (yes or no). The flow branches into two paths depending on the result. |
+| **Input / Output** |  {{< figure src="https://teacher-sites-storage.inthinking.net/ib/computerscience/2025/theme-b-computational-thinking/b1-computational-thinking/b1.1-approaches-to-computational-thinking/inputoutput.png" width="100%">}} | Represents data entering the system (user input) or data leaving the system (displayed output or printed results). |
+| **Flowline** |  {{< figure src="https://teacher-sites-storage.inthinking.net/ib/computerscience/2025/theme-b-computational-thinking/b1-computational-thinking/b1.1-approaches-to-computational-thinking/flowline.png" width="100%">}} | Indicates the direction of flow between symbols. Every symbol is connected by at least one flowline; arrows must be labelled Yes/No on Decision branches. |
+| **Connector** |  {{< figure src="https://teacher-sites-storage.inthinking.net/ib/computerscience/2025/theme-b-computational-thinking/b1-computational-thinking/b1.1-approaches-to-computational-thinking/connector.png" width="%">}} | Used to connect sections of a flowchart that are on separate pages, or to avoid crossing flow lines. Contains a matching letter or number at each end of the connection. |
 
 
 ---
@@ -123,101 +122,25 @@ loop each letter in guess by index
 
 Development is where you actually create the product. You must justify your Success Criteria and demonstrate your ability to pass the tests outlined in the Testing Strategy.
 
-{{< aside "Choose your own adventure" >}} 
+{{< aside >}}
 
-💻 **Follow along coding each success criteria.**
+💻 **Construct code to complete each success criteria.**
 
-It is your goal to complete as many success claims as you can. Test each one before moving onto the next.
+0. The solution word is chosen randomly from a list of words
+0. User can input their guess and has exactly 5 possible attempts
+0. Each guess will output with color formatting to display if the letter is correct, incorrect, or in the incorrect position. 
+
 {{< /aside >}}
 
-## Success Criteria 1: User Input
 
-**Success Criteria:** The game allows the user to input guess
-
-
-
-
-<!-- {{< expand "Solution" >}}
-```python
-from list_of_words import five_letter_words
-
-solution_word = five_letter_words[0]
-
-won = False 
-while won == False:
-	guess = input("Enter a guess: ")
-
-```
-{{< /expand >}} -->
-
-## Success Criteria 2: Correct User Guess 
-
-**Sucess Criteria:** The game provides output and the game stops if the user has successfully guessed the word
-
-{{< code-action "Edit the loop so that if the user guesses correctly, it will end early.">}}
-
-
-<!-- {{< expand "Solution" >}}
-
-```python
-from list_of_words import five_letter_words
-
-solution_word = five_letter_words[0]
-
-won = False 
-while won == False:
-	guess = input("Enter a guess: ")
-
-	if guess == solution_word:
-		won = True
-		print("You correctly guessed the word!")
-
-```
-{{< /expand >}} -->
-
-## Success Criteria 3: Guess Limit
-
-Right now, the user can guess infinitely. However, if they guess correctly, the loop should end early. 
-
-**Succes Criteria:** The game ends if the user guesses 6 times and outputs the correct word 
-
-
-<!-- {{< expand "Tip" >}}
-
-```python 
-attempts = 0
-
-while attempts < 7:
-	guess = input("Enter a guess: ")
-
-	attempts = attemps + 1
-
-```
-{{< /expand >}} -->
-
-## Success Criteria 4: Random Word
-
-**Success Criteria:** The game randomly selects a word from a list of possible words  
-
-
-{{< expand "Tip" >}}
-```python
-from word_list import words
-import random
-
-solution_word = words[random.randint(0,len(words))]
-```
-{{< /expand >}}
-
-## Success Criteria 5: Color Feedback
+## Color Feedback
 
 A big part of `Wordle` is the feedback from the game. After each guess, the user is shown their guess, and each letter is highlighted according to these rules:
 
-- **GRAY backround**: guess letters not included in the word 
-- **YELLOW backround**: guess letters in the wrong location
-- **GREEN backround**: guess letters in the correct location
+- **GRAY backround**: incorrect letter not included in the word 
+- **YELLOW backround**: correct letter in the wrong position
+- **GREEN backround**: correct letter in the correct location
 
-{{< code-action "Each time the user guesses a word, print the word in the terminal, formatted with background colors.">}}
 
 Here are some ANSI codes for you to use:
 ```java
@@ -226,16 +149,6 @@ String yellow = "\u001b[43;1m";
 String green = "\u001b[42;1m";
 String reset = "\u001b[0m";
 ```
-
-<!-- {{< expand "Solution" >}}
-
-
-{{< /expand >}} -->
-
-## Success Criteria 6: Error Handling
-
-**Sucess Criteria:** The game includes error handling if the user input contains too few or too many letters 
-
 
 ---
 
@@ -259,20 +172,6 @@ String reset = "\u001b[0m";
 - git remote
 
 {{< /deliverables >}}
-
----
-
-# [4] Criteria E: Evaluation
-
-The evaluatioin of the product must evaluate if the Success Criteria were met and consider future improvements to the product. 
-
-
-{{< checkpoint  >}}
-
-**✏️ Fill out Criteria E on your document**
-
-{{< /checkpoint>}}
-
 
 
 ---
