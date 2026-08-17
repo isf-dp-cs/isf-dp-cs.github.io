@@ -342,7 +342,7 @@ Go to your **CS Syllabus Content Checklist [class of 2028]** in your Google Driv
 
 ---
 
-## [4] Extension
+## [4] Extensions
 
 ### Print Vertical
 
@@ -374,3 +374,23 @@ n   t.
 
 
 
+### Find & Replace
+
+{{< code-action >}} **In a new file `replace.py`, construct code that takes finds all occurrences of a substring within a string and replaces it with a new string**
+
+
+It should work for words. 
+```shell
+Enter a string: A quick brown fox jumps over a brown dog.
+Enter substring to find: brown
+Enter string to replace: pink 
+Output: A quick pink fox jumps over a pink dog.
+```
+
+And for letters.
+```shell
+Enter a string: boop bool oop
+Enter substring to find: oop
+Enter string to replace: ee 
+Output: beep beel eep
+```
