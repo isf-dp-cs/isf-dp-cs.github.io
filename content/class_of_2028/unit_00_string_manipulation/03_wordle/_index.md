@@ -126,9 +126,11 @@ Development is where you actually create the product. You must justify your Succ
 
 💻 **Construct code to complete each success criteria.**
 
-0. The solution word is chosen randomly from a list of words
-0. User can input their guess and has exactly 5 possible attempts
-0. Each guess will output with color formatting to display if the letter is correct, incorrect, or in the incorrect position. 
+0. Each time the user plays the game, the solution word is chosen randomly from a list of words
+0. User can input their five letter guess and is limited to six attempts
+0. When the user has exceeded six guesses, the game will end and output the solution word
+0. After the user guesses, their guess will output with color formatting to display if each letter is correct, incorrect, or in the incorrect position. 
+0. Error handling ensures the user inputs a guess of the correct length and contains only letters
 
 {{< /aside >}}
 
@@ -142,7 +144,7 @@ A big part of `Wordle` is the feedback from the game. After each guess, the user
 - **GREEN backround**: correct letter in the correct location
 
 
-Here are some ANSI codes for you to use:
+Here are some ANSI codes for you to use. They are also in the `worldle.py` file:
 ```java
 String gray = "\u001b[47;1m";
 String yellow = "\u001b[43;1m";
