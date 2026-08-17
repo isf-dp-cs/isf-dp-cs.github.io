@@ -390,7 +390,7 @@ Output: A quick pink fox jumps over a pink dog.
 And for letters.
 ```shell
 Enter a string: boop bool oop
-Enter substring to find: oop
+Enter substring to find: oo
 Enter string to replace: ee 
 Output: beep beel eep
 ```
