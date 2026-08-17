@@ -334,7 +334,8 @@ Go to your **CS Syllabus Content Checklist [class of 2028]** in your Google Driv
 - git status
 - git commit -m \"describe your code here\"   
 - git push
-- git remote
+- remote
+  - *check if your push is on Github*
 
 {{< /deliverables >}}
 
