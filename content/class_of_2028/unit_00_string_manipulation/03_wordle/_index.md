@@ -3,21 +3,36 @@ title: "03. Wordle"
 bookFlatSection: false
 weight: 4
 # bookCollapseSection: true
-# draft: true
+draft: true
 ---
 
 <style>
     /* Fix equal column widths or target specific columns */
 table {
-  table-layout: fixed;
   width: 100%;
+  padding: 0px;
 }
 
-th:nth-child(1) { width: 20%; } /* Symbol Name */
+table tbody tr td{
+  padding: 0px;
+  margin: 0px;
+  height: 0px;
+}
+
+img{
+  padding: 0px;
+  margin: 0px;
+}
+
+
+th:nth-child(1) { width: 20%; padding: 0px;} /* Symbol Name */
 th:nth-child(2) { width: 20%; } /* Shape */
 th:nth-child(3) { width: 60%; } /* Purpose and Rules */
 
+
 </style>
+
+
 
 # Wordle 
 
