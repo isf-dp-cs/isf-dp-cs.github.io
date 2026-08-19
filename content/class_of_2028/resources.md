@@ -23,7 +23,8 @@ draft: false
 - [Glossary of Command Terms](https://drive.google.com/file/d/1eIbekAKzZFSbecOu1OGrwpNNSzH2wSrq/view?usp=sharing)
 
 ## Class Resources 
-- [Intro Quizzes](https://docs.google.com/presentation/d/1B5ptYTYRiK3WzUk3jVallfsBiejt4uvpLRnFsnWpuNU/edit?usp=sharing)
+- [Intro Quizzes SL](https://docs.google.com/presentation/d/1B5ptYTYRiK3WzUk3jVallfsBiejt4uvpLRnFsnWpuNU/edit?usp=sharing)
+- [Intro Quizzes HL](https://docs.google.com/presentation/d/1emKxkngM9Y9GWVJB2lo5xBYG6p0kIvuTytohS79mY2I/edit?usp=sharing)
 - [Summative Tips Doc](https://docs.google.com/document/d/17d-3OemFpOZ9m083nm-FPLA6xUdWmzrfumSWKpKCxHU/edit?usp=sharing)
 
 ## Outside Resources
