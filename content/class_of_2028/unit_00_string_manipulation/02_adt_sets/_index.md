@@ -3,7 +3,7 @@ title: "02. ADT: Sets"
 bookFlatSection: false
 weight: 2
 # bookCollapseSection: true
-draft: true
+# draft: true
 ---
 
 # ADT: Sets
@@ -12,6 +12,7 @@ In this lab we are going to introduce Abstract Data Types (ADTs), and specifical
 
 ---
 ## Syllabus Topics [HL]
+- **B4.1.1** Explain the properties and purpose of ADTs in programming.
 * **B4.1.5**  Construct and apply sets as an ADT
 
 ## Key Vocabulary
