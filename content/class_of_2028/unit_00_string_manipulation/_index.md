@@ -26,4 +26,4 @@ You can find the SL slides [HERE](https://docs.google.com/presentation/d/1v76UrW
 - **B4.1.5**  Construct and apply sets as an ADT
 - **B4.1.6** Explain the core principles of ADTs. (HL only)
 
-You can find the HL slides [HERE](https://docs.google.com/presentation/d/1ZZR4d82KhO3dCL1l0HFE48EPHBQubmibxOpp-Hy0cCU/edit?usp=sharing).
+You can find the HL slides [HERE](https://docs.google.com/presentation/d/13RQ4jsV2CiYCqxY6FLwjVFZoCTm1jirG9XgcTKBQJQA/edit?usp=sharing).
