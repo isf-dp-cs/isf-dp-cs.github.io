@@ -104,14 +104,10 @@ The Problem Specification is where you outline the description of your problem a
 
 ✏️ **Sketch a flowchart for the Wordle gameplay.** Ensure it completes each success criteria and utilizes the correct symbols.
 
-| Symbol Name | Shape | Purpose and Rules |
-| :--- | :--- | :--- |
-| **Start/End** | {{< figure src="<https://teacher-sites-storage.inthinking.net/ib/computerscience/2025/theme-b-computational-thinking/b1-computational-thinking/b1.1-approaches-to-computational-thinking/startstop.png>" width="100%">}} | Marks where the algorithm begins or terminates. Every flowchart has exactly one Start and one End. |
-| **Process / Operation** | {{< figure src="<https://teacher-sites-storage.inthinking.net/ib/computerscience/2025/theme-b-computational-thinking/b1-computational-thinking/b1.1-approaches-to-computational-thinking/process.png>" width="100%">}} | Represents any action performed by the algorithm: a calculation, an assignment of a value to a variable, or any other operation. |
-| **Decision** | {{< figure src="<https://teacher-sites-storage.inthinking.net/ib/computerscience/2025/theme-b-computational-thinking/b1-computational-thinking/b1.1-approaches-to-computational-thinking/decision.png>" width="100%">}} | Represents a condition that evaluates to true or false (yes or no). The flow branches into two paths depending on the result. |
-| **Input / Output** | {{< figure src="<https://teacher-sites-storage.inthinking.net/ib/computerscience/2025/theme-b-computational-thinking/b1-computational-thinking/b1.1-approaches-to-computational-thinking/inputoutput.png>" width="100%">}} | Represents data entering the system (user input) or data leaving the system (displayed output or printed results). |
-| **Flowline** | {{< figure src="<https://teacher-sites-storage.inthinking.net/ib/computerscience/2025/theme-b-computational-thinking/b1-computational-thinking/b1.1-approaches-to-computational-thinking/flowline.png>" width="100%">}} | Indicates the direction of flow between symbols. Every symbol is connected by at least one flowline; arrows must be labelled Yes/No on Decision branches. |
-| **Connector** | {{< figure src="<https://teacher-sites-storage.inthinking.net/ib/computerscience/2025/theme-b-computational-thinking/b1-computational-thinking/b1.1-approaches-to-computational-thinking/connector.png>" width="%">}} | Used to connect sections of a flowchart that are on separate pages, or to avoid crossing flow lines. Contains a matching letter or number at each end of the connection. |
+{{< figure src="images/courses/string_manipulation/floarchart_symbols_inthinking.png" width="75%">}}
+
+*Source: Inthinking eBook*
+
 
 ---
 
