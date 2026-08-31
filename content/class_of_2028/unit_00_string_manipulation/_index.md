@@ -2,7 +2,7 @@
 title: "Unit 00: String Manipulation"
 weight: 10
 # bookFlatSection: false 
-# bookCollapseSection: true 
+bookCollapseSection: true 
 # draft: true
 # headless: true
 
