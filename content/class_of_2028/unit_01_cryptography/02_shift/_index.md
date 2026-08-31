@@ -1,7 +1,7 @@
 ---
-title: "1. Shift Ciphers"
+title: "2. Shift Ciphers"
 bookFlatSection: false
-weight: 20
+weight: 30
 # bookCollapseSection: true
 draft: true
 ---
@@ -24,6 +24,7 @@ In this lab you will continue to practice functions and are introduced to modulo
 | **Encryption Key** | A string of characters or numbers used by an encryption algorithm to encode or decode data.|
 | **Modulo** | An operation that returns the remainder of a division. |
 | **Path** | Location of a file  |
+
 ---
 
 # [0] Set up
@@ -53,68 +54,7 @@ poetry shell
 When you want to exit the shell, you can type `exit` or `^D`
 {{< /aside >}}
 
----
 
-
-
-# [1] File Handling 
-
-In this lab you will use file handling techniques to encrypt and decrypt large text files. 
-
-
-📖 **To read a whole file**
-```python
-file = open('example.txt', 'r')
-file.read()
-file.close()
-```
-- `open()` - opens a file in a specific mode, if the file does not exisit it creates a new file
-- `'example.txt'` is the name of the file you want to open or create 
-- `'r'` represents the mode. important modes to remember are:
-    - `'r'` - read the text
-    - `'w'` - write over existing text 
-    - `'a'` - append text to the end of the file
-- `read()` - returns all text in the file
-- `close()` - closes the file
-
-📖 **To read a single line**
-```python
-file = open('example.txt', 'r')
-file.readline()
-file.close()
-```
-
-
-📖 **To read a file line-by-line**
-```python
-file = open('example.txt', 'r')
-for line in file:
-    print(line)
-file.close()
-```
-
-
-
-📖 **To add to an existing file**
-```python
-file = open('log.txt', 'a')
-file.write('A new entry. \n')
-file.close()
-```
-
-📖 **To write to a new file**
-```python
-file = open('new_document.txt', 'w')
-file.write('Hello world')
-file.close()
-```
-
-💻 **Open `file_handling.py` and construct code to perform the following actions.** 
-
-0) Open `song.txt`, read the file, and print the text
-0) Append the last line of the song. Be sure it is appended on the next line. 
-    - last line: `You're my soda pop, gotta drink every drop`
-0) Create a new file `capitalized_song.txt` with lyrics of the song in all capital letters
 
 
 ---
