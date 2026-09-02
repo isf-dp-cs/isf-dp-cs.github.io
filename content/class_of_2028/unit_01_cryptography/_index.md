@@ -28,7 +28,7 @@ You can find the Cryptography slides [HERE](https://docs.google.com/presentation
 - **B2.4.5** Construct and trace recursive algorithms in a programming language.
 - **A1.4.1** Evaluate the translation processes of interpreters and compilers. 
 
-You can find the Recursion slides [HERE](https://docs.google.com/presentation/d/1gF57VfRIdCDxXDaU7pbWXUmQGfX2ktP_eusX5GqUul0/edit?usp=sharing).
+You can find the Recursion slides [HERE](https://docs.google.com/presentation/d/1qE3q-bE8L0PrNM01qXFRpcjrLGim-vc4kANn0BPn8VY/edit?usp=sharing).
 
 <!-- You can find the Translation slides [HERE](https://docs.google.com/presentation/d/12zcLk90MWckJHf8mw49vKYYOwmFNlAbw8IdcWt0eztM/edit?usp=sharing). -->
 
