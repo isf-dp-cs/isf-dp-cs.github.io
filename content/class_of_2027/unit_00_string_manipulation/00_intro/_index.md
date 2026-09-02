@@ -413,7 +413,8 @@ code guessing_game.py
 {{< code-action "Fix the game so the loop ends once the user guesses the correct number. It should also tell the user if their guess is too high or too low." >}}
 
 
-{{< figure src="images/courses/cs9/unit00/05_while_guessing_game.drawio.png" width=50% alt-text="bubble tea flow chart" >}}
+{{< figure img-class="blackBackground" src="images/courses/cs9/unit00/05_while_guessing_game.drawio_black.png" width=60% alt-text="bubble tea flow chart" >}}
+{{< figure img-class="transparentBackground" src="images/courses/cs9/unit00/05_while_guessing_game.drawio.png" width=50% alt-text="bubble tea flow chart" >}}
 
 
 👾 **The final game should like something like this:**
