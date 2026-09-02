@@ -77,3 +77,24 @@ h2{
 .book-section-flat li{
     margin-left: 10px;
 }
+
+:root {
+      img {
+    &.blackBackground {
+      display: none;
+    }
+    &.transparentBackground {
+      display: block;
+    }
+  }
+}
+[saved-theme="dark"] {
+  img {
+    &.blackBackground {
+      display: block;
+    }
+    &.transparentBackground {
+      display: none;
+    }
+  }
+}

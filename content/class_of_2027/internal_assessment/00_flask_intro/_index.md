@@ -10,7 +10,7 @@ In this lab you will be introduced to the Flask framework for making web applica
 
 We recommend using this framework for your IA, unless you are ~80% confident in your ability in an alternative pathway.
 
-{{< figure src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Flask_logo.svg" width="30%" >}}
+{{< figure src="images/courses/java/Flask_icon.png" width="30%" >}}
 
 ---
 
