@@ -1,20 +1,23 @@
 ---
-title: "2. Shift Ciphers"
+title: "2. Encryption"
 bookFlatSection: false
 weight: 30
 # bookCollapseSection: true
-draft: true
+# draft: true
 ---
 
-# Shift Ciphers 
+# Encryption
 
 In this lab you will continue to practice functions and are introduced to modulo and file handling.
 
-{{< figure src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Caesar_cipher_left_shift_of_3.svg/1200px-Caesar_cipher_left_shift_of_3.svg.png" width="50%">}}
+{{< figure src="https://gkaccess.com/wp-content/uploads/2020/01/Caesar_Cipher_GateKeeper_security_compliance_proximity_authentication_2fa_mfa-768x803.jpg" width="25%">}}
+
 
 ---
 ## Syllabus Topics [SL]
+* **B2.1.3** Describe how programs use common exception handling techniques.
 * **B2.5.1** Construct code to perform file-processing operations.
+* **A2.4.4** Describe the process of encryption and digital certificates.
 
 ## Key Vocabulary
 
@@ -22,8 +25,11 @@ In this lab you will continue to practice functions and are introduced to modulo
 | :--- | :--- |
 | **Encryption** | Converting plain text into a secure format, cipher text, that cannot be easily understood by unauthorized people. |
 | **Encryption Key** | A string of characters or numbers used by an encryption algorithm to encode or decode data.|
-| **Modulo** | An operation that returns the remainder of a division. |
-| **Path** | Location of a file  |
+| **Exception** | An event that interrupts the execution of a program |
+| **ValueError** | An exception that occurs when a function receives an argument of the correct type but with an invalid value (e.g., converting "abc" to an integer). |
+| **ZeroDivisionError** | An exception that occurs when you attempt to divide a number by zero.|
+| **NameError** | An exception that occurs when you use a variable or function name that has not been defined |
+| **FileNotFoundError** | An exception that occurs when a file or directory is requested but cannot be found  |
 
 ---
 
@@ -38,10 +44,10 @@ cd ~/desktop/dpcs/unit01_cryptography/
 
 {{< code-action "Clone your repo and go into the directory." >}} Be sure to replace `yourGithubUsername` with your actual username. 
 ```shell
-git clone https://github.com/isf-dp-cs/lab_shift_ciphers_yourGithubUsername
+git clone https://github.com/isf-dp-cs/lab_encryption_yourGithubUsername
 ```
 ```shell
-cd lab_shift_ciphers_yourGithubUsername
+cd lab_encryption_yourGithubUsername
 ```
 
 
@@ -56,18 +62,37 @@ When you want to exit the shell, you can type `exit` or `^D`
 
 
 
+---
+
+# [2] Symmetric Cryptography: Atbash Cipher
+
+The **atbash cipher** is a simple cipher where each letter in the alphabet is reversed. `A = Z`, `B = Y`, and so forth. 
+
+💻 **In `atbash_cipher.py`, construct the function `atbash()` to encrypt or decrypt a message that has been encrypted by the atbash cipher.**
 
 ---
 
-# [2] Modulo
+
+# [3] Symmetric Cryptography: Caesar Cipher
+
+The **caesar cipher** is a type of symmetric cryptography used by ancient Romans. It takes a message, the `plain text` and transforms it by `shifting` each letter by a set value, the `encryption key`. 
+
+For example imagine that the alphabet is shifted by 3.
+
+| A | `B` | C | D | `E` | F | `G` | H | I | J | K | L | M | N | O | P | Q | R | S | T | U | V | W | X | Y | Z | 
+ | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | 
+| D | `E` | F | G | `H` | I | `J` | K | L | M | N | O | P | Q | R | S | T | U | V | W | X | Y | Z | A | B | C |
 
 
-Python has many operators that allow you to perform calculations with values. You've probably
-seen and used the basic ones like `+`(add), `-` (subtract), `*` (multiply), and `/` (divide).
+The plain text `"beg"` with the encryption key `3`, becomes `"ehj"`.
+- `b` shifts by 3, becoming `e`
+- `e` shifts by 3, becoming `h`
+- `g` shifts by 3, becoming `j`
 
-However, Python has other operators that can be really helpful.
 
-One such operator is **the modulo operator** (`%`). This operator **takes two values, divides them, and returns the remainder of the division.**
+{{< expand "How to use modulo" >}}
+
+**The modulo operator** (`%`). This operator **takes two values, divides them, and returns the remainder of the division.**
 > For example:
 >
 > 5/2 has a remainder of 1
@@ -89,24 +114,7 @@ print(3%4)
 >> 3
 ```
 
-
----
-
-# [3] Caesar Cipher
-
-The caesar cipher is a type of substitution cipher used by ancient Romans. It takes a message, the `plain text` and transforms it by `shifting` each letter by a set value, the `encryption key`. 
-
-For example imagine that the alphabet is shifted by 3.
-
-| A | `B` | C | D | `E` | F | `G` | H | I | J | K | L | M | N | O | P | Q | R | S | T | U | V | W | X | Y | Z | 
- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | 
-| D | `E` | F | G | `H` | I | `J` | K | L | M | N | O | P | Q | R | S | T | U | V | W | X | Y | Z | A | B | C |
-
-
-The plain text `"beg"` with the encryption key `3`, becomes `"ehj"`.
-- `b` shifts by 3, becoming `e`
-- `e` shifts by 3, becoming `h`
-- `g` shifts by 3, becoming `j`
+{{< /expand >}}
 
 
 💻 **In `caesar_cipher.py`, construct the function `decrypt_caesar_cipher()` to decrypt a message that has been encrypted by a caesar cipher.** 
@@ -117,7 +125,14 @@ The plain text `"beg"` with the encryption key `3`, becomes `"ehj"`.
 
 ✅ **Check your work by opening the created file and ensuring it makes sense as English text.** *Do you recogonize the text?*
 
-{{< expand "Solution" >}}
+{{< aside >}}
+
+Incorporate [exception handling](https://www.geeksforgeeks.org/python/python-exception-handling/) into your program by ensuring it doesn't crash if the file does not exist.
+
+{{< /aside >}}
+
+
+<!-- {{< expand "Solution" >}}
 
 ```python
 def decrypt_caesar_cipher(plain_text, encryption_key): 
@@ -140,11 +155,31 @@ def decrypt_caesar_cipher(plain_text, encryption_key):
     return new_text
 ```
 
-{{< /expand >}}
+{{< /expand >}} -->
+
+--- 
+
+# [5] Deliverables
+
+{{< deliverables "Once you complete the lab, be sure to complete these two steps:" >}}
+
+✏️ **Go to your **Syllabus Content Checklist** in your Google Drive and update it accordingly.**
+
+{{< code-action "Push your work to Github" >}}
+- git status
+- git add -A
+- git status
+- git commit -m \"describe your code here\"   
+- git push
+- git remote
+
+{{< /deliverables >}}
 
 ---
 
-# [4] Vigenere Cipher
+# Extension
+
+## Vigenere Cipher
 
 The Vigenere cipher is another substitution cipher. It takes a message, the `plain text` and transforms it by shifting each letter by a set value according to a repeating `encryption key`. Unlike the caesar cipher, the encryption key is a `string`. 
 
@@ -174,7 +209,7 @@ Therefore, we will shift our letters by 1 and 5, in an alternating pattern. For 
 ✅ **Check your work by opening the created file and ensuring it makes sense as English text.** *Do you recogonize the text?*
 
 
-{{< expand "Solution" >}}
+<!-- {{< expand "Solution" >}}
 
 ```python
 def decrypt_vigenere_cipher(plain_text, encryption_key): 
@@ -209,23 +244,4 @@ def decrypt_vigenere_cipher(plain_text, encryption_key):
     return new_text
 ```
 
-{{< /expand >}}
-
---- 
-
-# [5] Deliverables
-
-{{< deliverables "Once you complete the lab, be sure to complete these two steps:" >}}
-
-✏️ **Go to your **Syllabus Content Checklist** in your Google Drive and update it accordingly.**
-
-{{< code-action "Push your work to Github" >}}
-- git status
-- git add -A
-- git status
-- git commit -m \"describe your code here\"   
-- git push
-- git remote
-
-{{< /deliverables >}}
-
+{{< /expand >}} -->

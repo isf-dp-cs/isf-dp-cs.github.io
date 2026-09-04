@@ -12,7 +12,6 @@ weight: 20
 ---
 ## Syllabus Topics [SL]
 * **B2.5.1** Construct code to perform file-processing operations.
-* **B2.1.3** Describe how programs use common exception handling techniques.
 
 
 
@@ -21,13 +20,9 @@ weight: 20
 | Word | Definition |
 | :--- | :--- |
 | **Path** | Location of a file  |
-| **Exception** | Less severe problem that occurs at runtime and can be managed using exception handling (e.g., invalid input, missing files) |
-| **ValueError** | An exception that occurs when a function receives an argument of the correct type but with an invalid value (e.g., converting "abc" to an integer). |
-| **ZeroDivisionError** | An exception that occurs when you attempt to divide a number by zero.|
-| **NameError** | An exception that occurs when you use a variable or function name that has not been defined |
-| **FileNotFoundError** | An exception that occurs when a file or directory is requested but cannot be found  |
 | **Boolean Operators** | Symbols used for performing arithmetic on the values `True` and `False`. Includes `AND` `OR` `NOT`|
 | **Relational Operators** | Symbols used for comparing values. Includes `<`, `<=`, `>`, `>=`, `==`, `!=`. |
+| **Modulo** | An operation that returns the remainder of a division. |
 
 ---
 
