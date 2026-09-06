@@ -8,7 +8,7 @@ weight: 30
 
 # Encryption
 
-In this lab you will continue to practice functions and are introduced to modulo and file handling.
+In this lab you will continue to practice functions and are introduced to encryption.
 
 {{< figure src="https://gkaccess.com/wp-content/uploads/2020/01/Caesar_Cipher_GateKeeper_security_compliance_proximity_authentication_2fa_mfa-768x803.jpg" width="25%">}}
 
