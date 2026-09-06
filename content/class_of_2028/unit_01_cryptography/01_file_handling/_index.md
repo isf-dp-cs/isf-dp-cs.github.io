@@ -220,7 +220,7 @@ It should look something like
 - git status
 - git commit -m \"describe your code here\"   
 - git push
-- git remote
+- remote
 
 {{< /deliverables >}}
 

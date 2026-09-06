@@ -171,7 +171,7 @@ def decrypt_caesar_cipher(plain_text, encryption_key):
 - git status
 - git commit -m \"describe your code here\"   
 - git push
-- git remote
+- remote
 
 {{< /deliverables >}}
 
