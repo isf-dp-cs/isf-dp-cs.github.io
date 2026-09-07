@@ -25,11 +25,9 @@ In this lab you will continue to practice functions and are introduced to encryp
 | :--- | :--- |
 | **Encryption** | Converting plain text into a secure format, cipher text, that cannot be easily understood by unauthorized people. |
 | **Encryption Key** | A string of characters or numbers used by an encryption algorithm to encode or decode data.|
+| **Symmetric Cryptography** | The same key is used to encrypt and decrypt data |
+| **Asymmetric Cryptography** | The public key is used to encrypt and the private key is used to decrypt data |
 | **Exception** | An event that interrupts the execution of a program |
-| **ValueError** | An exception that occurs when a function receives an argument of the correct type but with an invalid value (e.g., converting "abc" to an integer). |
-| **ZeroDivisionError** | An exception that occurs when you attempt to divide a number by zero.|
-| **NameError** | An exception that occurs when you use a variable or function name that has not been defined |
-| **FileNotFoundError** | An exception that occurs when a file or directory is requested but cannot be found  |
 
 ---
 
@@ -64,24 +62,28 @@ When you want to exit the shell, you can type `exit` or `^D`
 
 ---
 
-# [2] Symmetric Cryptography: Atbash Cipher
+# [1] Symmetric Cryptography
+
+Symmetric cryptography is when the same key is used to encrypt and decrypt the data.
+
+{{< figure src="https://blog.cfte.education/wp-content/uploads/2023/03/Symmetric-key-cryptography-1024x576.png" width="50%">}}
+
+
+
+## Atbash Cipher
 
 The **atbash cipher** is a simple cipher where each letter in the alphabet is reversed. `A = Z`, `B = Y`, and so forth. 
 
+![atbash cipher](image-1.png)
+
 💻 **In `atbash_cipher.py`, construct the function `atbash()` to encrypt or decrypt a message that has been encrypted by the atbash cipher.**
 
----
 
-
-# [3] Symmetric Cryptography: Caesar Cipher
+## Caesar Cipher
 
 The **caesar cipher** is a type of symmetric cryptography used by ancient Romans. It takes a message, the `plain text` and transforms it by `shifting` each letter by a set value, the `encryption key`. 
 
-For example imagine that the alphabet is shifted by 3.
-
-| A | `B` | C | D | `E` | F | `G` | H | I | J | K | L | M | N | O | P | Q | R | S | T | U | V | W | X | Y | Z | 
- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | 
-| D | `E` | F | G | `H` | I | `J` | K | L | M | N | O | P | Q | R | S | T | U | V | W | X | Y | Z | A | B | C |
+{{< figure src="https://media.geeksforgeeks.org/wp-content/uploads/ceaserCipher.png" width="50%">}}
 
 
 The plain text `"beg"` with the encryption key `3`, becomes `"ehj"`.
@@ -129,6 +131,8 @@ print(3%4)
 
 Incorporate [exception handling](https://www.geeksforgeeks.org/python/python-exception-handling/) into your program by ensuring it doesn't crash if the file does not exist.
 
+Be sure to include `try`, `except`, and `finally`. 
+
 {{< /aside >}}
 
 
@@ -159,7 +163,7 @@ def decrypt_caesar_cipher(plain_text, encryption_key):
 
 --- 
 
-# [5] Deliverables
+# [2] Deliverables
 
 {{< deliverables "Once you complete the lab, be sure to complete these two steps:" >}}
 
@@ -177,11 +181,13 @@ def decrypt_caesar_cipher(plain_text, encryption_key):
 
 ---
 
-# Extension
-
-## Vigenere Cipher
+# [3] Extension: Vigenere Cipher
 
 The Vigenere cipher is another substitution cipher. It takes a message, the `plain text` and transforms it by shifting each letter by a set value according to a repeating `encryption key`. Unlike the caesar cipher, the encryption key is a `string`. 
+
+
+{{< figure src="https://i.redd.it/2979d0n3rgjf1.jpeg" width="50%">}}
+
 
 **For example, imagine that encryption key is `'be'`.**  
 
