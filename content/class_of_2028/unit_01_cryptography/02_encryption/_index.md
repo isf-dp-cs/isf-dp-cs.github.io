@@ -66,7 +66,6 @@ When you want to exit the shell, you can type `exit` or `^D`
 
 Symmetric cryptography is when the same key is used to encrypt and decrypt the data.
 
-{{< figure src="https://blog.cfte.education/wp-content/uploads/2023/03/Symmetric-key-cryptography-1024x576.png" width="50%">}}
 
 
 
@@ -74,7 +73,11 @@ Symmetric cryptography is when the same key is used to encrypt and decrypt the d
 
 The **atbash cipher** is a simple cipher where each letter in the alphabet is reversed. `A = Z`, `B = Y`, and so forth. 
 
-![atbash cipher](image-1.png)
+
+{{< figure src="https://www.geeksforgeeks.org/dsa/implementing-atbash-cipher/" width="50%">}}
+
+
+
 
 💻 **In `atbash_cipher.py`, construct the function `atbash()` to encrypt or decrypt a message that has been encrypted by the atbash cipher.**
 
