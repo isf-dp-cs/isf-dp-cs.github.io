@@ -79,7 +79,7 @@ h2{
 }
 
 :root {
-      img {
+  img {
     &.blackBackground {
       display: none;
     }
@@ -87,6 +87,37 @@ h2{
       display: block;
     }
   }
+
+  .mermaid * {
+    fill: #ECECFF;
+    color: var(--gray);
+
+    .relation {
+        fill: none;
+        stroke: #272640;
+    }
+
+    .marker * {
+        stroke: #272640;
+    }
+
+    .edgeLabel * {
+        background: #ECECFF;
+    }
+
+    .attributeBoxOdd {
+        fill: #ffffff !important;
+    }
+
+    .attributeBoxEven {
+        fill: #f2f2f2 !important;
+    }
+
+    .entityLabel { // this is actually bizarre
+        fill: var(--gray) !important;
+    }
+  }
+
 }
 [saved-theme="dark"] {
   img {
@@ -96,5 +127,35 @@ h2{
     &.transparentBackground {
       display: none;
     }
+  }
+
+    .mermaid * {
+        fill: #43436d !important;
+        color: #d4d4d4 !important;
+
+        .relation {
+            fill: none !important;
+            stroke: #f7f2fa !important;
+        }
+
+        .marker * {
+            stroke: #f7f2fa !important;
+        }
+
+        .edgeLabel * {
+            background: #43436d !important;
+        }
+
+        .attributeBoxOdd {
+            fill: #252525 !important;
+        }
+
+        .attributeBoxEven {
+            fill: #333333 !important;
+        }
+
+        .entityLabel { // this is actually bizarre
+            fill: var(--gray) !important;
+        }
   }
 }
