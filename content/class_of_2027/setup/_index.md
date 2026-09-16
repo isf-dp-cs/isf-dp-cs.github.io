@@ -1,6 +1,6 @@
 ---
 title: "Set up"
-weight: 40
+weight: 00
 # bookFlatSection: false 
 bookCollapseSection: true 
 # draft: true

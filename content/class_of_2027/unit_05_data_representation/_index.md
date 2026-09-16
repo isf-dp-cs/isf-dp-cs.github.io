@@ -1,38 +1,30 @@
 ---
 title: "Unit 05: Data Representation"
-weight: 20
+weight: 30
 bookFlatSection: false 
 bookCollapseSection: true 
 # draft: false
 ---
 
 # Unit 05: Data Representation
-<!-- 
-#### Syllabus Topics [SL]
-- **A3.1.1** Explain the features, benefits and limitations of a relational database.
-- **A3.2.1** Describe database schemas.
-- **A3.2.2** Construct ERDs.
-- **A3.2.3** Outline the different data types used in relational databases.
-- **A3.2.4** Construct tables for relational databases.
-- **A3.2.5** Explain the difference between normal forms.
-- **A3.2.6** Construct a database normalized to 3NF for a range of real-world scenarios.
-- **A3.2.7** Evaluate the need for denormalizing databases.
-- **A3.3.1** Outline the differences between data language types within SQL.
-- **A3.3.2** Construct queries between two tables in SQL.
-- **A3.3.3** Explain how SQL can be used to update data in a database.
 
-You can find the Database slides [HERE](https://docs.google.com/presentation/d/1m2yIp51ZOupfUQTynUNWpYMd4bpaqMepGoRRlDHu37Q/edit?usp=sharing). It has SL and HL content.
-
+<!-- You can find the Database slides [HERE](https://docs.google.com/presentation/d/1m2yIp51ZOupfUQTynUNWpYMd4bpaqMepGoRRlDHu37Q/edit?usp=sharing). It has SL and HL content. -->
+ 
+### Syllabus Topics [SL]
+- **A1.2.1** Describe the principal methods of representing data.
+- **A1.2.2** Explain how binary is used to store data.
+- **A1.2.3** Describe the purpose and use of logic gates.
+- **A1.2.4** Construct and analyse truth tables.
+- **A.1.2.5** Construct logic diagrams.
+- **A1.3.1** Describe the role of operating systems.
+- **A1.3.2** Describe the functions of an operating system.
+- **A1.3.3** Compare different approaches to scheduling.
+- **A1.3.4** Evaluate the use of polling and interrupt handling.
 
 
 ### Syllabus Topics [HL]
-- **A3.3.5** Describe different database views. (HL only)
-- **A3.3.6** Describe how transactions maintain data integrity in a database. (HL only)
-- **A3.4.1** Outline the different types of databases as approaches to storing data.
-- **A3.4.2** Explain the primary objectives of data warehouses in data management and business intelligence.
-- **A3.4.3** Explain the role of online analytical processing (OLAP) and data mining for business intelligence.
-- **A3.4.4** Describe the features of distributed databases.
+- **A1.3.5** Explain the role of the operating system in managing multitasking and resource allocation. 
+- **A1.3.6** Describe the use of the control system components. 
+- **A1.3.7** Explain the use of control systems in a range of real-world applications.
 
----
 
-### Summative -->
