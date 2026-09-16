@@ -64,8 +64,19 @@ poetry install
 {{< code-action "Install the command-line tool for the lab." >}} 
 
 ```shell
-pipx install .
+pipx install . -e
 ```
+{{< aside >}}
+
+If you already installed it incorrectly, force it to update using:
+
+```shell
+pipx install . -e --force
+```
+
+
+{{< /aside >}}
+
 
 --- 
 
