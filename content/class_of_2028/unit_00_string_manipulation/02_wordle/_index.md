@@ -1,5 +1,5 @@
 ---
-title: "03. Wordle"
+title: "02. Wordle"
 bookFlatSection: false
 weight: 4
 # bookCollapseSection: true

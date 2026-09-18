@@ -3,7 +3,7 @@ title: "02. Sorting"
 bookFlatSection: false
 weight: 1
 # bookCollapseSection: true
-draft: true
+# draft: true
 ---
 
 # Sorting
@@ -106,7 +106,7 @@ repeat until all elements have been sorted
 📖 **Here are the key steps in the Selection Sort algorithm.** 
 
 ```md
-at the start, the whole list is unsorted, so the **unsorted part** of the list starts at index 0
+start at the beginning of the unsorted part of the list
     loop through the **unsorted part** to find the smallest item 
     swap that smallest item with the first item in the **unsorted part**
 update the start location of the **unsorted part** of the list
@@ -180,8 +180,6 @@ Before you start optimizing, you want to be able to measure your progress as you
 
 {{< code-action "Edit">}} **your `bubble_sort()` to count how many times it has to compare the value of two numbers (in the if-statement). It should print this number out after it finishes.**
 
-{{< code-action >}} **Put your edits to Github to track your progress.**
-
 
 ## Already sorted elements
 
@@ -193,7 +191,6 @@ Take a look at the first two "Unoptimized" visualizations. The red signifies num
 
 {{< code-action "Run" >}} **`efficient_bubble_sort()` and `bubble_sort()` and notice the difference in how many comparisons each algorithm makes**
 
-{{< code-action >}} **Put your edits to Github to track your progress.**
 
 ##  Retire the non-swaps
 
@@ -213,5 +210,4 @@ This optimization tracks when it has to swap/doesn't swap, and if there are k no
 {{< code-action "Run">}} **`optimized_bubble_sort()`, `efficient_bubble_sort()`, and `bubble_sort()` using the same **semi-sorted** starting list.**
  Notice the difference in how many comparisons each algorithm makes
 
-{{< code-action >}} **Put your edits to Github to track your progress.**
 

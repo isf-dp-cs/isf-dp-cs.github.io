@@ -1,7 +1,7 @@
 ---
-title: "02. ADT: Sets"
+title: "00. Sets"
 bookFlatSection: false
-weight: 2
+weight: 1
 # bookCollapseSection: true
 # draft: true
 ---
