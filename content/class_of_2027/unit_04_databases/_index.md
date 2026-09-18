@@ -8,7 +8,7 @@ bookCollapseSection: true
 
 # Unit 04: Databases
 
-#### Syllabus Topics [SL]
+### Syllabus Topics [SL]
 - **A3.1.1** Explain the features, benefits and limitations of a relational database.
 - **A3.2.1** Describe database schemas.
 - **A3.2.2** Construct ERDs.
