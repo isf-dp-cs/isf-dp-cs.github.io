@@ -67,7 +67,7 @@ When you want to exit the shell, you can type `exit` or `^D`
 
 💻 **At the bottom of the file in `if __name__ ==" __main__":` insert items into the tree and test the `inorder_traversal()`.** 
 
-💻 **Construct the methods for `preorder_traversal()` and `postorder_traversal()`.** Test them at the bottom of the file.
+💻 **Construct the recursive methods for `preorder_traversal()` and `postorder_traversal()`.** Test them at the bottom of the file.
 - `preorder` - is `visit, left, right`
 - `postorder` - is `left, right, visit`
 
@@ -88,7 +88,6 @@ print(f"{num:.10f}")
 ```
 
 
-
 ---
 
 ## [3] Deliverables
@@ -107,3 +106,9 @@ print(f"{num:.10f}")
 - remote
 
 {{< /deliverables >}}
+
+---
+
+## [3] Deletion
+
+💻 **Code a method for `deletion(value)`.**  It should find the node with the given value and delete it. You can reference the three cases of deletion [here](https://www.geeksforgeeks.org/dsa/deletion-in-binary-search-tree/).
