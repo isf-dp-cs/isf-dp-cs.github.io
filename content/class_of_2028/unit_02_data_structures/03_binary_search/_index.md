@@ -3,14 +3,14 @@ title: "03. Binary Search"
 bookFlatSection: false
 weight: 1
 # bookCollapseSection: true
-draft: true
+# draft: true
 ---
 
 # Binary Search
 
 This lab introduces an alternate technique for searching for an item in a list, **binary search**. 
 
----
+
 ## Syllabus Topics [SL]
 - **B2.4.2** Construct and trace algorithms to implement a linear search and a **binary search** for data retrieval.
 
@@ -39,6 +39,11 @@ cd lab_binary_search_yourGithubUsername
 {{< code-action "Enter the Poetry Shell to start the lab." >}} As a reminder, we will run this command at the start of each lab, but only when we are inside a lab folder.
 ```shell
 poetry shell
+```
+
+{{< code-action "Install necessary packages" >}} 
+```shell
+poetry install
 ```
 
 {{< aside "Exiting the poetry shell" >}}
@@ -143,6 +148,7 @@ for i in tqdm(range(10), desc="Running Tests"):
 
 💻 **Be sure to run the test multiple times. Then, try increasing the number of tests. What do you notice about the average times and step ratio?**
 
+---
 
 # [4] Deliverables
 
@@ -177,25 +183,12 @@ for i in tqdm(range(10), desc="Running Tests"):
 
 {{< /write-action >}}
 
-## SL+HL: Test Questions
-
-✏️ **Brainstorm potential test questions for this syllabus topic using these command terms:** state, define, identify, explain, construct
-
-```md
-B2.4.2 - Construct and trace algorithms to implement a linear search and a binary search for data retrieval.
-```
-
-✏️ [Add your question to the google form](https://docs.google.com/forms/d/e/1FAIpQLSeXnyjxhKc8oEyp_jL_Auc5VqGZeAQu_4nvzYtmk223-nV57g/viewform?usp=header)
-
-✏️  **Answer your potential test questions & check with a peer/teacher.**
-
-
 
 ## HL only: Binary Search Recursive
 You can solve binary search recursively two ways - one uses indexes to track your progress, or we can use our usual slicing technique.
 <br>
 
-### Recursive with indexes
+### [Recursive with indexes]
 
 💻 **In `search.py`, write the function `bin_search_recursive(low, high, target, list)`.** 
 - the `low` and `high` parameters should be indexes
@@ -203,7 +196,7 @@ You can solve binary search recursively two ways - one uses indexes to track you
 
 💻 **In `runtime_test.py`, add in a test for `bin_search_recursive()`** 
 
-### Recursive with slicing 
+### [Recursive with slicing]
 
 💻 **In `search.py`, write the function `bin_search_recursive_slicing(target, list)`.** 
 - this time, use slicing to approach the base case
