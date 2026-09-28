@@ -65,16 +65,19 @@ Specifics on the algorithm steps:
 ```md
 `high` is the index at the end of the search area
 `low` is the index at beginning of the search area
-`mid` is the average of `high` and `low` 
 
-keep looping until `low` is bigger than `high`
+keep looping until `low` is greater than or equal to `high`
+    `mid` is the average of `high` and `low` 
     `current` is the value located at `mid`
+
     if `current` is the `target` value
         return `mid`
     else if `current` is higher than the `target` value
         update `high`
-    else
-        update `mid`
+    else if `current` is lower than the `target` value
+        update `low`
+
+    update `mid`
 ```
 
 ## Code Binary Search
