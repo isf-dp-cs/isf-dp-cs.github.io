@@ -1,9 +1,9 @@
 ---
-title: "05. 2D Lists" 
+title: "04. 2D Lists Quiz" 
 bookFlatSection: false
 weight: 1
 # bookCollapseSection: true
-draft: true
+# draft: true
 ---
 
 # 2D Lists
