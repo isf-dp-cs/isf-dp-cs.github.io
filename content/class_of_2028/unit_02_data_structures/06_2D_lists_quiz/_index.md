@@ -177,12 +177,12 @@ print(len(revolution_events))
 
 💻 **In `get_data.py`, write the function `get_range()`.** 
 
-- Gets all events containing the keyword in the long event description. 
-- It should be **case insensitive**.
+- Gets all events within a given year range
 - Prints out a message if no matches are found.
 - Parameters: 
     - **events** (2D list of strings):  list of historical events
-    - **keyword** (string): search term
+    - **start_year** (int): start year
+    - **end_year** (int): end year
 - Return:
     - 2D list of strings
 
