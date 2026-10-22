@@ -63,16 +63,40 @@ When you want to exit the shell, you can type `exit` or `^D`
 **This method is probably the easiest one to understand. We're going to create two new lists:**
 - one list for items smaller than our pivot
 - one list for items bigger than our pivot
+- then, recursively call the function on the each section of the list
 
-> **If you want a challenge, try to code this recursively without looking at the answer in the file..** 
 
+💻 **In `pylists_quicksort.py` implement quick sort.** You may check your answer with the solution.
 
-💻 **In `list_comprehension_quicksort.py`, add comments to annotate the quicksort code.** 
+{{< expand "Solution" >}}
+
+```python
+def pylists_quicksort(alist):
+    if len(alist) <= 1:
+        return alist
+
+    pivot = alist[0]
+
+    left = []
+    for x in alist[1:]:
+        if x < pivot:
+            left.append(x)
+
+    right = []
+    for x in alist[1:]:
+        if x > pivot:
+            right.append(x)
+
+    return pylists_quicksort(left) + [pivot] + pylists_quicksort(right)
+```
+
+{{< /expand >}}
 
 ---
 
 ## Lomuto Method
 
+The Lomuto Method uses in-place swapping and chooses the last item as the pivot.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Vtckgz38QHs?si=00OOE79YgDiLHpPh&amp;start=14&amp;end=468;" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
@@ -81,6 +105,8 @@ When you want to exit the shell, you can type `exit` or `^D`
 ---
 
 ## Hoare Method
+
+The Hoare Method uses in-place swapping and chooses the first item as the pivot.
 
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/h_9kAXFKJwY?si=PxyQcOJWbXv52Isn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
