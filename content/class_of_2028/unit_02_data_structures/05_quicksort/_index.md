@@ -95,8 +95,7 @@ def pylists_quicksort(alist):
 ---
 
 ## Lomuto Method
-
-The Lomuto Method uses in-place swapping and chooses the last item as the pivot.
+The Lomuto Method uses in-place swapping and chooses the last item as the pivot. The pointers both start at the beginning of the list
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Vtckgz38QHs?si=00OOE79YgDiLHpPh&amp;start=14&amp;end=468;" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
@@ -106,7 +105,7 @@ The Lomuto Method uses in-place swapping and chooses the last item as the pivot.
 
 ## Hoare Method
 
-The Hoare Method uses in-place swapping and chooses the first item as the pivot.
+The Hoare Method uses in-place swapping and chooses the first item as the pivot. One pointer starts at the beginning of the list, and the other at the end.
 
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/h_9kAXFKJwY?si=PxyQcOJWbXv52Isn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
