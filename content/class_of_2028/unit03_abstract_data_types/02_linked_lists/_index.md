@@ -214,50 +214,346 @@ set previous_node's next to the current_node's next
 {{< /write-action >}}
 
 
-<!-- 
+## Solution 
+
+
+{{< expand "Teacher Code for Singly Linked List" >}}
+
+```python
+class Node:
+    def __init__(self, data):
+        self.data = data
+        self.next = None
+
+
+class SinglyLinkedList:
+    def __init__(self):
+        self.head = None
+
+    def traverse(self):
+        """Displays each node"""
+
+        current_node = self.head
+        elements = "head -> "
+        while current_node:
+            elements += f"{str(current_node.data)} -> "
+            current_node = current_node.next
+
+        elements += "tail"
+        print(elements)
+
+    def insert_at_beginning(self, data):
+        """Inserts a new node as the head"""
+
+        new_node = Node(data)
+        new_node.next = self.head  # New node points to the old head
+        self.head = new_node  # Update head to be the new node
+
+    def insert_at_end(self, data):
+        """Inserts a new node as the tail"""
+
+        new_node = Node(data)
+        if self.head == None:
+            self.head = Node(data)
+        else:
+            current = self.head
+            while current.next != None:
+                current = current.next
+            current.next = new_node
+
+    def insert_after_node(self, prev_node_data, new_data):
+        """Inserts a new node after an existing node"""
+
+        current = self.head
+
+        while current != None:
+            if current.data == prev_node_data:
+                new_node = Node(new_data)
+                new_node.next = current.next
+                current.next = new_node
+
+                return True
+
+            current = current.next
+        return False
+
+    def delete_node(self, data):
+        """Deletes a node and updates other nodes if needed"""
+
+        current = self.head
+        previous = None
+
+        # Case 1: The head node holds the key
+        if current and current.data == data:
+            self.head = current.next
+            return
+
+        # Case 2: Search for the key, keeping track of the previous node
+        while current and current.data != data:
+            previous = current
+            current = current.next
+            print(previous.data)
+
+        if current == None:
+            return
+
+        previous.next = current.next
+
+    def search(self, data):
+        """Returns a boolean representing if the data exists in the list"""
+
+        current = self.head
+        while current:
+            if current.data == data:
+                return True
+            current = current.next
+        return False
+```
+
+
+{{< /expand >}}
+
+
 ---
 
-# [2] DoublyLinkedList
+# [2] Circular Linked List
+
+{{< figure src="https://media.geeksforgeeks.org/wp-content/uploads/20240501111922/Circular_Linked_List-768.webp" width=75% alt-text="bubble tea flow chart" >}}
+
+
+💻 **Copy & Paste your `Singly LinkedList` into a new file `circular_linked_list.py`.** 
+- Change the class name to `CircularLinkedList`.
+
+💻  **Update the following methods to ensure it is circular.** Optional construct `get_last()` as a helper method.
+- `traverse()`
+- `insert_at_beginning()`
+- `insert_at_end()`
+- `insert_after_node() `
+- `delete_node()`
+
+💻 **Test your methods!** Ensure they all work as expected and can be used in different combinations and order. 
+
+✏️ **Practice handwriting each method.**
+
+
+## Solution 
+
+
+{{< expand "Teacher Code for Circular Linked List" >}}
+
+```python
+class Node:
+    def __init__(self, data):
+        self.data = data
+        self.next = None
+
+
+class CircularLinkedList:
+    def __init__(self):
+        self.head = None
+
+    def traverse(self):
+        """Displays each node"""
+
+        elements = f"head -> {self.head.data} -> "
+        current_node = self.head.next
+
+        while current_node != self.head:
+            elements += f"{str(current_node.data)} -> "
+            current_node = current_node.next
+
+        elements += "tail"
+        print(elements)
+
+    def get_last(self):
+        current_node = self.head
+
+        while current_node.next != self.head:
+            current_node = current_node.next
+
+        return current_node
+
+    def insert_at_beginning(self, data):
+        """Inserts a new node as the head"""
+
+        new_node = Node(data)
+
+        if self.head == None:
+            self.head = new_node  # Update head to be the new node
+            new_node.next = self.head  # New node points to the old head
+        else:
+            last_node = self.get_last()
+
+            new_node.next = self.head
+            self.head = new_node
+
+            last_node.next = self.head
+
+    def insert_at_end(self, data):
+        """Inserts a new node as the tail"""
+
+        new_node = Node(data)
+        if self.head == None:
+            self.head = Node(data)
+            self.head.next = self.head
+        else:
+            current = self.head
+            while current.next != self.head:
+                current = current.next
+            current.next = new_node
+            new_node.next = self.head
+
+    def insert_after_node(self, prev_node_data, new_data):
+        """Inserts a new node after an existing node"""
+
+        current = self.head
+
+        while current != None:
+            if current.data == prev_node_data:
+                new_node = Node(new_data)
+                new_node.next = current.next
+                current.next = new_node
+
+                return True
+
+            current = current.next
+        return False
+
+    def delete_node(self, data):
+        """Deletes a node and updates other nodes if needed"""
+
+        current = self.head
+        previous = None
+
+        # Data is in the head
+        if current and current.data == data:
+            last = self.get_last()
+            self.head = current.next
+            last.next = self.head
+
+            return
+
+        # Data is not in the head
+        while current and current.data != data:
+            previous = current
+            current = current.next
+            print(previous.data)
+
+        # Data is not in the list
+        if current == None:
+            return
+
+        previous.next = current.next
+
+    def search(self, data):
+        """Returns a boolean representing if the data exists in the list"""
+
+        current = self.head
+        while current.next != self.head:
+            if current.data == data:
+                return True
+            current = current.next
+        return False
+```
+
+
+{{< /expand >}}
+
+---
+
+
+# [2] Doubly Linked List
+
+**In our implementation of a Doubly Linked List, it is not circular.**
 
 {{< figure src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/gq/2014/03/DLL1.png" width=75% alt-text="bubble tea flow chart" >}}
 
 
+💻 **Copy & Paste this starter code into `doubly_linked_list.py`.** 
 
-You can find an implementation of a `DoublyLinkedList` in `doubly_linked_list.py`.
+```python
+class Node:
+    def __init__(self, data):
+        self.data = data
+        self.next = None
+        self.prev = None
 
-## Testing
+class DoublyLinkedList:
+    def __init__(self):
+        self.head = None
 
-💻 **At the bottom of the file, test out the `DoublyLinkedList` class.** 
+    def traverse_forward(self):
+        """Displays each node starting at the head"""
+        
+        current_node = self.head
+        elements = "head <-> "
+        while current_node:
+            elements += f"{str(current_node.data)} <-> "
+            current_node = current_node.next
 
-- create a `SinglyLinkedList` object
-- append some items
-
-You might notice that there's no way to view the list!
-
-✏️ **Edit the descriptive comments for the methods of the `Node` class and  `SinglyLinkedList` class.** 
-
-Take note of the differences between this and the SinglyLinkedList
-
----
-
-## Display forward and in reverse
-
-We can't yet display the doubly linked list! 
-
-💻 **Finish the methods `display()` and `display_reverse()`.** 
+        elements += "tail"
+        print(elements)
+    
+    def traverse_backwards(self):
+        """Displays each node starting at the tail"""
 
 
-You can test your method out on these phrases which work forward and backward, or make up your own!
 
-***are you as bored as I am***     
-***dream big work hard***      
-***there is hope***      
-***clearly spoken dreams***      
-***moving fast sometimes***     
-***blinking green light shows***     
+    def insert_at_beginning(self,data):
+        """Inserts a new node as the head"""
 
---- -->
+        new_node = Node(data)
 
+        if not self.head:
+            self.head = new_node
+        else:
+            self.head.prev = new_node
+            new_node.next = self.head  
+            self.head = new_node
+
+    def insert_at_end(self, data):
+        """Inserts a new node as the tail"""
+
+     
+
+    def insert_after_node(self, prev_node_data, new_data):
+        """Inserts a new node after an existing node"""
+
+
+
+    def delete_node(self, data):
+        """Deletes a node and updates other nodes if needed"""
+
+
+    def search(self, data):
+        """Returns a boolean representing if the data exists in the list"""
+
+        current = self.head
+        while current:
+            if current.data == data:
+                return True
+            current = current.next
+        return False
+
+
+if __name__ == '__main__':
+    dll = DoublyLinkedList()
+    dll.insert_at_beginning(5)
+    dll.insert_at_beginning(3)
+    dll.traverse_forward()
+```
+
+
+
+💻  **You must construct following methods.** Optional construct `get_last()` as a helper method.
+- `traverse_backwards()`
+- `insert_at_end()`
+- `insert_after_node() `
+- `delete_node()`
+
+💻 **Test your methods!** Ensure they all work as expected and can be used in different combinations and order. 
+
+✏️ **Practice handwriting each method.**
 
 
 ---
