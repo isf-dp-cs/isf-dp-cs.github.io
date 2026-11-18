@@ -464,7 +464,7 @@ class CircularLinkedList:
 
 # [2] Doubly Linked List
 
-**In our implementation of a Doubly Linked List, it is not circular.**
+**A Doubly Linked List is a collection of nodes where each node contains data and a pointer to the next node and the previous node. It contains a pointer to the head and to the tail.**
 
 {{< figure src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/gq/2014/03/DLL1.png" width=75% alt-text="bubble tea flow chart" >}}
 
@@ -481,6 +481,7 @@ class Node:
 class DoublyLinkedList:
     def __init__(self):
         self.head = None
+        self.tail = None
 
     def traverse_forward(self):
         """Displays each node starting at the head"""
@@ -506,6 +507,8 @@ class DoublyLinkedList:
 
         if not self.head:
             self.head = new_node
+            self.tail = new_node
+        
         else:
             self.head.prev = new_node
             new_node.next = self.head  
