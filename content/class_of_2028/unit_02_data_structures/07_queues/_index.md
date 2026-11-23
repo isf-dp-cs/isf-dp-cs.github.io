@@ -97,7 +97,7 @@ if __name__ == "__main__":
 ---
 
 
-# [1] Song Playlist
+# [2] Song Playlist
 
 **In `playlist.py` you will be creating a song playlist.** Every time a song is added to the playlist, it is added to the end of the queue. 
 
@@ -135,7 +135,7 @@ Allow repeated? (Y or N)    N
 
 ---
 
-# [4] Deliverables
+# [3] Deliverables
 
 {{< deliverables "Once you complete the lab, be sure to complete these two steps:" >}}
 
