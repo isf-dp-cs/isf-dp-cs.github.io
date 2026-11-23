@@ -46,7 +46,7 @@ q.front()               # returns John
 q.isEmpty()             # return False
 
 q.dequeue()             # returns John
-items = q.dequeue()     # returns Paul
+item = q.dequeue()     # returns Paul
 ```
 
 
